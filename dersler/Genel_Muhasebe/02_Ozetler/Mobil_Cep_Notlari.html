@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENEL MUHASEBE - AÖF Mobil Cep Notları</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 70px; }
+        header { background: linear-gradient(135deg, #1e1b4b, #0f172a); padding: 20px 16px; border-bottom: 1px solid var(--card-border); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); }
+        .badge { background: #4338ca; color: #e0e7ff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 9999px; text-transform: uppercase; }
+        h1 { font-size: 20px; font-weight: 800; margin-top: 6px; color: #fff; }
+        .search-box { margin-top: 12px; width: 100%; }
+        .search-input { width: 100%; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--card-border); background: #1e293b; color: #fff; font-size: 14px; outline: none; }
+        .search-input:focus { border-color: var(--primary); }
+        .tabs { display: flex; overflow-x: auto; background: #1e293b; padding: 6px 12px; gap: 8px; border-bottom: 1px solid var(--card-border); }
+        .tab-btn { background: transparent; border: none; color: var(--text-muted); padding: 8px 14px; font-size: 13px; font-weight: 600; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+        .tab-btn.active { background: var(--primary); color: #0f172a; font-weight: 700; }
+        .container { padding: 16px; max-width: 800px; margin: 0 auto; }
+        .section-pane { display: none; }
+        .section-pane.active { display: block; }
+        .unit-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        .unit-title { font-size: 16px; font-weight: 700; color: var(--primary); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px; }
+        .bullet-item { margin-bottom: 8px; font-size: 13.5px; display: flex; align-items: flex-start; gap: 8px; }
+        .bullet-dot { color: var(--accent); font-size: 16px; line-height: 1; }
+        .trap-card { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+        .trap-header { color: #f87171; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+        .trap-mistake { color: #fca5a5; font-size: 13px; margin-bottom: 4px; }
+        .trap-truth { color: #86efac; font-size: 13px; font-weight: 600; }
+        .dict-item { background: var(--card-bg); border-left: 3px solid var(--primary); padding: 10px 14px; margin-bottom: 10px; border-radius: 0 8px 8px 0; }
+        .dict-term { font-weight: 700; color: #fff; font-size: 14px; }
+        .dict-desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; border-top: 1px solid var(--card-border); padding: 10px; text-align: center; font-size: 11px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">MUH101U - AÖF YBS 1. SINIF</span>
+        <h1>GENEL MUHASEBE</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Konu, kavram veya tuzak ara..." oninput="handleSearch()">
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('vize')">📘 Vize (1-4)</button>
+        <button class="tab-btn" onclick="switchTab('final')">📗 Final (5-8)</button>
+        <button class="tab-btn" onclick="switchTab('tuzaklar')">⚠️ Sınav Tuzakları</button>
+        <button class="tab-btn" onclick="switchTab('sozluk')">📚 Sözlük & Formül</button>
+    </div>
+
+    <div class="container">
+        <!-- Vize Tab -->
+        <div id="vizePane" class="section-pane active">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 1: Muhasebeye Giriş</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Muhasebenin 4 Temel İşlevi: 1. Kaydetme (Yevmiye Defteri - ilk ve temel işlev), 2. Sınıflandırma (Büyük Defter / Defter-i Kebir), 3. Özetleme (Mizanlar, Bilanço, Gelir Tablosu), 4. Analiz ve Yorumlama (Rasyolar ve karar vericilere raporlama).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Temel Muhasebe (Bilanço) Eşitliği: Varlıklar (Aktif) = Kaynaklar (Pasif). Detaylı: Varlıklar = Yabancı Kaynaklar (Borçlar) + Öz Kaynaklar (Sermaye).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Bilanço: Bir işletmenin belirli bir tarihteki (anlık fotoğraf) varlıklarını ve bu varlıkların sağlandığı kaynakları gösteren temel mali tablodur. Sol taraf AKTİF (Dönen ve Duran Varlıklar), sağ taraf PASİF (Kısa Vadeli Yabancı Kaynaklar, Uzun Vadeli Yabancı Kaynaklar, Öz Kaynaklar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Gelir Tablosu: Bir işletmenin belirli bir dönemde elde ettiği tüm gelirler ile katlandığı tüm giderleri ve bunların sonucunda oluşan Dönem Net Kârı veya Zararını gösteren dinamik tablodur (Gelirler - Giderler = Kâr veya Zarar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>12 Temel Muhasebe Kavramı:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Sosyal Sorumluluk: Muhasebenin belli kişi veya grupların değil, tüm toplumun çıkarlarını gözeterek dürüst ve tarafsız yürütülmesidir (En üst kavramdır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Kişilik Kavramı: İşletmenin, sahiplerinden ve ortaklarından ayrı bağımsız bir hukuki ve iktisadi kişiliğe sahip olmasıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - İşletmenin Sürekliliği: İşletmenin faaliyetlerinin herhangi bir zaman sınırına bağlı olmaksızın sonsuza kadar süreceği varsayımıdır (Maliyet esası bu kavrama dayanır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Dönemsellik Kavramı: İşletmenin sınırsız ömrünün belirli dönemlere (genellikle 1 takvim yılı) bölünmesi, her dönemin gelir ve giderinin o döneme ait olmasıdır (Amortisman, reeskont ve tahakkuk kayıtları bu kavrama dayanır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Parayla Ölçülme: Muhasebe işlemlerinin ortak bir ulusal para birimiyle kaydedilmesidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Maliyet Esası: Para mevcudu ve alacaklar hariç, edinilen varlıkların maliyet bedeliyle defterlere kaydedilmesidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Tarafsızlık ve Belgelendirme: Kayıtların objektif belgelere (fatura, makbuz, çek) dayandırılması zorunluluğudur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Tutarlılık: Muhasebe politikalarının ve değerleme yöntemlerinin dönemden döneme değiştirilmeden uygulanmasıdır (Karşılaştırılabilirliği sağlar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Tam Açıklama: Mali tabloların karar vericilerin anlayabileceği açıklık ve detayda hazırlanmasıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - İhtiyatlılık: Olası riskler, zararlar ve giderler için karşılık ayrılması, ancak gerçekleşmemiş kârların kaydedilmemesidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Önemlilik: Bir hesap veya tutarın karar vericilerin kararlarını etkileyecek ağırlıkta olması durumunda mutlaka ayrı gösterilmesidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Özün Önceliği: İşlemlerin biçimsel hukuki yapısından ziyade iktisadi ve mali özünün esas alınmasıdır (Örn: Çeklerin vadeli düzenlenmesi durumunda senet gibi değerlenmesi).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 2: Bilgi İşleme ve Muhasebe Süreci</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Hesap İşleyiş Kuralları (ALTIN KURAL):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Aktif Karakterli Hesaplar (Varlıklar ve Giderler): İlk kayıt ve artışlar BORCA yazılır. Azalışlar ALACAĞA yazılır. Borç kalanı verir veya kalan vermez (sıfır olur). Kesinlikle alacak kalanı veremez!</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Pasif Karakterli Hesaplar (Kaynaklar ve Gelirler): İlk kayıt ve artışlar ALACAĞA yazılır. Azalışlar BORCA yazılır. Alacak kalanı verir veya sıfır olur. Kesinlikle borç kalanı veremez!</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Düzenleyici Hesaplar: Yanında eksi (-) olan hesaplardır. Aktifi Düzenleyici hesaplar bilançonun aktifinde yer alır ancak pasif karakterlidir (artış alacağa). Pasifi Düzenleyici hesaplar pasifte yer alır ancak aktif karakterlidir (artış borca).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Muhasebe Fişleri: 1. Kasa Tahsil Fişi (Kasaya nakit girişi olduğunda), 2. Kasa Tediye Fişi (Kasadan nakit çıkışı olduğunda), 3. Mahsup Fişi (İçinde kesinlikle kasa hesabı geçmeyen, nakit hareketsiz işlemler için düzenlenir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Yasal Defterler: Yevmiye Defteri (İşlemlerin tarih sırasına göre madde madde kaydedildiği günlük defter), Defter-i Kebir (Büyük Defter - yevmiyedeki kayıtların hesaplar bazında sınıflandırıldığı defter), Envanter Defteri (Dönem başı ve dönem sonu sayım sonuçlarının yazıldığı defter).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Mizan Çeşitleri: 1. Aylık Mizan (Her ay sonunda yevmiye ile büyük defter uyumunu kontrol eder), 2. Genel Geçici Mizan (Aralık ayı sonunda, dönem sonu envanter işlemlerine başlamadan önce çıkarılır), 3. Kesin Mizan (Dönem sonu envanter ve düzeltme kayıtları tamamlandıktan sonra, bilançodan hemen önce çıkarılan nihai kontrol cetvelidir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Muhasebe Süreci Sıralaması: Açılış Bilançosu -> Açılış Yevmiye Kaydı -> Dönem İçi İşlemler -> Aylık Mizanlar -> Genel Geçici Mizan -> Envanter İşlemleri (Sayım, değerleme, amortisman) -> Kesin Mizan -> Finansal Tablolar (Bilanço & Gelir Tablosu) -> Kapanış Kayıtları.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 3: Dönen Varlıklar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Dönen Varlıklar (1 Grubu): Bir yıl veya normal faaliyet dönemi içinde paraya çevrilmesi veya tüketilmesi öngörülen varlıklardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>10 Hazır Değerler:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 100 Kasa: Kasa mevcudu fiili sayımdan çok çıkarsa '397 Sayım ve Tesellüm Fazlaları' alacaklandırılır; eksik çıkarsa '197 Sayım ve Tesellüm Noksanları' borçlandırılır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 101 Alınan Çekler: Müşteriden alınan çekler portföyde iken bu hesapta izlenir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 102 Bankalar: Vadeli veya vadesiz banka mevduatları.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 103 Verilen Çekler ve Ödeme Emirleri (-): İşletmenin üçüncü kişilere keşide ettiği çeklerdir. Aktifte yer almasına rağmen pasif karakterli (düzenleyici) bir hesaptır! Verildiğinde ALACAKLANDIRILIR.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>12 Ticari Alacaklar:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 120 Alıcılar: Veresiye (açık hesap) mal veya hizmet satışından doğan senetsiz alacaklar. Mal satıldığında 120 BORÇLU, 600 Yurtiçi Satışlar ALACAKLI kaydedilir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 121 Alacak Senetleri: Müşteriden alınan bonolar ve poliçeler.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 122 Alacak Senetleri Reeskontu (-): Senetli alacakların dönem sonundaki peşin değerine indirgenmesi (aktifi düzenleyici).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 128 Şüpheli Ticari Alacaklar ve 129 Şüpheli Ticari Alacaklar Karşılığı (-): Vadesinde ödenmeyen ve yasal takibe intikal eden alacaklar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>15 Stoklar:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 153 Ticari Mallar: Üzerinde hiçbir değişiklik yapılmadan satılmak üzere alınan mallardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Sürekli Envanter Yöntemi: Her satış anında satış kaydının hemen altına maliyet kaydı yapılır: 621 Satılan Ticari Mallar Maliyeti BORÇLU, 153 Ticari Mallar ALACAKLI.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Aralıklı Envanter Yöntemi: Satış anında maliyet kaydı yapılmaz. Dönem sonunda fiili sayım yapılır ve formülle hesaplanır: STMM = Dönem Başı Mal Mevcudu + Dönem İçi Net Alışlar - Dönem Sonu Mal Mevcudu.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Stok Değerleme Yöntemleri: FIFO (İlk Giren İlk Çıkar - enflasyonist ortamda dönem sonu stokları yüksek, STMM düşük, kâr yüksek çıkar), Ağırlıklı Ortalama Maliyet.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>KDV Hesapları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 191 İndirilecek KDV: Mal ve hizmet satın alırken ödenen KDV (Aktif hesap, Borçlu çalışır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 391 Hesaplanan KDV: Mal ve hizmet satarken müşteriden tahsil edilen KDV (Pasif hesap, Alacaklı çalışır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ay Sonu KDV Mahsubu: 391 > 191 ise aradaki fark '360 Ödenecek Vergi ve Fonlar' hesabına alacak yazılır. 191 > 391 ise fark '190 Devreden KDV' hesabına borç yazılır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 4: Duran Varlıklar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Duran Varlıklar (2 Grubu): Bir yıldan daha uzun süre işletme faaliyetlerinde kullanılmak üzere edinilen varlıklardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>25 Maddi Duran Varlıklar: 250 Arazi ve Arsalar, 251 Yeraltı ve Yerüstü Düzenleri, 252 Binalar, 253 Tesis Makine ve Cihazlar, 254 Taşıtlar, 255 Demirbaşlar, 257 Birikmiş Amortismanlar (-).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>KRİTİK KURAL: 250 Arazi ve Arsalar hesabına aşınma veya yıpranma payı olmadığı için KESİNLİKLE AMORTİSMAN AYRILMAZ!</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Amortisman Yöntemleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Normal (Eşit Paylı) Amortisman: Her yıl eşit tutarda amortisman ayrılır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     Amortisman Oranı = 1 / Faydalı Ömür (n). Yıllık Tutar = Maliyet Bedeli * Amortisman Oranı.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     Örnek: 100.000 TL demirbaş, ömrü 5 yıl -> Oran = 1/5 = %20 -> Yıllık amortisman = 20.000 TL.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Azalan Bakiyeler (Hızlandırılmış) Amortisman Yöntemi:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     Oran = Normal Amortisman Oranı * 2 (Ancak oran hiçbir şekilde %50'yi geçemez!).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     Amortisman tutarı her yıl Duran Varlığın Net Defter Değerinden (Maliyet Bedeli - Birikmiş Amortisman) hesaplanır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     Son yıl kalan net defter değerinin tamamı amortisman olarak ayrılır ve sıfırlanır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Kıst Amortisman Kuralı: Vergi Usul Kanunu'na göre YALNIZCA işletmelerde kullanılan BİNEK OTOMOBİLLER için uygulanır. Alındığı aydan itibaren yıl sonuna kadar kalan ay sayısı kadar ayrılır. İlk yıl ayrılmayan eksik kısım son yıla ilave edilir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Amortisman Kaydı: 770 Genel Yönetim Giderleri BORÇLU, 257 Birikmiş Amortismanlar ALACAKLI.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>26 Maddi Olmayan Duran Varlıklar: Fiziksel varlığı olmayan haklar ve imtiyazlardır (260 Haklar - patent, telif, lisans; 261 Şerefiye - işletme devralırken ödenen hava parası; 268 Birikmiş Amortismanlar [-]).</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Tab -->
+        <div id="finalPane" class="section-pane">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 5: Yabancı Kaynaklar</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Yabancı Kaynaklar: İşletmenin üçüncü kişilere (bankalar, satıcılar, devlet vb.) olan borçlarıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kısa Vadeli Yabancı Kaynaklar (3 Grubu): Vadesi 1 yıla kadar olan borçlar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Uzun Vadeli Yabancı Kaynaklar (4 Grubu): Vadesi 1 yıldan uzun olan borçlar. Vadesi 1 yılın altına inen uzun vadeli borçlar dönem sonunda 3 grubundaki ilgili hesaplara aktarılır (Örn: 400 Banka Kredileri -> 303 Uzun Vadeli Kredilerin Anapara Taksitleri ve Faizleri).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>32 Ticari Borçlar:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 320 Satıcılar: Veresiye (açık hesap) mal ve hizmet alımından doğan senetsiz borçlar. Mal alındığında 153 Ticari Mallar ve 191 İndirilecek KDV BORÇLU, 320 Satıcılar ALACAKLI olur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 321 Borç Senetleri: Mal alımı veya borç karşılığı işletmenin keşide ettiği ya da ciroladığı bonolar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 322 Borç Senetleri Reeskontu (-): Pasifte yer almasına karşın AKTİF karakterli düzenleyici hesaptır! Dönem sonunda borç senetlerinin peşin değerine indirilmesini sağlar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>380 Gelecek Aylara Ait Gelirler: Peşin tahsil edilen ancak gelecek aylara ait olan gelirlerdir (Örn: 1 yıllık kira gelirinin peşin tahsil edilmesi). Dönemsellik ilkesi gereği peşin alınan tutar hemen gelir yazılmaz, pasifte 380 hesabında bekletilir ve ilgili ay geldikçe 649/600 hesaplarına aktarılır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 6: Öz Kaynaklar</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Öz Kaynaklar (5 Grubu): İşletme sahip veya ortaklarının işletme varlıkları üzerindeki net hak sahipliğidir (Öz Kaynaklar = Varlıklar - Yabancı Kaynaklar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>50 Ödenmiş Sermaye:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 500 Sermaye: Şirket ana sözleşmesinde taahhüt edilen nominal sermayedir (Pasif hesap, alacak kalanı verir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 501 Ödenmemiş Sermaye (-): Ortakların taahhüt edip henüz işletmeye ödemedikleri sermaye payıdır. Pasifte yer almasına rağmen AKTİF karakterli düzenleyici hesaptır (borç tarafına kayıt yapılır, bilançoda indirim kalemi olarak eksi gösterilir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>52 Sermaye Yedekleri: 520 Hisse Senedi İhraç Primleri (Emisyon Primi - hisse senetlerinin nominal değerinin üzerinde bir bedelle satılmasından doğan farktır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>54 Kâr Yedekleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 540 Yasal Yedekler: Türk Ticaret Kanunu (TTK) hükümlerine göre safi kârın %5'i oranında zorunlu olarak ayrılan yedek akçelerdir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 541 Statü Yedekleri: Şirket ana sözleşmesi gereğince ayrılan yedekler.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 542 Olağanüstü Yedekler: Genel Kurul kararıyla serbestçe ayrılan yedekler.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>570 Geçmiş Yıllar Kârları (Kâr birikimi) ve 580 Geçmiş Yıllar Zararları (-) (Zarar birikimi).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>590 Dönem Net Kârı ve 591 Dönem Net Zararı (-): Faaliyet dönemi sonucunda oluşan nihai net sonuçtur.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 7: Gelirler ve Giderler</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Gelir Tablosu Temel Matematiksel Yapısı (Kademe Kademe Kâr Hesaplama):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Net Satışlar = 60 Brüt Satışlar (600 Yurtiçi Satışlar) - 61 Satış İndirimleri (610 Satıştan İadeler, 611 Satış İskontoları).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Brüt Satış Kârı (Zararı) = Net Satışlar - 62 Satışların Maliyeti (621 STMM).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Faaliyet Kârı (Zararı) = Brüt Satış Kârı - 63 Faaliyet Giderleri (631 Pazarlama Satış Dağıtım Giderleri + 632 Genel Yönetim Giderleri).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  4. Olağan Kâr (Zarar) = Faaliyet Kârı + Diğer Faaliyetlerden Olağan Gelirler (Faiz 642, Kambiyo Kârı 646) - Diğer Faaliyetlerden Olağan Giderler (Kambiyo Zararı 656) - Finansman Giderleri (660).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  5. Dönem Net Kârı (Zararı) = Dönem Kârı - Dönem Kârı Vergi ve Yasal Yükümlülük Karşılıkları (691).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Maliyet Hesapları (7/A Seçeneği):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 710 Direkt İlk Madde ve Malzeme, 720 Direkt İşçilik, 730 Genel Üretim, 760 Pazarlama Satış Dağıtım, 770 Genel Yönetim Giderleri, 780 Finansman Giderleri.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Giderler fiilen ortaya çıktığında ilgili 7'li hesaba BORÇ yazılır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Dönem sonunda bu giderler Yansıtma Hesapları (771, 761, 781 vb.) aracılığıyla Gelir Tablosundaki 632, 631, 660 hesaplarına devredilerek kapatılır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 8: Dönem Sonu İşlemleri</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Envanter Türleri: Muhasebe Dışı Envanter (Fiziki sayım, ölçüm, tartım yaparak fiili durumun tespit edilmesi) ve Muhasebe İçi Envanter (Tespit edilen fiili durum ile defter kayıtları arasındaki farkların düzeltilmesi, amortisman, reeskont, karşılık ve kapanış kayıtları).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Reeskont İşlemleri (Senede bağlı alacak ve borçların bilançoda peşin değerine indirgenmesi):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Alacak Senetleri Reeskontu: 657 Reeskont Faiz Giderleri BORÇLU / 122 Alacak Senetleri Reeskontu ALACAKLI.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Borç Senetleri Reeskontu: 322 Borç Senetleri Reeskontu BORÇLU / 647 Reeskont Faiz Gelirleri ALACAKLI.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Gelir ve Gider Hesaplarının Kapatılması:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Bütün Gelir Hesapları (Alacak kalanı veren 600, 642 vb.) BORÇLANDIRILARAK,</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Bütün Gider Hesapları (Borç kalanı veren 621, 631, 632, 656 vb.) ALACAKLANDIRILARAK,</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - '690 Dönem Kârı veya Zararı' hesabına devredilir ve 6'lı hesapların tamamı sıfırlanır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>690 Hesabın Kalanı: Alacak kalanı verirse KÂR (690 Borç / 692 Dönem Net Kârı Alacak); Borç kalanı verirse ZARAR (692 Dönem Net Zararı Borç / 690 Alacak) oluşur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kapanış Yevmiye Kaydı (Dönemin en son kaydı):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Borç kalanı veren Aktif hesaplar ALACAKLANDIRILIR.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Alacak kalanı veren Pasif hesaplar BORÇLANDIRILIR.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Böylece bilançonun tüm hesapları sıfırlanarak defterler kapatılır.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuzaklar Tab -->
+        <div id="tuzaklarPane" class="section-pane">
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #1: 103 Verilen Çekler ve Ödeme Emirleri Hesabının Karakteri</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> 103 hesabının aktifte yer aldığı için normal bir aktif hesap gibi borç kalanı vereceğini düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> 103 Verilen Çekler hesabı AKTİFİ DÜZENLEYİCİ PASİF KARAKTERLİ bir hesaptır. Çek keşide edildiğinde ALACAKLANDIRILIR, bankadan ödendiğinde BORÇLANDIRILIR. Asla borç kalanı vermez!</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #2: 250 Arazi ve Arsalar Hesabına Amortisman Ayrılması Yanılgısı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Soru metninde 'işletmenin sahip olduğu arsaya %20 amortisman ayrılmıştır' dendiğinde hesaplama yapmaya çalışmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Arazi ve arsalar (250) tükenebilir veya yıpranabilir bir nitelikte olmadığından amortismana tabi DEĞİLDİR! Bu hesap için amortisman tutarı daima 0 (sıfır) TL'dir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #3: Kıst Amortisman Kapsamı Tuzağı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Kıst amortismanın tüm makineler veya binalar için de uygulanabileceğini sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Türk vergi mevzuatında kıst amortisman YALNIZCA işletmelerde kullanılan BİNEK OTOMOBİLLER için zorunludur. Kamyon, otobüs, bina veya makineler için yılın hangi ayında alınırsa alınsın tam yıllık amortisman ayrılır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #4: Azalan Bakiyeler Yönteminde Matrah Hesabı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Her yıl ilk maliyet bedeli üzerinden amortisman hesaplamak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Azalan bakiyelerde amortisman tutarı maliyetten değil, NET DEFTER DEĞERİNDEN (Maliyet Bedeli - Birikmiş Amortisman) hesaplanır. Ayrıca normal oranın 2 katı alınır (azami %50).</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #5: 120 Alıcılar ile 320 Satıcılar Hesaplarının Karıştırılması</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Veresiye mal alışında 120, satışında 320 hesabını kullanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> İşletme mal sattığında müşteriye karşı alacak doğar -> 120 ALICILAR BORÇLU. İşletme veresiye mal aldığında toptancıya borç doğar -> 320 SATICILAR ALACAKLI.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #6: Mizan Tablosunun Mali Tablo Sayılması</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Mizanın bilanço veya gelir tablosu gibi bir finansal tablo olduğunu düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Mizan bir mali tablo DEĞİLDİR! Mizan, yevmiye defterinden büyük deftere yapılan kayıtların matematiksel eşitliğini kontrol etmeye yarayan bir ara kontrol cetvelidir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #7: 380 Gelecek Aylara Ait Gelirler Hesabının Niteliği</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Adında 'Gelir' kelimesi geçtiği için gelir tablosu hesabı sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> 380 bir GELİR hesabı değil, bir PASİF (Kısa Vadeli Yabancı Kaynak) bilançosu hesabıdır. Peşin tahsil edilen kiranın henüz hak edilmemiş borcunu gösterir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #8: KDV Mahsubunda Ödenecek KDV ile Devreden KDV Karışıklığı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> 191 büyük olduğunda vergi dairesine vergi ödeneceğini sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> 391 Hesaplanan KDV (müşteriden tahsil ettiğin) > 191 İndirilecek KDV (ödediğin) ise devlete vergi borcu doğar -> 360 Ödenecek Vergi. Tam tersi 191 > 391 ise devletten alacaklı olursun ve sonraki aya devreder -> 190 Devreden KDV.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #9: Gelir ve Gider Hesaplarının Kapatılma Şekli</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Gelir hesaplarını alacaklandırarak, gider hesaplarını borçlandırarak kapattığını düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Gelir hesapları normalde alacak kalanı verir; kapatmak için BORÇLANDIRILIR. Gider hesapları borç kalanı verir; kapatmak için ALACAKLANDIRILIR. Karşı hesap daima '690 Dönem Kârı veya Zararı'dır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #10: 501 Ödenmemiş Sermaye Hesabının Bilançodaki Yeri</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Ödenmemiş sermayeyi bir alacak kalemi sanıp Dönen Varlıklara yazmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> 501 Ödenmemiş Sermaye, bilançonun PASİFİNDE, ÖZ KAYNAKLAR grubunda yer alır; ancak düzenleyici bir hesap olduğu için sermayeden düşülerek (-) eksi olarak gösterilir.</div>
+            </div>
+        </div>
+
+        <!-- Sozluk Tab -->
+        <div id="sozlukPane" class="section-pane">
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Bilanço Eşitliği</div>
+                <div class="dict-desc">Varlıklar (Aktif) = Yabancı Kaynaklar (Kısa + Uzun Vadeli Borçlar) + Öz Kaynaklar.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Net Satışlar Formülü</div>
+                <div class="dict-desc">Net Satışlar = Brüt Satışlar (600 Yurtiçi Satışlar) - Satış İndirimleri (610 Satıştan İadeler + 611 Satış İskontoları).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Brüt Satış Kârı (Zararı)</div>
+                <div class="dict-desc">Brüt Satış Kârı = Net Satışlar - Satılan Ticari Mallar Maliyeti (621 STMM).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Faaliyet Kârı (Zararı)</div>
+                <div class="dict-desc">Faaliyet Kârı = Brüt Satış Kârı - (760 Pazarlama Giderleri + 770 Genel Yönetim Giderleri).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">STMM Formülü (Aralıklı Envanter)</div>
+                <div class="dict-desc">STMM = Dönem Başı Emtia Mevcudu + Dönem İçi Net Alışlar - Dönem Sonu Emtia Mevcudu.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Normal Amortisman Formülü</div>
+                <div class="dict-desc">Yıllık Amortisman = Maliyet Bedeli / Faydalı Ömür = Maliyet Bedeli * (1 / n).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Azalan Bakiyeler Amortismanı</div>
+                <div class="dict-desc">Amortisman Oranı = Normal Oran * 2 (Maksimum %50). Yıllık Amortisman = (Maliyet - Birikmiş Amortisman) * Oran.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Kıst Amortisman (Binek Oto)</div>
+                <div class="dict-desc">İlk Yıl Amortismanı = (Yıllık Amortisman Tutarı / 12) * Kalan Ay Sayısı. Ayrılmayan kısım son yıla eklenir.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Alacak Senetleri Reeskontu</div>
+                <div class="dict-desc">Senetli alacakların dönem sonu itibarıyla peşin değerine indirgenmesi işlemidir. 657 Reeskont Faiz Giderleri Borç / 122 Alacak Senetleri Reeskontu Alacak kaydedilir.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Borç Senetleri Reeskontu</div>
+                <div class="dict-desc">Senetli borçların bilanço tarihindeki peşin değerine indirgenmesidir. 322 Borç Senetleri Reeskontu Borç / 647 Reeskont Faiz Gelirleri Alacak kaydedilir.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Kasa Sayım Fazlası</div>
+                <div class="dict-desc">Fiili sayım mevcudu > Defter mevcudu ise aradaki fark 397 Sayım ve Tesellüm Fazlaları hesabına alacak yazılır.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Kasa Sayım Noksanı</div>
+                <div class="dict-desc">Fiili sayım mevcudu < Defter mevcudu ise aradaki fark 197 Sayım ve Tesellüm Noksanları hesabına borç yazılır.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Yasal Yedekler (I. Tertip)</div>
+                <div class="dict-desc">Türk Ticaret Kanunu uyarınca her yıl safi kârın %5'i, ödenmiş sermayenin %20'sine ulaşıncaya kadar yasal yedek olarak ayrılır.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Emisyon Primi (Hisse İhraç Primi)</div>
+                <div class="dict-desc">Hisse senetlerinin nominal bedelinden daha yüksek fiyatla ihraç edilmesi halinde aradaki pozitif fark (520 hesabı).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">690 Dönem Kârı veya Zararı</div>
+                <div class="dict-desc">Dönem sonunda tüm gelir ve gider hesaplarının devredildiği, kâr veya zararın net olarak toplandığı sonuç hesabıdır.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        🎓 AÖF YBS 1. Sınıf Başarı Ekosistemi • İnternetsiz Doğrudan Çalışır
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
+            
+            if (tabId === 'vize') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('vizePane').classList.add('active');
+            } else if (tabId === 'final') {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('finalPane').classList.add('active');
+            } else if (tabId === 'tuzaklar') {
+                document.querySelectorAll('.tab-btn')[2].classList.add('active');
+                document.getElementById('tuzaklarPane').classList.add('active');
+            } else if (tabId === 'sozluk') {
+                document.querySelectorAll('.tab-btn')[3].classList.add('active');
+                document.getElementById('sozlukPane').classList.add('active');
+            }
+        }
+
+        function handleSearch() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.searchable-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (q === '' || text.includes(q)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

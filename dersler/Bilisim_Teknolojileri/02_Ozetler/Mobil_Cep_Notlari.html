@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BİLİŞİM TEKNOLOJİLERİ - AÖF Mobil Cep Notları</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 70px; }
+        header { background: linear-gradient(135deg, #1e1b4b, #0f172a); padding: 20px 16px; border-bottom: 1px solid var(--card-border); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); }
+        .badge { background: #4338ca; color: #e0e7ff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 9999px; text-transform: uppercase; }
+        h1 { font-size: 20px; font-weight: 800; margin-top: 6px; color: #fff; }
+        .search-box { margin-top: 12px; width: 100%; }
+        .search-input { width: 100%; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--card-border); background: #1e293b; color: #fff; font-size: 14px; outline: none; }
+        .search-input:focus { border-color: var(--primary); }
+        .tabs { display: flex; overflow-x: auto; background: #1e293b; padding: 6px 12px; gap: 8px; border-bottom: 1px solid var(--card-border); }
+        .tab-btn { background: transparent; border: none; color: var(--text-muted); padding: 8px 14px; font-size: 13px; font-weight: 600; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+        .tab-btn.active { background: var(--primary); color: #0f172a; font-weight: 700; }
+        .container { padding: 16px; max-width: 800px; margin: 0 auto; }
+        .section-pane { display: none; }
+        .section-pane.active { display: block; }
+        .unit-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        .unit-title { font-size: 16px; font-weight: 700; color: var(--primary); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px; }
+        .bullet-item { margin-bottom: 8px; font-size: 13.5px; display: flex; align-items: flex-start; gap: 8px; }
+        .bullet-dot { color: var(--accent); font-size: 16px; line-height: 1; }
+        .trap-card { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+        .trap-header { color: #f87171; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+        .trap-mistake { color: #fca5a5; font-size: 13px; margin-bottom: 4px; }
+        .trap-truth { color: #86efac; font-size: 13px; font-weight: 600; }
+        .dict-item { background: var(--card-bg); border-left: 3px solid var(--primary); padding: 10px 14px; margin-bottom: 10px; border-radius: 0 8px 8px 0; }
+        .dict-term { font-weight: 700; color: #fff; font-size: 14px; }
+        .dict-desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; border-top: 1px solid var(--card-border); padding: 10px; text-align: center; font-size: 11px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">YBS101U - AÖF YBS 1. SINIF</span>
+        <h1>BİLİŞİM TEKNOLOJİLERİ</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Konu, kavram veya tuzak ara..." oninput="handleSearch()">
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('vize')">📘 Vize (1-4)</button>
+        <button class="tab-btn" onclick="switchTab('final')">📗 Final (5-8)</button>
+        <button class="tab-btn" onclick="switchTab('tuzaklar')">⚠️ Sınav Tuzakları</button>
+        <button class="tab-btn" onclick="switchTab('sozluk')">📚 Sözlük & Formül</button>
+    </div>
+
+    <div class="container">
+        <!-- Vize Tab -->
+        <div id="vizePane" class="section-pane active">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 1: Bilişim Teknolojilerinin Gelişimi</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>DIKW Piramidi: Veri (Data - işlenmemiş ham gerçekler) -> Enformasyon (Information - anlamlandırılmış veri) -> Bilgi (Knowledge - deneyim ve bağlamla harmanlanmış enformasyon) -> Bilgelik (Wisdom - bilgiyi doğru ve etik kullanma yetisi).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İlk Mekanik Hesap Makineleri: Blaise Pascal (Pascaline - sadece toplama ve çıkarma), Gottfried Wilhelm Leibniz (Leibniz Çarkı - 4 işlem yapabilen).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Modern Bilgisayarın Babası: Charles Babbage (Fark Motoru ve Analitik Motor). Analitik Motor için ilk algoritmayı yazan Ada Lovelace ise 'İlk Bilgisayar Programcısı' kabul edilir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Herman Hollerith: 1890 ABD nüfus sayımı için delikli kart sistemini geliştirdi ve daha sonra IBM'e dönüşecek şirketin temelini attı.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>ENIAC (1946): J. Presper Eckert ve John Mauchly tarafından geliştirilen, ilk genel amaçlı, tamamen elektronik, ondalık tabanlı devasa bilgisayardır (Vakum tüpleri kullanılmıştır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>EDVAC ve Von Neumann: John von Neumann tarafından ortaya atılan 'Saklı Program' mimarisini (program ve verinin aynı bellekte tutulması) kullanan ilk tasarımdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>1. Kuşak (1940-1956): Vakum (Elektron) tüpleri kullanıldı. Çok büyük, çok ısı üreten, sık arızalanan ve makine diliyle programlanan makinelerdir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>2. Kuşak (1956-1963): Transistörün icadı (1947, Bell Labs - Shockley, Bardeen, Brattain). Bilgisayarlar küçüldü, hızlandı ve Assembly/FORTRAN gibi diller doğdu.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>3. Kuşak (1964-1971): Entegre Devreler (Mikroçipler - Jack Kilby ve Robert Noyce). Klavye, monitör ve işletim sistemleri kullanılmaya başlandı.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>4. Kuşak (1971-Günümüz): Mikroişlemciler (Intel 4004 - 1971). Tek bir silikon çip üzerine tüm CPU yerleştirildi; kişisel bilgisayarlar (PC) devrimi başladı.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>5. Kuşak (Gelecek/Günümüz): Yapay zeka, paralel işlemciler, kuantum hesaplama ve doğal dil işleme.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Moore Yasası: Intel'in kurucularından Gordon Moore'a göre bir mikroçip üzerindeki transistör sayısı yaklaşık her 18-24 ayda bir iki katına çıkacaktır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 2: Bilgisayar Donanımı</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Von Neumann Mimarisi 4 Temel Bölüm: Giriş Birimleri, Çıkış Birimleri, Merkezi İşlem Birimi (CPU) ve Bellek (Memory).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>CPU Bileşenleri: 1. Aritmetik ve Mantık Birimi (ALU - matematiksel ve mantıksal işlemleri yapar), 2. Denetim Birimi (Control Unit / CU - komutları çözer, diğer birimleri senkronize yönetir), 3. Yazmaçlar (Registers - CPU içindeki en küçük ve en hızlı geçici depolama alanları).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Saat Hızı (Clock Speed): İşlemcinin saniyede yaptığı döngü sayısını ifade eder (Hertz/GHz). 1 GHz = saniyede 1 milyar çevrim.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Bellek Hiyerarşisi (Hız ve Maliyet Sıralaması: En Hızlı ve En Pahalıdan En Yavaşa): Yazmaçlar (Registers) -> L1 Önbellek -> L2 Önbellek -> L3 Önbellek -> RAM -> SSD / Sabit Disk (HDD) -> Optik/Manyetik Teyp.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>RAM (Random Access Memory): Geçici (uçucu/volatile) ana bellektir. Elektrik kesildiğinde veriler silinir. DRAM (Dinamik - yenileme gerekir, ucuz, ana RAM) ve SRAM (Statik - yenileme gerekmez, çok hızlı, önbellek olarak kullanılır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>ROM (Read Only Memory): Kalıcı (uçucu olmayan/non-volatile) bellektir. Fabrika çıkışı BIOS/UEFI yazılımını tutar. Çeşitleri: PROM (bir kez programlanır), EPROM (morötesi ışıkla silinir), EEPROM (elektriksel olarak silinip yazılır, Flash bellekler bu yapıdadır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Giriş Birimleri: Klavye, fare, mikrofon, optik okuyucu, barkod okuyucu, tarayıcı.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Çıkış Birimleri: Monitör, yazıcı, hoparlör, projeksiyon.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Hem Giriş Hem Çıkış Birimleri: Dokunmatik ekranlar (Touchscreen), modemler, ağ kartları (NIC), ses kartları.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Veri Ölçü Birimleri (İkili Sistem - 2^10 = 1024 kuralı): 1 Byte = 8 Bit. 1 Kilobyte (KB) = 1024 Byte. 1 Megabyte (MB) = 1024 KB. 1 Gigabyte (GB) = 1024 MB. 1 Terabyte (TB) = 1024 GB. 1 Petabyte (PB) = 1024 TB.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 3: İşletim Sistemleri ve Dosya Yönetimi</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletim Sistemi (OS): Kullanıcı ve uygulama programları ile bilgisayar donanımı arasındaki iletişimi sağlayan, donanım kaynaklarını yöneten temel sistem yazılımıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletim Sisteminin 4 Temel Yönetim Fonksiyonu: 1. İşlemci Yönetimi (Process Management / Görev Zamanlama), 2. Bellek Yönetimi (RAM tahsisi ve Sanal Bellek), 3. Aygıt (Giriş/Çıkış) Yönetimi, 4. Dosya ve Depolama Yönetimi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Çekirdek (Kernel): İşletim sisteminin kalbidir; doğrudan donanım seviyesinde çalışır ve bellek, CPU ve aygıt erişimlerini yönetir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kabuk (Shell) ve Arayüz: Kullanıcının komut girdiği arayüzdür. CLI (Komut Satırı Arayüzü - terminal/bash/cmd) ve GUI (Grafiksel Kullanıcı Arayüzü - pencereler, ikonlar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Sanal Bellek (Virtual Memory): RAM yetersiz kaldığında sabit diskin (paging file / swap alanı) bir bölümünün geçici olarak RAM gibi kullanılması tekniğidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletim Sistemi Sınıfları: Tek Kullanıcılı - Tek Görevli (MS-DOS), Tek Kullanıcılı - Çok Görevli (Windows 10/11, macOS), Çok Kullanıcılı - Çok Görevli (Unix, Linux sunucular), Gerçek Zamanlı (RTOS - savunma sanayii, otomotiv, robotik).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Açık Kaynak Kodlu İşletim Sistemleri: Linux (1991'de Linus Torvalds tarafından geliştirilen çekirdek üzerine kuruludur). Dağıtımlar: Ubuntu, Fedora, Debian, Pardus (TÜBİTAK).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Dosya Sistemleri: FAT32 (maksimum 4 GB tek dosya boyutu sınırı vardır), NTFS (Windows standartı, güvenlik izinleri, şifreleme ve günlükleme destekler), exFAT (USB bellekler için evrensel), ext4 (modern Linux), APFS (Apple Dosya Sistemi).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Dosya Yolları: Mutlak Yol (Absolute Path - Kök dizinden başlar: 'C:\Users\Belgeler\rapor.docx'), Göreceli Yol (Relative Path - bulunulan dizinden başlar: '..\rapor.docx').</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 4: Uygulama Yazılımları</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Yazılım Türleri: Sistem Yazılımları (İşletim sistemleri, aygıt sürücüleri, BIOS) ve Uygulama Yazılımları (Kullanıcının belirli bir işi yapmasını sağlayan yazılımlar: Word, Excel, Photoshop, ERP).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kelime İşlemci (Word Processors): Metin oluşturma, düzenleme, biçimlendirme ve raporlama (MS Word, Google Docs, LibreOffice Writer).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Hesap Tablosu (Spreadsheet): Satır ve sütunlardan oluşan hücreler yapısı. Hücre adresi sütun harfi ve satır numarasından oluşur (örn: B4). Formüller daima '=' (eşittir) işareti ile başlar (MS Excel, Google Sheets, LibreOffice Calc).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Sunum Yazılımları: Slaytlar, animasyonlar ve görsel anlatım (PowerPoint, Keynote, Prezi).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Veritabanı Yönetim Sistemleri (DBMS): Büyük verilerin yapısal olarak saklanması ve SQL ile sorgulanması (MS Access, Oracle, MySQL, PostgreSQL).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Yazılım Lisanslama Modelleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ticari (Proprietary) Yazılım: Telif hakkı saklıdır, kaynak kod kapalıdır, ücret ödenerek kullanım lisansı alınır (MS Windows, Photoshop).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Açık Kaynak Kodlu (Open Source): Kaynak kodları herkese açıktır; incelenebilir, değiştirilebilir ve dağıtılabilir (Linux, LibreOffice, GIMP, Apache). GNU Genel Kamu Lisansı (GPL) yaygındır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Paylaşılan Yazılım (Shareware): Belirli bir süre (örneğin 30 gün) veya kısıtlı özellikle ücretsiz denenebilen, süre sonunda ücret talep eden yazılımlardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ücretsiz Yazılım (Freeware): Kullanımı tamamen ücretsiz olan ancak kaynak kodu kapalı olan yazılımlardır (Adobe Acrobat Reader).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Kamu Malı (Public Domain): Telif hakkı süresi dolmuş veya bilinçli olarak kamuya bağışlanmış, hiçbir kısıtlaması olmayan yazılımlar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>SaaS (Software as a Service - Hizmet Olarak Yazılım): Yazılımın bilgisayara kurulmadan doğrudan web tarayıcısı üzerinden bulut sunuculardan çalıştırılması modelidir (Office 365, Google Workspace, Canva).</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Tab -->
+        <div id="finalPane" class="section-pane">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 5: İnternet ve Mobil Teknolojiler</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İnternetin Doğuşu: 1969 yılında ABD Savunma Bakanlığı İleri Araştırma Projeleri Ajansı (DARPA) tarafından kurulan 'ARPANET' internetin ilk atasıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>TCP/IP: İnternetin ortak iletişim protokolü kümesidir. Vinton Cerf ve Robert Kahn tarafından geliştirilmiştir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>World Wide Web (WWW): 1989 yılında CERN laboratuvarlarında İngiliz bilim insanı Tim Berners-Lee tarafından bilgi paylaşımını kolaylaştırmak amacıyla icat edilmiştir (HTTP, HTML ve URL standartlarını belirlemiştir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Web 1.0 (Statik Web): Tek taraflı iletişim. Kullanıcı sadece okuyucudur, içerik üreticileri web yöneticileridir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Web 2.0 (Sosyal ve Etkileşimli Web): Çift taraflı iletişim. Kullanıcılar içerik üretir, paylaşır ve etkileşime girer (Bloglar, Wikipedia, Sosyal Medya, YouTube).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Web 3.0 (Semantik Web / Anlamsal Web): Makinelerin verileri anlayıp yorumlayabildiği, yapay zeka destekli ve merkeziyetsiz web yapısıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Mobil İletişim Nesilleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 1G: Analog sinyaller, sadece ses iletimi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 2G: Dijital iletişim (GSM), SMS (kısa mesaj) ve çok düşük hızlı veri transferi (GPRS/EDGE).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 3G: Mobil internet, görüntülü görüşme, veri hızında büyük artış (UMTS/HSPA).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 4G (LTE): Yüksek hızlı mobil genişbant, HD video akışı, düşük gecikme süresi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 5G: Ultra yüksek hız (Gigabit seviyesi), 1 milisaniyenin altında ultra düşük gecikme, kitlesel IoT bağlantı kapasitesi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Bulut Bilişim Hizmet Modelleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - IaaS (Altyapı): Sunucu, sanal makine, ağ ve depolama kiralama (AWS EC2, Google Compute Engine).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - PaaS (Platform): Geliştiricilere işletim sistemi, veritabanı ve çalışma ortamı sunma (Heroku, Google App Engine).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - SaaS (Yazılım): Son kullanıcılara internet üzerinden hazır yazılım sunma (Gmail, Dropbox, Salesforce).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 6: İletişim Alt Yapısı ve Güvenlik</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Ağ Türleri (Coğrafi Boyuta Göre): PAN (Kişisel Alan Ağı - Bluetooth), LAN (Yerel Alan Ağı - Ev/Ofis), CAN (Kampüs Alan Ağı - Üniversite), MAN (Metropol Alan Ağı - Şehir çapında), WAN (Geniş Alan Ağı - Şehirler/ülkeler arası; en büyük WAN İnternettir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Ağ Topolojileri: Yol (Bus - tek bir ana hat), Halka (Ring - jeton mantığı), Yıldız (Star - tüm cihazlar merkezi bir Switch/Hub'a bağlıdır, en yaygın kullanılanıdır), Ağaç (Tree), Örgü (Mesh - her düğüm diğerine bağlıdır, en yüksek hata toleransına sahiptir ancak en maliyetlisidir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Ağ Cihazları: Hub (Veriyi tüm portlara yayar/broadcast, verimsizdir), Switch (Anahtar - MAC adresine bakarak veriyi sadece ilgili hedefe iletir, Katman 2), Router (Yönlendirici - IP adreslerine bakarak farklı ağlar arasında yönlendirme yapar, Katman 3), Modem (Analog ve dijital sinyal dönüşümü yapar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>OSI Modeli (7 Katman - Aşağıdan Yukarıya): 1. Fiziksel, 2. Veri Bağı (Data Link - MAC adresi, Switch), 3. Ağ (Network - IP adresi, Router), 4. İletim (Transport - TCP, UDP), 5. Oturum (Session), 6. Sunum (Presentation - şifreleme, sıkıştırma, format), 7. Uygulama (Application - HTTP, FTP, SMTP, DNS).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Bilgi Güvenliğinin 3 Temel İlkesi (CIA Triad):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Gizlilik (Confidentiality): Bilgiye sadece yetkili kişilerin erişebilmesi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Bütünlük (Integrity): Bilginin yetkisiz kişilerce değiştirilmemesi, doğruluğunun korunması.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Erişilebilirlik (Availability): Yetkili kullanıcıların ihtiyaç duyduklarında bilgiye kesintisiz ulaşabilmesi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Zararlı Yazılımlar (Malware):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Virüs: Kendi kendine çalışamaz, bir çalıştırılabilir dosyaya veya programa bulaşarak kullanıcı etkisiyle yayılır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Solucan (Worm): İnsan müdahalesi olmadan ağ bağlantılarını kullanarak kendi kendini kopyalayıp yayılan bağımsız programdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Truva Atı (Trojan): Masum veya faydalı bir yazılım gibi görünüp arka planda arka kapı (backdoor) açan zararlıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ransomware (Fidye Yazılımı): Dosyaları şifreleyerek açılması için fidye talep eden zararlı yazılımdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Siber Saldırı Türleri: Oltalama (Phishing - sahte e-posta/web sitesiyle kimlik avı), DoS / DDoS (Hizmeti aksatmak için sunucuyu sahte trafik bombardımanına tutma), Ortadaki Adam (Man-in-the-Middle).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 7: Bilgisayar Programlama</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Algoritma: Bir problemin çözümü için adım adım tanımlanmış, sonlu, açık, net ve uygulanabilir işlem basamakları dizisidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Akış Şeması (Flowchart) Sembolleri: Oval (Başla / Dur), Paralelkenar (Veri Girişi / Çıkışı), Dikdörtgen (İşlem / Hesaplama / Atama), Eşkenar Dörtgen / Baklava (Karar / Karşılaştırma / Koşul).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Dillerin Düzeyleri (İnsan Diline Yakınlık):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Düşük Düzey Diller: Makine dili (0 ve 1'lerden oluşur, donanıma doğrudan bağlıdır) ve Assembly dili (sembolik kısaltmalar: MOV, ADD).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Orta Düzey Diller: C dili (hem sistem programlama hem kullanıcı uygulamaları için elverişlidir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Yüksek Düzey Diller: İnsan diline çok yakın, donanımdan bağımsız dillerdir (Python, Java, C#, C++).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Derleyici (Compiler) vs Yorumlayıcı (Interpreter):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Derleyici: Kaynak kodun tamamını tek seferde makine diline çevirir ve çalıştırılabilir bir dosya (.exe vb.) oluşturur (C, C++, Go). Kod derlendikten sonra çok hızlı çalışır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Yorumlayıcı: Kaynak kodları satır satır okur, anında makine diline çevirip çalıştırır (Python, JavaScript, PHP). Hata ayıklama kolaydır ancak çalışma hızı genellikle derlenen dillere göre yavaştır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Temel Programlama Yapıları: Değişkenler (int, float, string, boolean), Koşul Blokları (if-else, switch-case), Döngüler (for, while - belirli işlemi tekrar ettirme), Fonksiyonlar/Metotlar (kodun tekrar kullanılabilir modüllere ayrılması).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Nesne Yönelimli Programlama (OOP) Temel Kavramları: Sınıf (Class - şablon), Nesne (Object - sınıftan türetilen somut örnek), Kapsülleme (Encapsulation), Kalıtım (Inheritance - miras alma), Çok Biçimlilik (Polymorphism).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 8: Bilişim Teknolojilerinde Yeni Yönelimler</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Sanayi Devrimleri: Endüstri 1.0 (Buhar makinesi ve mekanizasyon), Endüstri 2.0 (Elektrik enerjisi ve seri üretim bantları), Endüstri 3.0 (Elektronik, bilgisayarlar ve otomasyon), Endüstri 4.0 (Siber-fiziksel sistemler, akıllı fabrikalar, IoT, yapay zeka).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Yapay Zeka (Artificial Intelligence - AI): İnsan zekasına özgü algılama, öğrenme, akıl yürütme ve problem çözme gibi işlevleri bilgisayarların gerçekleştirmesidir. Alan Turing (1950 - Turing Testi).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Makine Öğrenmesi (Machine Learning) Türleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Denetimli Öğrenme (Supervised Learning): Etiketli veriler kullanılarak sınıflandırma veya regresyon yapılması.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Denetimsiz Öğrenme (Unsupervised Learning): Etiketsiz veriler arasındaki gizli örüntülerin ve kümelerin bulunması (Kümeleme).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Pekiştirmeli Öğrenme (Reinforcement Learning): Ödül ve ceza mekanizmasıyla ajanın çevreyle etkileşime girerek en uygun kararları öğrenmesi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Büyük Veri (Big Data) 5V Bileşeni: Volume (Hacim / Boyut), Velocity (Hız / Veri üretim hızı), Variety (Çeşitlilik / Metin, ses, video), Veracity (Doğruluk / Güvenilirlik), Value (Değer / İş zekasına dönüşme).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Nesnelerin İnterneti (IoT - Internet of Things): Fiziksel nesnelerin (sensörler, ev aletleri, araçlar) internet üzerinden birbirleriyle ve merkezi sistemlerle veri alışverişi yapabilmesidir. Kavramı ilk kez 1999'da Kevin Ashton kullanmıştır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Blokzincir (Blockchain): Dağıtık, merkeziyetsiz, şifrelenmiş ve değiştirilemez bir dijital defter teknolojisidir. İlk olarak Bitcoin ile 2008'de 'Satoshi Nakamoto' rumuzlu kişi/grup tarafından ortaya atılmıştır. Veriler bloklar halinde kriptografik özetlerle (hash) birbirine zincirlenir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Genişletilmiş Gerçeklik: Sanal Gerçeklik (VR - tamamen sanal bir ortama girme), Artırılmış Gerçeklik (AR - gerçek dünya görüntüsünün üzerine dijital nesneler bindirme, örn: Pokemon Go), Karma Gerçeklik (MR).</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuzaklar Tab -->
+        <div id="tuzaklarPane" class="section-pane">
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #1: Veri (Data) ile Enformasyon (Information) Karışıklığı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Öğrenci işlenmemiş ham veriler ile anlamlı hale getirilmiş bilgiyi birbirine karıştırır.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Veri (Data) tek başına bir anlam ifade etmeyen, bağlamdan yoksun ham ölçümlerdir (örn: '28', 'Ali'). Enformasyon ise bu verilerin işlenip organize edilmiş halidir (örn: 'Ali'nin vize notu 28'dir').</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #2: RAM ile ROM Arasındaki 'Uçuculuk' (Volatility) Tuzağı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Sınavda 'Elektrik kesildiğinde silinmeyen bellek' sorulduğunda öğrencinin doğrudan RAM'i işaretlemesi.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> RAM geçicidir (volatile), elektrik kesilince içindeki veriler UÇAR. ROM ise kalıcıdır (non-volatile), elektrik kesilse bile içindeki BIOS/üretici verileri silinmez.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #3: ALU ile Control Unit (CU) Görev Çatışması</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Aritmetik Mantık Biriminin (ALU) bilgisayardaki tüm diğer parçalara komut gönderip onları yönettiğini düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Yönetim, senkronizasyon ve komut çözme işi Denetim Birimi'ne (Control Unit) aittir. ALU sadece dört işlem ve mantıksal (BÜYÜK, KÜÇÜK, EŞİT) karşılaştırmaları yapar.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #4: İşletim Sisteminin 'Uygulama Yazılımı' Olarak Düşünülmesi</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Windows veya Linux'un bir uygulama yazılımı olduğu yanılgısı.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> İşletim sistemleri temel 'SİSTEM YAZILIMI'dır. Uygulama yazılımları (Word, Excel, Photoshop) işletim sisteminin sunduğu altyapı üzerinde çalışır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #5: Hub ile Switch (Anahtar) Farkı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> İkisinin de yerel ağda bilgisayarları birbirine bağlayan aynı mantıkta kutular olduğunu zannetmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Hub aptaldır; bir porttan gelen veriyi bütün portlara yayınlar (Broadcast), ağda çakışma ve yavaşlık yaratır. Switch ise akıllıdır; gelen verinin MAC adresine bakar ve sadece ilgili hedef bilgisayara iletir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #6: OSI Modeli Katman Sırası ve Görevleri</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Ağ (Network) katmanında MAC adreslerinin kullanıldığını sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> MAC adresleri 2. Katman olan 'Veri Bağı (Data Link)' katmanında kullanılır. IP adresleri ve yönlendirme (routing) ise 3. Katman olan 'Ağ (Network)' katmanında gerçekleşir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #7: Virüs ile Solucan (Worm) Ayırımı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> İkisini eş anlamlı kabul etmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Virüs kendi başına çalışamaz; bir taşıyıcı dosyaya (.exe, .doc vb.) ihtiyaç duyar ve kullanıcının o dosyayı açması gerekir. Solucan (Worm) ise kullanıcı müdahalesi olmadan ağ üzerinden kendi kendini kopyalar ve yayılır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #8: Derleyici (Compiler) ile Yorumlayıcı (Interpreter) Farkı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Python'ın derleyici kullandığını, C'nin yorumlayıcı olduğunu düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> C, C++ derleyicidir (tüm kodu bir kerede makine diline çevirip .exe üretir). Python ve JavaScript ise yorumlayıcıdır (kodu satır satır okur ve hemen icra eder).</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #9: Açık Kaynak Kod (Open Source) ile Ücretsiz Yazılım (Freeware) Eşit Değildir</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Ücretsiz olan her yazılımın açık kaynak kodlu olduğunu sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Adobe Reader ücretsizdir (Freeware) ama kaynak kodları gizlidir (kapalı kaynak). Açık kaynak kodlu bir yazılım ise hem ücretsiz olabilir hem de kaynak kodları herkes tarafından görülebilir ve geliştirilebilir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #10: Web 2.0 ile Web 3.0 Ayrımı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Sosyal medyanın ve Wikipedia'nın Web 3.0 olduğunu varsaymak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Kullanıcıların içerik ürettiği blog, sosyal medya ve video paylaşım siteleri Web 2.0'dır. Web 3.0 ise semantik web (makinelerin anlamlandırdığı web), yapay zeka entegrasyonu ve merkeziyetsiz blokzincir yapılarıdır.</div>
+            </div>
+        </div>
+
+        <!-- Sozluk Tab -->
+        <div id="sozlukPane" class="section-pane">
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">DIKW Piramidi</div>
+                <div class="dict-desc">Veri (Data) -> Enformasyon (Information) -> Bilgi (Knowledge) -> Bilgelik (Wisdom) hiyerarşik bilgi piramididir.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Von Neumann Mimarisi</div>
+                <div class="dict-desc">Girdi, Çıktı, Bellek ve CPU'dan oluşan, komut ve verinin aynı hafızada tutulduğu modern bilgisayar mimarisi.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">ALU (Arithmetic Logic Unit)</div>
+                <div class="dict-desc">CPU içinde toplama, çıkarma gibi matematiksel ve AND, OR gibi mantıksal işlemleri yapan birim.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Control Unit (CU)</div>
+                <div class="dict-desc">İşlemcideki komutların getirilmesi, kodunun çözülmesi ve diğer donanımlara sinyal gönderilmesini yöneten kontrol birimi.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Yazmaç (Register)</div>
+                <div class="dict-desc">İşlemci içerisinde yer alan en hızlı ve en düşük kapasiteli geçici depolama gözleri.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Moore Yasası</div>
+                <div class="dict-desc">Bir entegre devredeki transistör sayısının yaklaşık her iki yılda bir ikiye katlanacağını öngören kural.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">RAM (Random Access Memory)</div>
+                <div class="dict-desc">Rastgele erişimli, elektrik kesilince içeriği silinen (uçucu), işlemcinin doğrudan haberleştiği ana bellek.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">ROM (Read Only Memory)</div>
+                <div class="dict-desc">Sadece okunabilir, elektrik kesilse dahi silinmeyen, BIOS gibi kritik başlangıç kodlarını barındıran kalıcı bellek.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Sanal Bellek (Virtual Memory)</div>
+                <div class="dict-desc">Fiziksel RAM dolduğunda işletim sisteminin sabit diskin bir bölümünü RAM gibi kullanması mekanizması.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Kernel (Çekirdek)</div>
+                <div class="dict-desc">İşletim sisteminin donanım ile doğrudan etkileşime giren, kaynak yönetimini sağlayan en temel çekirdek katmanı.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">GUI (Graphical User Interface)</div>
+                <div class="dict-desc">Kullanıcının bilgisayarla ikonlar, pencereler ve fare işaretçisi ile etkileşime girmesini sağlayan görsel arayüz.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">FAT32 / NTFS</div>
+                <div class="dict-desc">FAT32 en fazla 4GB tek dosya boyutunu desteklerken, NTFS güvenlik, izinler ve dosya şifreleme özellikleri sunar.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Shareware</div>
+                <div class="dict-desc">Belirli bir süre veya deneme amacıyla ücretsiz kullanılabilen, süre bitiminde lisans ücreti istenen yazılım türü.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Freeware</div>
+                <div class="dict-desc">Kullanımı tamamen ücretsiz olan ancak kaynak kodları gizli tutulan mülkiyetli yazılım.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">SaaS (Software as a Service)</div>
+                <div class="dict-desc">Yazılımların yerel bilgisayara yüklenmeden bulut sunucular üzerinden internet tarayıcısıyla kullanılması (örn: Office 365).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">ARPANET</div>
+                <div class="dict-desc">1969'da ABD Savunma Bakanlığı (DARPA) tarafından kurulan, internetin temeli sayılan ilk paket anahtarlamalı ağ.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">TCP/IP</div>
+                <div class="dict-desc">İnternet üzerindeki tüm cihazların haberleşmesini sağlayan standart iletişim protokol takımı (Transmission Control Protocol / Internet Protocol).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Semantik Web (Web 3.0)</div>
+                <div class="dict-desc">Web üzerindeki verilerin makineler ve yapay zeka ajanları tarafından anlamlandırılabildiği anlamsal ağ vizyonu.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">OSI 7 Katman Modeli</div>
+                <div class="dict-desc">Ağ haberleşmesini standartlaştıran 7 katman: Fiziksel, Veri Bağı, Ağ, İletim, Oturum, Sunum, Uygulama.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">MAC Adresi</div>
+                <div class="dict-desc">Ağ bağdaştırıcısına (Ethernet/Wi-Fi) üretici tarafından fiziksel olarak kazınan 48 bitlik benzersiz donanım kimlik adresi.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Router (Yönlendirici)</div>
+                <div class="dict-desc">Farklı ağlar (örn: yerel ağ ile internet) arasında IP adreslerini kullanarak paket yönlendirmesi yapan 3. katman cihazı.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Switch (Anahtar)</div>
+                <div class="dict-desc">Yerel ağdaki bilgisayarları bağlayan ve paketleri MAC adresine bakarak sadece hedef porta ileten 2. katman cihazı.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">CIA Triad</div>
+                <div class="dict-desc">Bilgi güvenliğinin üç sac ayağı: Confidentiality (Gizlilik), Integrity (Bütünlük) ve Availability (Erişilebilirlik).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Phishing (Oltalama)</div>
+                <div class="dict-desc">Güvenilir bir kurum (banka vb.) süsü verilerek kullanıcıların parola ve kredi kartı bilgilerini çalmayı hedefleyen sosyal mühendislik saldırısı.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Algoritma</div>
+                <div class="dict-desc">Bir sorunu çözmek veya belirli bir amaca ulaşmak için tasarlanan mantıksal adımlar bütünü.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Derleyici (Compiler)</div>
+                <div class="dict-desc">Yüksek seviyeli programlama diliyle yazılmış kodun tamamını bir kerede makine koduna çeviren program.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Büyük Veri 5V</div>
+                <div class="dict-desc">Volume (Hacim), Velocity (Hız), Variety (Çeşitlilik), Veracity (Doğruluk) ve Value (Değer).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">IoT (Internet of Things)</div>
+                <div class="dict-desc">Çeşitli sensörlerle donatılmış fiziksel nesnelerin internete bağlanarak veri alışverişi yapması.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Blokzincir (Blockchain)</div>
+                <div class="dict-desc">Merkezi bir otoriteye ihtiyaç duymadan, şifreli ve değiştirilemez bloklar halinde veri tutan dağıtık defter teknolojisi.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        🎓 AÖF YBS 1. Sınıf Başarı Ekosistemi • İnternetsiz Doğrudan Çalışır
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
+            
+            if (tabId === 'vize') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('vizePane').classList.add('active');
+            } else if (tabId === 'final') {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('finalPane').classList.add('active');
+            } else if (tabId === 'tuzaklar') {
+                document.querySelectorAll('.tab-btn')[2].classList.add('active');
+                document.getElementById('tuzaklarPane').classList.add('active');
+            } else if (tabId === 'sozluk') {
+                document.querySelectorAll('.tab-btn')[3].classList.add('active');
+                document.getElementById('sozlukPane').classList.add('active');
+            }
+        }
+
+        function handleSearch() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.searchable-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (q === '' || text.includes(q)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

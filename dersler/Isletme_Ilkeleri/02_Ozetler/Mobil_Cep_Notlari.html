@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İŞLETME İLKELERİ - AÖF Mobil Cep Notları</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 70px; }
+        header { background: linear-gradient(135deg, #1e1b4b, #0f172a); padding: 20px 16px; border-bottom: 1px solid var(--card-border); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); }
+        .badge { background: #4338ca; color: #e0e7ff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 9999px; text-transform: uppercase; }
+        h1 { font-size: 20px; font-weight: 800; margin-top: 6px; color: #fff; }
+        .search-box { margin-top: 12px; width: 100%; }
+        .search-input { width: 100%; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--card-border); background: #1e293b; color: #fff; font-size: 14px; outline: none; }
+        .search-input:focus { border-color: var(--primary); }
+        .tabs { display: flex; overflow-x: auto; background: #1e293b; padding: 6px 12px; gap: 8px; border-bottom: 1px solid var(--card-border); }
+        .tab-btn { background: transparent; border: none; color: var(--text-muted); padding: 8px 14px; font-size: 13px; font-weight: 600; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+        .tab-btn.active { background: var(--primary); color: #0f172a; font-weight: 700; }
+        .container { padding: 16px; max-width: 800px; margin: 0 auto; }
+        .section-pane { display: none; }
+        .section-pane.active { display: block; }
+        .unit-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        .unit-title { font-size: 16px; font-weight: 700; color: var(--primary); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px; }
+        .bullet-item { margin-bottom: 8px; font-size: 13.5px; display: flex; align-items: flex-start; gap: 8px; }
+        .bullet-dot { color: var(--accent); font-size: 16px; line-height: 1; }
+        .trap-card { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+        .trap-header { color: #f87171; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+        .trap-mistake { color: #fca5a5; font-size: 13px; margin-bottom: 4px; }
+        .trap-truth { color: #86efac; font-size: 13px; font-weight: 600; }
+        .dict-item { background: var(--card-bg); border-left: 3px solid var(--primary); padding: 10px 14px; margin-bottom: 10px; border-radius: 0 8px 8px 0; }
+        .dict-term { font-weight: 700; color: #fff; font-size: 14px; }
+        .dict-desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; border-top: 1px solid var(--card-border); padding: 10px; text-align: center; font-size: 11px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">İŞL101U - AÖF YBS 1. SINIF</span>
+        <h1>İŞLETME İLKELERİ</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Konu, kavram veya tuzak ara..." oninput="handleSearch()">
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('vize')">📘 Vize (1-4)</button>
+        <button class="tab-btn" onclick="switchTab('final')">📗 Final (5-8)</button>
+        <button class="tab-btn" onclick="switchTab('tuzaklar')">⚠️ Sınav Tuzakları</button>
+        <button class="tab-btn" onclick="switchTab('sozluk')">📚 Sözlük & Formül</button>
+    </div>
+
+    <div class="container">
+        <!-- Vize Tab -->
+        <div id="vizePane" class="section-pane active">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 1: İşletmecilik ve İşletmecilik ile İlgili Kavramlar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletmenin Tanımı: İnsanların ihtiyaçlarını karşılamak üzere mal ve hizmet üreten, kâr veya sosyal fayda amacı güden, finansal ve operasyonel risk üstlenen ekonomik birimdir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Maslow'un İhtiyaçlar Hiyerarşisi (Aşağıdan Yukarıya 5 Basamak): 1. Fizyolojik İhtiyaçlar (Açlık, susuzluk, barınma - temel taban), 2. Güvenlik İhtiyaçları (İş güvencesi, can ve mal güvenliği), 3. Sosyal / Ait Olma İhtiyaçları (Sevgi, arkadaşlık, gruba kabul), 4. Saygınlık İhtiyaçları (Statü, takdir, itibar), 5. Kendini Gerçekleştirme (Potansiyelini tam kullanma - ZİRVEDEKİ İHTİYAÇTIR).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>4 Temel Üretim Faktörü ve Karşılıkları (Gelirleri):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Emek (İşgücü): Karşılığı ÜCRET.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Sermaye (Finansal ve fiziki araçlar): Karşılığı FAİZ.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Doğal Kaynaklar (Toprak): Karşılığı RANT (Kira).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Girişimci (Müteşebbis): Karşılığı KÂR (Zarar riskini üstlenir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Girişimci vs Profesyonel Yönetici:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Girişimci: Fırsatları sezen, üretim faktörlerini bir araya getiren, sermaye koyan ve kâr/zarar riskini bizzat üstlenen kişidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Profesyonel Yönetici: Kendi sermayesini koymak zorunda olmayan, işletme sahibi adına işletmeyi sevk ve idare eden, emeği karşılığı ücret veya prim alan profesyoneldir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletme Başarı Ölçütleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Verimlilik (Productivity): Üretilen Çıktı / Kullanılan Girdi oranıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Etkililik (Effectiveness): İşletmenin önceden belirlenen amaç ve hedeflere ulaşma derecesidir ('Doğru işleri yapmak').</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - İktisadilik (Karlılık): Satış Hasılatı / Katlanılan Gider oranıdır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 2: İşletme ve Çevresi</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Açık Sistem Olarak İşletme: İşletme çevresinden girdi alan (hammadde, işgücü, bilgi, sermaye), bunları üretim sürecinde dönüştüren, çevreye çıktı sunan (mal, hizmet, atık) ve geri bildirimle kendini güncelleyen açık bir sistemdir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletmenin 3 Çevre Katmanı:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. İç Çevre (Örgütsel Çevre): İşletmenin doğrudan kontrol edebildiği iç faktörlerdir (Yönetim yapısı, kurum kültürü, insan kaynakları, finansal güç, fiziki tesisler).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Yakın Dış Çevre (Sektörel / Görev Çevresi): İşletmenin doğrudan etkileşimde bulunduğu paydaşlardır (Müşteriler, Rakipler, Tedarikçiler, İkame Ürünler, Finans Kuruluşları). Michael Porter'ın '5 Güç Modeli' bu çevreyi analiz eder.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Genel Dış Çevre (Makro Çevre - PESTLE): İşletmenin kontrol edemediği, uyum sağlamak zorunda olduğu geniş çevredir:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Politik / Yasal Faktörler (Hükümet politikaları, mevzuat, vergiler).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Ekonomik Faktörler (Enflasyon, döviz kuru, faiz oranları, millî gelir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Sosyo-Kültürel Faktörler (Demografi, yaşam tarzları, toplumsal değerler).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Teknolojik Faktörler (Otomasyon, yapay zeka, Ar-Ge yenilikleri).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Ekolojik / Doğal Faktörler (İklim değişikliği, hammadde kıtlığı).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Çevresel Belirsizlik: Çevredeki faktör sayısı (basit/karmaşık) ve değişim hızı (durağan/dinamik) ile belirlenir. 'Karmaşık ve Dinamik' çevreler en yüksek belirsizliğe sahiptir.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 3: İşletmelerin Sınıflandırılması ve Türleri</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Büyüklüklerine Göre İşletmeler (KOBİ Tanımı):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Mikro İşletme: 1 - 9 çalışan.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Küçük İşletme: 10 - 49 çalışan.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Orta Büyüklükteki İşletme: 50 - 249 çalışan.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Büyük İşletme: 250 ve üzeri çalışan.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Şahıs Şirketleri (Ortakların sorumluluğu kural olarak sınırsız ve müteselsildir):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Adi Şirket: Türk Borçlar Kanunu'na tabidir, tüzel kişiliği ve ticaret unvanı yoktur, ortaklar tüm malvarlıklarıyla sınırsız sorumludur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Kollektif Şirket: Yalnızca gerçek kişilerce kurulur, tüzel kişiliği vardır, ortakların sorumluluğu sınırsız ve zincirleme (müteselsil) sorumluluktur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Komandit Şirket: İki tür ortak vardır:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>    1. Komandite Ortak: Sorumluluğu sınırsız olan ortaktır (Yalnızca gerçek kişi olabilir, şirketi yönetir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>    2. Komanditer Ortak: Sorumluluğu koyduğu sermaye payı ile SINIRLI olan ortaktır (Tüzel kişi de olabilir, şirketi yönetemez).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Sermaye Şirketleri (Ortakların sorumluluğu koydukları sermaye ile sınırlıdır):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Anonim Şirket (A.Ş.): Sermayesi belirli ve paylara bölünmüş olan, asgari 50.000 TL sermaye ile kurulabilen, pay devri çok kolay olan şirkettir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Limited Şirket (Ltd. Şti.): Ortak sayısı en çok 50 olabilen, asgari 10.000 TL sermaye ile kurulan, pay devri noter ve ticaret sicil tesciline tabi olan şirkettir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kooperatifler: Amacı kâr elde etmek değil, ortaklarının meslek veya geçim ihtiyaçlarını karşılıklı yardım ve dayanışma yoluyla en uygun şartlarda karşılamaktır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 4: Sosyal Sorumluluk ve İş Ahlakı</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kurumsal Sosyal Sorumluluk (KSS): İşletmenin sadece yasalara uymakla kalmayıp, toplumun refahını artıracak ve çevreyi koruyacak gönüllü faaliyetlerde bulunmasıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Archie Carroll'ın Sosyal Sorumluluk Piramidi (4 Katman):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Ekonomik Sorumluluk (Taban): Kârlı olmak, istihdam yaratmak ve verimli üretmek (Tüm diğer sorumlulukların temelidir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Yasal Sorumluluk: Kanunlara, kurallara ve mevzuata eksiksiz uymak.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Etik Sorumluluk: Yasalarda açıkça yazmasa bile doğru, adil, dürüst ve ahlaki olanı yapmak.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  4. Filantropik (Gönüllü) Sorumluluk (Zirve): Eğitime, sanata, sağlığa bağış yapmak, topluma katkı sağlayan iyi bir kurumsal vatandaş olmak.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Paydaş (Stakeholder) Teorisi: İşletmenin kararlarından etkilenen veya işletmeyi etkileyen tüm kişi ve gruplardır (Hissedarlar, çalışanlar, müşteriler, tedarikçiler, yerel toplum, sendikalar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İş Ahlakı (İş Etiği): İş hayatındaki davranışların doğru veya yanlış, adil veya haksız olarak değerlendirilmesine rehberlik eden ahlaki ilkeler ve standartlardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Whistleblowing (İçeriden Bilgi İfşası / Etik Bildirim): Bir çalışanın şirket içinde yapılan yasadışı, hileli, tehlikeli veya etik dışı bir durumu yetkili mercilere veya kamuoyuna ifşa etmesidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Yeşil Yıkama (Greenwashing): Bir işletmenin gerçekte çevre dostu olmadığı halde kendini reklam ve pazarlama yoluyla çevreci ve sürdürülebilir gibi göstermesi aldatmacasıdır.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Tab -->
+        <div id="finalPane" class="section-pane">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 5: İşletmelerin Kuruluşu</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletme Kurma Süreci Kronolojik Adımları: Yatırım Düşüncesi -> Ön Fizibilite -> Fizibilite Araştırması (Yapılabilirlik Etüdü) -> Fizibilite Raporu ve Değerlendirme -> Yatırım Kararı -> Kesin Proje Hazırlama -> Tesisin Kurulması / Uygulama -> Deneme Üretimi -> Kesin İşletmeye Geçiş.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Fizibilite Araştırmasının 4 Temel Boyutu:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Ekonomik Etüt: Pazar araştırması, talep tahmini, pazar payı, kapasite seçimi ve ürün fiyatlandırma analizi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Teknik Etüt: Üretim teknolojisi, makine-ekipman seçimi, fabrika yerleşim planı, hammadde temin yöntemleri.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Finansal Etüt: Toplam yatırım tutarı, sermaye ihtiyacı, fon kaynakları, Net Bugünkü Değer (NBD), İç Verim Oranı (İVO), Kârlılık ve Başabaş Noktası analizi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  4. Yasal ve Örgütsel Etüt: Şirket türünün seçimi, resmi izinler, teşvikler, çevre etki değerlendirmesi (ÇED) ve organizasyon şeması.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kuruluş Yeri Faktörleri: Hammaddeye yakınlık (çabuk bozulan veya nakliyesi pahalı girdilerde), Pazara yakınlık (tüketiciye hızla ulaşma), İşgücü temini, Enerji ve su kaynakları, Ulaşım ve lojistik olanakları, Devlet teşvikleri.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Optimum Kuruluş Yeri: İşletmenin maliyetlerini en aza indirirken kârını ve verimliliğini en üst düzeye çıkaran ideal coğrafi konumdur.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 6: İşletmelerin Büyümesi</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşletmelerin Büyüme Nedenleri: Ölçek ekonomilerinden yararlanarak birim maliyeti düşürmek, pazar payını artırmak, finansal güç kazanmak, riski dağıtmak ve prestij sağlamak.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Büyüme Biçimleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - İç Büyüme: İşletmenin kendi özkaynakları, kâr birikimi (otofinansman) ve AR-GE'si ile mevcut kapasitesini artırması, yeni ürün veya pazarlar geliştirmesidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Dış Büyüme: Başka işletmelerle birleşme (Merger) veya başka şirketleri satın alma (Acquisition / M&A) yoluyla hızlı büyümedir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Büyüme Yönleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Yatay Büyüme: Aynı sektörde ve aynı üretim aşamasındaki rakipleri bünyesine katarak veya aynı ürünü üreten yeni fabrikalar açarak büyümedir (Örn: Bir tekstilcinin başka bir tekstil firmasını satın alması).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Dikey Büyüme:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>    * Geriye Doğru Dikey Büyüme: İşletmenin hammadde veya girdi tedarikçisini bünyesine katması (Örn: Lastik üreticisinin kauçuk çiftliği satın alması).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>    * İleriye Doğru Dikey Büyüme: İşletmenin dağıtım kanalını, toptancıları veya perakende satış mağazalarını bünyesine katması (Örn: Fabrikanın kendi mağaza zincirini açması).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Çapraz / Karma (Konglomerat) Büyüme: Birbirleriyle hiçbir teknolojik veya sektörel bağı bulunmayan tamamen farklı sektörlere girerek büyümedir (Holding yapılanmaları; amaç riski çeşitlendirmektir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İş Birlikleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Joint Venture (Ortak Girişim): İki veya daha fazla bağımsız şirketin belirli bir amaç doğrultusunda bir araya gelerek 'YENİ VE BAĞIMSIZ BİR TÜZEL KİŞİLİK (ŞİRKET)' kurmasıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Konsorsiyum: Büyük bir altyapı ihalesini (köprü, baraj) gerçekleştirmek üzere kurulan geçici işbirliğidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Kartel: Aynı sektördeki firmaların rekabeti ortadan kaldırmak için fiyat veya kota anlaşması yapmasıdır (Hukuken yasaktır).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 7: Küresel Çevrede İşletmecilik ve Rekabet</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Uluslararasılaşma Aşamaları (Düşük Riskten Yüksek Risklere Doğru Sıralama):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. İhracat (Exporting): Dolaylı veya doğrudan ihracat (En az riskli ve en yaygın ilk adımdır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Lisans Anlaşmaları ve Franchise Verme: Marka veya teknolojinin kullanım hakkını devretme.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Stratejik İttifaklar ve Ortak Girişimler (Joint Venture): Yerel bir ortakla ortak şirket kurma.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  4. Doğrudan Yabancı Yatırım (FDI): Yabancı ülkede sıfırdan tesis kurma (Greenfield yatırım) veya yerel bir şirketi doğrudan satın alma (En yüksek risk ve en yüksek kontrole sahiptir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Çokuluslu Şirketlerin Stratejik Yaklaşımları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Çok Uluslu (Multidomestic) Strateji: Her ülkenin yerel tüketici tercihlerine göre ürün ve pazarlamayı uyarlamak (Yüksek yerel uyum).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Küresel (Global) Strateji: Tüm dünyada standartlaştırılmış tek bir ürün satarak küresel maliyet avantajı yakalamak (Düşük yerel uyum, yüksek entegrasyon).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ulusötesi (Transnational) Strateji: Hem küresel ölçek ekonomilerini hem de yerel farklılıklara uyumu birleştiren karma stratejidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Michael Porter'ın 3 Jenerik Rekabet Stratejisi:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Maliyet Liderliği: Sektördeki en düşük maliyetle üretim yaparak geniş pazara ucuz fiyatla hakim olmak (Örn: BİM, IKEA).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Farklılaştırma: Müşterilerin benzersiz algıladığı üstün tasarım, kalite veya marka imajı yaratarak primli fiyat uygulamak (Örn: Apple, BMW).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Odaklanma (Niş) Stratejisi: Tüm pazara değil, dar bir tüketici veya coğrafya segmentine odaklanarak orada maliyet liderliği ya da farklılaştırma uygulamak (Örn: Ferrari, lüks saatler).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 8: İşletme Fonksiyonları</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Yönetim Fonksiyonları (POLC Döngüsü):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Planlama: Amaç ve hedeflerin belirlenmesi, bunlara nasıl ulaşılacağının kararlaştırılmasıdır (Yönetimin İLK fonksiyonudur).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Örgütleme (Organize Etme): İnsanların, görevlerin, yetkilerin ve fiziki kaynakların amaca uygun şekilde yapılandırılmasıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Yöneltme (Yürütme / Liderlik): Çalışanların motive edilmesi, liderlik yapılması ve ortak hedefe doğru yönlendirilmesidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Denetim (Kontrol): Standartların belirlenmesi, gerçekleşen sonuçların ölçülmesi, sapmaların tespit edilip düzeltici tedbirlerin alınmasıdır (Yönetimin SON fonksiyonudur).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Pazarlama Fonksiyonu ve Pazarlama Karması (4P):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Product (Ürün): Mal, hizmet, ambalaj, marka, garanti.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Price (Fiyat): Maliyet, rekabet ve tüketici algısına göre belirlenen bedel.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Place (Dağıtım): Ürünün üreticiden tüketiciye ulaştırıldığı kanallar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Promotion (Tutundurma): Reklam, halkla ilişkiler, kişisel satış, satış promosyonları.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Modern Hizmet Pazarlaması Ek 3P'si: People (İnsan), Process (Süreç), Physical Evidence (Fiziksel Kanıtlar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Finansman Fonksiyonu: İşletmenin ihtiyaç duyduğu fonları en uygun maliyetle temin etmesi ve bu fonları en verimli alanlara yatırmasıdır. Temel amaç işletmenin piyasa değerini maksimize etmektir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İnsan Kaynakları Yönetimi (İKY): İnsan kaynağının planlanması, iş analizi, personel seçimi, eğitim, performans değerleme ve ücret yönetimini kapsar.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuzaklar Tab -->
+        <div id="tuzaklarPane" class="section-pane">
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #1: Maslow Hiyerarşisinin Zirvesindeki İhtiyaç</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Zirvede 'Saygınlık' veya 'Sosyal' ihtiyaçların yer aldığını düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Maslow hiyerarşisinin en tepesindeki (zirvedeki) 5. basamak KENDİNİ GERÇEKLEŞTİRME (Self-Actualization) ihtiyacıdır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #2: Girişimci ile Yönetici (Profesyonel Yönetici) Ayrımı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Yöneticinin de kâr ve zarara doğrudan ortak olduğunu varsaymak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Girişimci sermayesini koyar ve kâr/zarar riskini bizzat üstlenir. Profesyonel yönetici ise başkası adına işletmeyi yönetir ve emeği karşılığı maaş/ücret alır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #3: Komandite Ortak ile Komanditer Ortak Sorumluluk Farkı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> İkisinin sorumluluklarını birbirine karıştırmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Komandite ortak: Sorumluluğu SINIRSIZDIR, gerçek kişi olmak zorundadır ve şirketi yönetir. Komanditer ortak: Sorumluluğu koyduğu sermaye ile SINIRLIDIR ve şirketi yönetemez.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #4: Anonim Şirket ile Limited Şirket Farkları</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Limited şirkette pay devrinin elden serbestçe yapılabileceğini sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Anonim şirkette hisse devri çok kolay ve serbesttir. Limited şirkette ise ortak sayısı en çok 50'dir ve pay devri genel kurul onayı, noter ve ticaret sicil tesciline tabidir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #5: Carroll'ın Sosyal Sorumluluk Piramidinin Tabanı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Piramidin temelinde 'Yasal' veya 'Ahlaki' sorumluluğun olduğunu sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Archie Carroll'a göre piramidin en tabanında EKONOMİK SORUMLULUK (kârlı olmak ve ayakta kalmak) yer alır. İşletme kâr etmezse diğer sorumlulukları yerine getiremez.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #6: Joint Venture (Ortak Girişim) ile Konsorsiyum Farkı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Konsorsiyumda da yeni bir tüzel şirket kurulduğunu zannetmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Joint Venture'da ortaklar bir araya gelerek YENİ BİR TÜZEL KİŞİLİK (ayrı bir şirket) kurarlar. Konsorsiyumda ise büyük bir iş için sadece sözleşmeye dayalı geçici ortaklık kurulur, yeni bir şirket doğmaz.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #7: Geriye Doğru Dikey Büyüme ile İleriye Doğru Dikey Büyüme</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Kendi mağaza zincirini açmayı geriye doğru büyüme sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Hammadde ve girdi tedarikçisine doğru gitmek GERİYE doğru dikey büyümedir. Dağıtım kanallarına ve nihai satış mağazalarına doğru gitmek İLERİYE doğru dikey büyümedir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #8: Konglomerat (Çapraz / Karma) Büyüme Amacı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Konglomerat büyümenin aynı sektörde pazar payı kazanmak için yapıldığını düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Konglomerat büyüme, birbiriyle HİÇBİR İLİŞKİSİ OLMAYAN tamamen farklı sektörlere girilmesidir (Örn: İnşaat firmasının gıda ve bankacılık sektörüne girmesi). Temel amaç sektörel riskleri dağıtmaktır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #9: Yönetim Fonksiyonlarının Sıralaması (POLC)</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Yönetimin ilk fonksiyonunun örgütleme veya yöneltme olduğunu sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Yönetimin İLK fonksiyonu PLANLAMA, SON fonksiyonu ise DENETİM'dir (Kontrol). Planlama olmadan hiçbir yönetim faaliyeti başlayamaz.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #10: Pazarlamanın 4P'sindeki 'Tutundurma' (Promotion) Kapsamı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Tutundurmanın sadece fiyat indirimi yapmak olduğunu düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Tutundurma (Promotion); Reklam, Halkla İlişkiler (PR), Kişisel Satış ve Satış Geliştirme (promosyon) unsurlarını içeren geniş bir iletişim karmasıdır.</div>
+            </div>
+        </div>
+
+        <!-- Sozluk Tab -->
+        <div id="sozlukPane" class="section-pane">
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Verimlilik Formülü</div>
+                <div class="dict-desc">Verimlilik = Üretilen Çıktı / Tüketilen Girdi.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Etkililik (Effectiveness)</div>
+                <div class="dict-desc">İşletmenin önceden belirlediği stratejik hedeflere ve amaçlara ulaşma derecesidir.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">İktisadilik (Karlılık)</div>
+                <div class="dict-desc">İktisadilik = Satış Hasılatı / Katlanılan Toplam Maliyet.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Maslow İhtiyaçlar Piramidi</div>
+                <div class="dict-desc">Fizyolojik -> Güvenlik -> Sosyal -> Saygınlık -> Kendini Gerçekleştirme.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Üretim Faktörleri ve Getirileri</div>
+                <div class="dict-desc">Emek -> Ücret, Sermaye -> Faiz, Doğal Kaynaklar -> Rant, Girişimci -> Kâr.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Carroll KSS Piramidi</div>
+                <div class="dict-desc">Ekonomik (Taban) -> Yasal -> Etik -> Filantropik/Gönüllü (Zirve).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">PESTLE Analizi</div>
+                <div class="dict-desc">Politik, Ekonomik, Sosyo-kültürel, Teknolojik, Yasal, Ekolojik makro çevre faktörleri analizi.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Porter'ın 5 Güç Modeli</div>
+                <div class="dict-desc">Sektörel rekabet, potansiyel rakiplerin tehdidi, tedarikçilerin pazarlık gücü, alıcıların pazarlık gücü, ikame ürünlerin tehdidi.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">KOBİ Çalışan Sınırları</div>
+                <div class="dict-desc">Mikro: 1-9, Küçük: 10-49, Orta: 50-249 çalışan.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Joint Venture (Ortak Girişim)</div>
+                <div class="dict-desc">İki şirketin belirli bir amaçla bir araya gelerek yeni bir tüzel kişilik oluşturması.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Whistleblowing</div>
+                <div class="dict-desc">Kurum içindeki yasadışı veya etik dışı eylemlerin yetkililere ihbar edilmesi.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Greenwashing (Yeşil Yıkama)</div>
+                <div class="dict-desc">Çevre dostu olmayan ürünlerin aldatıcı reklamlarla çevreci gibi pazarlanması.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Michael Porter Jenerik Stratejileri</div>
+                <div class="dict-desc">Maliyet Liderliği, Farklılaştırma, Odaklanma.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Pazarlamanın 4P'si</div>
+                <div class="dict-desc">Product (Ürün), Price (Fiyat), Place (Dağıtım), Promotion (Tutundurma).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Yönetim Fonksiyonları (POLC)</div>
+                <div class="dict-desc">Planlama, Örgütleme, Yöneltme, Denetim.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        🎓 AÖF YBS 1. Sınıf Başarı Ekosistemi • İnternetsiz Doğrudan Çalışır
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
+            
+            if (tabId === 'vize') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('vizePane').classList.add('active');
+            } else if (tabId === 'final') {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('finalPane').classList.add('active');
+            } else if (tabId === 'tuzaklar') {
+                document.querySelectorAll('.tab-btn')[2].classList.add('active');
+                document.getElementById('tuzaklarPane').classList.add('active');
+            } else if (tabId === 'sozluk') {
+                document.querySelectorAll('.tab-btn')[3].classList.add('active');
+                document.getElementById('sozlukPane').classList.add('active');
+            }
+        }
+
+        function handleSearch() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.searchable-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (q === '' || text.includes(q)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

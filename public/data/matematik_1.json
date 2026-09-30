@@ -1,0 +1,1690 @@
+{
+  "course_name": "MATEMATİK I",
+  "course_code": "MAT105U",
+  "faculty": "İşletme / İktisat Fakültesi - Yönetim Bilişim Sistemleri (YBS)",
+  "term": "1. Sınıf Güz Dönemi",
+  "description": "Kümeler ve sayılar, fonksiyonlar ve grafikleri, polinomlar, üstel ve logaritmik fonksiyonlar, limit, süreklilik, türev, matrisler, determinantlar, çok değişkenli fonksiyonlar ve iktisadi uygulamalar.",
+  "units": [
+    {
+      "unit_number": 1,
+      "title": "Kümeler ve Sayılar",
+      "is_vize": true,
+      "key_topics": [
+        "Kümelerde İşlemler",
+        "Alt Küme ve Özalt Küme",
+        "De Morgan Kuralları",
+        "Sayı Kümeleri",
+        "Mutlak Değer"
+      ],
+      "hap_bilgiler": [
+        "Alt Küme Sayısı Formülü: n elemanlı bir kümenin alt küme sayısı 2^n, kendisi hariç özalt küme sayısı ise 2^n - 1'dir. Örn: 4 elemanlı bir kümenin 2^4 = 16 alt kümesi, 15 özalt kümesi vardır.",
+        "Birleşim ve Kesişim Eleman Sayısı: s(A ∪ B) = s(A) + s(B) - s(A ∩ B). Eğer A ve B ayrık kümeler ise (kesişimleri boş küme) s(A ∪ B) = s(A) + s(B)'dir.",
+        "De Morgan Kuralları: (A ∪ B)' = A' ∩ B' ve (A ∩ B)' = A' ∪ B'. Birleşimin tümleyeni tümleyenlerin kesişimine eşittir.",
+        "Sayı Kümeleri Hiyerarşisi: N (Doğal Sayılar: {0,1,2,...}) ⊂ Z (Tam Sayılar: {...,-2,-1,0,1,2,...}) ⊂ Q (Rasyonel Sayılar: a/b şeklinde yazılabilenler) ⊂ R (Gerçel/Reel Sayılar).",
+        "İrrasyonel Sayılar (Q' veya I): a/b şeklinde yazılamayan, virgülden sonra devretmeksizin sonsuza giden sayılardır. √2, √3, pi (π ≈ 3.14159) ve e (≈ 2.71828) en klasik irrasyonel sayılardır.",
+        "Mutlak Değer Özellikleri:",
+        "  - Her x gerçel sayısı için |x| ≥ 0'dır.",
+        "  - |-x| = |x| ve |x * y| = |x| * |y|.",
+        "  - Üçgen Eşitsizliği: |x + y| ≤ |x| + |y|.",
+        "  - a > 0 olmak üzere; |x| < a ise -a < x < a'dır. |x| > a ise x > a veya x < -a'dır."
+      ]
+    },
+    {
+      "unit_number": 2,
+      "title": "Fonksiyonlar",
+      "is_vize": true,
+      "key_topics": [
+        "Fonksiyon Tanımı ve Kümeleri",
+        "Bire-Bir ve Örtenlik",
+        "Ters Fonksiyon",
+        "Bileşke İşlemi",
+        "Tek ve Çift Fonksiyonlar"
+      ],
+      "hap_bilgiler": [
+        "Fonksiyon Olma Şartı: f: A -> B için tanım kümesi A'nın her elemanı değer kümesi B'den yalnız bir elemanla eşleşmelidir. A'da açıkta eleman kalamaz, ancak B'de kalabilir.",
+        "Bire-Bir (Injective) Fonksiyon: Farklı elemanların görüntüleri de farklı olmalıdır (x1 ≠ x2 => f(x1) ≠ f(x2)). Grafiğe çizilen yatay doğrular grafiği en fazla bir noktada kesmelidir (Yatay Doğru Testi).",
+        "Örten (Surjective) Fonksiyon: Değer kümesinde açıkta hiç eleman kalmamasıdır (f(A) = B). Değer kümesinde açıkta eleman kalırsa fonksiyona 'İçine Fonksiyon' denir.",
+        "Ters Fonksiyon (f^-1): Bir fonksiyonun tersinin olabilmesi için fonksiyonun MUTLAKA hem BİRE-BİR hem de ÖRTEN (Biyektif) olması şarttır! y = f(x) <=> x = f^-1(y). Bir fonksiyonun grafiği ile tersinin grafiği y = x doğrusuna göre simetriktir.",
+        "Doğrusal Fonksiyonun Tersi: f(x) = ax + b ise f^-1(x) = (x - b) / a'dır. Örn: f(x) = 2x + 6 => f^-1(x) = (x - 6) / 2.",
+        "Bileşke Fonksiyon: (f o g)(x) = f(g(x)). Bileşke işleminin değişme özelliği yoktur: (f o g) ≠ (g o f). Ancak birleşme özelliği vardır: f o (g o h) = (f o g) o h.",
+        "Çift Fonksiyon: f(-x) = f(x) olan fonksiyondur. Grafiği y eksenine göre simetriktir (Örn: f(x) = x^2, f(x) = cos x, f(x) = |x|).",
+        "Tek Fonksiyon: f(-x) = -f(x) olan fonksiyondur. Grafiği orijine (0,0) göre simetriktir (Örn: f(x) = x^3, f(x) = sin x, f(x) = x)."
+      ]
+    },
+    {
+      "unit_number": 3,
+      "title": "Polinom Fonksiyonlar",
+      "is_vize": true,
+      "key_topics": [
+        "Doğrusal Fonksiyonlar ve Eğim",
+        "Paralel ve Dik Doğrular",
+        "İkinci Dereceden Fonksiyonlar (Parabol)",
+        "Tepe Noktası ve Diskriminant"
+      ],
+      "hap_bilgiler": [
+        "Doğrunun Eğimi (m): A(x1, y1) ve B(x2, y2) noktalarından geçen doğrunun eğimi m = (y2 - y1) / (x2 - x1)'dir. y = mx + n denkleminde x'in katsayısı m eğimdir, n ise doğrunun y eksenini kestiği noktadır.",
+        "Paralel Doğrular: Eğilimleri birbirine eşittir (d1 // d2 => m1 = m2).",
+        "Dik Doğrular: Birbirine dik iki doğrunun eğimleri çarpımı -1'dir (d1 ⊥ d2 => m1 * m2 = -1 => m2 = -1 / m1).",
+        "İkinci Dereceden Fonksiyon (Parabol): f(x) = ax^2 + bx + c (a ≠ 0).",
+        "  - a > 0 ise kollar YUKARI doğrudur ve fonksiyon tepe noktasında en küçük (MİNİMUM) değerini alır.",
+        "  - a < 0 ise kollar AŞAĞI doğrudur ve fonksiyon tepe noktasında en büyük (MAKSİMUM) değerini alır.",
+        "Tepe Noktası Koordinatları T(r, k):",
+        "  - r = -b / (2a) (Simetri ekseni x = r doğrusudur).",
+        "  - k = f(r) = (4ac - b^2) / (4a) (Fonksiyonun alabileceği en büyük veya en küçük değerdir).",
+        "Diskriminant (Δ = b^2 - 4ac):",
+        "  - Δ > 0 ise parabol x eksenini iki farklı noktada keser (2 gerçel kök vardır).",
+        "  - Δ = 0 ise parabol x eksenine teğettir (çakışık/çift katlı tek gerçel kök vardır: x1 = x2 = -b / (2a)).",
+        "  - Δ < 0 ise parabol x eksenini hiç kesmez (gerçel kök yoktur).",
+        "Kökler Bağıntıları: Kökler toplamı x1 + x2 = -b / a, Kökler çarpımı x1 * x2 = c / a."
+      ]
+    },
+    {
+      "unit_number": 4,
+      "title": "Üstel ve Logaritmik Fonksiyonlar",
+      "is_vize": true,
+      "key_topics": [
+        "Üstel Fonksiyon Tanımı",
+        "Doğal Üstel Fonksiyon (e^x)",
+        "Logaritma Tanımı ve Özellikleri",
+        "Doğal Logaritma (ln x)"
+      ],
+      "hap_bilgiler": [
+        "Üstel Fonksiyon: f(x) = a^x (a > 0 ve a ≠ 1).",
+        "  - a > 1 ise fonksiyon artandır.",
+        "  - 0 < a < 1 ise fonksiyon azalandır.",
+        "  - Tanım kümesi tüm gerçel sayılar (-∞, +∞), görüntü kümesi pozitif gerçel sayılardır (0, +∞). Grafiği daima (0, 1) noktasından geçer.",
+        "Doğal Üstel Fonksiyon: Tabanı Euler sayısı (e ≈ 2.71828) olan f(x) = e^x fonksiyonudur.",
+        "Logaritma Fonksiyonu: Üstel fonksiyonun tersidir. y = log_a(x) <=> a^y = x (x > 0, a > 0, a ≠ 1). Logaritması alınan sayı x daima KESİNLİKLE pozitif (> 0) olmalıdır!",
+        "Temel Logaritma Kuralları:",
+        "  - log_a(1) = 0 ve log_a(a) = 1.",
+        "  - log_a(x * y) = log_a(x) + log_a(y) (Çarpımın logaritması toplamdır).",
+        "  - log_a(x / y) = log_a(x) - log_a(y) (Bölümün logaritması farktır).",
+        "  - log_a(x^k) = k * log_a(x) (Kuvvet başa katsayı olarak düşer).",
+        "  - Taban Değiştirme Kuralı: log_a(b) = ln(b) / ln(a) = log(b) / log(a).",
+        "Doğal Logaritma (ln): Tabanı e olan logaritmadır. ln(x) = log_e(x). ln(e) = 1, ln(1) = 0, ln(e^k) = k."
+      ]
+    },
+    {
+      "unit_number": 5,
+      "title": "Limit, Süreklilik ve Türev",
+      "is_vize": false,
+      "key_topics": [
+        "Limit Tanımı ve Özellikleri",
+        "0/0 Belirsizliği ve L'Hopital",
+        "Süreklilik Şartları",
+        "Türev Tanımı ve Geometrik Anlamı",
+        "Temel Türev Alma Kuralları"
+      ],
+      "hap_bilgiler": [
+        "Limit Varlık Şartı: Bir f(x) fonksiyonunun x = a noktasında limitinin olması için sağdan ve soldan limitlerinin birbirine eşit olması gerekir: lim_{x->a^+} f(x) = lim_{x->a^-} f(x) = L.",
+        "0/0 Belirsizliği ve L'Hopital Kuralı: lim_{x->a} f(x)/g(x) işleminde 0/0 çıkarsa, pay ve paydanın ayrı ayrı türevi alınarak limit tekrar hesaplanır: lim [f'(x) / g'(x)].",
+        "Süreklilik Şartları (3 Şart Birlikte Sağlanmalı): 1. f(a) tanımlı olmalıdır, 2. x -> a iken limit var olmalıdır, 3. lim_{x->a} f(x) = f(a) olmalıdır.",
+        "Türevin Geometrik Anlamı: f'(x0), f(x) eğrisine x0 noktasında çizilen teğet doğrusunun eğimine eşittir (mt = f'(x0)).",
+        "Temel Türev Alma Kuralları:",
+        "  - Sabit sayının türevi sıfırdır: (c)' = 0.",
+        "  - Kuvvet kuralı: (x^n)' = n * x^(n-1). Örn: (x^3)' = 3x^2, (5x^4)' = 20x^3, (x)' = 1.",
+        "  - Çarpımın Türevi: (f * g)' = f' * g + f * g'.",
+        "  - Bölümün Türevi: (f / g)' = (f' * g - f * g') / (g^2).",
+        "  - Zincir Kuralı (Bileşke Türevi): [f(g(x))]' = f'(g(x)) * g'(x).",
+        "  - Üstel ve Logaritmik Türevler: (e^x)' = e^x, (e^(kx))' = k * e^(kx), (ln x)' = 1 / x, (ln(g(x)))' = g'(x) / g(x)."
+      ]
+    },
+    {
+      "unit_number": 6,
+      "title": "Matrisler ve Doğrusal Denklem Sistemleri",
+      "is_vize": false,
+      "key_topics": [
+        "Matris Boyutu ve Türleri",
+        "Matris Çarpımı Kuralları",
+        "Determinant Hesaplama (2x2 ve 3x3)",
+        "Ters Matris ve Cramer Kuralı"
+      ],
+      "hap_bilgiler": [
+        "Matris Boyutu: m satır ve n sütundan oluşan tabloya m x n matris denir. Kare matriste satır ve sütun sayısı eşittir (m = n).",
+        "Matris Çarpımı Şartı: A_(m x k) ile B_(k x n) çarpılabilir ve sonuç C_(m x n) boyutunda olur. Yani birinci matrisin SÜTUN sayısı, ikinci matrisin SATIR sayısına eşit olmak zorundadır! Matris çarpımında değişme özelliği yoktur: A * B ≠ B * A.",
+        "Birim Matris (I): Asal köşegeni 1, diğer tüm elemanları 0 olan kare matristir. Her A matrisi için A * I = I * A = A'dır.",
+        "2x2 Determinant: det |a b; c d| = a * d - b * c (Asal köşegen çarpımı eksi yedek köşegen çarpımı).",
+        "Determinant Özellikleri: det(A^T) = det(A), det(A * B) = det(A) * det(B). Bir matrisin iki satırı veya sütunu aynıysa ya da orantılıysa determinantı 0'dır.",
+        "Ters Matris (A^-1): Bir kare matrisin tersinin olabilmesi için det(A) ≠ 0 (tekil olmayan / regüler) olması şarttır! Eğer det(A) = 0 ise matris tektir (singüler) ve tersi yoktur!",
+        "2x2 Ters Matris Formülü: A = [a b; c d] ise A^-1 = (1 / det(A)) * [d -b; -c a]. Asal köşegen yer değiştirir, yedek köşegen işaret değiştirir.",
+        "Cramer Kuralı: Ax = b sisteminde xi = det(Ai) / det(A). Ai matrisi, katsayılar matrisinin i. sütunu yerine b sonuç sütununun yazılmasıyla elde edilir."
+      ]
+    },
+    {
+      "unit_number": 7,
+      "title": "Çok Değişkenli Fonksiyonlar",
+      "is_vize": false,
+      "key_topics": [
+        "İki Değişkenli Fonksiyonlar",
+        "Birinci Mertebeden Kısmi Türevler",
+        "Schwarz Teoremi",
+        "İkinci Mertebeden Kısmi Türevler ve Ekstremum"
+      ],
+      "hap_bilgiler": [
+        "Çok Değişkenli Fonksiyon: z = f(x, y) şeklinde birden fazla bağımsız değişkene sahip fonksiyonlardır.",
+        "Kısmi Türev Mantığı:",
+        "  - x'e göre kısmi türev (∂f/∂x veya fx): y bir sabit sayı kabul edilerek x'e göre türev alınır.",
+        "  - y'ye göre kısmi türev (∂f/∂y veya fy): x bir sabit sayı kabul edilerek y'ye göre türev alınır.",
+        "Schwarz Teoremi (Karma Kısmi Türevlerin Eşitliği): Eğer sürekli türevlenebiliyorsa fxy = fyx'tir. Yani önce x'e sonra y'ye türev almak ile önce y'ye sonra x'e türev almak aynı sonucu verir.",
+        "İki Değişkenli Fonksiyonlarda Yerel Ekstremum (Maksimum/Minimum) Bulma Adımları:",
+        "  1. Kritik Nokta: fx = 0 ve fy = 0 denklemleri ortak çözülerek kritik (x0, y0) noktaları bulunur.",
+        "  2. Hessian Determinantı (D): D = fxx * fyy - (fxy)^2 hesaplanır.",
+        "     - Eğer D > 0 ve fxx > 0 ise fonksiyon (x0, y0) noktasında bir YEREL MİNİMUM'a sahiptir.",
+        "     - Eğer D > 0 ve fxx < 0 ise fonksiyon (x0, y0) noktasında bir YEREL MAKSİMUM'a sahiptir.",
+        "     - Eğer D < 0 ise nokta bir EYER (SEMER) NOKTASI'dır (ne maksimum ne minimumdur).",
+        "     - Eğer D = 0 ise test sonuçsuz kalır, başka yöntemlere bakılır."
+      ]
+    },
+    {
+      "unit_number": 8,
+      "title": "İktisadi Uygulamalar",
+      "is_vize": false,
+      "key_topics": [
+        "Piyasa Dengesi (Arz-Talep)",
+        "Toplam ve Marjinal Hasılat",
+        "Toplam ve Marjinal Maliyet",
+        "Kâr Maksimizasyonu Kuralı (MR=MC)",
+        "Talebin Fiyat Esnekliği"
+      ],
+      "hap_bilgiler": [
+        "Piyasa Denge Fiyatı ve Miktarı: Talep (Qd) ve Arz (Qs) fonksiyonları eşitlenerek bulunur: Qd = Qs => P* (denge fiyatı) bulunur, yerine konularak Q* (denge miktarı) elde edilir.",
+        "Hasılat Fonksiyonları:",
+        "  - Toplam Hasılat (TR - Total Revenue): TR = P * Q (Fiyat çarpı miktar).",
+        "  - Marjinal Hasılat (MR - Marginal Revenue): Üretilen/satılan son birimin toplam hasılata katkısıdır. Toplam Hasılatın Q'ya göre 1. türevidir: MR = d(TR) / dQ.",
+        "Maliyet Fonksiyonları:",
+        "  - Toplam Maliyet (TC - Total Cost): TC = TFC (Sabit Maliyet) + TVC (Değişken Maliyet).",
+        "  - Ortalama Maliyet (AC - Average Cost): AC = TC / Q.",
+        "  - Marjinal Maliyet (MC - Marginal Cost): Bir birim ek üretimin maliyetidir. Toplam Maliyetin Q'ya göre 1. türevidir: MC = d(TC) / dQ.",
+        "Kâr Maksimizasyonu Kuralı: Toplam Kâr (π) = TR - TC. Kârın maksimum olması için 1. türevin sıfır olması gerekir: dπ/dQ = 0 => MR - MC = 0 => MR = MC! Yani kârı maksimize eden üretim düzeyinde Marjinal Hasılat daima Marjinal Maliyete eşit olmalıdır.",
+        "Talebin Fiyat Esnekliği Formülü: ε = (dQ / dP) * (P / Q). Q'nun fiyata göre türevi ile P/Q oranının çarpımıdır."
+      ]
+    }
+  ],
+  "sinav_tuzaklari": [
+    {
+      "id": 1,
+      "title": "Kümelerde Alt Küme ile Özalt Küme Sayısı Karışıklığı",
+      "mistake": "Özalt küme sorulduğunda doğrudan 2^n hesaplayıp işaretlemek.",
+      "truth": "Alt küme sayısı 2^n'dir; ancak ÖZALT KÜME kümenin kendisi hariç tutulduğu için 2^n - 1'dir. 1 çıkarmayı kesinlikle unutmamalısın.",
+      "tip": "Özalt küme = 2^n - 1 (Kendini çıkar)."
+    },
+    {
+      "id": 2,
+      "title": "Rasyonel Sayı ile İrrasyonel Sayı Ayrımı (Karekök Tuzağı)",
+      "mistake": "Karekök içindeki her sayının irrasyonel olduğunu düşünmek (örn: √9 veya √16).",
+      "truth": "Kök dışına tam çıkan sayılar rasyoneldir (√9 = 3 rasyoneldir). Kök dışına çıkamayan sayılar (√2, √3, √5) ve pi (π), e sayıları irrasyoneldir.",
+      "tip": "Kökten tam çıkıyorsa Rasyonel (Q), çıkamıyorsa İrrasyonel (Q')."
+    },
+    {
+      "id": 3,
+      "title": "Ters Fonksiyon Varlık Şartı",
+      "mistake": "Her fonksiyonun tersinin alınabileceğini zannetmek.",
+      "truth": "Bir fonksiyonun tersinin var olabilmesi için fonksiyonun MUTLAKA hem BİRE-BİR hem de ÖRTEN olması gerekir. İkisinden biri eksikse ters fonksiyon tanımlanamaz.",
+      "tip": "Ters fonksiyon = Bire-bir VE Örten (Biyektif) olmak zorundadır."
+    },
+    {
+      "id": 4,
+      "title": "Parabolde Tepe Noktasının Maksimum mu Minimum mu Olduğu",
+      "mistake": "a katsayısı pozitifken fonksiyonun maksimum değer aldığını sanmak.",
+      "truth": "f(x) = ax^2 + bx + c fonksiyonunda a > 0 ise kollar YUKARI açılır ve çukurun dibi MİNİMUM değerdir. a < 0 ise kollar AŞAĞI iner ve tepe noktası MAKSİMUM değerdir.",
+      "tip": "a > 0 => Gülen yüz (En dip = Minimum); a < 0 => Üzgün yüz (Zirve = Maksimum)."
+    },
+    {
+      "id": 5,
+      "title": "Bir Doğruya Dik Olan Doğrunun Eğimi",
+      "mistake": "Dik doğrunun eğimini bulurken sadece işaretini değiştirmek (m yerine -m almak).",
+      "truth": "Dik iki doğrunun eğimleri çarpımı -1'dir (m1 * m2 = -1). Dolayısıyla dik doğrunun eğimi hem ters çevrilir hem işareti değişir: m2 = -1 / m1.",
+      "tip": "Örn: m1 = 2 ise dik doğrunun eğimi -1/2'dir (sadece -2 değil!)."
+    },
+    {
+      "id": 6,
+      "title": "Logaritmanın Tanım Kümesi Pozitiflik Şartı",
+      "mistake": "log_a(x) ifadesinde x'in sıfır veya negatif olabileceğini varsaymak.",
+      "truth": "Logaritması alınan sayı daima sıfırdan KESİNLİKLE BÜYÜK olmalıdır (x > 0). Taban da pozitif ve 1'den farklı olmalıdır (a > 0, a ≠ 1). log(0) tanımsızdır, negatifin logaritması reel sayılarda yoktur.",
+      "tip": "Logaritmanın içi daima > 0 olmak zorundadır."
+    },
+    {
+      "id": 7,
+      "title": "0/0 Belirsizliğinde L'Hopital Kuralı Uygulaması",
+      "mistake": "Bölümün türev kuralını [(f'g - fg')/g^2] uygulamaya çalışmak.",
+      "truth": "L'Hopital kuralında bölümün genel türevi ALINMAZ! Sadece payın türevi alınıp paya [f'(x)], paydanın türevi alınıp paydaya [g'(x)] yazılır.",
+      "tip": "L'Hopital = Payın türevi / Paydanın türevi."
+    },
+    {
+      "id": 8,
+      "title": "Matris Çarpımı Değişme Özelliği Yanılgısı",
+      "mistake": "Sayılar gibi matrislerde de A * B = B * A olduğunu düşünmek.",
+      "truth": "Matris çarpımında kural olarak DEĞİŞME ÖZELLİĞİ YOKTUR (A * B ≠ B * A). Çoğu zaman biri tanımlıyken diğeri boyut uyumsuzluğundan hesaplanamaz bile.",
+      "tip": "A * B ile B * A matrislerde eşit DEĞİLDİR!"
+    },
+    {
+      "id": 9,
+      "title": "Ters Matris Varlık Şartı (Determinant Sıfır Olma Durumu)",
+      "mistake": "Her kare matrisin tersinin olduğunu varsaymak.",
+      "truth": "Bir A matrisinin tersinin (A^-1) var olabilmesi için det(A) ≠ 0 olmalıdır. Determinantı 0 olan matrislere 'Tekil (Singüler)' matris denir ve tersleri YOKTUR.",
+      "tip": "det(A) = 0 ise ters matris YOKTUR."
+    },
+    {
+      "id": 10,
+      "title": "Kâr Maksimizasyonunda Türev Alma Tuzağı",
+      "mistake": "Kârı bulmak için sadece fiyatı veya maliyeti sıfıra eşitlemek.",
+      "truth": "Kârı maksimize eden miktar; Marjinal Hasılatın Marjinal Maliyete eşit olduğu (MR = MC) üretim düzeyidir. TR'nin türevi ile TC'nin türevi birbirine eşitlenir.",
+      "tip": "Maksimum Kâr = MR'yi bul, MC'ye eşitle (MR = MC)."
+    }
+  ],
+  "formuller_ve_kavramlar": [
+    {
+      "term": "Alt Küme Formülü",
+      "description": "n elemanlı bir kümenin alt küme sayısı = 2^n; özalt küme sayısı = 2^n - 1.",
+      "example": "s(A) = 5 ise alt küme sayısı = 2^5 = 32, özalt küme = 31."
+    },
+    {
+      "term": "Kümeler Birleşim Formülü",
+      "description": "s(A ∪ B) = s(A) + s(B) - s(A ∩ B)."
+    },
+    {
+      "term": "İki Noktadan Geçen Doğrunun Eğimi",
+      "description": "m = (y2 - y1) / (x2 - x1).",
+      "example": "A(1, 3) ve B(3, 7) noktaları için m = (7 - 3) / (3 - 1) = 4 / 2 = 2."
+    },
+    {
+      "term": "Dik Doğruların Eğimleri Bağıntısı",
+      "description": "m1 * m2 = -1 => m2 = -1 / m1."
+    },
+    {
+      "term": "Parabol Tepe Noktası Koordinatları",
+      "description": "f(x) = ax^2 + bx + c için r = -b / (2a) ve k = f(r) = (4ac - b^2) / (4a).",
+      "example": "f(x) = x^2 - 4x + 7 için r = -(-4)/(2*1) = 2. k = f(2) = 4 - 8 + 7 = 3. Tepe noktası T(2, 3)."
+    },
+    {
+      "term": "Parabol Kökler ve Diskriminant",
+      "description": "Δ = b^2 - 4ac. Kökler toplamı = -b / a, Kökler çarpımı = c / a."
+    },
+    {
+      "term": "Logaritma Çarpım ve Bölüm Kuralları",
+      "description": "log(x * y) = log(x) + log(y) ve log(x / y) = log(x) - log(y)."
+    },
+    {
+      "term": "L'Hopital Kuralı",
+      "description": "0/0 veya ∞/∞ belirsizliklerinde lim [f(x) / g(x)] = lim [f'(x) / g'(x)]."
+    },
+    {
+      "term": "Kuvvet Türev Kuralı",
+      "description": "d(x^n)/dx = n * x^(n-1).",
+      "example": "d(4x^3)/dx = 12x^2."
+    },
+    {
+      "term": "Çarpımın Türevi",
+      "description": "(f * g)' = f' * g + f * g'."
+    },
+    {
+      "term": "Bölümün Türevi",
+      "description": "(f / g)' = (f' * g - f * g') / (g^2)."
+    },
+    {
+      "term": "2x2 Matris Determinantı",
+      "description": "det |a b; c d| = a * d - b * c.",
+      "example": "det |3 2; 1 4| = 3*4 - 2*1 = 12 - 2 = 10."
+    },
+    {
+      "term": "2x2 Ters Matris Formülü",
+      "description": "A^-1 = (1 / det(A)) * [d -b; -c a]."
+    },
+    {
+      "term": "Cramer Kuralı",
+      "description": "xi = det(Ai) / det(A)."
+    },
+    {
+      "term": "Schwarz Teoremi",
+      "description": "fxy = fyx (Karma ikinci mertebe kısmi türevler eşittir)."
+    },
+    {
+      "term": "Hessian Determinantı (Ekstremum)",
+      "description": "D = fxx * fyy - (fxy)^2. D > 0 ve fxx > 0 ise Min; D > 0 ve fxx < 0 ise Max; D < 0 ise Eyer noktası."
+    },
+    {
+      "term": "Kâr Maksimizasyonu Şartı",
+      "description": "MR = MC (Marjinal Hasılat = Marjinal Maliyet)."
+    },
+    {
+      "term": "Marjinal Hasılat (MR)",
+      "description": "MR = d(TR) / dQ."
+    },
+    {
+      "term": "Marjinal Maliyet (MC)",
+      "description": "MC = d(TC) / dQ."
+    },
+    {
+      "term": "Talebin Fiyat Esnekliği",
+      "description": "ε = (dQ/dP) * (P/Q)."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "unit": 1,
+      "question": "4 elemanlı bir kümenin alt küme sayısı ile özalt küme sayısı kaçtır?",
+      "answer": "Alt küme sayısı 2^4 = 16, özalt küme sayısı 16 - 1 = 15'tir."
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "question": "De Morgan kurallarına göre (A ∪ B)' ifadesinin eşiti nedir?",
+      "answer": "A' ∩ B' (Tümleyenlerin kesişimidir)."
+    },
+    {
+      "id": 3,
+      "unit": 1,
+      "question": "√2, pi (π) ve e sayıları hangi sayı kümesinin elemanıdır?",
+      "answer": "İrrasyonel Sayılar kümesinin (Q' veya I)."
+    },
+    {
+      "id": 4,
+      "unit": 1,
+      "question": "|x| < 5 eşitsizliğinin çözüm aralığı nedir?",
+      "answer": "-5 < x < 5 veya (-5, 5) açık aralığıdır."
+    },
+    {
+      "id": 5,
+      "unit": 2,
+      "question": "Bir fonksiyonun tersinin (f^-1) var olabilmesi için gereken iki temel şart nedir?",
+      "answer": "Fonksiyonun hem Bire-Bir hem de Örten olması gerekir."
+    },
+    {
+      "id": 6,
+      "unit": 2,
+      "question": "f(x) = 3x - 9 fonksiyonunun tersi f^-1(x) nedir?",
+      "answer": "f^-1(x) = (x + 9) / 3."
+    },
+    {
+      "id": 7,
+      "unit": 2,
+      "question": "Grafiği y eksenine göre simetrik olan ve f(-x) = f(x) şartını sağlayan fonksiyona ne ad verilir?",
+      "answer": "Çift Fonksiyon (örn: f(x) = x^2)."
+    },
+    {
+      "id": 8,
+      "unit": 2,
+      "question": "Grafiği orijine göre simetrik olan ve f(-x) = -f(x) şartını sağlayan fonksiyona ne ad verilir?",
+      "answer": "Tek Fonksiyon (örn: f(x) = x^3)."
+    },
+    {
+      "id": 9,
+      "unit": 3,
+      "question": "y = 4x + 5 doğrusuna dik olan bir doğrunun eğimi kaçtır?",
+      "answer": "-1/4'tür (m1 * m2 = -1 => 4 * m2 = -1 => m2 = -1/4)."
+    },
+    {
+      "id": 10,
+      "unit": 3,
+      "question": "f(x) = ax^2 + bx + c parabolünün tepe noktasının apsisi (r) hangi formülle bulunur?",
+      "answer": "r = -b / (2a)."
+    },
+    {
+      "id": 11,
+      "unit": 3,
+      "question": "Bir parabolde diskriminant Δ = 0 ise parabolün x eksenine göre konumu nasıldır?",
+      "answer": "Parabol x eksenine teğettir (tek bir noktada değer)."
+    },
+    {
+      "id": 12,
+      "unit": 3,
+      "question": "f(x) = -2x^2 + 8x - 5 parabolünün kolları ne tarafa bakar ve tepe noktasında hangi değeri alır?",
+      "answer": "a = -2 < 0 olduğundan kolları aşağı bakar ve tepe noktasında Maksimum değerini alır."
+    },
+    {
+      "id": 13,
+      "unit": 4,
+      "question": "Doğal logaritma fonksiyonunda ln(e) ve ln(1) değerleri kaçtır?",
+      "answer": "ln(e) = 1 ve ln(1) = 0'dır."
+    },
+    {
+      "id": 14,
+      "unit": 4,
+      "question": "log_a(x * y) ifadesi nasıl açılır?",
+      "answer": "log_a(x) + log_a(y) şeklinde açılır."
+    },
+    {
+      "id": 15,
+      "unit": 4,
+      "question": "log_2(32) işleminin sonucu kaçtır?",
+      "answer": "5'tir (Çünkü 2^5 = 32)."
+    },
+    {
+      "id": 16,
+      "unit": 5,
+      "question": "Bir noktada limitin var olması için sağ ve sol limitler arasında nasıl bir ilişki olmalıdır?",
+      "answer": "Sağdan limit ile soldan limit birbirine eşit olmalıdır."
+    },
+    {
+      "id": 17,
+      "unit": 5,
+      "question": "Limit hesabında 0/0 belirsizliği çıktığında uygulanan kural nedir?",
+      "answer": "L'Hopital Kuralı (Pay ve paydanın ayrı ayrı türevi alınır)."
+    },
+    {
+      "id": 18,
+      "unit": 5,
+      "question": "f(x) = 5x^4 - 3x^2 + 7 fonksiyonunun türevi f'(x) nedir?",
+      "answer": "f'(x) = 20x^3 - 6x."
+    },
+    {
+      "id": 19,
+      "unit": 5,
+      "question": "f(x) = e^(3x) fonksiyonunun türevi nedir?",
+      "answer": "f'(x) = 3 * e^(3x)."
+    },
+    {
+      "id": 20,
+      "unit": 5,
+      "question": "Türevin geometrik anlamı nedir?",
+      "answer": "Fonksiyon grafiğine o noktadan çizilen teğet doğrusunun eğimidir (mt = f'(x0))."
+    },
+    {
+      "id": 21,
+      "unit": 6,
+      "question": "3 x 2 boyutunda bir A matrisi ile 2 x 4 boyutunda bir B matrisi çarpılırsa oluşan matrisin boyutu ne olur?",
+      "answer": "3 x 4 boyutunda olur."
+    },
+    {
+      "id": 22,
+      "unit": 6,
+      "question": "A = [2 5; 1 3] matrisinin determinantı kaçtır?",
+      "answer": "det(A) = 2*3 - 5*1 = 6 - 5 = 1'dir."
+    },
+    {
+      "id": 23,
+      "unit": 6,
+      "question": "Bir kare matrisin tersinin (A^-1) var olabilmesi için determinantı ne olmalıdır?",
+      "answer": "Determinantı sıfırdan farklı olmalıdır (det(A) ≠ 0)."
+    },
+    {
+      "id": 24,
+      "unit": 6,
+      "question": "İki satırı birbirinin aynısı olan bir matrisin determinantı kaçtır?",
+      "answer": "Sıfırdır (0)."
+    },
+    {
+      "id": 25,
+      "unit": 7,
+      "question": "f(x, y) = 3x^2 * y + 5y^3 fonksiyonunun x'e göre kısmi türevi (fx) nedir?",
+      "answer": "fx = 6x * y (y sabit kabul edilir)."
+    },
+    {
+      "id": 26,
+      "unit": 7,
+      "question": "İkinci mertebe kısmi türevlerde fxy = fyx olduğunu belirten teoremin adı nedir?",
+      "answer": "Schwarz Teoremi."
+    },
+    {
+      "id": 27,
+      "unit": 7,
+      "question": "Hessian determinantı D < 0 olan kritik noktaya ne ad verilir?",
+      "answer": "Eyer (Semer) Noktası."
+    },
+    {
+      "id": 28,
+      "unit": 8,
+      "question": "Toplam maliyet TC = 2Q^2 + 10Q + 50 ise Marjinal Maliyet (MC) fonksiyonu nedir?",
+      "answer": "MC = d(TC)/dQ = 4Q + 10."
+    },
+    {
+      "id": 29,
+      "unit": 8,
+      "question": "İktisatta kâr maksimizasyonunun altın kuralı nedir?",
+      "answer": "MR = MC (Marjinal Hasılat = Marjinal Maliyet)."
+    },
+    {
+      "id": 30,
+      "unit": 8,
+      "question": "Piyasa denge fiyatı nasıl belirlenir?",
+      "answer": "Talep fonksiyonu ile arz fonksiyonu birbirine eşitlenerek (Qd = Qs)."
+    }
+  ],
+  "exams": [
+    {
+      "title": "Vize Deneme Sınavı 1",
+      "filename": "Vize_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "A = {a, b, c, d, e} kümesinin özalt küme sayısı kaçtır?",
+          "options": [
+            "A) 16",
+            "B) 31",
+            "C) 32",
+            "D) 63",
+            "E) 64"
+          ],
+          "correct_answer": "B",
+          "explanation": "Eleman sayısı n = 5'tir. Alt küme sayısı 2^5 = 32'dir. Özalt küme sayısı 2^n - 1 = 32 - 1 = 31'dir."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "s(A) = 12, s(B) = 8 ve s(A ∩ B) = 3 olduğuna göre, s(A ∪ B) kaçtır?",
+          "options": [
+            "A) 17",
+            "B) 20",
+            "C) 23",
+            "D) 15",
+            "E) 18"
+          ],
+          "correct_answer": "A",
+          "explanation": "s(A ∪ B) = s(A) + s(B) - s(A ∩ B) = 12 + 8 - 3 = 17."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "Aşağıdakilerden hangisi bir 'İrrasyonel Sayı'dır?",
+          "options": [
+            "A) 3/5",
+            "B) -7",
+            "C) √16",
+            "D) √5",
+            "E) 0"
+          ],
+          "correct_answer": "D",
+          "explanation": "√16 = 4 rasyoneldir. √5 ise kök dışına çıkamayan, devretmeyen sonsuz bir ondalıktır; dolayısıyla İrrasyoneldir."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "|2x - 6| < 10 eşitsizliğini sağlayan en büyük x tam sayısı kaçtır?",
+          "options": [
+            "A) 6",
+            "B) 7",
+            "C) 8",
+            "D) 9",
+            "E) 10"
+          ],
+          "correct_answer": "B",
+          "explanation": "-10 < 2x - 6 < 10 => her tarafa 6 ekle: -4 < 2x < 16 => 2'ye böl: -2 < x < 8. Bu aralıktaki en büyük tam sayı 7'dir."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "A ve B iki küme olmak üzere, (A ∪ B)' ifadesi De Morgan kuralına göre aşağıdakilerden hangisine eşittir?",
+          "options": [
+            "A) A' ∪ B'",
+            "B) A' ∩ B'",
+            "C) A ∩ B",
+            "D) A' ∩ B",
+            "E) A \\ B"
+          ],
+          "correct_answer": "B",
+          "explanation": "De Morgan kuralı: (A ∪ B)' = A' ∩ B' (Birleşimin tümleyeni, tümleyenlerin kesişimidir)."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "f(x) = 4x - 12 fonksiyonunun tersi f^-1(x) aşağıdakilerden hangisidir?",
+          "options": [
+            "A) (x + 12) / 4",
+            "B) (x - 12) / 4",
+            "C) 4x + 12",
+            "D) -4x + 12",
+            "E) (x + 4) / 12"
+          ],
+          "correct_answer": "A",
+          "explanation": "y = 4x - 12 => y + 12 = 4x => x = (y + 12) / 4. Dolayısıyla f^-1(x) = (x + 12) / 4."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "f(x) = 2x + 1 ve g(x) = x^2 olduğuna göre, (f o g)(3) bileşke işleminin sonucu kaçtır?",
+          "options": [
+            "A) 19",
+            "B) 49",
+            "C) 37",
+            "D) 25",
+            "E) 13"
+          ],
+          "correct_answer": "A",
+          "explanation": "(f o g)(3) = f(g(3)). g(3) = 3^2 = 9. f(9) = 2*9 + 1 = 18 + 1 = 19."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Grafiği y eksenine göre simetrik olan ve f(-x) = f(x) özelliğini sağlayan fonksiyon türü hangisidir?",
+          "options": [
+            "A) Tek Fonksiyon",
+            "B) Çift Fonksiyon",
+            "C) Örten Fonksiyon",
+            "D) Bire-Bir Fonksiyon",
+            "E) İçine Fonksiyon"
+          ],
+          "correct_answer": "B",
+          "explanation": "y eksenine göre simetrik olan fonksiyonlar Çift Fonksiyonlardır."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi bir 'Tek Fonksiyon'dur?",
+          "options": [
+            "A) f(x) = x^2 + 4",
+            "B) f(x) = x^3",
+            "C) f(x) = cos x",
+            "D) f(x) = |x|",
+            "E) f(x) = 7"
+          ],
+          "correct_answer": "B",
+          "explanation": "f(-x) = (-x)^3 = -x^3 = -f(x). f(x) = x^3 tek fonksiyondur ve grafiği orijine göre simetriktir."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "Bir f fonksiyonunun tersinin tanımlı olabilmesi için fonksiyonun hangi özelliği taşıması zorunludur?",
+          "options": [
+            "A) Sadece örten olması",
+            "B) Sadece çift fonksiyon olması",
+            "C) Hem bire-bir hem de örten olması",
+            "D) Sabit fonksiyon olması",
+            "E) Tanım kümesinin doğal sayılar olması"
+          ],
+          "correct_answer": "C",
+          "explanation": "Ters fonksiyon ancak ve ancak fonksiyon bire-bir ve örten (biyektif) ise tanımlıdır."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "A(2, 5) ve B(4, 11) noktalarından geçen doğrunun eğimi kaçtır?",
+          "options": [
+            "A) 2",
+            "B) 3",
+            "C) 4",
+            "D) 6",
+            "E) 8"
+          ],
+          "correct_answer": "B",
+          "explanation": "m = (y2 - y1) / (x2 - x1) = (11 - 5) / (4 - 2) = 6 / 2 = 3."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Eğimi 3 olan bir d1 doğrusuna dik olan d2 doğrusunun eğimi kaçtır?",
+          "options": [
+            "A) 3",
+            "B) -3",
+            "C) 1/3",
+            "D) -1/3",
+            "E) 0"
+          ],
+          "correct_answer": "D",
+          "explanation": "Dik doğruların eğimleri çarpımı -1'dir: m1 * m2 = -1 => 3 * m2 = -1 => m2 = -1/3."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "f(x) = x^2 - 6x + 14 parabolünün tepe noktasının koordinatları T(r, k) nedir?",
+          "options": [
+            "A) T(3, 5)",
+            "B) T(-3, 5)",
+            "C) T(3, -5)",
+            "D) T(6, 14)",
+            "E) T(2, 6)"
+          ],
+          "correct_answer": "A",
+          "explanation": "r = -b / (2a) = -(-6) / (2*1) = 6/2 = 3. k = f(3) = 3^2 - 6*3 + 14 = 9 - 18 + 14 = 5. Tepe noktası T(3, 5)."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "f(x) = -x^2 + 8x - 10 parabolünün alabileceği en büyük (maksimum) değer kaçtır?",
+          "options": [
+            "A) 4",
+            "B) 6",
+            "C) 8",
+            "D) 10",
+            "E) 16"
+          ],
+          "correct_answer": "B",
+          "explanation": "a = -1 < 0 olduğundan tepe noktasında maksimum değerini alır. r = -8 / (2*-1) = 4. k = f(4) = -(4^2) + 8*4 - 10 = -16 + 32 - 10 = 6."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "x^2 - 8x + 12 = 0 denkleminin kökler toplamı kaçtır?",
+          "options": [
+            "A) 4",
+            "B) 8",
+            "C) -8",
+            "D) 12",
+            "E) 6"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kökler toplamı formülü = -b / a = -(-8) / 1 = 8."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "log_3(81) ifadesinin değeri kaçtır?",
+          "options": [
+            "A) 2",
+            "B) 3",
+            "C) 4",
+            "D) 9",
+            "E) 27"
+          ],
+          "correct_answer": "C",
+          "explanation": "81 = 3^4 olduğuna göre, log_3(3^4) = 4 * log_3(3) = 4 * 1 = 4."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "ln(x) = 2 denklemini sağlayan x değeri aşağıdakilerden hangisidir?",
+          "options": [
+            "A) 2e",
+            "B) e^2",
+            "C) 10^2",
+            "D) √e",
+            "E) 2/e"
+          ],
+          "correct_answer": "B",
+          "explanation": "ln tabanı e'dir. log_e(x) = 2 <=> x = e^2."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "log(2) = x ve log(3) = y olduğuna göre, log(6) ifadesinin x ve y türünden eşiti nedir?",
+          "options": [
+            "A) x * y",
+            "B) x + y",
+            "C) x - y",
+            "D) y / x",
+            "E) 2x + 3y"
+          ],
+          "correct_answer": "B",
+          "explanation": "log(6) = log(2 * 3) = log(2) + log(3) = x + y."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "f(x) = a^x üstel fonksiyonunun azalan bir fonksiyon olması için taban 'a' hangi aralıkta olmalıdır?",
+          "options": [
+            "A) a > 1",
+            "B) a < 0",
+            "C) 0 < a < 1",
+            "D) a = 1",
+            "E) a ≥ 2"
+          ],
+          "correct_answer": "C",
+          "explanation": "Üstel fonksiyonda 0 < a < 1 olduğunda fonksiyon azalandır; a > 1 olduğunda artandır."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "f(x) = log_2(x - 5) fonksiyonunun en geniş tanım kümesi aşağıdakilerden hangisidir?",
+          "options": [
+            "A) x ≥ 5",
+            "B) (5, +∞)",
+            "C) (-∞, 5)",
+            "D) Tüm Gerçel Sayılar",
+            "E) [5, +∞)"
+          ],
+          "correct_answer": "B",
+          "explanation": "Logaritmanın içi kesinlikle pozitif olmalıdır: x - 5 > 0 => x > 5, yani (5, +∞) açık aralığıdır."
+        }
+      ]
+    },
+    {
+      "title": "Vize Deneme Sınavı 2",
+      "filename": "Vize_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "Alt küme sayısı 64 olan bir kümenin eleman sayısı (n) kaçtır?",
+          "options": [
+            "A) 5",
+            "B) 6",
+            "C) 7",
+            "D) 8",
+            "E) 9"
+          ],
+          "correct_answer": "B",
+          "explanation": "2^n = 64 => 2^6 = 64 olduğuna göre eleman sayısı n = 6'dır."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Aşağıdaki sayılardan hangisi bir rasyonel sayı değildir?",
+          "options": [
+            "A) 0",
+            "B) -3/4",
+            "C) 2,75",
+            "D) π (Pi sayısı)",
+            "E) √49"
+          ],
+          "correct_answer": "D",
+          "explanation": "π sayısı devretmeyen sonsuz bir ondalık olup irrasyoneldir."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "|3x - 9| = 0 denklemini sağlayan x değeri kaçtır?",
+          "options": [
+            "A) 0",
+            "B) 3",
+            "C) -3",
+            "D) 9",
+            "E) Çözüm yoktur"
+          ],
+          "correct_answer": "B",
+          "explanation": "Mutlak değerin sıfır olması için içinin sıfır olması gerekir: 3x - 9 = 0 => 3x = 9 => x = 3."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "s(A \\ B) = 7, s(B \\ A) = 4 ve s(A ∩ B) = 3 olduğuna göre, s(A ∪ B) kaçtır?",
+          "options": [
+            "A) 11",
+            "B) 14",
+            "C) 17",
+            "D) 20",
+            "E) 12"
+          ],
+          "correct_answer": "B",
+          "explanation": "s(A ∪ B) = s(A \\ B) + s(B \\ A) + s(A ∩ B) = 7 + 4 + 3 = 14."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Boş kümenin alt küme sayısı kaçtır?",
+          "options": [
+            "A) 0",
+            "B) 1",
+            "C) 2",
+            "D) Tanımsızdır",
+            "E) Sonsuz"
+          ],
+          "correct_answer": "B",
+          "explanation": "Boş kümenin eleman sayısı 0'dır. Alt küme sayısı 2^0 = 1'dir (yalnızca kendisi)."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "f(x) = 5x + 10 fonksiyonu için f^-1(25) değeri kaçtır?",
+          "options": [
+            "A) 3",
+            "B) 5",
+            "C) 7",
+            "D) 135",
+            "E) 15"
+          ],
+          "correct_answer": "A",
+          "explanation": "f^-1(25) = k dersek f(k) = 25 olur. 5k + 10 = 25 => 5k = 15 => k = 3."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "f(x) = 3x - 2 ve g(x) = 2x + 4 olduğuna göre, (g o f)(x) bileşke fonksiyonu nedir?",
+          "options": [
+            "A) 6x",
+            "B) 6x - 4",
+            "C) 6x + 2",
+            "D) 6x - 8",
+            "E) 5x + 2"
+          ],
+          "correct_answer": "A",
+          "explanation": "(g o f)(x) = g(f(x)) = g(3x - 2) = 2*(3x - 2) + 4 = 6x - 4 + 4 = 6x."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi bir fonksiyonun grafiği ile tersinin grafiğinin simetrik olduğu doğruyu belirtir?",
+          "options": [
+            "A) x ekseni (y = 0)",
+            "B) y ekseni (x = 0)",
+            "C) y = x doğrusu",
+            "D) y = -x doğrusu",
+            "E) Orijin noktası"
+          ],
+          "correct_answer": "C",
+          "explanation": "Bir fonksiyon ile tersinin grafiği y = x (1. açıortay) doğrusuna göre simetriktir."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Tanım kümesindeki her elemanı değer kümesinde yine kendisine eşleyen f(x) = x fonksiyonuna ne ad verilir?",
+          "options": [
+            "A) Sabit Fonksiyon",
+            "B) Birim (Özdeşlik) Fonksiyon",
+            "C) Sıfır Fonksiyonu",
+            "D) Ters Fonksiyon",
+            "E) Polinom Fonksiyon"
+          ],
+          "correct_answer": "B",
+          "explanation": "f(x) = x fonksiyonu Birim (Özdeşlik) fonksiyondur."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "f(x) = 8 fonksiyonu için f(100) değeri kaçtır?",
+          "options": [
+            "A) 8",
+            "B) 100",
+            "C) 800",
+            "D) 0",
+            "E) Tanımsız"
+          ],
+          "correct_answer": "A",
+          "explanation": "f(x) = 8 bir sabit fonksiyondur; her x değeri için sonucu daima 8'dir."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "2x - 3y + 6 = 0 doğrusunun eğimi kaçtır?",
+          "options": [
+            "A) 2/3",
+            "B) -2/3",
+            "C) 3/2",
+            "D) -3/2",
+            "E) 2"
+          ],
+          "correct_answer": "A",
+          "explanation": "3y = 2x + 6 => y = (2/3)x + 2. x'in katsayısı olan m = 2/3 doğrunun eğimidir."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Birbirine paralel iki doğrunun eğimleri m1 ve m2 arasındaki ilişki nedir?",
+          "options": [
+            "A) m1 * m2 = -1",
+            "B) m1 = m2",
+            "C) m1 + m2 = 0",
+            "D) m1 * m2 = 1",
+            "E) m1 - m2 = 1"
+          ],
+          "correct_answer": "B",
+          "explanation": "Paralel doğruların eğimleri birbirine eşittir (m1 = m2)."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "f(x) = x^2 - 4x + 3 parabolünün x eksenini kestiği noktaların apsisleri toplamı kaçtır?",
+          "options": [
+            "A) 3",
+            "B) 4",
+            "C) -4",
+            "D) 7",
+            "E) 1"
+          ],
+          "correct_answer": "B",
+          "explanation": "x eksenini kestiği noktalar köklerdir: x1 + x2 = -b / a = -(-4) / 1 = 4."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "f(x) = 3x^2 - 12x + 20 parabolünün simetri ekseni hangi doğrudur?",
+          "options": [
+            "A) x = 2",
+            "B) x = -2",
+            "C) x = 4",
+            "D) y = 2",
+            "E) x = 6"
+          ],
+          "correct_answer": "A",
+          "explanation": "Simetri ekseni x = r doğrusudur: r = -b / (2a) = -(-12) / (2*3) = 12 / 6 = 2. Yani x = 2 doğrusudur."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "f(x) = x^2 + 6x + m parabolünün x eksenine teğet olması için m kaç olmalıdır?",
+          "options": [
+            "A) 3",
+            "B) 6",
+            "C) 9",
+            "D) 12",
+            "E) 36"
+          ],
+          "correct_answer": "C",
+          "explanation": "x eksenine teğet olması için diskriminant Δ = 0 olmalıdır. Δ = b^2 - 4ac = 6^2 - 4*1*m = 0 => 36 - 4m = 0 => 4m = 36 => m = 9."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "ln(e^5) işleminin sonucu kaçtır?",
+          "options": [
+            "A) 1",
+            "B) e",
+            "C) 5",
+            "D) 5e",
+            "E) e^5"
+          ],
+          "correct_answer": "C",
+          "explanation": "ln(e^k) = k olduğundan ln(e^5) = 5'tir."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "log_5(x) = 3 olduğuna göre x kaçtır?",
+          "options": [
+            "A) 15",
+            "B) 125",
+            "C) 243",
+            "D) 81",
+            "E) 5"
+          ],
+          "correct_answer": "B",
+          "explanation": "x = 5^3 = 125."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "log(50) + log(2) işleminin sonucu kaçtır?",
+          "options": [
+            "A) 1",
+            "B) 2",
+            "C) 10",
+            "D) 100",
+            "E) 52"
+          ],
+          "correct_answer": "B",
+          "explanation": "log(50) + log(2) = log(50 * 2) = log(100) = log_10(10^2) = 2."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "f(x) = 2^x üstel fonksiyonu için f(4) değeri kaçtır?",
+          "options": [
+            "A) 8",
+            "B) 16",
+            "C) 32",
+            "D) 64",
+            "E) 12"
+          ],
+          "correct_answer": "B",
+          "explanation": "f(4) = 2^4 = 16."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "log_a(a) ifadesinin değeri her a > 0 (a ≠ 1) için kaçtır?",
+          "options": [
+            "A) 0",
+            "B) 1",
+            "C) a",
+            "D) e",
+            "E) Tanımsız"
+          ],
+          "correct_answer": "B",
+          "explanation": "Taban ile logaritması alınan sayı eşit olduğunda sonuç daima 1'dir."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 1",
+      "filename": "Final_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) 3 elemanlı bir kümenin alt küme sayısı kaçtır?",
+          "options": [
+            "A) 6",
+            "B) 7",
+            "C) 8",
+            "D) 9",
+            "E) 16"
+          ],
+          "correct_answer": "C",
+          "explanation": "2^3 = 8."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) f(x) = 2x - 8 ise f^-1(0) değeri kaçtır?",
+          "options": [
+            "A) -8",
+            "B) 4",
+            "C) -4",
+            "D) 0",
+            "E) 8"
+          ],
+          "correct_answer": "B",
+          "explanation": "2x - 8 = 0 => 2x = 8 => x = 4."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) f(x) = x^2 - 4x + 1 parabolünün tepe noktasının apsisi (r) kaçtır?",
+          "options": [
+            "A) -2",
+            "B) 2",
+            "C) 4",
+            "D) -4",
+            "E) 1"
+          ],
+          "correct_answer": "B",
+          "explanation": "r = -(-4) / (2*1) = 2."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) log_2(16) değeri kaçtır?",
+          "options": [
+            "A) 2",
+            "B) 4",
+            "C) 8",
+            "D) 16",
+            "E) 32"
+          ],
+          "correct_answer": "B",
+          "explanation": "2^4 = 16 olduğuna göre sonuç 4'tür."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "lim_{x->2} (x^2 - 4) / (x - 2) limitinin değeri kaçtır?",
+          "options": [
+            "A) 0",
+            "B) 2",
+            "C) 4",
+            "D) 8",
+            "E) Belirsizdir"
+          ],
+          "correct_answer": "C",
+          "explanation": "x=2 yazıldığında 0/0 belirsizliği çıkar. L'Hopital ile: payın türevi 2x, paydanın türevi 1. lim_{x->2} 2x / 1 = 2*2 = 4."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "f(x) = 3x^4 - 5x^2 + 8x - 1 fonksiyonunun türevi f'(x) nedir?",
+          "options": [
+            "A) 12x^3 - 10x + 8",
+            "B) 12x^3 - 5x + 8",
+            "C) 7x^3 - 10x",
+            "D) 12x^4 - 10x^2 + 8",
+            "E) 3x^3 - 5x + 8"
+          ],
+          "correct_answer": "A",
+          "explanation": "f'(x) = 3*(4x^3) - 5*(2x) + 8 = 12x^3 - 10x + 8."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "f(x) = x^3 - 6x^2 + 9x + 2 fonksiyonunun x = 1 noktasındaki teğetinin eğimi kaçtır?",
+          "options": [
+            "A) 0",
+            "B) 3",
+            "C) -3",
+            "D) 6",
+            "E) 9"
+          ],
+          "correct_answer": "A",
+          "explanation": "Teğet eğimi türevdir: f'(x) = 3x^2 - 12x + 9. x = 1 için: f'(1) = 3*(1) - 12*(1) + 9 = 3 - 12 + 9 = 0."
+        },
+        {
+          "id": 8,
+          "unit": 5,
+          "question": "f(x) = e^(2x) fonksiyonunun x'e göre türevi nedir?",
+          "options": [
+            "A) e^(2x)",
+            "B) 2 * e^(2x)",
+            "C) 2x * e^(2x)",
+            "D) e^x",
+            "E) 2 * e^x"
+          ],
+          "correct_answer": "B",
+          "explanation": "Zincir kuralı gereğince (e^(kx))' = k * e^(kx) => 2 * e^(2x)."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "A = [4 2; 3 1] matrisinin determinantı kaçtır?",
+          "options": [
+            "A) -2",
+            "B) 2",
+            "C) 10",
+            "D) -10",
+            "E) 0"
+          ],
+          "correct_answer": "A",
+          "explanation": "det(A) = 4*1 - 2*3 = 4 - 6 = -2."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Aşağıdaki durumlardan hangisinde bir kare matrisin tersi KESİNLİKLE YOKTUR?",
+          "options": [
+            "A) det(A) > 0 ise",
+            "B) det(A) < 0 ise",
+            "C) det(A) = 0 ise",
+            "D) det(A) = 1 ise",
+            "E) Matris birim matris ise"
+          ],
+          "correct_answer": "C",
+          "explanation": "Determinantı sıfır olan matrislerin tersi yoktur (tekil matris)."
+        },
+        {
+          "id": 11,
+          "unit": 6,
+          "question": "A bir 2x3 matris, B ise 3x4 matris olduğuna göre A * B çarpım matrisinin boyutu nedir?",
+          "options": [
+            "A) 2x3",
+            "B) 3x3",
+            "C) 2x4",
+            "D) 4x2",
+            "E) Çarpım yapılamaz"
+          ],
+          "correct_answer": "C",
+          "explanation": "2x3 ile 3x4 çarpıldığında ortak boyut 3 elenir ve sonuç 2x4 boyutunda olur."
+        },
+        {
+          "id": 12,
+          "unit": 7,
+          "question": "f(x, y) = 4x^3 * y^2 - 7x + 2y fonksiyonunun x'e göre kısmi türevi (fx) nedir?",
+          "options": [
+            "A) 12x^2 * y^2 - 7",
+            "B) 8x^3 * y + 2",
+            "C) 12x^2 - 7",
+            "D) 4x^2 * y^2",
+            "E) 12x^2 * y - 7"
+          ],
+          "correct_answer": "A",
+          "explanation": "y sabit tutulduğunda: d(4x^3)/dx * y^2 - 7 = 12x^2 * y^2 - 7."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "İkinci mertebe kısmi türevlerde karma türevlerin eşit olduğunu (fxy = fyx) ifade eden teorem hangisidir?",
+          "options": [
+            "A) Fermat Teoremi",
+            "B) Schwarz (Clairaut) Teoremi",
+            "C) Rolle Teoremi",
+            "D) Cramer Teoremi",
+            "E) Euler Teoremi"
+          ],
+          "correct_answer": "B",
+          "explanation": "fxy = fyx eşitliği Schwarz Teoremi olarak bilinir."
+        },
+        {
+          "id": 14,
+          "unit": 7,
+          "question": "İki değişkenli bir fonksiyonun kritik noktasında Hessian determinantı D < 0 olarak bulunmuştur. Bu nokta ne tür bir noktadır?",
+          "options": [
+            "A) Yerel Maksimum",
+            "B) Yerel Minimum",
+            "C) Eyer (Semer) Noktası",
+            "D) Dönüm Noktası",
+            "E) Kök Noktası"
+          ],
+          "correct_answer": "C",
+          "explanation": "D < 0 olması noktanın Eyer (Semer) Noktası olduğunu gösterir."
+        },
+        {
+          "id": 15,
+          "unit": 8,
+          "question": "Bir malın talep denklemi Qd = 100 - 4P ve arz denklemi Qs = 20 + 4P olduğuna göre piyasa denge fiyatı (P*) kaç TL'dir?",
+          "options": [
+            "A) 5",
+            "B) 10",
+            "C) 15",
+            "D) 20",
+            "E) 60"
+          ],
+          "correct_answer": "B",
+          "explanation": "Qd = Qs => 100 - 4P = 20 + 4P => 80 = 8P => P = 10 TL."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "Toplam maliyet fonksiyonu TC = Q^3 - 6Q^2 + 25Q + 100 olan bir firmanın Marjinal Maliyet (MC) fonksiyonu nedir?",
+          "options": [
+            "A) 3Q^2 - 12Q + 25",
+            "B) Q^2 - 6Q + 25",
+            "C) 3Q^2 - 6Q + 100",
+            "D) 3Q^2 - 12Q",
+            "E) 6Q - 12"
+          ],
+          "correct_answer": "A",
+          "explanation": "MC, TC'nin Q'ya göre 1. türevidir: d(TC)/dQ = 3Q^2 - 12Q + 25."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Bir firmanın toplam hasılat fonksiyonu TR = 80Q - 2Q^2 olduğuna göre Marjinal Hasılatı (MR) sıfır yapan üretim miktarı (Q) kaçtır?",
+          "options": [
+            "A) 10",
+            "B) 20",
+            "C) 30",
+            "D) 40",
+            "E) 80"
+          ],
+          "correct_answer": "B",
+          "explanation": "MR = d(TR)/dQ = 80 - 4Q. MR = 0 => 80 - 4Q = 0 => 4Q = 80 => Q = 20."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Bir işletmenin kârını maksimize etmesi için gerekli birinci derece koşul aşağıdakilerden hangisidir?",
+          "options": [
+            "A) TR = TC",
+            "B) MR = MC",
+            "C) P = AC",
+            "D) MC = 0",
+            "E) MR = 0"
+          ],
+          "correct_answer": "B",
+          "explanation": "Maksimum kâr için Marjinal Hasılat Marjinal Maliyete eşit olmalıdır (MR = MC)."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Toplam Hasılat TR = 120Q ve Toplam Maliyet TC = Q^2 + 20Q + 200 olduğuna göre kârı maksimum yapan üretim miktarı (Q) kaçtır?",
+          "options": [
+            "A) 25",
+            "B) 50",
+            "C) 75",
+            "D) 100",
+            "E) 120"
+          ],
+          "correct_answer": "B",
+          "explanation": "MR = d(TR)/dQ = 120. MC = d(TC)/dQ = 2Q + 20. MR = MC => 120 = 2Q + 20 => 2Q = 100 => Q = 50."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "f(x) = ln(x) fonksiyonunun türevi f'(x) aşağıdakilerden hangisidir?",
+          "options": [
+            "A) 1/x",
+            "B) e^x",
+            "C) x",
+            "D) 1 / (x^2)",
+            "E) ln(x) / x"
+          ],
+          "correct_answer": "A",
+          "explanation": "(ln x)' = 1 / x."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 2",
+      "filename": "Final_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) |x - 4| = 7 denklemini sağlayan x değerlerinin toplamı kaçtır?",
+          "options": [
+            "A) 4",
+            "B) 7",
+            "C) 8",
+            "D) 11",
+            "E) -3"
+          ],
+          "correct_answer": "C",
+          "explanation": "x - 4 = 7 => x1 = 11. x - 4 = -7 => x2 = -3. Toplam = 11 + (-3) = 8."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) f(x) = 5x - 7 fonksiyonunun bire-bir ve örten olduğu bilindiğine göre ters fonksiyonu nedir?",
+          "options": [
+            "A) (x + 7) / 5",
+            "B) (x - 7) / 5",
+            "C) 5x + 7",
+            "D) -5x + 7",
+            "E) (x - 5) / 7"
+          ],
+          "correct_answer": "A",
+          "explanation": "f^-1(x) = (x + 7) / 5."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) y = -2x + 7 doğrusunun eğimi kaçtır?",
+          "options": [
+            "A) 7",
+            "B) -2",
+            "C) 2",
+            "D) -7",
+            "E) 1/2"
+          ],
+          "correct_answer": "B",
+          "explanation": "y = mx + n formunda x'in katsayısı m = -2 eğimdir."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) log_4(64) işleminin sonucu kaçtır?",
+          "options": [
+            "A) 2",
+            "B) 3",
+            "C) 4",
+            "D) 8",
+            "E) 16"
+          ],
+          "correct_answer": "B",
+          "explanation": "4^3 = 64 olduğuna göre log_4(64) = 3."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "f(x) = x^5 - 2x^3 + 4x fonksiyonunun ikinci mertebeden türevi f''(x) nedir?",
+          "options": [
+            "A) 20x^3 - 12x",
+            "B) 5x^4 - 6x^2 + 4",
+            "C) 20x^4 - 6x",
+            "D) 60x^2 - 12",
+            "E) 20x^3 - 6x"
+          ],
+          "correct_answer": "A",
+          "explanation": "1. türev: f'(x) = 5x^4 - 6x^2 + 4. 2. türev: f''(x) = 20x^3 - 12x."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "lim_{x->3} (2x^2 - 5x + 1) limitinin değeri kaçtır?",
+          "options": [
+            "A) 4",
+            "B) 10",
+            "C) 16",
+            "D) 20",
+            "E) 8"
+          ],
+          "correct_answer": "A",
+          "explanation": "Polinom fonksiyonda doğrudan x yerine 3 yazılır: 2*(3^2) - 5*3 + 1 = 2*9 - 15 + 1 = 18 - 15 + 1 = 4."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "f(x) = (2x + 1) * (x - 3) fonksiyonunun türevi f'(x) nedir?",
+          "options": [
+            "A) 4x - 5",
+            "B) 4x + 5",
+            "C) 2x - 5",
+            "D) 4x - 6",
+            "E) 2x - 6"
+          ],
+          "correct_answer": "A",
+          "explanation": "Çarpımın türevi: (2)*(x - 3) + (2x + 1)*(1) = 2x - 6 + 2x + 1 = 4x - 5."
+        },
+        {
+          "id": 8,
+          "unit": 5,
+          "question": "Bir f fonksiyonunun x = a noktasında sürekli olması için aşağıdakilerden hangisi gerekli DEĞİLDİR?",
+          "options": [
+            "A) f(a)'nın tanımlı olması",
+            "B) x -> a iken limitin var olması",
+            "C) Limitin f(a) değerine eşit olması",
+            "D) Fonksiyonun o noktada türevinin sıfır olması",
+            "E) Sağ ve sol limitlerin eşit olması"
+          ],
+          "correct_answer": "D",
+          "explanation": "Süreklilik için türevin sıfır olması gerekmez; hatta fonksiyon sürekli olduğu halde o noktada türevsiz bile olabilir (kırılma noktaları)."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "A = [3 1; 2 2] matrisinin determinantı kaçtır?",
+          "options": [
+            "A) 4",
+            "B) 6",
+            "C) 8",
+            "D) 2",
+            "E) 0"
+          ],
+          "correct_answer": "A",
+          "explanation": "det(A) = 3*2 - 1*2 = 6 - 2 = 4."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Asal köşegenindeki elemanları 1, diğer tüm elemanları 0 olan matrise ne ad verilir?",
+          "options": [
+            "A) Sıfır Matrisi",
+            "B) Birim Matris",
+            "C) Skaler Matris",
+            "D) Ters Matris",
+            "E) Transpoz Matris"
+          ],
+          "correct_answer": "B",
+          "explanation": "Köşegeni 1 olan matris Birim Matristir (I)."
+        },
+        {
+          "id": 11,
+          "unit": 6,
+          "question": "Cramer kuralı ile 2 bilinmeyenli denklem sistemi çözülürken x bilinmeyeni nasıl bulunur?",
+          "options": [
+            "A) det(A) / det(Ax)",
+            "B) det(Ax) / det(A)",
+            "C) det(Ax) * det(A)",
+            "D) det(Ay) / det(A)",
+            "E) det(A) + det(Ax)"
+          ],
+          "correct_answer": "B",
+          "explanation": "Cramer kuralında x = det(Ax) / det(A)'dır."
+        },
+        {
+          "id": 12,
+          "unit": 7,
+          "question": "f(x, y) = 5x^2 + 3xy + 2y^2 fonksiyonunun y'ye göre kısmi türevi (fy) nedir?",
+          "options": [
+            "A) 10x + 3y",
+            "B) 3x + 4y",
+            "C) 3x + 2y",
+            "D) 10x + 4y",
+            "E) 4y"
+          ],
+          "correct_answer": "B",
+          "explanation": "x sabit tutulur: d(5x^2)/dy = 0, d(3xy)/dy = 3x, d(2y^2)/dy = 4y => fy = 3x + 4y."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "f(x, y) = x^3 * y^4 fonksiyonunun önce x'e sonra y'ye türevi (fxy) nedir?",
+          "options": [
+            "A) 12x^2 * y^3",
+            "B) 3x^2 * y^4",
+            "C) 4x^3 * y^3",
+            "D) 12x^3 * y^2",
+            "E) 6x * y^2"
+          ],
+          "correct_answer": "A",
+          "explanation": "fx = 3x^2 * y^4. fxy = d(3x^2 * y^4)/dy = 3x^2 * (4y^3) = 12x^2 * y^3."
+        },
+        {
+          "id": 14,
+          "unit": 7,
+          "question": "İki değişkenli bir fonksiyonda Hessian determinantı D > 0 ve fxx > 0 ise kritik nokta ne tür bir ekstremum noktasıdır?",
+          "options": [
+            "A) Yerel Maksimum",
+            "B) Yerel Minimum",
+            "C) Eyer Noktası",
+            "D) Dönüm Noktası",
+            "E) Belirsizdir"
+          ],
+          "correct_answer": "B",
+          "explanation": "D > 0 ve fxx > 0 olduğunda fonksiyon yerel minimuma sahiptir."
+        },
+        {
+          "id": 15,
+          "unit": 8,
+          "question": "Bir firmanın toplam hasılat fonksiyonu TR = 150Q - Q^2 olduğuna göre Marjinal Hasılat (MR) fonksiyonu nedir?",
+          "options": [
+            "A) 150 - 2Q",
+            "B) 150 - Q",
+            "C) 150Q - 2",
+            "D) 75 - Q",
+            "E) -2Q"
+          ],
+          "correct_answer": "A",
+          "explanation": "MR = d(TR)/dQ = 150 - 2Q."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "Toplam Maliyet TC = 50 + 20Q ise Sabit Maliyet (TFC) kaç TL'dir?",
+          "options": [
+            "A) 20",
+            "B) 50",
+            "C) 70",
+            "D) 0",
+            "E) 100"
+          ],
+          "correct_answer": "B",
+          "explanation": "Q'ya bağlı olmayan sabit terim TFC'dir, yani 50 TL'dir."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Bir malın talep fonksiyonu Q = 200 - 5P olduğuna göre P = 10 TL için talep miktarı (Q) kaçtır?",
+          "options": [
+            "A) 100",
+            "B) 150",
+            "C) 50",
+            "D) 190",
+            "E) 20"
+          ],
+          "correct_answer": "B",
+          "explanation": "Q = 200 - 5*10 = 200 - 50 = 150 birim."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Marjinal Hasılatı MR = 100 - 4Q ve Marjinal Maliyeti MC = 20 + 4Q olan bir tekelci firmanın kârını maksimize eden üretim miktarı (Q) kaçtır?",
+          "options": [
+            "A) 5",
+            "B) 10",
+            "C) 15",
+            "D) 20",
+            "E) 25"
+          ],
+          "correct_answer": "B",
+          "explanation": "MR = MC => 100 - 4Q = 20 + 4Q => 80 = 8Q => Q = 10 birim."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Toplam Maliyeti TC = 300 + 15Q olan firmanın Marjinal Maliyeti (MC) kaçtır?",
+          "options": [
+            "A) 300",
+            "B) 15",
+            "C) 315",
+            "D) 0",
+            "E) 15Q"
+          ],
+          "correct_answer": "B",
+          "explanation": "MC = d(TC)/dQ = 15."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "f(x) = e^x fonksiyonunun x'e göre türevi nedir?",
+          "options": [
+            "A) e^x",
+            "B) x * e^(x-1)",
+            "C) 1 / e^x",
+            "D) ln x",
+            "E) 1"
+          ],
+          "correct_answer": "A",
+          "explanation": "Doğal üstel fonksiyonun türevi kendisine eşittir: (e^x)' = e^x."
+        }
+      ]
+    }
+  ]
+}

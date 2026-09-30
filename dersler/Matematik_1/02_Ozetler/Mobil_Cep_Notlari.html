@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATEMATİK I - AÖF Mobil Cep Notları</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 70px; }
+        header { background: linear-gradient(135deg, #1e1b4b, #0f172a); padding: 20px 16px; border-bottom: 1px solid var(--card-border); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); }
+        .badge { background: #4338ca; color: #e0e7ff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 9999px; text-transform: uppercase; }
+        h1 { font-size: 20px; font-weight: 800; margin-top: 6px; color: #fff; }
+        .search-box { margin-top: 12px; width: 100%; }
+        .search-input { width: 100%; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--card-border); background: #1e293b; color: #fff; font-size: 14px; outline: none; }
+        .search-input:focus { border-color: var(--primary); }
+        .tabs { display: flex; overflow-x: auto; background: #1e293b; padding: 6px 12px; gap: 8px; border-bottom: 1px solid var(--card-border); }
+        .tab-btn { background: transparent; border: none; color: var(--text-muted); padding: 8px 14px; font-size: 13px; font-weight: 600; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+        .tab-btn.active { background: var(--primary); color: #0f172a; font-weight: 700; }
+        .container { padding: 16px; max-width: 800px; margin: 0 auto; }
+        .section-pane { display: none; }
+        .section-pane.active { display: block; }
+        .unit-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        .unit-title { font-size: 16px; font-weight: 700; color: var(--primary); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px; }
+        .bullet-item { margin-bottom: 8px; font-size: 13.5px; display: flex; align-items: flex-start; gap: 8px; }
+        .bullet-dot { color: var(--accent); font-size: 16px; line-height: 1; }
+        .trap-card { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+        .trap-header { color: #f87171; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+        .trap-mistake { color: #fca5a5; font-size: 13px; margin-bottom: 4px; }
+        .trap-truth { color: #86efac; font-size: 13px; font-weight: 600; }
+        .dict-item { background: var(--card-bg); border-left: 3px solid var(--primary); padding: 10px 14px; margin-bottom: 10px; border-radius: 0 8px 8px 0; }
+        .dict-term { font-weight: 700; color: #fff; font-size: 14px; }
+        .dict-desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; border-top: 1px solid var(--card-border); padding: 10px; text-align: center; font-size: 11px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">MAT105U - AÖF YBS 1. SINIF</span>
+        <h1>MATEMATİK I</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Konu, kavram veya tuzak ara..." oninput="handleSearch()">
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('vize')">📘 Vize (1-4)</button>
+        <button class="tab-btn" onclick="switchTab('final')">📗 Final (5-8)</button>
+        <button class="tab-btn" onclick="switchTab('tuzaklar')">⚠️ Sınav Tuzakları</button>
+        <button class="tab-btn" onclick="switchTab('sozluk')">📚 Sözlük & Formül</button>
+    </div>
+
+    <div class="container">
+        <!-- Vize Tab -->
+        <div id="vizePane" class="section-pane active">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 1: Kümeler ve Sayılar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Alt Küme Sayısı Formülü: n elemanlı bir kümenin alt küme sayısı 2^n, kendisi hariç özalt küme sayısı ise 2^n - 1'dir. Örn: 4 elemanlı bir kümenin 2^4 = 16 alt kümesi, 15 özalt kümesi vardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Birleşim ve Kesişim Eleman Sayısı: s(A ∪ B) = s(A) + s(B) - s(A ∩ B). Eğer A ve B ayrık kümeler ise (kesişimleri boş küme) s(A ∪ B) = s(A) + s(B)'dir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>De Morgan Kuralları: (A ∪ B)' = A' ∩ B' ve (A ∩ B)' = A' ∪ B'. Birleşimin tümleyeni tümleyenlerin kesişimine eşittir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Sayı Kümeleri Hiyerarşisi: N (Doğal Sayılar: {0,1,2,...}) ⊂ Z (Tam Sayılar: {...,-2,-1,0,1,2,...}) ⊂ Q (Rasyonel Sayılar: a/b şeklinde yazılabilenler) ⊂ R (Gerçel/Reel Sayılar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İrrasyonel Sayılar (Q' veya I): a/b şeklinde yazılamayan, virgülden sonra devretmeksizin sonsuza giden sayılardır. √2, √3, pi (π ≈ 3.14159) ve e (≈ 2.71828) en klasik irrasyonel sayılardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Mutlak Değer Özellikleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Her x gerçel sayısı için |x| ≥ 0'dır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - |-x| = |x| ve |x * y| = |x| * |y|.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Üçgen Eşitsizliği: |x + y| ≤ |x| + |y|.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - a > 0 olmak üzere; |x| < a ise -a < x < a'dır. |x| > a ise x > a veya x < -a'dır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 2: Fonksiyonlar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Fonksiyon Olma Şartı: f: A -> B için tanım kümesi A'nın her elemanı değer kümesi B'den yalnız bir elemanla eşleşmelidir. A'da açıkta eleman kalamaz, ancak B'de kalabilir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Bire-Bir (Injective) Fonksiyon: Farklı elemanların görüntüleri de farklı olmalıdır (x1 ≠ x2 => f(x1) ≠ f(x2)). Grafiğe çizilen yatay doğrular grafiği en fazla bir noktada kesmelidir (Yatay Doğru Testi).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Örten (Surjective) Fonksiyon: Değer kümesinde açıkta hiç eleman kalmamasıdır (f(A) = B). Değer kümesinde açıkta eleman kalırsa fonksiyona 'İçine Fonksiyon' denir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Ters Fonksiyon (f^-1): Bir fonksiyonun tersinin olabilmesi için fonksiyonun MUTLAKA hem BİRE-BİR hem de ÖRTEN (Biyektif) olması şarttır! y = f(x) <=> x = f^-1(y). Bir fonksiyonun grafiği ile tersinin grafiği y = x doğrusuna göre simetriktir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Doğrusal Fonksiyonun Tersi: f(x) = ax + b ise f^-1(x) = (x - b) / a'dır. Örn: f(x) = 2x + 6 => f^-1(x) = (x - 6) / 2.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Bileşke Fonksiyon: (f o g)(x) = f(g(x)). Bileşke işleminin değişme özelliği yoktur: (f o g) ≠ (g o f). Ancak birleşme özelliği vardır: f o (g o h) = (f o g) o h.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Çift Fonksiyon: f(-x) = f(x) olan fonksiyondur. Grafiği y eksenine göre simetriktir (Örn: f(x) = x^2, f(x) = cos x, f(x) = |x|).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tek Fonksiyon: f(-x) = -f(x) olan fonksiyondur. Grafiği orijine (0,0) göre simetriktir (Örn: f(x) = x^3, f(x) = sin x, f(x) = x).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 3: Polinom Fonksiyonlar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Doğrunun Eğimi (m): A(x1, y1) ve B(x2, y2) noktalarından geçen doğrunun eğimi m = (y2 - y1) / (x2 - x1)'dir. y = mx + n denkleminde x'in katsayısı m eğimdir, n ise doğrunun y eksenini kestiği noktadır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Paralel Doğrular: Eğilimleri birbirine eşittir (d1 // d2 => m1 = m2).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Dik Doğrular: Birbirine dik iki doğrunun eğimleri çarpımı -1'dir (d1 ⊥ d2 => m1 * m2 = -1 => m2 = -1 / m1).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İkinci Dereceden Fonksiyon (Parabol): f(x) = ax^2 + bx + c (a ≠ 0).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - a > 0 ise kollar YUKARI doğrudur ve fonksiyon tepe noktasında en küçük (MİNİMUM) değerini alır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - a < 0 ise kollar AŞAĞI doğrudur ve fonksiyon tepe noktasında en büyük (MAKSİMUM) değerini alır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tepe Noktası Koordinatları T(r, k):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - r = -b / (2a) (Simetri ekseni x = r doğrusudur).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - k = f(r) = (4ac - b^2) / (4a) (Fonksiyonun alabileceği en büyük veya en küçük değerdir).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Diskriminant (Δ = b^2 - 4ac):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Δ > 0 ise parabol x eksenini iki farklı noktada keser (2 gerçel kök vardır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Δ = 0 ise parabol x eksenine teğettir (çakışık/çift katlı tek gerçel kök vardır: x1 = x2 = -b / (2a)).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Δ < 0 ise parabol x eksenini hiç kesmez (gerçel kök yoktur).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kökler Bağıntıları: Kökler toplamı x1 + x2 = -b / a, Kökler çarpımı x1 * x2 = c / a.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 4: Üstel ve Logaritmik Fonksiyonlar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Üstel Fonksiyon: f(x) = a^x (a > 0 ve a ≠ 1).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - a > 1 ise fonksiyon artandır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - 0 < a < 1 ise fonksiyon azalandır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Tanım kümesi tüm gerçel sayılar (-∞, +∞), görüntü kümesi pozitif gerçel sayılardır (0, +∞). Grafiği daima (0, 1) noktasından geçer.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Doğal Üstel Fonksiyon: Tabanı Euler sayısı (e ≈ 2.71828) olan f(x) = e^x fonksiyonudur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Logaritma Fonksiyonu: Üstel fonksiyonun tersidir. y = log_a(x) <=> a^y = x (x > 0, a > 0, a ≠ 1). Logaritması alınan sayı x daima KESİNLİKLE pozitif (> 0) olmalıdır!</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Temel Logaritma Kuralları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - log_a(1) = 0 ve log_a(a) = 1.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - log_a(x * y) = log_a(x) + log_a(y) (Çarpımın logaritması toplamdır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - log_a(x / y) = log_a(x) - log_a(y) (Bölümün logaritması farktır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - log_a(x^k) = k * log_a(x) (Kuvvet başa katsayı olarak düşer).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Taban Değiştirme Kuralı: log_a(b) = ln(b) / ln(a) = log(b) / log(a).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Doğal Logaritma (ln): Tabanı e olan logaritmadır. ln(x) = log_e(x). ln(e) = 1, ln(1) = 0, ln(e^k) = k.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Tab -->
+        <div id="finalPane" class="section-pane">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 5: Limit, Süreklilik ve Türev</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Limit Varlık Şartı: Bir f(x) fonksiyonunun x = a noktasında limitinin olması için sağdan ve soldan limitlerinin birbirine eşit olması gerekir: lim_{x->a^+} f(x) = lim_{x->a^-} f(x) = L.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>0/0 Belirsizliği ve L'Hopital Kuralı: lim_{x->a} f(x)/g(x) işleminde 0/0 çıkarsa, pay ve paydanın ayrı ayrı türevi alınarak limit tekrar hesaplanır: lim [f'(x) / g'(x)].</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Süreklilik Şartları (3 Şart Birlikte Sağlanmalı): 1. f(a) tanımlı olmalıdır, 2. x -> a iken limit var olmalıdır, 3. lim_{x->a} f(x) = f(a) olmalıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Türevin Geometrik Anlamı: f'(x0), f(x) eğrisine x0 noktasında çizilen teğet doğrusunun eğimine eşittir (mt = f'(x0)).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Temel Türev Alma Kuralları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Sabit sayının türevi sıfırdır: (c)' = 0.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Kuvvet kuralı: (x^n)' = n * x^(n-1). Örn: (x^3)' = 3x^2, (5x^4)' = 20x^3, (x)' = 1.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Çarpımın Türevi: (f * g)' = f' * g + f * g'.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Bölümün Türevi: (f / g)' = (f' * g - f * g') / (g^2).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Zincir Kuralı (Bileşke Türevi): [f(g(x))]' = f'(g(x)) * g'(x).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Üstel ve Logaritmik Türevler: (e^x)' = e^x, (e^(kx))' = k * e^(kx), (ln x)' = 1 / x, (ln(g(x)))' = g'(x) / g(x).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 6: Matrisler ve Doğrusal Denklem Sistemleri</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Matris Boyutu: m satır ve n sütundan oluşan tabloya m x n matris denir. Kare matriste satır ve sütun sayısı eşittir (m = n).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Matris Çarpımı Şartı: A_(m x k) ile B_(k x n) çarpılabilir ve sonuç C_(m x n) boyutunda olur. Yani birinci matrisin SÜTUN sayısı, ikinci matrisin SATIR sayısına eşit olmak zorundadır! Matris çarpımında değişme özelliği yoktur: A * B ≠ B * A.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Birim Matris (I): Asal köşegeni 1, diğer tüm elemanları 0 olan kare matristir. Her A matrisi için A * I = I * A = A'dır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>2x2 Determinant: det |a b; c d| = a * d - b * c (Asal köşegen çarpımı eksi yedek köşegen çarpımı).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Determinant Özellikleri: det(A^T) = det(A), det(A * B) = det(A) * det(B). Bir matrisin iki satırı veya sütunu aynıysa ya da orantılıysa determinantı 0'dır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Ters Matris (A^-1): Bir kare matrisin tersinin olabilmesi için det(A) ≠ 0 (tekil olmayan / regüler) olması şarttır! Eğer det(A) = 0 ise matris tektir (singüler) ve tersi yoktur!</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>2x2 Ters Matris Formülü: A = [a b; c d] ise A^-1 = (1 / det(A)) * [d -b; -c a]. Asal köşegen yer değiştirir, yedek köşegen işaret değiştirir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Cramer Kuralı: Ax = b sisteminde xi = det(Ai) / det(A). Ai matrisi, katsayılar matrisinin i. sütunu yerine b sonuç sütununun yazılmasıyla elde edilir.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 7: Çok Değişkenli Fonksiyonlar</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Çok Değişkenli Fonksiyon: z = f(x, y) şeklinde birden fazla bağımsız değişkene sahip fonksiyonlardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kısmi Türev Mantığı:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - x'e göre kısmi türev (∂f/∂x veya fx): y bir sabit sayı kabul edilerek x'e göre türev alınır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - y'ye göre kısmi türev (∂f/∂y veya fy): x bir sabit sayı kabul edilerek y'ye göre türev alınır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Schwarz Teoremi (Karma Kısmi Türevlerin Eşitliği): Eğer sürekli türevlenebiliyorsa fxy = fyx'tir. Yani önce x'e sonra y'ye türev almak ile önce y'ye sonra x'e türev almak aynı sonucu verir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İki Değişkenli Fonksiyonlarda Yerel Ekstremum (Maksimum/Minimum) Bulma Adımları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Kritik Nokta: fx = 0 ve fy = 0 denklemleri ortak çözülerek kritik (x0, y0) noktaları bulunur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Hessian Determinantı (D): D = fxx * fyy - (fxy)^2 hesaplanır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Eğer D > 0 ve fxx > 0 ise fonksiyon (x0, y0) noktasında bir YEREL MİNİMUM'a sahiptir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Eğer D > 0 ve fxx < 0 ise fonksiyon (x0, y0) noktasında bir YEREL MAKSİMUM'a sahiptir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Eğer D < 0 ise nokta bir EYER (SEMER) NOKTASI'dır (ne maksimum ne minimumdur).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>     - Eğer D = 0 ise test sonuçsuz kalır, başka yöntemlere bakılır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 8: İktisadi Uygulamalar</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Piyasa Denge Fiyatı ve Miktarı: Talep (Qd) ve Arz (Qs) fonksiyonları eşitlenerek bulunur: Qd = Qs => P* (denge fiyatı) bulunur, yerine konularak Q* (denge miktarı) elde edilir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Hasılat Fonksiyonları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Toplam Hasılat (TR - Total Revenue): TR = P * Q (Fiyat çarpı miktar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Marjinal Hasılat (MR - Marginal Revenue): Üretilen/satılan son birimin toplam hasılata katkısıdır. Toplam Hasılatın Q'ya göre 1. türevidir: MR = d(TR) / dQ.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Maliyet Fonksiyonları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Toplam Maliyet (TC - Total Cost): TC = TFC (Sabit Maliyet) + TVC (Değişken Maliyet).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ortalama Maliyet (AC - Average Cost): AC = TC / Q.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Marjinal Maliyet (MC - Marginal Cost): Bir birim ek üretimin maliyetidir. Toplam Maliyetin Q'ya göre 1. türevidir: MC = d(TC) / dQ.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kâr Maksimizasyonu Kuralı: Toplam Kâr (π) = TR - TC. Kârın maksimum olması için 1. türevin sıfır olması gerekir: dπ/dQ = 0 => MR - MC = 0 => MR = MC! Yani kârı maksimize eden üretim düzeyinde Marjinal Hasılat daima Marjinal Maliyete eşit olmalıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Talebin Fiyat Esnekliği Formülü: ε = (dQ / dP) * (P / Q). Q'nun fiyata göre türevi ile P/Q oranının çarpımıdır.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuzaklar Tab -->
+        <div id="tuzaklarPane" class="section-pane">
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #1: Kümelerde Alt Küme ile Özalt Küme Sayısı Karışıklığı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Özalt küme sorulduğunda doğrudan 2^n hesaplayıp işaretlemek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Alt küme sayısı 2^n'dir; ancak ÖZALT KÜME kümenin kendisi hariç tutulduğu için 2^n - 1'dir. 1 çıkarmayı kesinlikle unutmamalısın.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #2: Rasyonel Sayı ile İrrasyonel Sayı Ayrımı (Karekök Tuzağı)</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Karekök içindeki her sayının irrasyonel olduğunu düşünmek (örn: √9 veya √16).</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Kök dışına tam çıkan sayılar rasyoneldir (√9 = 3 rasyoneldir). Kök dışına çıkamayan sayılar (√2, √3, √5) ve pi (π), e sayıları irrasyoneldir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #3: Ters Fonksiyon Varlık Şartı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Her fonksiyonun tersinin alınabileceğini zannetmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Bir fonksiyonun tersinin var olabilmesi için fonksiyonun MUTLAKA hem BİRE-BİR hem de ÖRTEN olması gerekir. İkisinden biri eksikse ters fonksiyon tanımlanamaz.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #4: Parabolde Tepe Noktasının Maksimum mu Minimum mu Olduğu</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> a katsayısı pozitifken fonksiyonun maksimum değer aldığını sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> f(x) = ax^2 + bx + c fonksiyonunda a > 0 ise kollar YUKARI açılır ve çukurun dibi MİNİMUM değerdir. a < 0 ise kollar AŞAĞI iner ve tepe noktası MAKSİMUM değerdir.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #5: Bir Doğruya Dik Olan Doğrunun Eğimi</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Dik doğrunun eğimini bulurken sadece işaretini değiştirmek (m yerine -m almak).</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Dik iki doğrunun eğimleri çarpımı -1'dir (m1 * m2 = -1). Dolayısıyla dik doğrunun eğimi hem ters çevrilir hem işareti değişir: m2 = -1 / m1.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #6: Logaritmanın Tanım Kümesi Pozitiflik Şartı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> log_a(x) ifadesinde x'in sıfır veya negatif olabileceğini varsaymak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Logaritması alınan sayı daima sıfırdan KESİNLİKLE BÜYÜK olmalıdır (x > 0). Taban da pozitif ve 1'den farklı olmalıdır (a > 0, a ≠ 1). log(0) tanımsızdır, negatifin logaritması reel sayılarda yoktur.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #7: 0/0 Belirsizliğinde L'Hopital Kuralı Uygulaması</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Bölümün türev kuralını [(f'g - fg')/g^2] uygulamaya çalışmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> L'Hopital kuralında bölümün genel türevi ALINMAZ! Sadece payın türevi alınıp paya [f'(x)], paydanın türevi alınıp paydaya [g'(x)] yazılır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #8: Matris Çarpımı Değişme Özelliği Yanılgısı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Sayılar gibi matrislerde de A * B = B * A olduğunu düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Matris çarpımında kural olarak DEĞİŞME ÖZELLİĞİ YOKTUR (A * B ≠ B * A). Çoğu zaman biri tanımlıyken diğeri boyut uyumsuzluğundan hesaplanamaz bile.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #9: Ters Matris Varlık Şartı (Determinant Sıfır Olma Durumu)</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Her kare matrisin tersinin olduğunu varsaymak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Bir A matrisinin tersinin (A^-1) var olabilmesi için det(A) ≠ 0 olmalıdır. Determinantı 0 olan matrislere 'Tekil (Singüler)' matris denir ve tersleri YOKTUR.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #10: Kâr Maksimizasyonunda Türev Alma Tuzağı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Kârı bulmak için sadece fiyatı veya maliyeti sıfıra eşitlemek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Kârı maksimize eden miktar; Marjinal Hasılatın Marjinal Maliyete eşit olduğu (MR = MC) üretim düzeyidir. TR'nin türevi ile TC'nin türevi birbirine eşitlenir.</div>
+            </div>
+        </div>
+
+        <!-- Sozluk Tab -->
+        <div id="sozlukPane" class="section-pane">
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Alt Küme Formülü</div>
+                <div class="dict-desc">n elemanlı bir kümenin alt küme sayısı = 2^n; özalt küme sayısı = 2^n - 1.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Kümeler Birleşim Formülü</div>
+                <div class="dict-desc">s(A ∪ B) = s(A) + s(B) - s(A ∩ B).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">İki Noktadan Geçen Doğrunun Eğimi</div>
+                <div class="dict-desc">m = (y2 - y1) / (x2 - x1).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Dik Doğruların Eğimleri Bağıntısı</div>
+                <div class="dict-desc">m1 * m2 = -1 => m2 = -1 / m1.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Parabol Tepe Noktası Koordinatları</div>
+                <div class="dict-desc">f(x) = ax^2 + bx + c için r = -b / (2a) ve k = f(r) = (4ac - b^2) / (4a).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Parabol Kökler ve Diskriminant</div>
+                <div class="dict-desc">Δ = b^2 - 4ac. Kökler toplamı = -b / a, Kökler çarpımı = c / a.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Logaritma Çarpım ve Bölüm Kuralları</div>
+                <div class="dict-desc">log(x * y) = log(x) + log(y) ve log(x / y) = log(x) - log(y).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">L'Hopital Kuralı</div>
+                <div class="dict-desc">0/0 veya ∞/∞ belirsizliklerinde lim [f(x) / g(x)] = lim [f'(x) / g'(x)].</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Kuvvet Türev Kuralı</div>
+                <div class="dict-desc">d(x^n)/dx = n * x^(n-1).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Çarpımın Türevi</div>
+                <div class="dict-desc">(f * g)' = f' * g + f * g'.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Bölümün Türevi</div>
+                <div class="dict-desc">(f / g)' = (f' * g - f * g') / (g^2).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">2x2 Matris Determinantı</div>
+                <div class="dict-desc">det |a b; c d| = a * d - b * c.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">2x2 Ters Matris Formülü</div>
+                <div class="dict-desc">A^-1 = (1 / det(A)) * [d -b; -c a].</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Cramer Kuralı</div>
+                <div class="dict-desc">xi = det(Ai) / det(A).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Schwarz Teoremi</div>
+                <div class="dict-desc">fxy = fyx (Karma ikinci mertebe kısmi türevler eşittir).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Hessian Determinantı (Ekstremum)</div>
+                <div class="dict-desc">D = fxx * fyy - (fxy)^2. D > 0 ve fxx > 0 ise Min; D > 0 ve fxx < 0 ise Max; D < 0 ise Eyer noktası.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Kâr Maksimizasyonu Şartı</div>
+                <div class="dict-desc">MR = MC (Marjinal Hasılat = Marjinal Maliyet).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Marjinal Hasılat (MR)</div>
+                <div class="dict-desc">MR = d(TR) / dQ.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Marjinal Maliyet (MC)</div>
+                <div class="dict-desc">MC = d(TC) / dQ.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Talebin Fiyat Esnekliği</div>
+                <div class="dict-desc">ε = (dQ/dP) * (P/Q).</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        🎓 AÖF YBS 1. Sınıf Başarı Ekosistemi • İnternetsiz Doğrudan Çalışır
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
+            
+            if (tabId === 'vize') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('vizePane').classList.add('active');
+            } else if (tabId === 'final') {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('finalPane').classList.add('active');
+            } else if (tabId === 'tuzaklar') {
+                document.querySelectorAll('.tab-btn')[2].classList.add('active');
+                document.getElementById('tuzaklarPane').classList.add('active');
+            } else if (tabId === 'sozluk') {
+                document.querySelectorAll('.tab-btn')[3].classList.add('active');
+                document.getElementById('sozlukPane').classList.add('active');
+            }
+        }
+
+        function handleSearch() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.searchable-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (q === '' || text.includes(q)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

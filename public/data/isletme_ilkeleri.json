@@ -1,0 +1,1677 @@
+{
+  "course_name": "İŞLETME İLKELERİ",
+  "course_code": "İŞL101U",
+  "faculty": "İşletme / İktisat Fakültesi - Yönetim Bilişim Sistemleri (YBS)",
+  "term": "1. Sınıf Güz Dönemi",
+  "description": "İşletmecilik temel kavramları, işletme çevresi, işletme türleri, sosyal sorumluluk ve iş ahlakı, kuruluş süreci ve fizibilite araştırmaları, büyüme stratejileri, küresel rekabet ve işletme fonksiyonları.",
+  "units": [
+    {
+      "unit_number": 1,
+      "title": "İşletmecilik ve İşletmecilik ile İlgili Kavramlar",
+      "is_vize": true,
+      "key_topics": [
+        "İşletme Tanımı ve Özellikleri",
+        "Maslow İhtiyaçlar Hiyerarşisi",
+        "4 Üretim Faktörü ve Getirileri",
+        "Girişimci ve Profesyonel Yönetici",
+        "Verimlilik, Etkililik ve İktisadilik"
+      ],
+      "hap_bilgiler": [
+        "İşletmenin Tanımı: İnsanların ihtiyaçlarını karşılamak üzere mal ve hizmet üreten, kâr veya sosyal fayda amacı güden, finansal ve operasyonel risk üstlenen ekonomik birimdir.",
+        "Maslow'un İhtiyaçlar Hiyerarşisi (Aşağıdan Yukarıya 5 Basamak): 1. Fizyolojik İhtiyaçlar (Açlık, susuzluk, barınma - temel taban), 2. Güvenlik İhtiyaçları (İş güvencesi, can ve mal güvenliği), 3. Sosyal / Ait Olma İhtiyaçları (Sevgi, arkadaşlık, gruba kabul), 4. Saygınlık İhtiyaçları (Statü, takdir, itibar), 5. Kendini Gerçekleştirme (Potansiyelini tam kullanma - ZİRVEDEKİ İHTİYAÇTIR).",
+        "4 Temel Üretim Faktörü ve Karşılıkları (Gelirleri):",
+        "  - Emek (İşgücü): Karşılığı ÜCRET.",
+        "  - Sermaye (Finansal ve fiziki araçlar): Karşılığı FAİZ.",
+        "  - Doğal Kaynaklar (Toprak): Karşılığı RANT (Kira).",
+        "  - Girişimci (Müteşebbis): Karşılığı KÂR (Zarar riskini üstlenir).",
+        "Girişimci vs Profesyonel Yönetici:",
+        "  - Girişimci: Fırsatları sezen, üretim faktörlerini bir araya getiren, sermaye koyan ve kâr/zarar riskini bizzat üstlenen kişidir.",
+        "  - Profesyonel Yönetici: Kendi sermayesini koymak zorunda olmayan, işletme sahibi adına işletmeyi sevk ve idare eden, emeği karşılığı ücret veya prim alan profesyoneldir.",
+        "İşletme Başarı Ölçütleri:",
+        "  - Verimlilik (Productivity): Üretilen Çıktı / Kullanılan Girdi oranıdır.",
+        "  - Etkililik (Effectiveness): İşletmenin önceden belirlenen amaç ve hedeflere ulaşma derecesidir ('Doğru işleri yapmak').",
+        "  - İktisadilik (Karlılık): Satış Hasılatı / Katlanılan Gider oranıdır."
+      ]
+    },
+    {
+      "unit_number": 2,
+      "title": "İşletme ve Çevresi",
+      "is_vize": true,
+      "key_topics": [
+        "Sistem Olarak İşletme",
+        "İç Çevre Faktörleri",
+        "Yakın Dış Çevre (Sektörel / Porter)",
+        "Genel Dış Çevre (PESTLE)",
+        "Çevresel Belirsizlik"
+      ],
+      "hap_bilgiler": [
+        "Açık Sistem Olarak İşletme: İşletme çevresinden girdi alan (hammadde, işgücü, bilgi, sermaye), bunları üretim sürecinde dönüştüren, çevreye çıktı sunan (mal, hizmet, atık) ve geri bildirimle kendini güncelleyen açık bir sistemdir.",
+        "İşletmenin 3 Çevre Katmanı:",
+        "  1. İç Çevre (Örgütsel Çevre): İşletmenin doğrudan kontrol edebildiği iç faktörlerdir (Yönetim yapısı, kurum kültürü, insan kaynakları, finansal güç, fiziki tesisler).",
+        "  2. Yakın Dış Çevre (Sektörel / Görev Çevresi): İşletmenin doğrudan etkileşimde bulunduğu paydaşlardır (Müşteriler, Rakipler, Tedarikçiler, İkame Ürünler, Finans Kuruluşları). Michael Porter'ın '5 Güç Modeli' bu çevreyi analiz eder.",
+        "  3. Genel Dış Çevre (Makro Çevre - PESTLE): İşletmenin kontrol edemediği, uyum sağlamak zorunda olduğu geniş çevredir:",
+        "     - Politik / Yasal Faktörler (Hükümet politikaları, mevzuat, vergiler).",
+        "     - Ekonomik Faktörler (Enflasyon, döviz kuru, faiz oranları, millî gelir).",
+        "     - Sosyo-Kültürel Faktörler (Demografi, yaşam tarzları, toplumsal değerler).",
+        "     - Teknolojik Faktörler (Otomasyon, yapay zeka, Ar-Ge yenilikleri).",
+        "     - Ekolojik / Doğal Faktörler (İklim değişikliği, hammadde kıtlığı).",
+        "Çevresel Belirsizlik: Çevredeki faktör sayısı (basit/karmaşık) ve değişim hızı (durağan/dinamik) ile belirlenir. 'Karmaşık ve Dinamik' çevreler en yüksek belirsizliğe sahiptir."
+      ]
+    },
+    {
+      "unit_number": 3,
+      "title": "İşletmelerin Sınıflandırılması ve Türleri",
+      "is_vize": true,
+      "key_topics": [
+        "Faaliyet Alanına Göre İşletmeler",
+        "Büyüklüklerine Göre (KOBİ)",
+        "Şahıs Şirketleri",
+        "Sermaye Şirketleri",
+        "Kooperatifler"
+      ],
+      "hap_bilgiler": [
+        "Büyüklüklerine Göre İşletmeler (KOBİ Tanımı):",
+        "  - Mikro İşletme: 1 - 9 çalışan.",
+        "  - Küçük İşletme: 10 - 49 çalışan.",
+        "  - Orta Büyüklükteki İşletme: 50 - 249 çalışan.",
+        "  - Büyük İşletme: 250 ve üzeri çalışan.",
+        "Şahıs Şirketleri (Ortakların sorumluluğu kural olarak sınırsız ve müteselsildir):",
+        "  - Adi Şirket: Türk Borçlar Kanunu'na tabidir, tüzel kişiliği ve ticaret unvanı yoktur, ortaklar tüm malvarlıklarıyla sınırsız sorumludur.",
+        "  - Kollektif Şirket: Yalnızca gerçek kişilerce kurulur, tüzel kişiliği vardır, ortakların sorumluluğu sınırsız ve zincirleme (müteselsil) sorumluluktur.",
+        "  - Komandit Şirket: İki tür ortak vardır:",
+        "    1. Komandite Ortak: Sorumluluğu sınırsız olan ortaktır (Yalnızca gerçek kişi olabilir, şirketi yönetir).",
+        "    2. Komanditer Ortak: Sorumluluğu koyduğu sermaye payı ile SINIRLI olan ortaktır (Tüzel kişi de olabilir, şirketi yönetemez).",
+        "Sermaye Şirketleri (Ortakların sorumluluğu koydukları sermaye ile sınırlıdır):",
+        "  - Anonim Şirket (A.Ş.): Sermayesi belirli ve paylara bölünmüş olan, asgari 50.000 TL sermaye ile kurulabilen, pay devri çok kolay olan şirkettir.",
+        "  - Limited Şirket (Ltd. Şti.): Ortak sayısı en çok 50 olabilen, asgari 10.000 TL sermaye ile kurulan, pay devri noter ve ticaret sicil tesciline tabi olan şirkettir.",
+        "Kooperatifler: Amacı kâr elde etmek değil, ortaklarının meslek veya geçim ihtiyaçlarını karşılıklı yardım ve dayanışma yoluyla en uygun şartlarda karşılamaktır."
+      ]
+    },
+    {
+      "unit_number": 4,
+      "title": "Sosyal Sorumluluk ve İş Ahlakı",
+      "is_vize": true,
+      "key_topics": [
+        "Kurumsal Sosyal Sorumluluk (KSS)",
+        "Carroll'ın Sosyal Sorumluluk Piramidi",
+        "Paydaş Teorisi",
+        "İş Etiği ve Whistleblowing",
+        "Yeşil Yıkama (Greenwashing)"
+      ],
+      "hap_bilgiler": [
+        "Kurumsal Sosyal Sorumluluk (KSS): İşletmenin sadece yasalara uymakla kalmayıp, toplumun refahını artıracak ve çevreyi koruyacak gönüllü faaliyetlerde bulunmasıdır.",
+        "Archie Carroll'ın Sosyal Sorumluluk Piramidi (4 Katman):",
+        "  1. Ekonomik Sorumluluk (Taban): Kârlı olmak, istihdam yaratmak ve verimli üretmek (Tüm diğer sorumlulukların temelidir).",
+        "  2. Yasal Sorumluluk: Kanunlara, kurallara ve mevzuata eksiksiz uymak.",
+        "  3. Etik Sorumluluk: Yasalarda açıkça yazmasa bile doğru, adil, dürüst ve ahlaki olanı yapmak.",
+        "  4. Filantropik (Gönüllü) Sorumluluk (Zirve): Eğitime, sanata, sağlığa bağış yapmak, topluma katkı sağlayan iyi bir kurumsal vatandaş olmak.",
+        "Paydaş (Stakeholder) Teorisi: İşletmenin kararlarından etkilenen veya işletmeyi etkileyen tüm kişi ve gruplardır (Hissedarlar, çalışanlar, müşteriler, tedarikçiler, yerel toplum, sendikalar).",
+        "İş Ahlakı (İş Etiği): İş hayatındaki davranışların doğru veya yanlış, adil veya haksız olarak değerlendirilmesine rehberlik eden ahlaki ilkeler ve standartlardır.",
+        "Whistleblowing (İçeriden Bilgi İfşası / Etik Bildirim): Bir çalışanın şirket içinde yapılan yasadışı, hileli, tehlikeli veya etik dışı bir durumu yetkili mercilere veya kamuoyuna ifşa etmesidir.",
+        "Yeşil Yıkama (Greenwashing): Bir işletmenin gerçekte çevre dostu olmadığı halde kendini reklam ve pazarlama yoluyla çevreci ve sürdürülebilir gibi göstermesi aldatmacasıdır."
+      ]
+    },
+    {
+      "unit_number": 5,
+      "title": "İşletmelerin Kuruluşu",
+      "is_vize": false,
+      "key_topics": [
+        "İşletme Kurma Süreci Aşamaları",
+        "Fizibilite (Yapılabilirlik) Araştırması",
+        "Ekonomik, Teknik ve Finansal Etüt",
+        "Kuruluş Yeri Seçimi Kriterleri"
+      ],
+      "hap_bilgiler": [
+        "İşletme Kurma Süreci Kronolojik Adımları: Yatırım Düşüncesi -> Ön Fizibilite -> Fizibilite Araştırması (Yapılabilirlik Etüdü) -> Fizibilite Raporu ve Değerlendirme -> Yatırım Kararı -> Kesin Proje Hazırlama -> Tesisin Kurulması / Uygulama -> Deneme Üretimi -> Kesin İşletmeye Geçiş.",
+        "Fizibilite Araştırmasının 4 Temel Boyutu:",
+        "  1. Ekonomik Etüt: Pazar araştırması, talep tahmini, pazar payı, kapasite seçimi ve ürün fiyatlandırma analizi.",
+        "  2. Teknik Etüt: Üretim teknolojisi, makine-ekipman seçimi, fabrika yerleşim planı, hammadde temin yöntemleri.",
+        "  3. Finansal Etüt: Toplam yatırım tutarı, sermaye ihtiyacı, fon kaynakları, Net Bugünkü Değer (NBD), İç Verim Oranı (İVO), Kârlılık ve Başabaş Noktası analizi.",
+        "  4. Yasal ve Örgütsel Etüt: Şirket türünün seçimi, resmi izinler, teşvikler, çevre etki değerlendirmesi (ÇED) ve organizasyon şeması.",
+        "Kuruluş Yeri Faktörleri: Hammaddeye yakınlık (çabuk bozulan veya nakliyesi pahalı girdilerde), Pazara yakınlık (tüketiciye hızla ulaşma), İşgücü temini, Enerji ve su kaynakları, Ulaşım ve lojistik olanakları, Devlet teşvikleri.",
+        "Optimum Kuruluş Yeri: İşletmenin maliyetlerini en aza indirirken kârını ve verimliliğini en üst düzeye çıkaran ideal coğrafi konumdur."
+      ]
+    },
+    {
+      "unit_number": 6,
+      "title": "İşletmelerin Büyümesi",
+      "is_vize": false,
+      "key_topics": [
+        "Büyüme Nedenleri",
+        "İç Büyüme ve Dış Büyüme",
+        "Yatay, Dikey ve Konglomerat Büyüme",
+        "Ortak Girişim (Joint Venture) ve Birleşmeler"
+      ],
+      "hap_bilgiler": [
+        "İşletmelerin Büyüme Nedenleri: Ölçek ekonomilerinden yararlanarak birim maliyeti düşürmek, pazar payını artırmak, finansal güç kazanmak, riski dağıtmak ve prestij sağlamak.",
+        "Büyüme Biçimleri:",
+        "  - İç Büyüme: İşletmenin kendi özkaynakları, kâr birikimi (otofinansman) ve AR-GE'si ile mevcut kapasitesini artırması, yeni ürün veya pazarlar geliştirmesidir.",
+        "  - Dış Büyüme: Başka işletmelerle birleşme (Merger) veya başka şirketleri satın alma (Acquisition / M&A) yoluyla hızlı büyümedir.",
+        "Büyüme Yönleri:",
+        "  - Yatay Büyüme: Aynı sektörde ve aynı üretim aşamasındaki rakipleri bünyesine katarak veya aynı ürünü üreten yeni fabrikalar açarak büyümedir (Örn: Bir tekstilcinin başka bir tekstil firmasını satın alması).",
+        "  - Dikey Büyüme:",
+        "    * Geriye Doğru Dikey Büyüme: İşletmenin hammadde veya girdi tedarikçisini bünyesine katması (Örn: Lastik üreticisinin kauçuk çiftliği satın alması).",
+        "    * İleriye Doğru Dikey Büyüme: İşletmenin dağıtım kanalını, toptancıları veya perakende satış mağazalarını bünyesine katması (Örn: Fabrikanın kendi mağaza zincirini açması).",
+        "  - Çapraz / Karma (Konglomerat) Büyüme: Birbirleriyle hiçbir teknolojik veya sektörel bağı bulunmayan tamamen farklı sektörlere girerek büyümedir (Holding yapılanmaları; amaç riski çeşitlendirmektir).",
+        "İş Birlikleri:",
+        "  - Joint Venture (Ortak Girişim): İki veya daha fazla bağımsız şirketin belirli bir amaç doğrultusunda bir araya gelerek 'YENİ VE BAĞIMSIZ BİR TÜZEL KİŞİLİK (ŞİRKET)' kurmasıdır.",
+        "  - Konsorsiyum: Büyük bir altyapı ihalesini (köprü, baraj) gerçekleştirmek üzere kurulan geçici işbirliğidir.",
+        "  - Kartel: Aynı sektördeki firmaların rekabeti ortadan kaldırmak için fiyat veya kota anlaşması yapmasıdır (Hukuken yasaktır)."
+      ]
+    },
+    {
+      "unit_number": 7,
+      "title": "Küresel Çevrede İşletmecilik ve Rekabet",
+      "is_vize": false,
+      "key_topics": [
+        "Küreselleşme Kavramı",
+        "Uluslararasılaşma Aşamaları",
+        "Çokuluslu Şirket Stratejileri",
+        "Michael Porter'ın Jenerik Rekabet Stratejileri"
+      ],
+      "hap_bilgiler": [
+        "Uluslararasılaşma Aşamaları (Düşük Riskten Yüksek Risklere Doğru Sıralama):",
+        "  1. İhracat (Exporting): Dolaylı veya doğrudan ihracat (En az riskli ve en yaygın ilk adımdır).",
+        "  2. Lisans Anlaşmaları ve Franchise Verme: Marka veya teknolojinin kullanım hakkını devretme.",
+        "  3. Stratejik İttifaklar ve Ortak Girişimler (Joint Venture): Yerel bir ortakla ortak şirket kurma.",
+        "  4. Doğrudan Yabancı Yatırım (FDI): Yabancı ülkede sıfırdan tesis kurma (Greenfield yatırım) veya yerel bir şirketi doğrudan satın alma (En yüksek risk ve en yüksek kontrole sahiptir).",
+        "Çokuluslu Şirketlerin Stratejik Yaklaşımları:",
+        "  - Çok Uluslu (Multidomestic) Strateji: Her ülkenin yerel tüketici tercihlerine göre ürün ve pazarlamayı uyarlamak (Yüksek yerel uyum).",
+        "  - Küresel (Global) Strateji: Tüm dünyada standartlaştırılmış tek bir ürün satarak küresel maliyet avantajı yakalamak (Düşük yerel uyum, yüksek entegrasyon).",
+        "  - Ulusötesi (Transnational) Strateji: Hem küresel ölçek ekonomilerini hem de yerel farklılıklara uyumu birleştiren karma stratejidir.",
+        "Michael Porter'ın 3 Jenerik Rekabet Stratejisi:",
+        "  1. Maliyet Liderliği: Sektördeki en düşük maliyetle üretim yaparak geniş pazara ucuz fiyatla hakim olmak (Örn: BİM, IKEA).",
+        "  2. Farklılaştırma: Müşterilerin benzersiz algıladığı üstün tasarım, kalite veya marka imajı yaratarak primli fiyat uygulamak (Örn: Apple, BMW).",
+        "  3. Odaklanma (Niş) Stratejisi: Tüm pazara değil, dar bir tüketici veya coğrafya segmentine odaklanarak orada maliyet liderliği ya da farklılaştırma uygulamak (Örn: Ferrari, lüks saatler)."
+      ]
+    },
+    {
+      "unit_number": 8,
+      "title": "İşletme Fonksiyonları",
+      "is_vize": false,
+      "key_topics": [
+        "Yönetim Fonksiyonları (POLC)",
+        "Üretim Fonksiyonu ve Kalite",
+        "Pazarlama Fonksiyonu (4P ve STP)",
+        "Finansman ve İnsan Kaynakları Fonksiyonları"
+      ],
+      "hap_bilgiler": [
+        "Yönetim Fonksiyonları (POLC Döngüsü):",
+        "  - Planlama: Amaç ve hedeflerin belirlenmesi, bunlara nasıl ulaşılacağının kararlaştırılmasıdır (Yönetimin İLK fonksiyonudur).",
+        "  - Örgütleme (Organize Etme): İnsanların, görevlerin, yetkilerin ve fiziki kaynakların amaca uygun şekilde yapılandırılmasıdır.",
+        "  - Yöneltme (Yürütme / Liderlik): Çalışanların motive edilmesi, liderlik yapılması ve ortak hedefe doğru yönlendirilmesidir.",
+        "  - Denetim (Kontrol): Standartların belirlenmesi, gerçekleşen sonuçların ölçülmesi, sapmaların tespit edilip düzeltici tedbirlerin alınmasıdır (Yönetimin SON fonksiyonudur).",
+        "Pazarlama Fonksiyonu ve Pazarlama Karması (4P):",
+        "  - Product (Ürün): Mal, hizmet, ambalaj, marka, garanti.",
+        "  - Price (Fiyat): Maliyet, rekabet ve tüketici algısına göre belirlenen bedel.",
+        "  - Place (Dağıtım): Ürünün üreticiden tüketiciye ulaştırıldığı kanallar.",
+        "  - Promotion (Tutundurma): Reklam, halkla ilişkiler, kişisel satış, satış promosyonları.",
+        "  - Modern Hizmet Pazarlaması Ek 3P'si: People (İnsan), Process (Süreç), Physical Evidence (Fiziksel Kanıtlar).",
+        "Finansman Fonksiyonu: İşletmenin ihtiyaç duyduğu fonları en uygun maliyetle temin etmesi ve bu fonları en verimli alanlara yatırmasıdır. Temel amaç işletmenin piyasa değerini maksimize etmektir.",
+        "İnsan Kaynakları Yönetimi (İKY): İnsan kaynağının planlanması, iş analizi, personel seçimi, eğitim, performans değerleme ve ücret yönetimini kapsar."
+      ]
+    }
+  ],
+  "sinav_tuzaklari": [
+    {
+      "id": 1,
+      "title": "Maslow Hiyerarşisinin Zirvesindeki İhtiyaç",
+      "mistake": "Zirvede 'Saygınlık' veya 'Sosyal' ihtiyaçların yer aldığını düşünmek.",
+      "truth": "Maslow hiyerarşisinin en tepesindeki (zirvedeki) 5. basamak KENDİNİ GERÇEKLEŞTİRME (Self-Actualization) ihtiyacıdır.",
+      "tip": "En altta Fizyolojik, en tepede Kendini Gerçekleştirme vardır."
+    },
+    {
+      "id": 2,
+      "title": "Girişimci ile Yönetici (Profesyonel Yönetici) Ayrımı",
+      "mistake": "Yöneticinin de kâr ve zarara doğrudan ortak olduğunu varsaymak.",
+      "truth": "Girişimci sermayesini koyar ve kâr/zarar riskini bizzat üstlenir. Profesyonel yönetici ise başkası adına işletmeyi yönetir ve emeği karşılığı maaş/ücret alır.",
+      "tip": "Risk ve kâr-zarar girişimcinindir; yönetici maaşlı profesyoneldir."
+    },
+    {
+      "id": 3,
+      "title": "Komandite Ortak ile Komanditer Ortak Sorumluluk Farkı",
+      "mistake": "İkisinin sorumluluklarını birbirine karıştırmak.",
+      "truth": "Komandite ortak: Sorumluluğu SINIRSIZDIR, gerçek kişi olmak zorundadır ve şirketi yönetir. Komanditer ortak: Sorumluluğu koyduğu sermaye ile SINIRLIDIR ve şirketi yönetemez.",
+      "tip": "KomanditE = 'Esas sorumlu' (Sınırsız); KomanditeR = 'Rahat ortak' (Sermayesi kadar sınırlı)."
+    },
+    {
+      "id": 4,
+      "title": "Anonim Şirket ile Limited Şirket Farkları",
+      "mistake": "Limited şirkette pay devrinin elden serbestçe yapılabileceğini sanmak.",
+      "truth": "Anonim şirkette hisse devri çok kolay ve serbesttir. Limited şirkette ise ortak sayısı en çok 50'dir ve pay devri genel kurul onayı, noter ve ticaret sicil tesciline tabidir.",
+      "tip": "A.Ş. = Kolay hisse devri, asgari 50.000 TL; Ltd. = Zor pay devri, en çok 50 ortak."
+    },
+    {
+      "id": 5,
+      "title": "Carroll'ın Sosyal Sorumluluk Piramidinin Tabanı",
+      "mistake": "Piramidin temelinde 'Yasal' veya 'Ahlaki' sorumluluğun olduğunu sanmak.",
+      "truth": "Archie Carroll'a göre piramidin en tabanında EKONOMİK SORUMLULUK (kârlı olmak ve ayakta kalmak) yer alır. İşletme kâr etmezse diğer sorumlulukları yerine getiremez.",
+      "tip": "Piramidin temeli daima Ekonomik Sorumluluktur."
+    },
+    {
+      "id": 6,
+      "title": "Joint Venture (Ortak Girişim) ile Konsorsiyum Farkı",
+      "mistake": "Konsorsiyumda da yeni bir tüzel şirket kurulduğunu zannetmek.",
+      "truth": "Joint Venture'da ortaklar bir araya gelerek YENİ BİR TÜZEL KİŞİLİK (ayrı bir şirket) kurarlar. Konsorsiyumda ise büyük bir iş için sadece sözleşmeye dayalı geçici ortaklık kurulur, yeni bir şirket doğmaz.",
+      "tip": "Yeni tüzel şirket varsa = Joint Venture; Geçici işbirliğiyse = Konsorsiyum."
+    },
+    {
+      "id": 7,
+      "title": "Geriye Doğru Dikey Büyüme ile İleriye Doğru Dikey Büyüme",
+      "mistake": "Kendi mağaza zincirini açmayı geriye doğru büyüme sanmak.",
+      "truth": "Hammadde ve girdi tedarikçisine doğru gitmek GERİYE doğru dikey büyümedir. Dağıtım kanallarına ve nihai satış mağazalarına doğru gitmek İLERİYE doğru dikey büyümedir.",
+      "tip": "Tedarikçiye = Geriye; Müşteriye/Mağazaya = İleriye."
+    },
+    {
+      "id": 8,
+      "title": "Konglomerat (Çapraz / Karma) Büyüme Amacı",
+      "mistake": "Konglomerat büyümenin aynı sektörde pazar payı kazanmak için yapıldığını düşünmek.",
+      "truth": "Konglomerat büyüme, birbiriyle HİÇBİR İLİŞKİSİ OLMAYAN tamamen farklı sektörlere girilmesidir (Örn: İnşaat firmasının gıda ve bankacılık sektörüne girmesi). Temel amaç sektörel riskleri dağıtmaktır.",
+      "tip": "Farklı sektörler = Konglomerat (Holding) büyüme; amaç risk dağıtımı."
+    },
+    {
+      "id": 9,
+      "title": "Yönetim Fonksiyonlarının Sıralaması (POLC)",
+      "mistake": "Yönetimin ilk fonksiyonunun örgütleme veya yöneltme olduğunu sanmak.",
+      "truth": "Yönetimin İLK fonksiyonu PLANLAMA, SON fonksiyonu ise DENETİM'dir (Kontrol). Planlama olmadan hiçbir yönetim faaliyeti başlayamaz.",
+      "tip": "Sıralama: Planlama -> Örgütleme -> Yöneltme -> Denetim."
+    },
+    {
+      "id": 10,
+      "title": "Pazarlamanın 4P'sindeki 'Tutundurma' (Promotion) Kapsamı",
+      "mistake": "Tutundurmanın sadece fiyat indirimi yapmak olduğunu düşünmek.",
+      "truth": "Tutundurma (Promotion); Reklam, Halkla İlişkiler (PR), Kişisel Satış ve Satış Geliştirme (promosyon) unsurlarını içeren geniş bir iletişim karmasıdır.",
+      "tip": "Tutundurma = Müşteriyle iletişim kurulan tüm reklam ve PR faaliyetleridir."
+    }
+  ],
+  "formuller_ve_kavramlar": [
+    {
+      "term": "Verimlilik Formülü",
+      "description": "Verimlilik = Üretilen Çıktı / Tüketilen Girdi."
+    },
+    {
+      "term": "Etkililik (Effectiveness)",
+      "description": "İşletmenin önceden belirlediği stratejik hedeflere ve amaçlara ulaşma derecesidir."
+    },
+    {
+      "term": "İktisadilik (Karlılık)",
+      "description": "İktisadilik = Satış Hasılatı / Katlanılan Toplam Maliyet."
+    },
+    {
+      "term": "Maslow İhtiyaçlar Piramidi",
+      "description": "Fizyolojik -> Güvenlik -> Sosyal -> Saygınlık -> Kendini Gerçekleştirme."
+    },
+    {
+      "term": "Üretim Faktörleri ve Getirileri",
+      "description": "Emek -> Ücret, Sermaye -> Faiz, Doğal Kaynaklar -> Rant, Girişimci -> Kâr."
+    },
+    {
+      "term": "Carroll KSS Piramidi",
+      "description": "Ekonomik (Taban) -> Yasal -> Etik -> Filantropik/Gönüllü (Zirve)."
+    },
+    {
+      "term": "PESTLE Analizi",
+      "description": "Politik, Ekonomik, Sosyo-kültürel, Teknolojik, Yasal, Ekolojik makro çevre faktörleri analizi."
+    },
+    {
+      "term": "Porter'ın 5 Güç Modeli",
+      "description": "Sektörel rekabet, potansiyel rakiplerin tehdidi, tedarikçilerin pazarlık gücü, alıcıların pazarlık gücü, ikame ürünlerin tehdidi."
+    },
+    {
+      "term": "KOBİ Çalışan Sınırları",
+      "description": "Mikro: 1-9, Küçük: 10-49, Orta: 50-249 çalışan."
+    },
+    {
+      "term": "Joint Venture (Ortak Girişim)",
+      "description": "İki şirketin belirli bir amaçla bir araya gelerek yeni bir tüzel kişilik oluşturması."
+    },
+    {
+      "term": "Whistleblowing",
+      "description": "Kurum içindeki yasadışı veya etik dışı eylemlerin yetkililere ihbar edilmesi."
+    },
+    {
+      "term": "Greenwashing (Yeşil Yıkama)",
+      "description": "Çevre dostu olmayan ürünlerin aldatıcı reklamlarla çevreci gibi pazarlanması."
+    },
+    {
+      "term": "Michael Porter Jenerik Stratejileri",
+      "description": "Maliyet Liderliği, Farklılaştırma, Odaklanma."
+    },
+    {
+      "term": "Pazarlamanın 4P'si",
+      "description": "Product (Ürün), Price (Fiyat), Place (Dağıtım), Promotion (Tutundurma)."
+    },
+    {
+      "term": "Yönetim Fonksiyonları (POLC)",
+      "description": "Planlama, Örgütleme, Yöneltme, Denetim."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "unit": 1,
+      "question": "Maslow'un ihtiyaçlar hiyerarşisinin en tepesinde (zirvesinde) hangi ihtiyaç yer alır?",
+      "answer": "Kendini Gerçekleştirme (Self-Actualization)."
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "question": "Girişimcinin üretim faktörlerini bir araya getirmesi karşılığında elde ettiği gelir payı nedir?",
+      "answer": "Kâr (Aynı zamanda zarar riskini de üstlenir)."
+    },
+    {
+      "id": 3,
+      "unit": 1,
+      "question": "İşletmenin önceden belirlediği amaç ve hedeflere ulaşma derecesine ne ad verilir?",
+      "answer": "Etkililik (Effectiveness)."
+    },
+    {
+      "id": 4,
+      "unit": 1,
+      "question": "Üretilen çıktı miktarının kullanılan girdi miktarına bölünmesiyle hangi ölçüt hesaplanır?",
+      "answer": "Verimlilik (Productivity)."
+    },
+    {
+      "id": 5,
+      "unit": 2,
+      "question": "İşletmenin PESTLE analiziyle incelediği çevre katmanı hangisidir?",
+      "answer": "Genel Dış Çevre (Makro Çevre)."
+    },
+    {
+      "id": 6,
+      "unit": 2,
+      "question": "Michael Porter'ın 5 Güç Modeli hangi çevrenin analizinde kullanılır?",
+      "answer": "Yakın Dış Çevre (Sektörel / Görev Çevresi)."
+    },
+    {
+      "id": 7,
+      "unit": 2,
+      "question": "Hem faktör sayısı çok fazla olan hem de faktörlerin çok hızlı değiştiği çevreye ne denir?",
+      "answer": "Karmaşık ve Dinamik Çevre (En yüksek belirsizlik düzeyi)."
+    },
+    {
+      "id": 8,
+      "unit": 3,
+      "question": "10 ile 49 arasında çalışanı olan işletmeler KOBİ sınıflandırmasında hangi gruptadır?",
+      "answer": "Küçük İşletme."
+    },
+    {
+      "id": 9,
+      "unit": 3,
+      "question": "Komandit şirkette sorumluluğu koyduğu sermaye payı ile sınırlı olan ortağa ne ad verilir?",
+      "answer": "Komanditer Ortak."
+    },
+    {
+      "id": 10,
+      "unit": 3,
+      "question": "En fazla 50 ortağa sahip olabilen ve pay devri noter/sicil onayına tabi olan sermaye şirketi hangisidir?",
+      "answer": "Limited Şirket (Ltd. Şti.)."
+    },
+    {
+      "id": 11,
+      "unit": 3,
+      "question": "Amacı kâr elde etmek değil, ortakların geçim ve meslek ihtiyaçlarını karşılıklı yardımlaşmayla karşılamak olan kuruluş nedir?",
+      "answer": "Kooperatif."
+    },
+    {
+      "id": 12,
+      "unit": 4,
+      "question": "Carroll'ın Sosyal Sorumluluk Piramidinin en tabanında hangi sorumluluk yer alır?",
+      "answer": "Ekonomik Sorumluluk (Kârlı olmak ve verimli üretmek)."
+    },
+    {
+      "id": 13,
+      "unit": 4,
+      "question": "Şirket içindeki yolsuzluk veya ahlak dışı uygulamaların bir çalışan tarafından ifşa edilmesine ne denir?",
+      "answer": "Whistleblowing (İçeriden İhbar / Etik Bildirim)."
+    },
+    {
+      "id": 14,
+      "unit": 4,
+      "question": "Bir işletmenin gerçekte çevreci olmadığı halde kendini öyle göstermesine ne ad verilir?",
+      "answer": "Yeşil Yıkama (Greenwashing)."
+    },
+    {
+      "id": 15,
+      "unit": 5,
+      "question": "Bir yatırım kararının verilmesinden önce yapılan kapsamlı yapılabilirlik araştırmasına ne denir?",
+      "answer": "Fizibilite Etüdü (Araştırması)."
+    },
+    {
+      "id": 16,
+      "unit": 5,
+      "question": "Pazar araştırması, talep tahmini ve kapasite seçimi fizibilite araştırmasının hangi boyutundadır?",
+      "answer": "Ekonomik Etüt boyutundadır."
+    },
+    {
+      "id": 17,
+      "unit": 5,
+      "question": "İşletmenin maliyetlerini en aza indirip kârını en üst düzeye çıkaran ideal konuma ne denir?",
+      "answer": "Optimum Kuruluş Yeri."
+    },
+    {
+      "id": 18,
+      "unit": 6,
+      "question": "Aynı sektörde ve aynı üretim aşamasındaki bir rakip firmayı satın alarak büyümeye ne ad verilir?",
+      "answer": "Yatay Büyüme."
+    },
+    {
+      "id": 19,
+      "unit": 6,
+      "question": "Bir fabrikanın kendi hammadde üreticisini satın alması ne tür bir büyümedir?",
+      "answer": "Geriye Doğru Dikey Büyüme."
+    },
+    {
+      "id": 20,
+      "unit": 6,
+      "question": "Birbirleriyle hiçbir sektörel ve teknolojik bağı olmayan farklı sektörlere girerek büyüme türü nedir?",
+      "answer": "Konglomerat (Çapraz / Karma) Büyüme."
+    },
+    {
+      "id": 21,
+      "unit": 6,
+      "question": "İki bağımsız şirketin birleşip yeni bir üçüncü tüzel şirket kurmasıyla oluşan işbirliği nedir?",
+      "answer": "Joint Venture (Ortak Girişim)."
+    },
+    {
+      "id": 22,
+      "unit": 7,
+      "question": "Bir firmanın yabancı pazarlara açılırken başvurduğu en düşük riskli ilk adım genellikle nedir?",
+      "answer": "İhracat (Exporting)."
+    },
+    {
+      "id": 23,
+      "unit": 7,
+      "question": "Tüm dünyada standartlaştırılmış tek bir ürün satarak ölçek ekonomisi yakalayan strateji nedir?",
+      "answer": "Küresel (Global) Strateji."
+    },
+    {
+      "id": 24,
+      "unit": 7,
+      "question": "Michael Porter'a göre sektördeki en düşük üretim maliyetini yakalamayı amaçlayan strateji nedir?",
+      "answer": "Maliyet Liderliği Stratejisi."
+    },
+    {
+      "id": 25,
+      "unit": 7,
+      "question": "Müşterilerin üstün algıladığı benzersiz tasarım ve kalite yaratarak primli fiyat uygulayan strateji nedir?",
+      "answer": "Farklılaştırma Stratejisi."
+    },
+    {
+      "id": 26,
+      "unit": 8,
+      "question": "Yönetim fonksiyonlarının ilk ve en temel adımı hangisidir?",
+      "answer": "Planlama."
+    },
+    {
+      "id": 27,
+      "unit": 8,
+      "question": "Yönetim sürecinin gerçekleşen sonuçları standartlarla karşılaştırıp sapmaları düzelten son adımı nedir?",
+      "answer": "Denetim (Kontrol)."
+    },
+    {
+      "id": 28,
+      "unit": 8,
+      "question": "Pazarlamanın 4P'si nelerdir?",
+      "answer": "Product (Ürün), Price (Fiyat), Place (Dağıtım), Promotion (Tutundurma)."
+    },
+    {
+      "id": 29,
+      "unit": 8,
+      "question": "Hizmet pazarlamasında geleneksel 4P'ye eklenen 3P nedir?",
+      "answer": "People (İnsan), Process (Süreç), Physical Evidence (Fiziksel Kanıtlar)."
+    },
+    {
+      "id": 30,
+      "unit": 8,
+      "question": "İşletmenin ihtiyaç duyduğu fonları en uygun şartlarda bulup yatırıma yönlendiren fonksiyon nedir?",
+      "answer": "Finansman Fonksiyonu."
+    }
+  ],
+  "exams": [
+    {
+      "title": "Vize Deneme Sınavı 1",
+      "filename": "Vize_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "Maslow'un İhtiyaçlar Hiyerarşisinde bireyin potansiyelini tam olarak ortaya koyma ve geliştirme arzusu piramidin hangi basamağında yer alır?",
+          "options": [
+            "A) Fizyolojik ihtiyaçlar",
+            "B) Güvenlik ihtiyaçları",
+            "C) Sosyal ihtiyaçlar",
+            "D) Saygınlık ihtiyaçları",
+            "E) Kendini gerçekleştirme ihtiyaçları"
+          ],
+          "correct_answer": "E",
+          "explanation": "Maslow'un ihtiyaçlar piramidinin en tepesinde (5. basamak) 'Kendini Gerçekleştirme' yer alır."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Üretim faktörlerinden biri olan 'Doğal Kaynaklar'ın (Toprak) üretim sürecine katılması karşılığında elde ettiği gelir payı nedir?",
+          "options": [
+            "A) Ücret",
+            "B) Faiz",
+            "C) Rant (Kira)",
+            "D) Kâr",
+            "E) Prim"
+          ],
+          "correct_answer": "C",
+          "explanation": "Doğal kaynakların payı Rant (Kira), emeğin payı Ücret, sermayenin payı Faiz, girişimcinin payı Kârdır."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "Bir işletmenin önceden belirlediği stratejik hedeflere ve amaçlara ulaşabilme derecesini ifade eden başarı ölçütü hangisidir?",
+          "options": [
+            "A) Verimlilik",
+            "B) Etkililik",
+            "C) İktisadilik",
+            "D) Likidite",
+            "E) Esneklik"
+          ],
+          "correct_answer": "B",
+          "explanation": "Hedeflere ulaşma derecesi 'Etkililik' (Effectiveness / Doğru işi yapmak) olarak adlandırılır."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "Girişimci ile profesyonel yönetici arasındaki en temel ayrım aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Yöneticinin üniversite mezunu olması",
+            "B) Girişimcinin kâr ve zarar riskini bizzat üstlenmesi",
+            "C) Yöneticinin daha çok çalışması",
+            "D) Girişimcinin emir vermemesi",
+            "E) Aralarında hiçbir fark olmaması"
+          ],
+          "correct_answer": "B",
+          "explanation": "Girişimci sermayesini ortaya koyarak kâr ve zarar riskini üstlenir; yönetici ise ücret karşılığı başkaları adına çalışır."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Üretilen toplam çıktı miktarının kullanılan girdi miktarına bölünmesiyle hesaplanan oran hangisidir?",
+          "options": [
+            "A) Verimlilik (Productivity)",
+            "B) Kârlılık",
+            "C) Finansal kaldıraç",
+            "D) İktisadilik",
+            "E) Başabaş oranı"
+          ],
+          "correct_answer": "A",
+          "explanation": "Çıktı / Girdi oranı Verimliliktir."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "İşletmenin kontrol edemediği; faiz, enflasyon, döviz kurları ve ekonomik büyüme gibi unsurları kapsayan makro çevre faktörü hangisidir?",
+          "options": [
+            "A) Sektörel çevre",
+            "B) Ekonomik çevre",
+            "C) Sosyo-kültürel çevre",
+            "D) Örgütsel çevre",
+            "E) Teknolojik çevre"
+          ],
+          "correct_answer": "B",
+          "explanation": "Faiz, kur, enflasyon ve millî gelir Ekonomik Çevre faktörleridir."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Michael Porter'ın Sektörel Rekabeti analiz eden '5 Güç Modeli'nde aşağıdakilerden hangisi yer almaz?",
+          "options": [
+            "A) Mevcut rakipler arasındaki rekabet",
+            "B) Tedarikçilerin pazarlık gücü",
+            "C) Alıcıların pazarlık gücü",
+            "D) İkame ürünlerin tehdidi",
+            "E) İşletmenin örgüt kültürü"
+          ],
+          "correct_answer": "E",
+          "explanation": "Örgüt kültürü işletmenin 'İç Çevresi'ne aittir; Porter'ın 5 Güç Modeli sektörel dış çevreyi inceler."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Çevredeki faktör sayısının çok fazla olduğu ve bu faktörlerin sürekli ve öngörülemez şekilde değiştiği çevre tipi hangisidir?",
+          "options": [
+            "A) Basit - Durağan Çevre",
+            "B) Karmaşık - Durağan Çevre",
+            "C) Basit - Dinamik Çevre",
+            "D) Karmaşık - Dinamik Çevre",
+            "E) Kapalı Çevre"
+          ],
+          "correct_answer": "D",
+          "explanation": "En yüksek belirsizlik 'Karmaşık ve Dinamik' çevrede görülür."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Bir işletmenin açık sistem yaklaşımında müşterilerine sunduğu ürün, hizmet ve atıklar sistemin hangi parçasını oluşturur?",
+          "options": [
+            "A) Girdiler",
+            "B) Dönüşüm süreci",
+            "C) Çıktılar",
+            "D) Geri bildirim",
+            "E) İç çevre"
+          ],
+          "correct_answer": "C",
+          "explanation": "Üretilen mal, hizmet ve ortaya çıkan atıklar sistemin 'Çıktıları'dır."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "Nüfusun yaş yapısı, eğitim düzeyi, kadınların işgücüne katılımı ve tüketim alışkanlıkları PESTLE analizinde hangi başlık altında incelenir?",
+          "options": [
+            "A) Politik çevre",
+            "B) Sosyo-Kültürel çevre",
+            "C) Teknolojik çevre",
+            "D) Yasal çevre",
+            "E) Ekolojik çevre"
+          ],
+          "correct_answer": "B",
+          "explanation": "Demografi, yaşam biçimleri ve toplumsal değerler Sosyo-Kültürel çevre unsurlarıdır."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "KOBİ sınıflandırmasına göre çalışan sayısı 10 ile 49 kişi arasında olan işletmeler hangi kategoriye girer?",
+          "options": [
+            "A) Mikro işletme",
+            "B) Küçük işletme",
+            "C) Orta büyüklükte işletme",
+            "D) Büyük işletme",
+            "E) Dev işletme"
+          ],
+          "correct_answer": "B",
+          "explanation": "1-9 Mikro, 10-49 Küçük, 50-249 Orta büyüklükte işletmedir."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Komandit şirkette sorumluluğu şirkete koyduğu sermaye payı ile sınırlı olan ve şirketi yönetme yetkisi bulunmayan ortak hangisidir?",
+          "options": [
+            "A) Komandite ortak",
+            "B) Komanditer ortak",
+            "C) Kollektif ortak",
+            "D) Hâkim ortak",
+            "E) Murahhas aza"
+          ],
+          "correct_answer": "B",
+          "explanation": "Komanditer ortağın sorumluluğu sermayesiyle sınırlıdır."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "Türk Ticaret Kanunu'na göre ortak sayısı en çok 50 olabilen ve pay devri noter tasdiki ile genel kurul onayına tabi olan sermaye şirketi hangisidir?",
+          "options": [
+            "A) Anonim Şirket",
+            "B) Limited Şirket",
+            "C) Kollektif Şirket",
+            "D) Komandit Şirket",
+            "E) Kooperatif"
+          ],
+          "correct_answer": "B",
+          "explanation": "Limited şirketlerde ortak sayısı en fazla 50 olabilir ve pay devri sıkı şekil şartlarına bağlıdır."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "Ortaklarının karşılıklı yardımlaşma ve dayanışma yoluyla meslek veya geçim ihtiyaçlarını uygun şartlarda karşılamak amacıyla kurulan kuruluş hangisidir?",
+          "options": [
+            "A) Anonim Şirket",
+            "B) Kooperatif",
+            "C) Limited Şirket",
+            "D) Holding",
+            "E) Joint Venture"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kooperatifler kâr değil karşılıklı yardım ve hizmet amaçlıdır."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "Sermayesi paylara bölünmüş olan ve pay senetlerinin devri en kolay olan sermaye şirketi türü hangisidir?",
+          "options": [
+            "A) Anonim Şirket (A.Ş.)",
+            "B) Limited Şirket",
+            "C) Kollektif Şirket",
+            "D) Adi Şirket",
+            "E) Adi Komandit Şirket"
+          ],
+          "correct_answer": "A",
+          "explanation": "Anonim Şirketlerde hisse senedi devri kural olarak serbest ve son derece kolaydır."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "Archie Carroll'ın Sosyal Sorumluluk Piramidinin en temelinde (tabanında) yer alan sorumluluk düzeyi hangisidir?",
+          "options": [
+            "A) Yasal sorumluluk",
+            "B) Etik sorumluluk",
+            "C) Ekonomik sorumluluk",
+            "D) Filantropik sorumluluk",
+            "E) Çevresel sorumluluk"
+          ],
+          "correct_answer": "C",
+          "explanation": "Carroll'ın piramidinin tabanında Ekonomik Sorumluluk (kârlı olmak) yer alır."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "Bir kurumda çalışan kişinin kurum içindeki yolsuzluk, hile veya yasadışı uygulamaları yetkili makamlara bildirmesine ne ad verilir?",
+          "options": [
+            "A) Whistleblowing (İçeriden Bilgi İfşası)",
+            "B) Greenwashing",
+            "C) Lobicilik",
+            "D) Konsolidasyon",
+            "E) Sosyal denetim"
+          ],
+          "correct_answer": "A",
+          "explanation": "Yasadışı veya etik dışı durumların yetkililere ifşa edilmesine Whistleblowing denir."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Bir şirketin çevreye zararlı uygulamalarını gizlemek için reklam ve halkla ilişkiler yoluyla kendini çevreci göstermesi aldatmacasına ne ad verilir?",
+          "options": [
+            "A) Sosyal sorumluluk",
+            "B) Yeşil Yıkama (Greenwashing)",
+            "C) Çevresel sürdürülebilirlik",
+            "D) Karbon ayak izi",
+            "E) Filantropi"
+          ],
+          "correct_answer": "B",
+          "explanation": "Sahte çevrecilik propagandası 'Yeşil Yıkama (Greenwashing)' olarak adlandırılır."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Bir işletmenin kararlarından ve faaliyetlerinden doğrudan ya da dolaylı etkilenen kişi ve gruplara ne ad verilir?",
+          "options": [
+            "A) Hissedar (Shareholder)",
+            "B) Paydaş (Stakeholder)",
+            "C) Komandite ortak",
+            "D) Yönetim kurulu",
+            "E) Girişimci"
+          ],
+          "correct_answer": "B",
+          "explanation": "Tüm etkilenen ve etkileyen gruplar 'Paydaş' (Stakeholder) olarak tanımlanır."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "Carroll'ın piramidinin en üst basamağında yer alan, eğitime ve topluma gönüllü katkı sağlamayı ifade eden sorumluluk nedir?",
+          "options": [
+            "A) Ekonomik sorumluluk",
+            "B) Yasal sorumluluk",
+            "C) Etik sorumluluk",
+            "D) Filantropik (Gönüllü) sorumluluk",
+            "E) Zorunlu sorumluluk"
+          ],
+          "correct_answer": "D",
+          "explanation": "En üst basamaktaki gönüllü katkılar Filantropik sorumluluktur."
+        }
+      ]
+    },
+    {
+      "title": "Vize Deneme Sınavı 2",
+      "filename": "Vize_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "Maslow hiyerarşisinde düzenli bir işe sahip olma ve sosyal güvenlik kapsamına girme hangi basamaktaki ihtiyacı karşılar?",
+          "options": [
+            "A) Fizyolojik ihtiyaçlar",
+            "B) Güvenlik ihtiyaçları",
+            "C) Saygınlık ihtiyaçları",
+            "D) Sosyal ihtiyaçlar",
+            "E) Kendini gerçekleştirme"
+          ],
+          "correct_answer": "B",
+          "explanation": "Gelecek kaygısını azaltma ve iş güvencesi Güvenlik İhtiyaçlarıdır."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Sermaye faktörünün üretim faaliyetine katılması karşılığında aldığı gelir payı aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Ücret",
+            "B) Rant",
+            "C) Faiz",
+            "D) Kâr",
+            "E) Temettü"
+          ],
+          "correct_answer": "C",
+          "explanation": "Sermayenin getirisi Faizdir."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "Satış hasılatının katlanılan toplam maliyet giderlerine bölünmesiyle elde edilen oran nedir?",
+          "options": [
+            "A) Verimlilik",
+            "B) İktisadilik (Karlılık)",
+            "C) Etkililik",
+            "D) Esneklik",
+            "E) Kapasite kullanım oranı"
+          ],
+          "correct_answer": "B",
+          "explanation": "Hasılat / Gider oranı İktisadilik olarak adlandırılır."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "Aşağıdakilerden hangisi bir işletmenin 'Birincil (Temel)' amaçları arasında yer alır?",
+          "options": [
+            "A) Çevreye ağaç dikmek",
+            "B) Uzun dönemde kâr maksimizasyonu ve varlığını sürdürme",
+            "C) Şirket içi spor turnuvası düzenlemek",
+            "D) Çalışanlara ücretsiz sinema bileti vermek",
+            "E) Şehir kütüphanesine kitap bağışlamak"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kâr elde etmek, süreklilik ve piyasa değerini artırmak işletmenin birincil amaçlarıdır."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Verimlilik kavramı aşağıdaki ifadelerden hangisiyle özetlenebilir?",
+          "options": [
+            "A) Doğru işi yapmak",
+            "B) İşi doğru ve en az kaynakla yapmak",
+            "C) Sadece kâr etmek",
+            "D) Çok personel çalıştırmak",
+            "E) Reklam vermek"
+          ],
+          "correct_answer": "B",
+          "explanation": "Verimlilik aynı girdiyle en yüksek çıktıyı almak, yani 'işi en az kaynakla doğru yapmaktır'."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "İşletmenin yönetim kadrosu, şirket kültürü, çalışanları ve fiziki kaynakları hangi çevre katmanında yer alır?",
+          "options": [
+            "A) İç Çevre",
+            "B) Yakın Dış Çevre",
+            "C) Genel Dış Çevre",
+            "D) Makro Çevre",
+            "E) Sektörel Çevre"
+          ],
+          "correct_answer": "A",
+          "explanation": "İşletmenin kendi bünyesinde kontrol edebildiği faktörler İç Çevredir."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Rakipler, tedarikçiler ve ikame mallar işletmenin hangi çevresine aittir?",
+          "options": [
+            "A) İç Çevre",
+            "B) Yakın Dış Çevre (Sektörel Çevre)",
+            "C) Makro Çevre",
+            "D) Doğal Çevre",
+            "E) Yasal Çevre"
+          ],
+          "correct_answer": "B",
+          "explanation": "Sektör içindeki paydaşlar Yakın Dış Çevreyi oluşturur."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Girdi alan, bunları işleyip çevreye çıktı veren ve çevresiyle sürekli etkileşimde olan sistem türü hangisidir?",
+          "options": [
+            "A) Kapalı Sistem",
+            "B) Açık Sistem",
+            "C) Statik Sistem",
+            "D) Yalıtılmış Sistem",
+            "E) Lineer Sistem"
+          ],
+          "correct_answer": "B",
+          "explanation": "İşletmeler çevresiyle sürekli veri ve kaynak alışverişinde olan Açık Sistemlerdir."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Yapay zeka, nesnelerin interneti ve otomasyondaki gelişmeler PESTLE analizinde hangi başlık altında değerlendirilir?",
+          "options": [
+            "A) Politik faktörler",
+            "B) Teknolojik faktörler",
+            "C) Ekolojik faktörler",
+            "D) Yasal faktörler",
+            "E) Sosyal faktörler"
+          ],
+          "correct_answer": "B",
+          "explanation": "Bilişim ve üretimdeki teknik yenilikler Teknolojik faktörlerdir."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "İşletme açısından çevresel belirsizliğin en düşük olduğu çevre türü hangisidir?",
+          "options": [
+            "A) Karmaşık - Dinamik",
+            "B) Basit - Durağan",
+            "C) Karmaşık - Durağan",
+            "D) Basit - Dinamik",
+            "E) Değişken"
+          ],
+          "correct_answer": "B",
+          "explanation": "Faktör sayısının az (basit) ve değişim hızının yavaş (durağan) olduğu durum belirsizliğin en az olduğu durumdur."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "Çalışan sayısı 1 ile 9 kişi arasında olan mikro işletmeler KOBİ mevzuatında hangi büyüklük grubunu oluşturur?",
+          "options": [
+            "A) Mikro İşletme",
+            "B) Küçük İşletme",
+            "C) Orta İşletme",
+            "D) Büyük İşletme",
+            "E) Aile İşletmesi"
+          ],
+          "correct_answer": "A",
+          "explanation": "1-9 çalışan arası Mikro İşletmedir."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Aşağıdaki şirket türlerinden hangisi bir 'Şahıs Şirketi'dir?",
+          "options": [
+            "A) Anonim Şirket",
+            "B) Limited Şirket",
+            "C) Kollektif Şirket",
+            "D) Sermayesi Paylara Bölünmüş Komandit Şirket",
+            "E) Kooperatif"
+          ],
+          "correct_answer": "C",
+          "explanation": "Kollektif ve Adi şirketler şahıs şirketleridir; ortakların sorumluluğu sınırsızdır."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "Komandit şirkette şirketi yönetme yetkisine sahip olan ve tüm mal varlığıyla sınırsız sorumlu olan ortak hangisidir?",
+          "options": [
+            "A) Komanditer ortak",
+            "B) Komandite ortak",
+            "C) Hissedar",
+            "D) Murahhas aza",
+            "E) Komisyoncu"
+          ],
+          "correct_answer": "B",
+          "explanation": "Komandite ortak sınırsız sorumlu olan ve şirketi yöneten ortaktır."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "Tüzel kişiliği bulunmayan ve Türk Borçlar Kanunu hükümlerine göre faaliyet gösteren şirket türü hangisidir?",
+          "options": [
+            "A) Adi Şirket",
+            "B) Anonim Şirket",
+            "C) Limited Şirket",
+            "D) Kollektif Şirket",
+            "E) Kooperatif"
+          ],
+          "correct_answer": "A",
+          "explanation": "Adi şirketin tüzel kişiliği ve ticaret unvanı yoktur, Borçlar Kanununa tabidir."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "Sermaye Piyasası Kuruluna kaydolarak hisse senetlerini Borsa İstanbul'da (BIST) halka arz edebilen şirket türü hangisidir?",
+          "options": [
+            "A) Kollektif Şirket",
+            "B) Limited Şirket",
+            "C) Anonim Şirket",
+            "D) Adi Şirket",
+            "E) Komandit Şirket"
+          ],
+          "correct_answer": "C",
+          "explanation": "Yalnızca Anonim Şirketler (A.Ş.) hisselerini halka arz edebilirler."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "Kanunlara ve düzenlemelere tam uyum sağlamak Carroll'ın piramidinde hangi sorumluluk düzeyini ifade eder?",
+          "options": [
+            "A) Ekonomik",
+            "B) Yasal",
+            "C) Etik",
+            "D) Gönüllü",
+            "E) Çevresel"
+          ],
+          "correct_answer": "B",
+          "explanation": "Yasalara uymak Yasal Sorumluluktur."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "Kanunlarda cezai yaptırımı olmasa bile toplum vicdanında kabul görmüş dürüstlük ve adalet ilkelerine uygun hareket etmek hangi sorumluluktur?",
+          "options": [
+            "A) Ekonomik",
+            "B) Yasal",
+            "C) Etik Sorumluluk",
+            "D) Vergi sorumluluğu",
+            "E) Şirket içi disiplin"
+          ],
+          "correct_answer": "C",
+          "explanation": "Yazılı kural ötesinde ahlaki olanı yapmak Etik Sorumluluktur."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Aşağıdakilerden hangisi bir işletmenin 'İç Paydaşları' arasında yer alır?",
+          "options": [
+            "A) Müşteriler",
+            "B) Tedarikçiler",
+            "C) Çalışanlar",
+            "D) Rakipler",
+            "E) Devlet"
+          ],
+          "correct_answer": "C",
+          "explanation": "Çalışanlar ve yöneticiler şirketin iç paydaşlarıdır; müşteriler ve tedarikçiler dış paydaştır."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Bir gıda firmasının ürünlerinde zararlı kimyasallar tespit eden laboratuvar uzmanının bunu kamu denetçilerine bildirmesi neye örnektir?",
+          "options": [
+            "A) Whistleblowing",
+            "B) Greenwashing",
+            "C) Lobicilik",
+            "D) Endüstriyel casusluk",
+            "E) Haksız rekabet"
+          ],
+          "correct_answer": "A",
+          "explanation": "İçerideki yasadışı veya halk sağlığını tehdit eden durumu ifşa etmek Whistleblowing'dir."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "İşletmelerin topluma yönelik kütüphane yaptırması, okul ve hastane bağışlarında bulunması hangi sorumluluk türüdür?",
+          "options": [
+            "A) Ekonomik sorumluluk",
+            "B) Yasal sorumluluk",
+            "C) Filantropik (Gönüllü) sorumluluk",
+            "D) Cezai sorumluluk",
+            "E) Finansal sorumluluk"
+          ],
+          "correct_answer": "C",
+          "explanation": "Bağış ve sosyal yardımlar Filantropik (hayırseverlik) sorumluluktur."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 1",
+      "filename": "Final_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) Maslow ihtiyaçlar hiyerarşisinde yemek yeme ve uyku hangi düzey ihtiyaçtır?",
+          "options": [
+            "A) Fizyolojik",
+            "B) Güvenlik",
+            "C) Sosyal",
+            "D) Saygınlık",
+            "E) Kendini gerçekleştirme"
+          ],
+          "correct_answer": "A",
+          "explanation": "Temel biyolojik ihtiyaçlar Fizyolojik ihtiyaçlardır."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) İşletmenin kontrol edemediği makro çevreyi analiz eden çerçeve hangisidir?",
+          "options": [
+            "A) PESTLE",
+            "B) Porter 5 Güç",
+            "C) 4P",
+            "D) BCG Matrisi",
+            "E) SMART Analizi"
+          ],
+          "correct_answer": "A",
+          "explanation": "Genel dış çevre PESTLE analizi ile incelenir."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Ortak sayısı 50 ile sınırlandırılmış olan sermaye şirketi hangisidir?",
+          "options": [
+            "A) Anonim Şirket",
+            "B) Limited Şirket",
+            "C) Kollektif Şirket",
+            "D) Komandit Şirket",
+            "E) Kooperatif"
+          ],
+          "correct_answer": "B",
+          "explanation": "Limited şirketlerde ortak sayısı en fazla 50 olabilir."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) Carroll piramidinde kanunlara eksiksiz uymak hangi sorumluluktur?",
+          "options": [
+            "A) Yasal sorumluluk",
+            "B) Ekonomik sorumluluk",
+            "C) Etik sorumluluk",
+            "D) Gönüllü sorumluluk",
+            "E) Çevresel sorumluluk"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kanunlara uyum Yasal Sorumluluktur."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "Bir işletme kurma sürecinde yatırım kararını vermeden önce yapılan pazar, teknik ve finansal değerlendirmelerin tümüne ne ad verilir?",
+          "options": [
+            "A) Fizibilite (Yapılabilirlik) Araştırması",
+            "B) Deneme üretimi",
+            "C) Kesin proje",
+            "D) ÇED raporu",
+            "E) Tescil işlemi"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kapsamlı yapılabilirlik etüdüne Fizibilite Araştırması denir."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "Fizibilite araştırmasında pazarın büyüklüğü, hedef müşteri kitlesi, talep tahmini ve kapasite büyüklüğü hangi etüt kapsamında incelenir?",
+          "options": [
+            "A) Teknik Etüt",
+            "B) Ekonomik Etüt",
+            "C) Finansal Etüt",
+            "D) Yasal Etüt",
+            "E) Örgütsel Etüt"
+          ],
+          "correct_answer": "B",
+          "explanation": "Pazar, talep ve kapasite analizleri Ekonomik Etüt içindedir."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "İşletmenin üretim maliyetlerini en aza indirirken kârını ve verimliliğini en üst düzeye çıkaran coğrafi yere ne ad verilir?",
+          "options": [
+            "A) Optimum Kuruluş Yeri",
+            "B) Organize Sanayi Bölgesi",
+            "C) Serbest Bölge",
+            "D) Liman bölgesi",
+            "E) Teknopark"
+          ],
+          "correct_answer": "A",
+          "explanation": "Maliyetleri minimize eden en uygun yer Optimum Kuruluş Yeridir."
+        },
+        {
+          "id": 8,
+          "unit": 6,
+          "question": "Aynı sektörde ve aynı üretim aşamasında yer alan rakip bir firmanın satın alınması veya birleşilmesi ne tür bir büyümedir?",
+          "options": [
+            "A) Dikey Büyüme",
+            "B) Yatay Büyüme",
+            "C) Çapraz (Konglomerat) Büyüme",
+            "D) İç Büyüme",
+            "E) Dairesel Büyüme"
+          ],
+          "correct_answer": "B",
+          "explanation": "Aynı sektördeki rakiplerle birleşme Yatay Büyümedir."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "Bir otomobil fabrikasının kendi lastik ve cam tedarikçilerini bünyesine katması hangi büyüme stratejisidir?",
+          "options": [
+            "A) Geriye Doğru Dikey Büyüme",
+            "B) İleriye Doğru Dikey Büyüme",
+            "C) Yatay Büyüme",
+            "D) Konglomerat Büyüme",
+            "E) İç Büyüme"
+          ],
+          "correct_answer": "A",
+          "explanation": "Girdi ve hammadde tedarikçilerine doğru genişleme Geriye Doğru Dikey Büyümedir."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Birbirleriyle hiçbir sektörel ve teknolojik ilişkisi olmayan tamamen farklı sektörlerdeki şirketleri bünyesinde toplayan holding yapılanmalarına ne ad verilir?",
+          "options": [
+            "A) Dikey Büyüme",
+            "B) Yatay Büyüme",
+            "C) Konglomerat (Çapraz/Karma) Büyüme",
+            "D) Tekel",
+            "E) Kartel"
+          ],
+          "correct_answer": "C",
+          "explanation": "İlişkisiz sektörlerde büyüme Konglomerat (Çapraz) Büyümedir; amaç risk dağıtımıdır."
+        },
+        {
+          "id": 11,
+          "unit": 6,
+          "question": "İki veya daha fazla bağımsız şirketin belirli bir ticari hedef için sermayelerini birleştirerek YENİ VE BAĞIMSIZ BİR TÜZEL ŞİRKET kurması işbirliği hangisidir?",
+          "options": [
+            "A) Konsorsiyum",
+            "B) Joint Venture (Ortak Girişim)",
+            "C) Kartel",
+            "D) Tröst",
+            "E) Centilmenlik Anlaşması"
+          ],
+          "correct_answer": "B",
+          "explanation": "Yeni bir tüzel kişilik kurulması Joint Venture (Ortak Girişim) modelidir."
+        },
+        {
+          "id": 12,
+          "unit": 7,
+          "question": "Bir firmanın yurtdışı pazarlara açılırken başvurduğu en az riskli ve en yaygın ilk aşama hangisidir?",
+          "options": [
+            "A) Doğrudan Yabancı Yatırım (FDI)",
+            "B) İhracat (Exporting)",
+            "C) Yurtdışında fabrika kurma",
+            "D) Yabancı şirket satın alma",
+            "E) Joint Venture"
+          ],
+          "correct_answer": "B",
+          "explanation": "İhracat en düşük sermaye riski taşıyan ilk uluslararasılaşma adımıdır."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "Tüm dünyada yerel farklılıkları dikkate almayıp standartlaştırılmış tek bir ürün satarak küresel maliyet liderliği elde etmeyi hedefleyen strateji nedir?",
+          "options": [
+            "A) Çok Uluslu Strateji",
+            "B) Küresel (Global) Strateji",
+            "C) Ulusötesi Strateji",
+            "D) Odaklanma Stratejisi",
+            "E) Niş Strateji"
+          ],
+          "correct_answer": "B",
+          "explanation": "Standart tek ürün ve yüksek küresel entegrasyon Küresel (Global) Stratejidir."
+        },
+        {
+          "id": 14,
+          "unit": 7,
+          "question": "Michael Porter'ın Jenerik Rekabet Stratejilerinden hangisi sektördeki en düşük üretim maliyetine ulaşarak geniş pazara hakim olmayı hedefler?",
+          "options": [
+            "A) Farklılaştırma",
+            "B) Maliyet Liderliği",
+            "C) Odaklanma",
+            "D) İnovasyon",
+            "E) Çeşitlendirme"
+          ],
+          "correct_answer": "B",
+          "explanation": "En düşük maliyetle üretim yapmak 'Maliyet Liderliği' stratejisidir."
+        },
+        {
+          "id": 15,
+          "unit": 7,
+          "question": "Müşterinin zihninde benzersiz bir ürün kalitesi, tasarımı veya marka imajı yaratarak yüksek primli fiyattan satış yapma stratejisi nedir?",
+          "options": [
+            "A) Maliyet Liderliği",
+            "B) Farklılaştırma",
+            "C) Fiyat Kırma",
+            "D) Taklitçilik",
+            "E) Kartel"
+          ],
+          "correct_answer": "B",
+          "explanation": "Benzersizlik ve marka algısı Farklılaştırma stratejisidir (Örn: Apple)."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "Yönetim fonksiyonlarının İLK basamağı olan, gelecekteki amaç ve hedefleri belirleyip bunlara nasıl ulaşılacağını tasarlayan fonksiyon hangisidir?",
+          "options": [
+            "A) Planlama",
+            "B) Örgütleme",
+            "C) Yöneltme",
+            "D) Denetim",
+            "E) Koordinasyon"
+          ],
+          "correct_answer": "A",
+          "explanation": "Yönetimin ilk fonksiyonu Planlamadır."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Gerçekleşen sonuçları belirlenen standartlarla karşılaştırıp sapmaları tespit eden ve düzeltici önlemler alan SON yönetim fonksiyonu hangisidir?",
+          "options": [
+            "A) Planlama",
+            "B) Örgütleme",
+            "C) Yöneltme",
+            "D) Denetim (Kontrol)",
+            "E) Motivasyon"
+          ],
+          "correct_answer": "D",
+          "explanation": "Yönetimin son adımı Denetimdir (Kontrol)."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Pazarlama karmasını oluşturan 4P bileşenleri arasında aşağıdakilerden hangisi yer almaz?",
+          "options": [
+            "A) Product (Ürün)",
+            "B) Price (Fiyat)",
+            "C) Place (Dağıtım)",
+            "D) Promotion (Tutundurma)",
+            "E) Production (Üretim)"
+          ],
+          "correct_answer": "E",
+          "explanation": "4P: Product, Price, Place ve Promotion'dır. Production (Üretim) pazarlama karması içinde yer almaz."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Hizmet sektöründe geleneksel 4P'ye eklenen 3 yeni pazarlama bileşeni (7P) hangileridir?",
+          "options": [
+            "A) Personel, Süreç, Fiziki Kanıtlar",
+            "B) Planlama, Para, Pazar",
+            "C) Patent, Performans, Politika",
+            "D) Paydaş, Portföy, Promosyon",
+            "E) Paketleme, Prestij, Pozisyon"
+          ],
+          "correct_answer": "A",
+          "explanation": "Hizmet pazarlamasında People (İnsan/Personel), Process (Süreç) ve Physical Evidence (Fiziki Kanıtlar) eklenir."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "İşletmenin ihtiyaç duyduğu fonları en uygun maliyetle bulup en kârlı yatırımlara yönlendiren temel işletme fonksiyonu nedir?",
+          "options": [
+            "A) Pazarlama",
+            "B) Finansman",
+            "C) Üretim",
+            "D) İnsan Kaynakları",
+            "E) Halkla İlişkiler"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fon sağlama ve yatırım yönetimi Finansman fonksiyonunun görevidir."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 2",
+      "filename": "Final_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) Emek üretim faktörünün getirisini ifade eden kavram nedir?",
+          "options": [
+            "A) Faiz",
+            "B) Rant",
+            "C) Ücret",
+            "D) Kâr",
+            "E) Prim"
+          ],
+          "correct_answer": "C",
+          "explanation": "Emeğin karşılığı Ücrettir."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) Doğrudan işletme içinde yer alan kurum kültürü ve yönetim yapısı hangi çevreye aittir?",
+          "options": [
+            "A) İç Çevre",
+            "B) Dış Çevre",
+            "C) Görev Çevresi",
+            "D) Makro Çevre",
+            "E) Genel Çevre"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kurum kültürü İç Çevrenin unsurudur."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Anonim şirket kurmak için gereken yasal asgari sermaye tutarı kaç TL'dir?",
+          "options": [
+            "A) 10.000 TL",
+            "B) 50.000 TL",
+            "C) 100.000 TL",
+            "D) 500.000 TL",
+            "E) Sermaye şartı yoktur"
+          ],
+          "correct_answer": "B",
+          "explanation": "TTK'ye göre Anonim şirket için asgari sermaye 50.000 TL'dir (Limited için 10.000 TL)."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) Bir işletmenin çevreci olmadığı halde aldatıcı reklamlarla öyle görünmesine ne ad verilir?",
+          "options": [
+            "A) Whistleblowing",
+            "B) Yeşil Yıkama (Greenwashing)",
+            "C) Lobicilik",
+            "D) Sosyal denetim",
+            "E) Karbon ticareti"
+          ],
+          "correct_answer": "B",
+          "explanation": "Aldatıcı çevreci pazarlamaya Greenwashing denir."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "Fizibilite araştırmasında işletmenin kullanacağı teknoloji, makineler ve fabrika yerleşim planı hangi etütle belirlenir?",
+          "options": [
+            "A) Ekonomik Etüt",
+            "B) Teknik Etüt",
+            "C) Finansal Etüt",
+            "D) Yasal Etüt",
+            "E) Sosyal Etüt"
+          ],
+          "correct_answer": "B",
+          "explanation": "Makine, teçhizat ve bina yerleşimi Teknik Etüt konusudur."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "İşletmenin yatırım tutarı, kârlılığı ve başabaş noktası analizleri hangi fizibilite etüdünde incelenir?",
+          "options": [
+            "A) Finansal Etüt",
+            "B) Teknik Etüt",
+            "C) Ekonomik Etüt",
+            "D) Hukuki Etüt",
+            "E) Çevresel Etüt"
+          ],
+          "correct_answer": "A",
+          "explanation": "Yatırım tutarı, NBD ve kârlılık Finansal Etüt kapsamındadır."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "Çabuk bozulan veya nakliyesi çok pahalı olan hammaddeleri kullanan işletmeler kuruluş yeri seçiminde neye öncelik verirler?",
+          "options": [
+            "A) Pazara yakınlık",
+            "B) Hammaddeye yakınlık",
+            "C) Finans merkezlerine yakınlık",
+            "D) Limanlara yakınlık",
+            "E) Başkente yakınlık"
+          ],
+          "correct_answer": "B",
+          "explanation": "Çabuk bozulan hammadde kullanan fabrikalar (konserve, şeker pancarı vb.) Hammaddeye yakın kurulur."
+        },
+        {
+          "id": 8,
+          "unit": 6,
+          "question": "Bir süt ve yoğurt üreticisinin kendi zincir marketlerini açarak doğrudan tüketiciye satış yapması hangi büyüme stratejisidir?",
+          "options": [
+            "A) Geriye doğru dikey büyüme",
+            "B) İleriye doğru dikey büyüme",
+            "C) Yatay büyüme",
+            "D) Konglomerat büyüme",
+            "E) Dışsal büyüme"
+          ],
+          "correct_answer": "B",
+          "explanation": "Dağıtım ve satış mağazalarını açmak İleriye Doğru Dikey Büyümedir."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "İşletmenin kendi kârlarını dağıtmayıp işletmede bırakarak (otofinansman) kapasitesini artırması hangi büyüme türüdür?",
+          "options": [
+            "A) İç Büyüme",
+            "B) Dış Büyüme",
+            "C) Satın Alma",
+            "D) Birleşme",
+            "E) Ortak Girişim"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kendi iç kaynakları ve otofinansmanla büyüme İç Büyümedir."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Aynı sektördeki iki bağımsız havayolu şirketinin güçlerini birleştirerek tek bir şirket çatısı altında birleşmesine ne ad verilir?",
+          "options": [
+            "A) Yatay Birleşme (Merger)",
+            "B) Dikey Birleşme",
+            "C) Çapraz Birleşme",
+            "D) Konsorsiyum",
+            "E) Franchise"
+          ],
+          "correct_answer": "A",
+          "explanation": "Aynı sektördeki rakiplerin birleşmesi Yatay Birleşmedir."
+        },
+        {
+          "id": 11,
+          "unit": 7,
+          "question": "Bir firmanın yurtdışında sıfırdan fabrika ve tesis kurarak yatırım yapmasına ne ad verilir?",
+          "options": [
+            "A) Dolaylı İhracat",
+            "B) Lisans Verme",
+            "C) Greenfield (Sıfırdan) Yatırım",
+            "D) Konsorsiyum",
+            "E) Portföy Yatırımı"
+          ],
+          "correct_answer": "C",
+          "explanation": "Sıfırdan tesis kurarak yapılan doğrudan yabancı yatırım Greenfield Yatırımdır."
+        },
+        {
+          "id": 12,
+          "unit": 7,
+          "question": "Farklı ülkelerdeki tüketici tercihlerinin ve kültürlerin çok farklı olduğu durumlarda her ülkeye özel ürün geliştiren strateji nedir?",
+          "options": [
+            "A) Çok Uluslu (Multidomestic) Strateji",
+            "B) Küresel Strateji",
+            "C) Standartlaşma Stratejisi",
+            "D) Maliyet Liderliği",
+            "E) Odaklanma"
+          ],
+          "correct_answer": "A",
+          "explanation": "Yerel şartlara tam uyum sağlayan yaklaşım Çok Uluslu (Multidomestic) Stratejidir."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "Piyasanın geneline hitap etmek yerine çok dar ve özel bir müşteri grubuna (örneğin sadece solaklar için makas üretenler) odaklanan strateji nedir?",
+          "options": [
+            "A) Maliyet Liderliği",
+            "B) Farklılaştırma",
+            "C) Odaklanma (Niş) Stratejisi",
+            "D) Küresel Strateji",
+            "E) Çapraz Büyüme"
+          ],
+          "correct_answer": "C",
+          "explanation": "Dar bir pazar segmentine hizmet etme Odaklanma (Niş) stratejisidir."
+        },
+        {
+          "id": 14,
+          "unit": 8,
+          "question": "İşletmede görevlerin, yetkilerin, departmanların ve raporlama hiyerarşisinin belirlendiği yönetim fonksiyonu hangisidir?",
+          "options": [
+            "A) Planlama",
+            "B) Örgütleme (Organize Etme)",
+            "C) Yöneltme",
+            "D) Denetim",
+            "E) Bütçeleme"
+          ],
+          "correct_answer": "B",
+          "explanation": "İşbölümü, yetki dağıtımı ve departmanlaşma Örgütleme fonksiyonudur."
+        },
+        {
+          "id": 15,
+          "unit": 8,
+          "question": "Çalışanların motivasyonunu artıran, onları ortak amaca yönlendiren ve liderlik eden yönetim fonksiyonu hangisidir?",
+          "options": [
+            "A) Planlama",
+            "B) Örgütleme",
+            "C) Yöneltme (Liderlik / Yürütme)",
+            "D) Denetim",
+            "E) Raporlama"
+          ],
+          "correct_answer": "C",
+          "explanation": "Liderlik ve motivasyon Yöneltme fonksiyonudur."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "Pazarlamada 'Tutundurma' (Promotion) karması içerisinde aşağıdakilerden hangisi yer almaz?",
+          "options": [
+            "A) Reklam",
+            "B) Halkla İlişkiler (PR)",
+            "C) Kişisel Satış",
+            "D) Satış Promosyonları",
+            "E) Ürünün fabrikada paketlenmesi"
+          ],
+          "correct_answer": "E",
+          "explanation": "Ürünün fiziksel paketlenmesi Product (Ürün) bileşenine aittir."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Üretim sürecinde sıfır hata, sürekli iyileştirme (Kaizen) ve müşteri odaklılığı temel alan yönetim felsefesi hangisidir?",
+          "options": [
+            "A) Toplam Kalite Yönetimi (TKY)",
+            "B) Klasik Yönetim",
+            "C) Taylorizm",
+            "D) Bürokratik Yönetim",
+            "E) Matris Yönetim"
+          ],
+          "correct_answer": "A",
+          "explanation": "Sürekli iyileştirme ve sıfır hata felsefesi Toplam Kalite Yönetimidir (TKY)."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "İşletmenin personel ihtiyacını belirleme, işe alma, performans değerleme ve kariyer planlamasını yürüten fonksiyon hangisidir?",
+          "options": [
+            "A) İnsan Kaynakları Yönetimi (İKY)",
+            "B) Muhasebe",
+            "C) Pazarlama",
+            "D) Finansman",
+            "E) Lojistik"
+          ],
+          "correct_answer": "A",
+          "explanation": "İşe alım ve çalışan gelişimi İnsan Kaynakları Yönetiminin sorumluluğudur."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "İşletmede yeni bir ürün tasarlanması veya mevcut üretim süreçlerinin yenilenmesi hangi fonksiyonun temel görevidir?",
+          "options": [
+            "A) Araştırma ve Geliştirme (AR-GE)",
+            "B) Halkla İlişkiler",
+            "C) Satış",
+            "D) Muhasebe",
+            "E) Tedarik"
+          ],
+          "correct_answer": "A",
+          "explanation": "Ürün ve süreç yenilikleri AR-GE fonksiyonu tarafından yürütülür."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "İşletmenin dönen varlıkları ile kısa vadeli borçlarını ödeyebilme gücünü ifade eden finansal kavram nedir?",
+          "options": [
+            "A) Likidite",
+            "B) Kârlılık",
+            "C) Verimlilik",
+            "D) Kaldıraç",
+            "E) Özkaynak"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kısa vadeli borç ödeme gücü Likiditedir."
+        }
+      ]
+    }
+  ]
+}

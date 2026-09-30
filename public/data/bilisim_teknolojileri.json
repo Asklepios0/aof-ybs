@@ -1,0 +1,1731 @@
+{
+  "course_name": "BİLİŞİM TEKNOLOJİLERİ",
+  "course_code": "YBS101U",
+  "faculty": "İşletme / İktisat Fakültesi - Yönetim Bilişim Sistemleri (YBS)",
+  "term": "1. Sınıf Güz Dönemi",
+  "description": "Bilgisayar donanımı, yazılımı, işletim sistemleri, ağlar, güvenlik, programlama mantığı ve güncel bilişim yönelimleri.",
+  "units": [
+    {
+      "unit_number": 1,
+      "title": "Bilişim Teknolojilerinin Gelişimi",
+      "is_vize": true,
+      "key_topics": [
+        "Tarihsel Süreç",
+        "Bilgisayar Kuşakları",
+        "DIKW Hiyerarşisi",
+        "Moore Yasası",
+        "Önemli Öncüler"
+      ],
+      "hap_bilgiler": [
+        "DIKW Piramidi: Veri (Data - işlenmemiş ham gerçekler) -> Enformasyon (Information - anlamlandırılmış veri) -> Bilgi (Knowledge - deneyim ve bağlamla harmanlanmış enformasyon) -> Bilgelik (Wisdom - bilgiyi doğru ve etik kullanma yetisi).",
+        "İlk Mekanik Hesap Makineleri: Blaise Pascal (Pascaline - sadece toplama ve çıkarma), Gottfried Wilhelm Leibniz (Leibniz Çarkı - 4 işlem yapabilen).",
+        "Modern Bilgisayarın Babası: Charles Babbage (Fark Motoru ve Analitik Motor). Analitik Motor için ilk algoritmayı yazan Ada Lovelace ise 'İlk Bilgisayar Programcısı' kabul edilir.",
+        "Herman Hollerith: 1890 ABD nüfus sayımı için delikli kart sistemini geliştirdi ve daha sonra IBM'e dönüşecek şirketin temelini attı.",
+        "ENIAC (1946): J. Presper Eckert ve John Mauchly tarafından geliştirilen, ilk genel amaçlı, tamamen elektronik, ondalık tabanlı devasa bilgisayardır (Vakum tüpleri kullanılmıştır).",
+        "EDVAC ve Von Neumann: John von Neumann tarafından ortaya atılan 'Saklı Program' mimarisini (program ve verinin aynı bellekte tutulması) kullanan ilk tasarımdır.",
+        "1. Kuşak (1940-1956): Vakum (Elektron) tüpleri kullanıldı. Çok büyük, çok ısı üreten, sık arızalanan ve makine diliyle programlanan makinelerdir.",
+        "2. Kuşak (1956-1963): Transistörün icadı (1947, Bell Labs - Shockley, Bardeen, Brattain). Bilgisayarlar küçüldü, hızlandı ve Assembly/FORTRAN gibi diller doğdu.",
+        "3. Kuşak (1964-1971): Entegre Devreler (Mikroçipler - Jack Kilby ve Robert Noyce). Klavye, monitör ve işletim sistemleri kullanılmaya başlandı.",
+        "4. Kuşak (1971-Günümüz): Mikroişlemciler (Intel 4004 - 1971). Tek bir silikon çip üzerine tüm CPU yerleştirildi; kişisel bilgisayarlar (PC) devrimi başladı.",
+        "5. Kuşak (Gelecek/Günümüz): Yapay zeka, paralel işlemciler, kuantum hesaplama ve doğal dil işleme.",
+        "Moore Yasası: Intel'in kurucularından Gordon Moore'a göre bir mikroçip üzerindeki transistör sayısı yaklaşık her 18-24 ayda bir iki katına çıkacaktır."
+      ]
+    },
+    {
+      "unit_number": 2,
+      "title": "Bilgisayar Donanımı",
+      "is_vize": true,
+      "key_topics": [
+        "Von Neumann Mimarisi",
+        "Merkezi İşlem Birimi (CPU)",
+        "Bellek Hiyerarşisi",
+        "Giriş-Çıkış Birimleri",
+        "Veri Birimleri"
+      ],
+      "hap_bilgiler": [
+        "Von Neumann Mimarisi 4 Temel Bölüm: Giriş Birimleri, Çıkış Birimleri, Merkezi İşlem Birimi (CPU) ve Bellek (Memory).",
+        "CPU Bileşenleri: 1. Aritmetik ve Mantık Birimi (ALU - matematiksel ve mantıksal işlemleri yapar), 2. Denetim Birimi (Control Unit / CU - komutları çözer, diğer birimleri senkronize yönetir), 3. Yazmaçlar (Registers - CPU içindeki en küçük ve en hızlı geçici depolama alanları).",
+        "Saat Hızı (Clock Speed): İşlemcinin saniyede yaptığı döngü sayısını ifade eder (Hertz/GHz). 1 GHz = saniyede 1 milyar çevrim.",
+        "Bellek Hiyerarşisi (Hız ve Maliyet Sıralaması: En Hızlı ve En Pahalıdan En Yavaşa): Yazmaçlar (Registers) -> L1 Önbellek -> L2 Önbellek -> L3 Önbellek -> RAM -> SSD / Sabit Disk (HDD) -> Optik/Manyetik Teyp.",
+        "RAM (Random Access Memory): Geçici (uçucu/volatile) ana bellektir. Elektrik kesildiğinde veriler silinir. DRAM (Dinamik - yenileme gerekir, ucuz, ana RAM) ve SRAM (Statik - yenileme gerekmez, çok hızlı, önbellek olarak kullanılır).",
+        "ROM (Read Only Memory): Kalıcı (uçucu olmayan/non-volatile) bellektir. Fabrika çıkışı BIOS/UEFI yazılımını tutar. Çeşitleri: PROM (bir kez programlanır), EPROM (morötesi ışıkla silinir), EEPROM (elektriksel olarak silinip yazılır, Flash bellekler bu yapıdadır).",
+        "Giriş Birimleri: Klavye, fare, mikrofon, optik okuyucu, barkod okuyucu, tarayıcı.",
+        "Çıkış Birimleri: Monitör, yazıcı, hoparlör, projeksiyon.",
+        "Hem Giriş Hem Çıkış Birimleri: Dokunmatik ekranlar (Touchscreen), modemler, ağ kartları (NIC), ses kartları.",
+        "Veri Ölçü Birimleri (İkili Sistem - 2^10 = 1024 kuralı): 1 Byte = 8 Bit. 1 Kilobyte (KB) = 1024 Byte. 1 Megabyte (MB) = 1024 KB. 1 Gigabyte (GB) = 1024 MB. 1 Terabyte (TB) = 1024 GB. 1 Petabyte (PB) = 1024 TB."
+      ]
+    },
+    {
+      "unit_number": 3,
+      "title": "İşletim Sistemleri ve Dosya Yönetimi",
+      "is_vize": true,
+      "key_topics": [
+        "İşletim Sisteminin Görevleri",
+        "Çekirdek (Kernel) ve Kabuk (Shell)",
+        "İşletim Sistemi Türleri",
+        "Dosya Sistemleri"
+      ],
+      "hap_bilgiler": [
+        "İşletim Sistemi (OS): Kullanıcı ve uygulama programları ile bilgisayar donanımı arasındaki iletişimi sağlayan, donanım kaynaklarını yöneten temel sistem yazılımıdır.",
+        "İşletim Sisteminin 4 Temel Yönetim Fonksiyonu: 1. İşlemci Yönetimi (Process Management / Görev Zamanlama), 2. Bellek Yönetimi (RAM tahsisi ve Sanal Bellek), 3. Aygıt (Giriş/Çıkış) Yönetimi, 4. Dosya ve Depolama Yönetimi.",
+        "Çekirdek (Kernel): İşletim sisteminin kalbidir; doğrudan donanım seviyesinde çalışır ve bellek, CPU ve aygıt erişimlerini yönetir.",
+        "Kabuk (Shell) ve Arayüz: Kullanıcının komut girdiği arayüzdür. CLI (Komut Satırı Arayüzü - terminal/bash/cmd) ve GUI (Grafiksel Kullanıcı Arayüzü - pencereler, ikonlar).",
+        "Sanal Bellek (Virtual Memory): RAM yetersiz kaldığında sabit diskin (paging file / swap alanı) bir bölümünün geçici olarak RAM gibi kullanılması tekniğidir.",
+        "İşletim Sistemi Sınıfları: Tek Kullanıcılı - Tek Görevli (MS-DOS), Tek Kullanıcılı - Çok Görevli (Windows 10/11, macOS), Çok Kullanıcılı - Çok Görevli (Unix, Linux sunucular), Gerçek Zamanlı (RTOS - savunma sanayii, otomotiv, robotik).",
+        "Açık Kaynak Kodlu İşletim Sistemleri: Linux (1991'de Linus Torvalds tarafından geliştirilen çekirdek üzerine kuruludur). Dağıtımlar: Ubuntu, Fedora, Debian, Pardus (TÜBİTAK).",
+        "Dosya Sistemleri: FAT32 (maksimum 4 GB tek dosya boyutu sınırı vardır), NTFS (Windows standartı, güvenlik izinleri, şifreleme ve günlükleme destekler), exFAT (USB bellekler için evrensel), ext4 (modern Linux), APFS (Apple Dosya Sistemi).",
+        "Dosya Yolları: Mutlak Yol (Absolute Path - Kök dizinden başlar: 'C:\\Users\\Belgeler\\rapor.docx'), Göreceli Yol (Relative Path - bulunulan dizinden başlar: '..\\rapor.docx')."
+      ]
+    },
+    {
+      "unit_number": 4,
+      "title": "Uygulama Yazılımları",
+      "is_vize": true,
+      "key_topics": [
+        "Yazılım Türleri",
+        "Ofis Yazılımları",
+        "Yazılım Lisanslama Türleri",
+        "SaaS ve Bulut Uygulamaları"
+      ],
+      "hap_bilgiler": [
+        "Yazılım Türleri: Sistem Yazılımları (İşletim sistemleri, aygıt sürücüleri, BIOS) ve Uygulama Yazılımları (Kullanıcının belirli bir işi yapmasını sağlayan yazılımlar: Word, Excel, Photoshop, ERP).",
+        "Kelime İşlemci (Word Processors): Metin oluşturma, düzenleme, biçimlendirme ve raporlama (MS Word, Google Docs, LibreOffice Writer).",
+        "Hesap Tablosu (Spreadsheet): Satır ve sütunlardan oluşan hücreler yapısı. Hücre adresi sütun harfi ve satır numarasından oluşur (örn: B4). Formüller daima '=' (eşittir) işareti ile başlar (MS Excel, Google Sheets, LibreOffice Calc).",
+        "Sunum Yazılımları: Slaytlar, animasyonlar ve görsel anlatım (PowerPoint, Keynote, Prezi).",
+        "Veritabanı Yönetim Sistemleri (DBMS): Büyük verilerin yapısal olarak saklanması ve SQL ile sorgulanması (MS Access, Oracle, MySQL, PostgreSQL).",
+        "Yazılım Lisanslama Modelleri:",
+        "  - Ticari (Proprietary) Yazılım: Telif hakkı saklıdır, kaynak kod kapalıdır, ücret ödenerek kullanım lisansı alınır (MS Windows, Photoshop).",
+        "  - Açık Kaynak Kodlu (Open Source): Kaynak kodları herkese açıktır; incelenebilir, değiştirilebilir ve dağıtılabilir (Linux, LibreOffice, GIMP, Apache). GNU Genel Kamu Lisansı (GPL) yaygındır.",
+        "  - Paylaşılan Yazılım (Shareware): Belirli bir süre (örneğin 30 gün) veya kısıtlı özellikle ücretsiz denenebilen, süre sonunda ücret talep eden yazılımlardır.",
+        "  - Ücretsiz Yazılım (Freeware): Kullanımı tamamen ücretsiz olan ancak kaynak kodu kapalı olan yazılımlardır (Adobe Acrobat Reader).",
+        "  - Kamu Malı (Public Domain): Telif hakkı süresi dolmuş veya bilinçli olarak kamuya bağışlanmış, hiçbir kısıtlaması olmayan yazılımlar.",
+        "SaaS (Software as a Service - Hizmet Olarak Yazılım): Yazılımın bilgisayara kurulmadan doğrudan web tarayıcısı üzerinden bulut sunuculardan çalıştırılması modelidir (Office 365, Google Workspace, Canva)."
+      ]
+    },
+    {
+      "unit_number": 5,
+      "title": "İnternet ve Mobil Teknolojiler",
+      "is_vize": false,
+      "key_topics": [
+        "İnternetin Tarihi",
+        "ARPANET ve TCP/IP",
+        "WWW ve Web Nesilleri",
+        "Mobil İletişim Kuşakları (1G-5G)",
+        "Bulut Bilişim"
+      ],
+      "hap_bilgiler": [
+        "İnternetin Doğuşu: 1969 yılında ABD Savunma Bakanlığı İleri Araştırma Projeleri Ajansı (DARPA) tarafından kurulan 'ARPANET' internetin ilk atasıdır.",
+        "TCP/IP: İnternetin ortak iletişim protokolü kümesidir. Vinton Cerf ve Robert Kahn tarafından geliştirilmiştir.",
+        "World Wide Web (WWW): 1989 yılında CERN laboratuvarlarında İngiliz bilim insanı Tim Berners-Lee tarafından bilgi paylaşımını kolaylaştırmak amacıyla icat edilmiştir (HTTP, HTML ve URL standartlarını belirlemiştir).",
+        "Web 1.0 (Statik Web): Tek taraflı iletişim. Kullanıcı sadece okuyucudur, içerik üreticileri web yöneticileridir.",
+        "Web 2.0 (Sosyal ve Etkileşimli Web): Çift taraflı iletişim. Kullanıcılar içerik üretir, paylaşır ve etkileşime girer (Bloglar, Wikipedia, Sosyal Medya, YouTube).",
+        "Web 3.0 (Semantik Web / Anlamsal Web): Makinelerin verileri anlayıp yorumlayabildiği, yapay zeka destekli ve merkeziyetsiz web yapısıdır.",
+        "Mobil İletişim Nesilleri:",
+        "  - 1G: Analog sinyaller, sadece ses iletimi.",
+        "  - 2G: Dijital iletişim (GSM), SMS (kısa mesaj) ve çok düşük hızlı veri transferi (GPRS/EDGE).",
+        "  - 3G: Mobil internet, görüntülü görüşme, veri hızında büyük artış (UMTS/HSPA).",
+        "  - 4G (LTE): Yüksek hızlı mobil genişbant, HD video akışı, düşük gecikme süresi.",
+        "  - 5G: Ultra yüksek hız (Gigabit seviyesi), 1 milisaniyenin altında ultra düşük gecikme, kitlesel IoT bağlantı kapasitesi.",
+        "Bulut Bilişim Hizmet Modelleri:",
+        "  - IaaS (Altyapı): Sunucu, sanal makine, ağ ve depolama kiralama (AWS EC2, Google Compute Engine).",
+        "  - PaaS (Platform): Geliştiricilere işletim sistemi, veritabanı ve çalışma ortamı sunma (Heroku, Google App Engine).",
+        "  - SaaS (Yazılım): Son kullanıcılara internet üzerinden hazır yazılım sunma (Gmail, Dropbox, Salesforce)."
+      ]
+    },
+    {
+      "unit_number": 6,
+      "title": "İletişim Alt Yapısı ve Güvenlik",
+      "is_vize": false,
+      "key_topics": [
+        "Ağ Türleri ve Topolojileri",
+        "Ağ Donanımları",
+        "OSI ve TCP/IP Modeli",
+        "Bilgi Güvenliği (CIA)",
+        "Siber Tehditler"
+      ],
+      "hap_bilgiler": [
+        "Ağ Türleri (Coğrafi Boyuta Göre): PAN (Kişisel Alan Ağı - Bluetooth), LAN (Yerel Alan Ağı - Ev/Ofis), CAN (Kampüs Alan Ağı - Üniversite), MAN (Metropol Alan Ağı - Şehir çapında), WAN (Geniş Alan Ağı - Şehirler/ülkeler arası; en büyük WAN İnternettir).",
+        "Ağ Topolojileri: Yol (Bus - tek bir ana hat), Halka (Ring - jeton mantığı), Yıldız (Star - tüm cihazlar merkezi bir Switch/Hub'a bağlıdır, en yaygın kullanılanıdır), Ağaç (Tree), Örgü (Mesh - her düğüm diğerine bağlıdır, en yüksek hata toleransına sahiptir ancak en maliyetlisidir).",
+        "Ağ Cihazları: Hub (Veriyi tüm portlara yayar/broadcast, verimsizdir), Switch (Anahtar - MAC adresine bakarak veriyi sadece ilgili hedefe iletir, Katman 2), Router (Yönlendirici - IP adreslerine bakarak farklı ağlar arasında yönlendirme yapar, Katman 3), Modem (Analog ve dijital sinyal dönüşümü yapar).",
+        "OSI Modeli (7 Katman - Aşağıdan Yukarıya): 1. Fiziksel, 2. Veri Bağı (Data Link - MAC adresi, Switch), 3. Ağ (Network - IP adresi, Router), 4. İletim (Transport - TCP, UDP), 5. Oturum (Session), 6. Sunum (Presentation - şifreleme, sıkıştırma, format), 7. Uygulama (Application - HTTP, FTP, SMTP, DNS).",
+        "Bilgi Güvenliğinin 3 Temel İlkesi (CIA Triad):",
+        "  - Gizlilik (Confidentiality): Bilgiye sadece yetkili kişilerin erişebilmesi.",
+        "  - Bütünlük (Integrity): Bilginin yetkisiz kişilerce değiştirilmemesi, doğruluğunun korunması.",
+        "  - Erişilebilirlik (Availability): Yetkili kullanıcıların ihtiyaç duyduklarında bilgiye kesintisiz ulaşabilmesi.",
+        "Zararlı Yazılımlar (Malware):",
+        "  - Virüs: Kendi kendine çalışamaz, bir çalıştırılabilir dosyaya veya programa bulaşarak kullanıcı etkisiyle yayılır.",
+        "  - Solucan (Worm): İnsan müdahalesi olmadan ağ bağlantılarını kullanarak kendi kendini kopyalayıp yayılan bağımsız programdır.",
+        "  - Truva Atı (Trojan): Masum veya faydalı bir yazılım gibi görünüp arka planda arka kapı (backdoor) açan zararlıdır.",
+        "  - Ransomware (Fidye Yazılımı): Dosyaları şifreleyerek açılması için fidye talep eden zararlı yazılımdır.",
+        "Siber Saldırı Türleri: Oltalama (Phishing - sahte e-posta/web sitesiyle kimlik avı), DoS / DDoS (Hizmeti aksatmak için sunucuyu sahte trafik bombardımanına tutma), Ortadaki Adam (Man-in-the-Middle)."
+      ]
+    },
+    {
+      "unit_number": 7,
+      "title": "Bilgisayar Programlama",
+      "is_vize": false,
+      "key_topics": [
+        "Algoritma Kavramı",
+        "Akış Şemaları",
+        "Programlama Dilleri Düzeyleri",
+        "Derleyici vs Yorumlayıcı",
+        "Temel Programlama Mantığı"
+      ],
+      "hap_bilgiler": [
+        "Algoritma: Bir problemin çözümü için adım adım tanımlanmış, sonlu, açık, net ve uygulanabilir işlem basamakları dizisidir.",
+        "Akış Şeması (Flowchart) Sembolleri: Oval (Başla / Dur), Paralelkenar (Veri Girişi / Çıkışı), Dikdörtgen (İşlem / Hesaplama / Atama), Eşkenar Dörtgen / Baklava (Karar / Karşılaştırma / Koşul).",
+        "Dillerin Düzeyleri (İnsan Diline Yakınlık):",
+        "  - Düşük Düzey Diller: Makine dili (0 ve 1'lerden oluşur, donanıma doğrudan bağlıdır) ve Assembly dili (sembolik kısaltmalar: MOV, ADD).",
+        "  - Orta Düzey Diller: C dili (hem sistem programlama hem kullanıcı uygulamaları için elverişlidir).",
+        "  - Yüksek Düzey Diller: İnsan diline çok yakın, donanımdan bağımsız dillerdir (Python, Java, C#, C++).",
+        "Derleyici (Compiler) vs Yorumlayıcı (Interpreter):",
+        "  - Derleyici: Kaynak kodun tamamını tek seferde makine diline çevirir ve çalıştırılabilir bir dosya (.exe vb.) oluşturur (C, C++, Go). Kod derlendikten sonra çok hızlı çalışır.",
+        "  - Yorumlayıcı: Kaynak kodları satır satır okur, anında makine diline çevirip çalıştırır (Python, JavaScript, PHP). Hata ayıklama kolaydır ancak çalışma hızı genellikle derlenen dillere göre yavaştır.",
+        "Temel Programlama Yapıları: Değişkenler (int, float, string, boolean), Koşul Blokları (if-else, switch-case), Döngüler (for, while - belirli işlemi tekrar ettirme), Fonksiyonlar/Metotlar (kodun tekrar kullanılabilir modüllere ayrılması).",
+        "Nesne Yönelimli Programlama (OOP) Temel Kavramları: Sınıf (Class - şablon), Nesne (Object - sınıftan türetilen somut örnek), Kapsülleme (Encapsulation), Kalıtım (Inheritance - miras alma), Çok Biçimlilik (Polymorphism)."
+      ]
+    },
+    {
+      "unit_number": 8,
+      "title": "Bilişim Teknolojilerinde Yeni Yönelimler",
+      "is_vize": false,
+      "key_topics": [
+        "Endüstri 4.0",
+        "Yapay Zeka ve Makine Öğrenmesi",
+        "Büyük Veri (5V)",
+        "Nesnelerin İnterneti (IoT)",
+        "Blokzincir"
+      ],
+      "hap_bilgiler": [
+        "Sanayi Devrimleri: Endüstri 1.0 (Buhar makinesi ve mekanizasyon), Endüstri 2.0 (Elektrik enerjisi ve seri üretim bantları), Endüstri 3.0 (Elektronik, bilgisayarlar ve otomasyon), Endüstri 4.0 (Siber-fiziksel sistemler, akıllı fabrikalar, IoT, yapay zeka).",
+        "Yapay Zeka (Artificial Intelligence - AI): İnsan zekasına özgü algılama, öğrenme, akıl yürütme ve problem çözme gibi işlevleri bilgisayarların gerçekleştirmesidir. Alan Turing (1950 - Turing Testi).",
+        "Makine Öğrenmesi (Machine Learning) Türleri:",
+        "  - Denetimli Öğrenme (Supervised Learning): Etiketli veriler kullanılarak sınıflandırma veya regresyon yapılması.",
+        "  - Denetimsiz Öğrenme (Unsupervised Learning): Etiketsiz veriler arasındaki gizli örüntülerin ve kümelerin bulunması (Kümeleme).",
+        "  - Pekiştirmeli Öğrenme (Reinforcement Learning): Ödül ve ceza mekanizmasıyla ajanın çevreyle etkileşime girerek en uygun kararları öğrenmesi.",
+        "Büyük Veri (Big Data) 5V Bileşeni: Volume (Hacim / Boyut), Velocity (Hız / Veri üretim hızı), Variety (Çeşitlilik / Metin, ses, video), Veracity (Doğruluk / Güvenilirlik), Value (Değer / İş zekasına dönüşme).",
+        "Nesnelerin İnterneti (IoT - Internet of Things): Fiziksel nesnelerin (sensörler, ev aletleri, araçlar) internet üzerinden birbirleriyle ve merkezi sistemlerle veri alışverişi yapabilmesidir. Kavramı ilk kez 1999'da Kevin Ashton kullanmıştır.",
+        "Blokzincir (Blockchain): Dağıtık, merkeziyetsiz, şifrelenmiş ve değiştirilemez bir dijital defter teknolojisidir. İlk olarak Bitcoin ile 2008'de 'Satoshi Nakamoto' rumuzlu kişi/grup tarafından ortaya atılmıştır. Veriler bloklar halinde kriptografik özetlerle (hash) birbirine zincirlenir.",
+        "Genişletilmiş Gerçeklik: Sanal Gerçeklik (VR - tamamen sanal bir ortama girme), Artırılmış Gerçeklik (AR - gerçek dünya görüntüsünün üzerine dijital nesneler bindirme, örn: Pokemon Go), Karma Gerçeklik (MR)."
+      ]
+    }
+  ],
+  "sinav_tuzaklari": [
+    {
+      "id": 1,
+      "title": "Veri (Data) ile Enformasyon (Information) Karışıklığı",
+      "mistake": "Öğrenci işlenmemiş ham veriler ile anlamlı hale getirilmiş bilgiyi birbirine karıştırır.",
+      "truth": "Veri (Data) tek başına bir anlam ifade etmeyen, bağlamdan yoksun ham ölçümlerdir (örn: '28', 'Ali'). Enformasyon ise bu verilerin işlenip organize edilmiş halidir (örn: 'Ali'nin vize notu 28'dir').",
+      "tip": "'İşlenmiş' veya 'anlamlandırılmış' kelimesini gördüğün anda cevap Enformasyon'dur!"
+    },
+    {
+      "id": 2,
+      "title": "RAM ile ROM Arasındaki 'Uçuculuk' (Volatility) Tuzağı",
+      "mistake": "Sınavda 'Elektrik kesildiğinde silinmeyen bellek' sorulduğunda öğrencinin doğrudan RAM'i işaretlemesi.",
+      "truth": "RAM geçicidir (volatile), elektrik kesilince içindeki veriler UÇAR. ROM ise kalıcıdır (non-volatile), elektrik kesilse bile içindeki BIOS/üretici verileri silinmez.",
+      "tip": "RAM = 'Rüzgar gibi Uçar' (Geçici); ROM = 'Rıza göstermez, Kalır' (Kalıcı)."
+    },
+    {
+      "id": 3,
+      "title": "ALU ile Control Unit (CU) Görev Çatışması",
+      "mistake": "Aritmetik Mantık Biriminin (ALU) bilgisayardaki tüm diğer parçalara komut gönderip onları yönettiğini düşünmek.",
+      "truth": "Yönetim, senkronizasyon ve komut çözme işi Denetim Birimi'ne (Control Unit) aittir. ALU sadece dört işlem ve mantıksal (BÜYÜK, KÜÇÜK, EŞİT) karşılaştırmaları yapar.",
+      "tip": "Hesap yapıyorsa ALU, emir verip orkestra şefliği yapıyorsa CU (Denetim Birimi)."
+    },
+    {
+      "id": 4,
+      "title": "İşletim Sisteminin 'Uygulama Yazılımı' Olarak Düşünülmesi",
+      "mistake": "Windows veya Linux'un bir uygulama yazılımı olduğu yanılgısı.",
+      "truth": "İşletim sistemleri temel 'SİSTEM YAZILIMI'dır. Uygulama yazılımları (Word, Excel, Photoshop) işletim sisteminin sunduğu altyapı üzerinde çalışır.",
+      "tip": "Bilgisayarın çalışması için şart olan ve donanımı yöneten her şey Sistem Yazılımıdır."
+    },
+    {
+      "id": 5,
+      "title": "Hub ile Switch (Anahtar) Farkı",
+      "mistake": "İkisinin de yerel ağda bilgisayarları birbirine bağlayan aynı mantıkta kutular olduğunu zannetmek.",
+      "truth": "Hub aptaldır; bir porttan gelen veriyi bütün portlara yayınlar (Broadcast), ağda çakışma ve yavaşlık yaratır. Switch ise akıllıdır; gelen verinin MAC adresine bakar ve sadece ilgili hedef bilgisayara iletir.",
+      "tip": "Sadece hedefe yollayan akıllı kutu: SWITCH. Herkese saçan: HUB."
+    },
+    {
+      "id": 6,
+      "title": "OSI Modeli Katman Sırası ve Görevleri",
+      "mistake": "Ağ (Network) katmanında MAC adreslerinin kullanıldığını sanmak.",
+      "truth": "MAC adresleri 2. Katman olan 'Veri Bağı (Data Link)' katmanında kullanılır. IP adresleri ve yönlendirme (routing) ise 3. Katman olan 'Ağ (Network)' katmanında gerçekleşir.",
+      "tip": "MAC = 2. Katman (Veri Bağı); IP = 3. Katman (Ağ Katmanı)."
+    },
+    {
+      "id": 7,
+      "title": "Virüs ile Solucan (Worm) Ayırımı",
+      "mistake": "İkisini eş anlamlı kabul etmek.",
+      "truth": "Virüs kendi başına çalışamaz; bir taşıyıcı dosyaya (.exe, .doc vb.) ihtiyaç duyar ve kullanıcının o dosyayı açması gerekir. Solucan (Worm) ise kullanıcı müdahalesi olmadan ağ üzerinden kendi kendini kopyalar ve yayılır.",
+      "tip": "Kendi kendine bağımsız yayılan: SOLUCAN; Kullanıcı çalıştırınca bulaşan: VİRÜS."
+    },
+    {
+      "id": 8,
+      "title": "Derleyici (Compiler) ile Yorumlayıcı (Interpreter) Farkı",
+      "mistake": "Python'ın derleyici kullandığını, C'nin yorumlayıcı olduğunu düşünmek.",
+      "truth": "C, C++ derleyicidir (tüm kodu bir kerede makine diline çevirip .exe üretir). Python ve JavaScript ise yorumlayıcıdır (kodu satır satır okur ve hemen icra eder).",
+      "tip": "Tek seferde toplu çeviri: Derleyici (Compiler). Satır satır anlık çeviri: Yorumlayıcı (Interpreter)."
+    },
+    {
+      "id": 9,
+      "title": "Açık Kaynak Kod (Open Source) ile Ücretsiz Yazılım (Freeware) Eşit Değildir",
+      "mistake": "Ücretsiz olan her yazılımın açık kaynak kodlu olduğunu sanmak.",
+      "truth": "Adobe Reader ücretsizdir (Freeware) ama kaynak kodları gizlidir (kapalı kaynak). Açık kaynak kodlu bir yazılım ise hem ücretsiz olabilir hem de kaynak kodları herkes tarafından görülebilir ve geliştirilebilir.",
+      "tip": "Freeware = Kod kapalı ama bedava. Open Source = Kod açık, herkes geliştirebilir."
+    },
+    {
+      "id": 10,
+      "title": "Web 2.0 ile Web 3.0 Ayrımı",
+      "mistake": "Sosyal medyanın ve Wikipedia'nın Web 3.0 olduğunu varsaymak.",
+      "truth": "Kullanıcıların içerik ürettiği blog, sosyal medya ve video paylaşım siteleri Web 2.0'dır. Web 3.0 ise semantik web (makinelerin anlamlandırdığı web), yapay zeka entegrasyonu ve merkeziyetsiz blokzincir yapılarıdır.",
+      "tip": "Sosyal Medya = Web 2.0; Semantik Web ve Yapay Zeka = Web 3.0."
+    }
+  ],
+  "formuller_ve_kavramlar": [
+    {
+      "term": "DIKW Piramidi",
+      "description": "Veri (Data) -> Enformasyon (Information) -> Bilgi (Knowledge) -> Bilgelik (Wisdom) hiyerarşik bilgi piramididir."
+    },
+    {
+      "term": "Von Neumann Mimarisi",
+      "description": "Girdi, Çıktı, Bellek ve CPU'dan oluşan, komut ve verinin aynı hafızada tutulduğu modern bilgisayar mimarisi."
+    },
+    {
+      "term": "ALU (Arithmetic Logic Unit)",
+      "description": "CPU içinde toplama, çıkarma gibi matematiksel ve AND, OR gibi mantıksal işlemleri yapan birim."
+    },
+    {
+      "term": "Control Unit (CU)",
+      "description": "İşlemcideki komutların getirilmesi, kodunun çözülmesi ve diğer donanımlara sinyal gönderilmesini yöneten kontrol birimi."
+    },
+    {
+      "term": "Yazmaç (Register)",
+      "description": "İşlemci içerisinde yer alan en hızlı ve en düşük kapasiteli geçici depolama gözleri."
+    },
+    {
+      "term": "Moore Yasası",
+      "description": "Bir entegre devredeki transistör sayısının yaklaşık her iki yılda bir ikiye katlanacağını öngören kural."
+    },
+    {
+      "term": "RAM (Random Access Memory)",
+      "description": "Rastgele erişimli, elektrik kesilince içeriği silinen (uçucu), işlemcinin doğrudan haberleştiği ana bellek."
+    },
+    {
+      "term": "ROM (Read Only Memory)",
+      "description": "Sadece okunabilir, elektrik kesilse dahi silinmeyen, BIOS gibi kritik başlangıç kodlarını barındıran kalıcı bellek."
+    },
+    {
+      "term": "Sanal Bellek (Virtual Memory)",
+      "description": "Fiziksel RAM dolduğunda işletim sisteminin sabit diskin bir bölümünü RAM gibi kullanması mekanizması."
+    },
+    {
+      "term": "Kernel (Çekirdek)",
+      "description": "İşletim sisteminin donanım ile doğrudan etkileşime giren, kaynak yönetimini sağlayan en temel çekirdek katmanı."
+    },
+    {
+      "term": "GUI (Graphical User Interface)",
+      "description": "Kullanıcının bilgisayarla ikonlar, pencereler ve fare işaretçisi ile etkileşime girmesini sağlayan görsel arayüz."
+    },
+    {
+      "term": "FAT32 / NTFS",
+      "description": "FAT32 en fazla 4GB tek dosya boyutunu desteklerken, NTFS güvenlik, izinler ve dosya şifreleme özellikleri sunar."
+    },
+    {
+      "term": "Shareware",
+      "description": "Belirli bir süre veya deneme amacıyla ücretsiz kullanılabilen, süre bitiminde lisans ücreti istenen yazılım türü."
+    },
+    {
+      "term": "Freeware",
+      "description": "Kullanımı tamamen ücretsiz olan ancak kaynak kodları gizli tutulan mülkiyetli yazılım."
+    },
+    {
+      "term": "SaaS (Software as a Service)",
+      "description": "Yazılımların yerel bilgisayara yüklenmeden bulut sunucular üzerinden internet tarayıcısıyla kullanılması (örn: Office 365)."
+    },
+    {
+      "term": "ARPANET",
+      "description": "1969'da ABD Savunma Bakanlığı (DARPA) tarafından kurulan, internetin temeli sayılan ilk paket anahtarlamalı ağ."
+    },
+    {
+      "term": "TCP/IP",
+      "description": "İnternet üzerindeki tüm cihazların haberleşmesini sağlayan standart iletişim protokol takımı (Transmission Control Protocol / Internet Protocol)."
+    },
+    {
+      "term": "Semantik Web (Web 3.0)",
+      "description": "Web üzerindeki verilerin makineler ve yapay zeka ajanları tarafından anlamlandırılabildiği anlamsal ağ vizyonu."
+    },
+    {
+      "term": "OSI 7 Katman Modeli",
+      "description": "Ağ haberleşmesini standartlaştıran 7 katman: Fiziksel, Veri Bağı, Ağ, İletim, Oturum, Sunum, Uygulama."
+    },
+    {
+      "term": "MAC Adresi",
+      "description": "Ağ bağdaştırıcısına (Ethernet/Wi-Fi) üretici tarafından fiziksel olarak kazınan 48 bitlik benzersiz donanım kimlik adresi."
+    },
+    {
+      "term": "Router (Yönlendirici)",
+      "description": "Farklı ağlar (örn: yerel ağ ile internet) arasında IP adreslerini kullanarak paket yönlendirmesi yapan 3. katman cihazı."
+    },
+    {
+      "term": "Switch (Anahtar)",
+      "description": "Yerel ağdaki bilgisayarları bağlayan ve paketleri MAC adresine bakarak sadece hedef porta ileten 2. katman cihazı."
+    },
+    {
+      "term": "CIA Triad",
+      "description": "Bilgi güvenliğinin üç sac ayağı: Confidentiality (Gizlilik), Integrity (Bütünlük) ve Availability (Erişilebilirlik)."
+    },
+    {
+      "term": "Phishing (Oltalama)",
+      "description": "Güvenilir bir kurum (banka vb.) süsü verilerek kullanıcıların parola ve kredi kartı bilgilerini çalmayı hedefleyen sosyal mühendislik saldırısı."
+    },
+    {
+      "term": "Algoritma",
+      "description": "Bir sorunu çözmek veya belirli bir amaca ulaşmak için tasarlanan mantıksal adımlar bütünü."
+    },
+    {
+      "term": "Derleyici (Compiler)",
+      "description": "Yüksek seviyeli programlama diliyle yazılmış kodun tamamını bir kerede makine koduna çeviren program."
+    },
+    {
+      "term": "Büyük Veri 5V",
+      "description": "Volume (Hacim), Velocity (Hız), Variety (Çeşitlilik), Veracity (Doğruluk) ve Value (Değer)."
+    },
+    {
+      "term": "IoT (Internet of Things)",
+      "description": "Çeşitli sensörlerle donatılmış fiziksel nesnelerin internete bağlanarak veri alışverişi yapması."
+    },
+    {
+      "term": "Blokzincir (Blockchain)",
+      "description": "Merkezi bir otoriteye ihtiyaç duymadan, şifreli ve değiştirilemez bloklar halinde veri tutan dağıtık defter teknolojisi."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "unit": 1,
+      "question": "DIKW piramidinde 'işlenmemiş ham gerçekler' olarak tanımlanan kavram nedir?",
+      "answer": "Veri (Data)."
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "question": "Tarihteki ilk bilgisayar programcısı kim olarak kabul edilir?",
+      "answer": "Ada Lovelace (Charles Babbage'ın Analitik Motoru için algoritma yazmıştır)."
+    },
+    {
+      "id": 3,
+      "unit": 1,
+      "question": "1946 yılında geliştirilen ilk genel amaçlı elektronik bilgisayarın adı nedir?",
+      "answer": "ENIAC."
+    },
+    {
+      "id": 4,
+      "unit": 1,
+      "question": "İkinci kuşak bilgisayarların ortaya çıkmasını sağlayan ve vakum tüplerinin yerini alan icat nedir?",
+      "answer": "Transistör (1947, Bell Labs)."
+    },
+    {
+      "id": 5,
+      "unit": 1,
+      "question": "Mikroçiplerdeki transistör sayısının her 18-24 ayda iki katına çıkacağını belirten ilke nedir?",
+      "answer": "Moore Yasası (Gordon Moore)."
+    },
+    {
+      "id": 6,
+      "unit": 2,
+      "question": "Von Neumann mimarisine göre CPU'nun 3 temel iç bileşeni nelerdir?",
+      "answer": "ALU (Aritmetik Mantık Birimi), CU (Denetim Birimi) ve Yazmaçlar (Registers)."
+    },
+    {
+      "id": 7,
+      "unit": 2,
+      "question": "Elektrik kesildiğinde içerisindeki tüm veriler kaybolan geçici ana bellek hangisidir?",
+      "answer": "RAM (Random Access Memory)."
+    },
+    {
+      "id": 8,
+      "unit": 2,
+      "question": "İşlemci içinde bulunan ve hiyerarşideki en hızlı, en pahalı bellek türü nedir?",
+      "answer": "Yazmaçlar (Registers)."
+    },
+    {
+      "id": 9,
+      "unit": 2,
+      "question": "Bilgisayarda 1 Megabyte (MB) kaç Kilobyte'a (KB) eşittir?",
+      "answer": "1024 KB."
+    },
+    {
+      "id": 10,
+      "unit": 2,
+      "question": "Fabrika çıkışı üzerinde BIOS/UEFI kodlarını barındıran kalıcı bellek türü nedir?",
+      "answer": "ROM (Read Only Memory)."
+    },
+    {
+      "id": 11,
+      "unit": 3,
+      "question": "İşletim sisteminin donanım ile doğrudan iletişim kuran en temel çekirdek katmanına ne denir?",
+      "answer": "Kernel (Çekirdek)."
+    },
+    {
+      "id": 12,
+      "unit": 3,
+      "question": "RAM yetersiz kaldığında sabit diskin bir bölümünün RAM gibi kullanılmasına ne ad verilir?",
+      "answer": "Sanal Bellek (Virtual Memory)."
+    },
+    {
+      "id": 13,
+      "unit": 3,
+      "question": "1991 yılında Linus Torvalds tarafından geliştirilen açık kaynak kodlu işletim sistemi çekirdeği nedir?",
+      "answer": "Linux."
+    },
+    {
+      "id": 14,
+      "unit": 3,
+      "question": "FAT32 dosya sisteminde tek bir dosyanın maksimum boyutu kaç GB olabilir?",
+      "answer": "4 GB."
+    },
+    {
+      "id": 15,
+      "unit": 4,
+      "question": "Elektronik tablolama yazılımlarında (Excel) formüller hangi işaretle başlar?",
+      "answer": "= (Eşittir) işareti ile başlar."
+    },
+    {
+      "id": 16,
+      "unit": 4,
+      "question": "Belirli bir süre ücretsiz deneme imkanı sunup süre sonunda ücret talep eden yazılım lisans türü nedir?",
+      "answer": "Shareware (Paylaşılan yazılım)."
+    },
+    {
+      "id": 17,
+      "unit": 4,
+      "question": "Yazılımların bilgisayara kurulmadan bulut üzerinden web tarayıcısıyla sunulması modeline ne denir?",
+      "answer": "SaaS (Software as a Service - Hizmet Olarak Yazılım)."
+    },
+    {
+      "id": 18,
+      "unit": 5,
+      "question": "İnternetin temeli kabul edilen ve 1969'da kurulan ilk askeri araştırma ağı nedir?",
+      "answer": "ARPANET (DARPA)."
+    },
+    {
+      "id": 19,
+      "unit": 5,
+      "question": "1989 yılında World Wide Web (WWW) standartlarını icat eden bilim insanı kimdir?",
+      "answer": "Tim Berners-Lee (CERN)."
+    },
+    {
+      "id": 20,
+      "unit": 5,
+      "question": "Kullanıcıların sadece tüketici değil aynı zamanda içerik üreticisi olduğu web nesli hangisidir?",
+      "answer": "Web 2.0 (Sosyal Medya, Bloglar, Vikiler)."
+    },
+    {
+      "id": 21,
+      "unit": 6,
+      "question": "Yerel ağda gelen veri paketini MAC adresine bakarak sadece ilgili hedefe ileten cihaz hangisidir?",
+      "answer": "Switch (Ağ Anahtarı)."
+    },
+    {
+      "id": 22,
+      "unit": 6,
+      "question": "OSI 7 Katman Modelinde IP adreslerinin kullanıldığı 3. katman hangisidir?",
+      "answer": "Ağ (Network) Katmanı."
+    },
+    {
+      "id": 23,
+      "unit": 6,
+      "question": "Bilgi güvenliğinin 3 temel unsuru (CIA Triad) nelerdir?",
+      "answer": "Gizlilik (Confidentiality), Bütünlük (Integrity) ve Erişilebilirlik (Availability)."
+    },
+    {
+      "id": 24,
+      "unit": 6,
+      "question": "İnsan müdahalesi olmadan ağ bağlantıları üzerinden kendi kendine çoğalan zararlı yazılım türü nedir?",
+      "answer": "Solucan (Worm)."
+    },
+    {
+      "id": 25,
+      "unit": 7,
+      "question": "Akış şemalarında (Flowchart) karar/koşul veya karşılaştırma işlemleri için hangi sembol kullanılır?",
+      "answer": "Eşkenar Dörtgen (Baklava dilimi)."
+    },
+    {
+      "id": 26,
+      "unit": 7,
+      "question": "Yazılan kodun tamamını tek bir seferde makine diline çeviren yazılıma ne denir?",
+      "answer": "Derleyici (Compiler)."
+    },
+    {
+      "id": 27,
+      "unit": 8,
+      "question": "Büyük Verinin (Big Data) 5V bileşeni nelerdir?",
+      "answer": "Volume (Hacim), Velocity (Hız), Variety (Çeşitlilik), Veracity (Doğruluk), Value (Değer)."
+    },
+    {
+      "id": 28,
+      "unit": 8,
+      "question": "Fiziksel nesnelerin sensörlerle donatılıp internet üzerinden haberleşmesine ne ad verilir?",
+      "answer": "Nesnelerin İnterneti (IoT - Internet of Things)."
+    },
+    {
+      "id": 29,
+      "unit": 8,
+      "question": "Blokzincir (Blockchain) teknolojisinin arkasındaki gizemli kurucu rumuzu nedir?",
+      "answer": "Satoshi Nakamoto (2008 - Bitcoin teknik raporu)."
+    },
+    {
+      "id": 30,
+      "unit": 8,
+      "question": "Siber-fiziksel sistemler ve akıllı fabrikalar hangi sanayi devriminin temel özelliğidir?",
+      "answer": "Endüstri 4.0."
+    }
+  ],
+  "exams": [
+    {
+      "title": "Vize Deneme Sınavı 1",
+      "filename": "Vize_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "Veri (Data), Enformasyon (Information), Bilgi (Knowledge) ve Bilgelik (Wisdom) hiyerarşisine göre, aşağıdakilerden hangisi doğrudan 'Enformasyon'a örnek gösterilebilir?",
+          "options": [
+            "A) 39",
+            "B) Bir sınıftaki öğrencilerin vize notu ortalamasının 68 olması",
+            "C) Ankara kelimesi",
+            "D) Bir ustanın yıllar süren tecrübeyle edindiği mesleki sezgileri",
+            "E) Bir veri tabanındaki rastgele sayılar"
+          ],
+          "correct_answer": "B",
+          "explanation": "Enformasyon, verilerin işlenip anlamlı ve ilişkili hale getirilmiş şeklidir. '39' veya 'Ankara' ham veridir (Data). 'Öğrencilerin vize not ortalamasının 68 olması' ise verilerin işlenerek anlamlı hale geldiği Enformasyondur."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "1946 yılında geliştirilen ve ilk genel amaçlı elektronik bilgisayar kabul edilen sistem aşağıdakilerden hangisidir?",
+          "options": [
+            "A) UNIVAC",
+            "B) Pascaline",
+            "C) ENIAC",
+            "D) EDVAC",
+            "E) Altair 8800"
+          ],
+          "correct_answer": "C",
+          "explanation": "ENIAC (Electronic Numerical Integrator and Computer), J. Presper Eckert ve John Mauchly tarafından 1946'da tamamlanan ilk genel amaçlı elektronik bilgisayardır."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "Bilgisayar kuşakları göz önüne alındığında, ikinci kuşak bilgisayarların temel donanım yapıtaşı aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Vakum tüpleri",
+            "B) Transistörler",
+            "C) Entegre devreler",
+            "D) Mikroişlemciler",
+            "E) Yapay zeka çipleri"
+          ],
+          "correct_answer": "B",
+          "explanation": "1. Kuşakta Vakum Tüpleri, 2. Kuşakta Transistörler, 3. Kuşakta Entegre Devreler, 4. Kuşakta Mikroişlemciler kullanılmıştır."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "Charles Babbage'ın tasarladığı Analitik Motor için algoritmalar geliştirerek tarihin ilk bilgisayar programcısı unvanını alan bilim insanı kimdir?",
+          "options": [
+            "A) Alan Turing",
+            "B) Ada Lovelace",
+            "C) Grace Hopper",
+            "D) Blaise Pascal",
+            "E) John von Neumann"
+          ],
+          "correct_answer": "B",
+          "explanation": "Lord Byron'ın kızı olan Ada Lovelace, Babbage'ın Analitik Motoru için yazdığı Bernoulli sayılarını hesaplayan algoritma sayesinde ilk bilgisayar programcısı sayılır."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Mikroçip üzerindeki transistör sayısının yaklaşık her 18-24 ayda bir iki katına çıkacağını ifade eden kural aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Amdahl Yasası",
+            "B) Metcalfe Yasası",
+            "C) Moore Yasası",
+            "D) Bell Yasası",
+            "E) Turing İlkesi"
+          ],
+          "correct_answer": "C",
+          "explanation": "Intel'in kurucularından Gordon Moore tarafından ortaya atılan kural Moore Yasası olarak bilinir."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "Von Neumann mimarisine göre bilgisayarın Merkezi İşlem Birimi (CPU) içinde yer alan ve matematiksel/mantıksal işlemleri yürüten birim hangisidir?",
+          "options": [
+            "A) Denetim Birimi (Control Unit)",
+            "B) Aritmetik Mantık Birimi (ALU)",
+            "C) RAM",
+            "D) ROM",
+            "E) Sabit Disk"
+          ],
+          "correct_answer": "B",
+          "explanation": "Aritmetik ve mantıksal işlemleri doğrudan gerçekleştiren birim ALU'dur (Arithmetic Logic Unit)."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Bilgisayar mimarisinde en hızlı çalışan ve CPU içerisinde yer alan geçici depolama birimleri aşağıdakilerden hangisidir?",
+          "options": [
+            "A) RAM",
+            "B) ROM",
+            "C) Yazmaçlar (Registers)",
+            "D) Sabit Disk (HDD)",
+            "E) Optik Disk"
+          ],
+          "correct_answer": "C",
+          "explanation": "Bellek hiyerarşisinin en tepesinde, işlemci içinde bulunan ve en hızlı erişilen birim Yazmaçlardır (Registers)."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi elektrik kesildiğinde üzerindeki verileri kaybeden uçucu (volatile) bir bellektir?",
+          "options": [
+            "A) ROM",
+            "B) EPROM",
+            "C) Sabit Disk",
+            "D) RAM",
+            "E) Flash Bellek"
+          ],
+          "correct_answer": "D",
+          "explanation": "RAM geçici (volatile) bir bellektir; bilgisayar kapandığında veya elektrik kesildiğinde tüm içeriği sıfırlanır."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi hem giriş hem de çıkış birimi olarak işlev görür?",
+          "options": [
+            "A) Lazer yazıcı",
+            "B) Dokunmatik ekran (Touchscreen)",
+            "C) Klavye",
+            "D) Optik tarayıcı",
+            "E) Barkod okuyucu"
+          ],
+          "correct_answer": "B",
+          "explanation": "Dokunmatik ekranlar görüntüyü sundukları için çıkış birimi, dokunarak komut alabildikleri için giriş birimidir."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "İkili sayı sistemine göre 1 Megabyte (MB) tam olarak kaç Byte'a eşittir?",
+          "options": [
+            "A) 1.000 Byte",
+            "B) 10.000 Byte",
+            "C) 1.024 Byte",
+            "D) 1.048.576 Byte",
+            "E) 1.000.000 Byte"
+          ],
+          "correct_answer": "D",
+          "explanation": "1 KB = 1024 Byte, 1 MB = 1024 * 1024 = 1.048.576 Byte eder."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "İşletim sisteminin donanım ile doğrudan iletişim kurarak işlemci, bellek ve aygıt yönetimini yürüten en temel çekirdek bileşeni hangisidir?",
+          "options": [
+            "A) Shell (Kabuk)",
+            "B) Kernel (Çekirdek)",
+            "C) GUI",
+            "D) BIOS",
+            "E) Compiler"
+          ],
+          "correct_answer": "B",
+          "explanation": "İşletim sisteminin kalbi ve donanıma en yakın çalışan katmanı Kernel (Çekirdek)'dir."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Fiziksel RAM belleğin yetersiz kaldığı durumlarda işletim sisteminin ikincil depolama aygıtının bir bölümünü RAM gibi kullanması işlemine ne ad verilir?",
+          "options": [
+            "A) Önbellekleme (Caching)",
+            "B) Sanal Bellek (Virtual Memory)",
+            "C) ROM yükleme",
+            "D) Disk birleştirme (Defrag)",
+            "E) RAID mimarisi"
+          ],
+          "correct_answer": "B",
+          "explanation": "Sanal bellek (Virtual Memory), RAM yetersizliğinde disk alanının takas (swap/paging) alanı olarak kullanılmasıdır."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "1991 yılında Linus Torvalds tarafından geliştirilen açık kaynak kodlu işletim sistemi çekirdeği aşağıdakilerden hangisidir?",
+          "options": [
+            "A) MS-DOS",
+            "B) Windows NT",
+            "C) Linux",
+            "D) macOS",
+            "E) OS/2"
+          ],
+          "correct_answer": "C",
+          "explanation": "Linus Torvalds, 1991 yılında üniversite öğrencisiyken Linux çekirdeğini geliştirmiş ve GPL lisansı altında kamuya açmıştır."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "FAT32 dosya sisteminde tek bir dosyanın alabileceği maksimum dosya boyutu sınırı aşağıdakilerden hangisidir?",
+          "options": [
+            "A) 2 GB",
+            "B) 4 GB",
+            "C) 16 GB",
+            "D) 32 GB",
+            "E) 64 GB"
+          ],
+          "correct_answer": "B",
+          "explanation": "FAT32 mimari sınırlaması gereği tek bir dosyanın boyutu en fazla 4 GB (4.294.967.295 byte) olabilir."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "TÜBİTAK tarafından geliştirilen Türkiye'nin yerli Linux dağıtımı aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Pardus",
+            "B) Ubuntu",
+            "C) RedHat",
+            "D) Debian",
+            "E) Fedora"
+          ],
+          "correct_answer": "A",
+          "explanation": "TÜBİTAK ULAKBİM tarafından geliştirilen ulusal işletim sistemi dağıtımı Pardus'tur."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "Bir hesap tablosu (Excel) programında formül yazmaya başlarken kullanılan zorunlu karakter aşağıdakilerden hangisidir?",
+          "options": [
+            "A) ?",
+            "B) #",
+            "C) =",
+            "D) %",
+            "E) @"
+          ],
+          "correct_answer": "C",
+          "explanation": "Excel ve diğer elektronik tablolarda bir hücreye formül veya fonksiyon girerken '=' (eşittir) işareti kullanılır."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "Belirli bir süre boyunca (örneğin 30 gün) ücretsiz denenmesine izin verilen, süre sonunda tam kullanım için lisans ücreti talep eden yazılım lisans türü nedir?",
+          "options": [
+            "A) Freeware",
+            "B) Shareware",
+            "C) Açık Kaynak Kodlu",
+            "D) Kamu Malı (Public Domain)",
+            "E) Firmware"
+          ],
+          "correct_answer": "B",
+          "explanation": "Deneme süreli ve sonradan ücretlendirilen yazılımlar Shareware (Paylaşılan yazılım) olarak adlandırılır."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Yazılımların kullanıcının bilgisayarına kurulmadan doğrudan internet tarayıcısı üzerinden bulut hizmeti olarak sunulması modeli aşağıdakilerden hangisidir?",
+          "options": [
+            "A) IaaS",
+            "B) PaaS",
+            "C) SaaS",
+            "D) BIOS",
+            "E) API"
+          ],
+          "correct_answer": "C",
+          "explanation": "SaaS (Software as a Service - Hizmet Olarak Yazılım), Office 365 veya Google Docs gibi uygulamaların doğrudan webden çalıştırılmasıdır."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Aşağıdakilerden hangisi bir 'Kelime İşlemci' (Word Processor) yazılımına örnektir?",
+          "options": [
+            "A) MS Access",
+            "B) MS Excel",
+            "C) LibreOffice Writer",
+            "D) MS PowerPoint",
+            "E) MySQL"
+          ],
+          "correct_answer": "C",
+          "explanation": "LibreOffice Writer ve MS Word kelime işlemci yazılımlarıdır. Access veritabanı, Excel hesap tablosu, PowerPoint ise sunum yazılımıdır."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "Telif hakkı tamamen sona ermiş veya sahibi tarafından tüm hakları koşulsuz olarak kamuya devredilmiş yazılımlara ne ad verilir?",
+          "options": [
+            "A) Ticari Yazılım",
+            "B) Shareware",
+            "C) Kamu Malı (Public Domain)",
+            "D) Demo Yazılım",
+            "E) Beta Yazılım"
+          ],
+          "correct_answer": "C",
+          "explanation": "Hiçbir telif hakkı veya mülkiyet kısıtlaması bulunmayan yazılımlar Public Domain (Kamu Malı) olarak adlandırılır."
+        }
+      ]
+    },
+    {
+      "title": "Vize Deneme Sınavı 2",
+      "filename": "Vize_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "1890 ABD nüfus sayımında delikli kart teknolojisini kullanarak verileri başarıyla işleyen ve daha sonra IBM'e dönüşen şirketi kuran mucit kimdir?",
+          "options": [
+            "A) Charles Babbage",
+            "B) Herman Hollerith",
+            "C) John Atanasoff",
+            "D) Blaise Pascal",
+            "E) Alan Turing"
+          ],
+          "correct_answer": "B",
+          "explanation": "Herman Hollerith delikli kart makineleriyle nüfus sayımını birkaç yıldan birkaç aya indirmiş ve kurduğu şirket IBM'in temeli olmuştur."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Entegre devrelerin (mikroçiplerin) kullanılmasıyla başlayan ve bilgisayarlarda ilk kez klavye ve işletim sistemlerinin devreye girdiği kuşak hangisidir?",
+          "options": [
+            "A) 1. Kuşak",
+            "B) 2. Kuşak",
+            "C) 3. Kuşak",
+            "D) 4. Kuşak",
+            "E) 5. Kuşak"
+          ],
+          "correct_answer": "C",
+          "explanation": "Entegre devreler (IC) 3. Kuşak bilgisayarların belirleyici özelliğidir."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "1642 yılında babasının vergi hesaplamalarına yardımcı olmak amacıyla sadece toplama ve çıkarma yapabilen ilk mekanik hesap makinesini geliştiren kimdir?",
+          "options": [
+            "A) Gottfried Leibniz",
+            "B) Blaise Pascal",
+            "C) John Napier",
+            "D) Leonardo da Vinci",
+            "E) René Descartes"
+          ],
+          "correct_answer": "B",
+          "explanation": "Blaise Pascal tarafından icat edilen mekanik makineye 'Pascaline' adı verilmiştir."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "Bilgisayarın hem komutlarını hem de üzerinde işlem yapacağı verileri aynı ana bellekte tutmasını öneren ve modern bilgisayarların temelini atan bilim insanı kimdir?",
+          "options": [
+            "A) John von Neumann",
+            "B) Alan Turing",
+            "C) Bill Gates",
+            "D) Steve Jobs",
+            "E) Linus Torvalds"
+          ],
+          "correct_answer": "A",
+          "explanation": "John von Neumann, 'Saklı Program' mimarisini geliştirerek veriler ile program komutlarının aynı bellekte tutulmasını sağlamıştır."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "1971 yılında dünyanın ilk tek çipli ticari mikroişlemcisi olan 4004'ü üreten teknoloji şirketi hangisidir?",
+          "options": [
+            "A) IBM",
+            "B) Apple",
+            "C) Intel",
+            "D) Microsoft",
+            "E) Texas Instruments"
+          ],
+          "correct_answer": "C",
+          "explanation": "Intel 4004, 1971'de piyasaya sürülen dünyanın ilk 4-bit mikroişlemcisidir."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "CPU içerisindeki komutların çözülmesini, yürütülme sırasını ve diğer donanım birimlerine kontrol sinyalleri gönderilmesini sağlayan birim hangisidir?",
+          "options": [
+            "A) Aritmetik Mantık Birimi (ALU)",
+            "B) Denetim Birimi (Control Unit - CU)",
+            "C) Önbellek (Cache)",
+            "D) RAM",
+            "E) Yazmaç"
+          ],
+          "correct_answer": "B",
+          "explanation": "Denetim Birimi (CU), CPU'nun beyni gibidir; komutları çözer ve diğer bileşenleri senkronize yönetir."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Aşağıdaki bellek türlerinden hangisi 'Morötesi (UV) ışık' altında silinerek tekrar programlanabilme özelliğine sahiptir?",
+          "options": [
+            "A) ROM",
+            "B) PROM",
+            "C) EPROM",
+            "D) EEPROM",
+            "E) DRAM"
+          ],
+          "correct_answer": "C",
+          "explanation": "EPROM (Erasable Programmable ROM), penceresinden verilen morötesi ışıkla silinir."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "İşlemci ile ana bellek (RAM) arasındaki hız uçurumunu kapatmak ve sık kullanılan verileri hazır tutmak için kullanılan çok hızlı bellek hangisidir?",
+          "options": [
+            "A) Önbellek (Cache Memory)",
+            "B) Sabit Disk",
+            "C) Optik Disk",
+            "D) Flash Bellek",
+            "E) BIOS"
+          ],
+          "correct_answer": "A",
+          "explanation": "L1, L2, L3 önbellekler (Cache), CPU'nun ihtiyaç duyacağı verileri RAM'den önceden çekip işlemci hızında sunar."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi yalnızca bir 'Giriş' birimidir?",
+          "options": [
+            "A) Hoparlör",
+            "B) Projeksiyon cihazı",
+            "C) Barkod Okuyucu",
+            "D) Monitör",
+            "E) Çizici (Plotter)"
+          ],
+          "correct_answer": "C",
+          "explanation": "Barkod okuyucu bilgisayara dış ortamdan veri aktaran saf bir giriş birimidir. Diğerleri çıkış birimidir."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "1 Gigabyte (GB) kapasite kaç Megabyte (MB)'a eşittir?",
+          "options": [
+            "A) 100",
+            "B) 512",
+            "C) 1.000",
+            "D) 1.024",
+            "E) 2.048"
+          ],
+          "correct_answer": "D",
+          "explanation": "Bilgisayarda 2'nin üsleri kuralı gereği 1 GB = 1024 MB'dır."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "Kullanıcının işletim sistemine doğrudan klavyeden yazılı metin komutları girerek talimat verdiği arayüz türü nedir?",
+          "options": [
+            "A) GUI (Grafik Kullanıcı Arayüzü)",
+            "B) CLI (Komut Satırı Arayüzü)",
+            "C) Dokunmatik Arayüz",
+            "D) Biyometrik Arayüz",
+            "E) Web Arayüzü"
+          ],
+          "correct_answer": "B",
+          "explanation": "CLI (Command Line Interface), MS-DOS komut istemi veya Linux bash kabuğu gibi metin tabanlı komut arayüzüdür."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Aşağıdaki işletim sistemi türlerinden hangisi hava yastığı, savunma sanayii ve tıbbi cihazlar gibi 'gecikmeye tahammülü olmayan' sistemlerde kullanılır?",
+          "options": [
+            "A) Masaüstü İşletim Sistemi",
+            "B) Ağ İşletim Sistemi",
+            "C) Gerçek Zamanlı İşletim Sistemi (RTOS)",
+            "D) Dağıtık İşletim Sistemi",
+            "E) Çok Kullanıcılı İşletim Sistemi"
+          ],
+          "correct_answer": "C",
+          "explanation": "RTOS (Real-Time Operating System), işlemlerin kesin zaman sınırları içinde hatasız tamamlanmasını garanti eder."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "Windows işletim sistemlerinde dosya güvenliği, kullanıcı izinleri ve günlükleme (journaling) özelliklerini destekleyen gelişmiş dosya sistemi hangisidir?",
+          "options": [
+            "A) FAT16",
+            "B) FAT32",
+            "C) NTFS",
+            "D) ext2",
+            "E) ISO 9660"
+          ],
+          "correct_answer": "C",
+          "explanation": "NTFS (New Technology File System), modern Windows sürümlerinin güvenlikli dosya sistemidir."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "'C:\\Universite\\YBS\\Dersler\\notlar.txt' şeklindeki bir dosya gösterimi ne tür bir dosya yoludur?",
+          "options": [
+            "A) Göreceli Yol (Relative Path)",
+            "B) Mutlak Yol (Absolute Path)",
+            "C) Ağ Yolu (UNC Path)",
+            "D) Sanal Yol",
+            "E) Köksüz Yol"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kök sürücü harfinden (C:\\) başlayarak hedefe kadar tüm hiyerarşiyi gösteren yola Mutlak Yol (Absolute Path) denir."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "Aşağıdakilerden hangisi bir işletim sisteminin temel görevlerinden biri değildir?",
+          "options": [
+            "A) İşlemci yönetimi ve görev zamanlama",
+            "B) Bellek tahsisi ve yönetimi",
+            "C) Dosya ve dizin organizasyonu",
+            "D) Muhasebe bilançosu hazırlama",
+            "E) Giriş/Çıkış aygıtlarının denetimi"
+          ],
+          "correct_answer": "D",
+          "explanation": "Muhasebe bilançosu hazırlamak bir uygulama yazılımının (ERP veya muhasebe programı) görevidir; işletim sisteminin donanım yönetimi görevi değildir."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "Kullanımı tamamen ücretsiz olan ancak kaynak kodları kapalı tutulan yazılım lisans modeli aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Shareware",
+            "B) Freeware",
+            "C) Açık Kaynak Kodlu",
+            "D) GNU GPL",
+            "E) Ticari Yazılım"
+          ],
+          "correct_answer": "B",
+          "explanation": "Freeware (Ücretsiz yazılım), son kullanıcıya bedelsiz sunulur ancak kaynak kodları gizlidir (örn: Adobe Reader)."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "Kaynak kodu herkesin erişimine açık olan, üzerinde değişiklik yapılıp yeniden dağıtılabilen yazılımlara ne ad verilir?",
+          "options": [
+            "A) Açık Kaynak Kodlu Yazılım",
+            "B) Mülkiyetli Yazılım",
+            "C) Demo Yazılım",
+            "D) Casus Yazılım",
+            "E) Kısıtlı Yazılım"
+          ],
+          "correct_answer": "A",
+          "explanation": "Open Source (Açık Kaynak Kodlu) yazılımların kaynak kodu açıktır ve denetlenebilir/geliştirilebilir."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Aşağıdakilerden hangisi bir 'İlişkisel Veritabanı Yönetim Sistemi' (RDBMS) örneğidir?",
+          "options": [
+            "A) MS Word",
+            "B) MS Excel",
+            "C) MySQL",
+            "D) Photoshop",
+            "E) VLC Player"
+          ],
+          "correct_answer": "C",
+          "explanation": "MySQL, Oracle, PostgreSQL ve MS Access ilişkisel veritabanı yönetim sistemleridir."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Bir elektronik tablolama programında (Excel) A1'den A5'e kadar olan hücrelerin toplamını hesaplayan formül hangisidir?",
+          "options": [
+            "A) =TOPLA(A1+A5)",
+            "B) =TOPLA(A1:A5)",
+            "C) =SUM(A1;A5)",
+            "D) =ORTALAMA(A1:A5)",
+            "E) =ÇARPIM(A1-A5)"
+          ],
+          "correct_answer": "B",
+          "explanation": "İki nokta üst üste ':' aralık belirtir. =TOPLA(A1:A5) formülü A1 ile A5 arasındaki tüm hücreleri toplar."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "Bir şirketin insan kaynakları, üretim, muhasebe ve satış gibi tüm departmanlarını tek bir entegre yazılım çatısında toplayan sistemlere ne ad verilir?",
+          "options": [
+            "A) CRM (Müşteri İlişkileri Yönetimi)",
+            "B) ERP (Kurumsal Kaynak Planlaması)",
+            "C) CAD (Bilgisayar Destekli Tasarım)",
+            "D) CAM (Bilgisayar Destekli Üretim)",
+            "E) CMS (İçerik Yönetim Sistemi)"
+          ],
+          "correct_answer": "B",
+          "explanation": "ERP (Enterprise Resource Planning - Kurumsal Kaynak Planlaması), bir işletmenin tüm iş süreçlerini ve verilerini tek çatı altında birleştiren entegre uygulama yazılımıdır."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 1",
+      "filename": "Final_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) DIKW piramidinde en üstte yer alan ve bilgiyi doğru ve etik şekilde uygulayabilme becerisini ifade eden kavram nedir?",
+          "options": [
+            "A) Bilgi (Knowledge)",
+            "B) Enformasyon (Information)",
+            "C) Bilgelik (Wisdom)",
+            "D) Veri (Data)",
+            "E) Sezgi"
+          ],
+          "correct_answer": "C",
+          "explanation": "DIKW piramidinin zirvesinde Bilgelik (Wisdom) yer alır."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) İşlemci saat hızı (Clock Speed) genellikle hangi birimle ölçülür?",
+          "options": [
+            "A) Byte",
+            "B) Gigahertz (GHz)",
+            "C) DPI",
+            "D) Piksel",
+            "E) Watt"
+          ],
+          "correct_answer": "B",
+          "explanation": "İşlemcinin saniyedeki çevrim hızı Hertz (GHz) ile ölçülür."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Birden fazla görevin işlemci tarafından belirli zaman dilimlerinde sırayla yürütülerek aynı anda çalışıyormuş gibi hissettirilmesine ne ad verilir?",
+          "options": [
+            "A) Multitasking (Çok Görevlilik)",
+            "B) Multiprocessing",
+            "C) Virtual Memory",
+            "D) Booting",
+            "E) Paging"
+          ],
+          "correct_answer": "A",
+          "explanation": "Multitasking (Çok görevlilik), işletim sisteminin birden çok uygulamayı eşzamanlı gibi çalıştırmasıdır."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) GNU Genel Kamu Lisansı (GPL) aşağıdaki yazılım kategorilerinden hangisinde yaygın olarak kullanılır?",
+          "options": [
+            "A) Mülkiyetli Yazılım",
+            "B) Açık Kaynak Kodlu Yazılım",
+            "C) Shareware",
+            "D) Firmware",
+            "E) Demo Yazılım"
+          ],
+          "correct_answer": "B",
+          "explanation": "GNU GPL, açık kaynak kodlu yazılımların özgür kalmasını güvence altına alan en popüler lisanstır."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "1969 yılında ABD Savunma Bakanlığı tarafından başlatılan ve internetin atası sayılan ilk ağ projesi aşağıdakilerden hangisidir?",
+          "options": [
+            "A) BITNET",
+            "B) NSFNET",
+            "C) ARPANET",
+            "D) USENET",
+            "E) ETHERNET"
+          ],
+          "correct_answer": "C",
+          "explanation": "İnternetin temeli DARPA tarafından kurulan ARPANET'tir."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "1989 yılında CERN laboratuvarlarında World Wide Web (WWW) standartlarını geliştiren İngiliz bilim insanı kimdir?",
+          "options": [
+            "A) Alan Turing",
+            "B) Vint Cerf",
+            "C) Tim Berners-Lee",
+            "D) Robert Kahn",
+            "E) Marc Andreessen"
+          ],
+          "correct_answer": "C",
+          "explanation": "Tim Berners-Lee, HTML, HTTP ve URL teknolojilerini geliştirerek WWW'yi kurmuştur."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "Kullanıcıların sadece okuyucu olmakla kalmayıp bloglar, sosyal ağlar ve vikiler üzerinden bizzat içerik ürettiği web dönemi hangisidir?",
+          "options": [
+            "A) Web 1.0",
+            "B) Web 2.0",
+            "C) Web 3.0",
+            "D) Web 4.0",
+            "E) Dark Web"
+          ],
+          "correct_answer": "B",
+          "explanation": "Etkileşimli ve kullanıcı odaklı içerik üretimi Web 2.0 ile başlamıştır."
+        },
+        {
+          "id": 8,
+          "unit": 5,
+          "question": "Mobil iletişim nesillerinden hangisi ile 'Görüntülü Görüşme' ve 'Mobil İnternet' kitlesel olarak hayatımıza girmiştir?",
+          "options": [
+            "A) 1G",
+            "B) 2G",
+            "C) 3G",
+            "D) 4G",
+            "E) 5G"
+          ],
+          "correct_answer": "C",
+          "explanation": "3G mobil genişbant internet ve görüntülü arama dönemini başlatmıştır."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "Bir kurumun veya evin yerel ağındaki cihazları bağlayan, gelen veri paketini MAC adresini analiz ederek doğrudan hedef porta ileten 2. katman cihazı hangisidir?",
+          "options": [
+            "A) Hub",
+            "B) Switch (Ağ Anahtarı)",
+            "C) Modem",
+            "D) Tekrarlayıcı (Repeater)",
+            "E) Güvenlik Duvarı"
+          ],
+          "correct_answer": "B",
+          "explanation": "Switch, MAC adres tablosunu kullanarak veriyi yalnızca hedef cihaza iletir."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "OSI 7 Katman Modelinde IP adreslerinin kullanıldığı ve farklı ağlar arasında paket yönlendirmesinin (routing) yapıldığı katman hangisidir?",
+          "options": [
+            "A) Fiziksel Katman",
+            "B) Veri Bağı Katmanı",
+            "C) Ağ (Network) Katmanı",
+            "D) İletim Katmanı",
+            "E) Uygulama Katmanı"
+          ],
+          "correct_answer": "C",
+          "explanation": "Ağ (Network) Katmanı (3. Katman) IP protokolünün ve yönlendiricilerin çalıştığı katmandır."
+        },
+        {
+          "id": 11,
+          "unit": 6,
+          "question": "Bilgi güvenliğinin 3 temel ilkesi (CIA Triad) arasında aşağıdakilerden hangisi yer almaz?",
+          "options": [
+            "A) Gizlilik (Confidentiality)",
+            "B) Bütünlük (Integrity)",
+            "C) Erişilebilirlik (Availability)",
+            "D) Maliyet (Cost)",
+            "E) Hepsi güvenlik unsurudur"
+          ],
+          "correct_answer": "D",
+          "explanation": "CIA Triad: Gizlilik, Bütünlük ve Erişilebilirliktir. Maliyet bu üçlüye dahil değildir."
+        },
+        {
+          "id": 12,
+          "unit": 6,
+          "question": "İnsan müdahalesi veya bir kullanıcı çalıştırması gerekmeden ağdaki açıkları kullanarak kendi kendini kopyalayan zararlı yazılım türü nedir?",
+          "options": [
+            "A) Virüs",
+            "B) Solucan (Worm)",
+            "C) Truva Atı (Trojan)",
+            "D) Casus Yazılım (Spyware)",
+            "E) Adware"
+          ],
+          "correct_answer": "B",
+          "explanation": "Solucanlar (Worms), virüslerden farklı olarak bağımsız dosyalardır ve ağda kendiliğinden yayılırlar."
+        },
+        {
+          "id": 13,
+          "unit": 6,
+          "question": "Kullanıcının bilgisayarındaki dosyaları şifreleyerek erişimi engelleyen ve şifreyi çözmek için para talep eden siber tehdit hangisidir?",
+          "options": [
+            "A) Ransomware (Fidye Yazılımı)",
+            "B) Keylogger",
+            "C) Rootkit",
+            "D) Phishing",
+            "E) Spam"
+          ],
+          "correct_answer": "A",
+          "explanation": "Ransomware (Fidye yazılımı), verileri rehin alıp fidye talep eden zararlı yazılımdır."
+        },
+        {
+          "id": 14,
+          "unit": 7,
+          "question": "Bir problemin çözümü için adım adım tanımlanmış, sonlu ve kesin kurallardan oluşan işlem basamakları dizisine ne ad verilir?",
+          "options": [
+            "A) Derleyici",
+            "B) Algoritma",
+            "C) Akış Şeması",
+            "D) İşletim Sistemi",
+            "E) Değişken"
+          ],
+          "correct_answer": "B",
+          "explanation": "Problemi adım adım çözme mantığına Algoritma denir."
+        },
+        {
+          "id": 15,
+          "unit": 7,
+          "question": "Akış şemalarında (Flowchart) karar/koşul veya karşılaştırma işlemleri için hangi geometrik sembol kullanılır?",
+          "options": [
+            "A) Oval",
+            "B) Dikdörtgen",
+            "C) Eşkenar Dörtgen (Baklava)",
+            "D) Paralelkenar",
+            "E) Daire"
+          ],
+          "correct_answer": "C",
+          "explanation": "Karar ve koşul yapıları (if/else) Eşkenar Dörtgen içinde gösterilir."
+        },
+        {
+          "id": 16,
+          "unit": 7,
+          "question": "Yüksek seviyeli bir dille yazılmış kaynak kodları satır satır okuyarak anında çalıştıran yazılım türü hangisidir?",
+          "options": [
+            "A) Derleyici (Compiler)",
+            "B) Yorumlayıcı (Interpreter)",
+            "C) Bağlayıcı (Linker)",
+            "D) İşletim Sistemi",
+            "E) Yükleyici (Loader)"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kodu satır satır anlık çalıştıran yazılımlara Yorumlayıcı (Interpreter) denir (Python, JS vb.)."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Büyük Veri (Big Data) kavramını tanımlayan 5V bileşeni arasında aşağıdakilerden hangisi yer almaz?",
+          "options": [
+            "A) Volume (Hacim)",
+            "B) Velocity (Hız)",
+            "C) Variety (Çeşitlilik)",
+            "D) Vector (Vektör)",
+            "E) Value (Değer)"
+          ],
+          "correct_answer": "D",
+          "explanation": "5V: Volume, Velocity, Variety, Veracity ve Value'dur. Vector bunlardan biri değildir."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Fiziksel nesnelerin (sensörler, makineler, akıllı ev aletleri) internet ağı üzerinden birbirleriyle veri alışverişi yapmasına ne ad verilir?",
+          "options": [
+            "A) Nesnelerin İnterneti (IoT)",
+            "B) Blokzincir",
+            "C) Derin Öğrenme",
+            "D) Sanal Gerçeklik",
+            "E) Kuantum Bilişim"
+          ],
+          "correct_answer": "A",
+          "explanation": "Fiziksel nesnelerin internete bağlanması 'Internet of Things (IoT)' olarak adlandırılır."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Merkezi bir otoriteye ihtiyaç duymadan, dağıtık ve kriptografik olarak birbirine bağlı bloklar halinde güvenli veri tutulmasını sağlayan teknoloji hangisidir?",
+          "options": [
+            "A) Blokzincir (Blockchain)",
+            "B) Bulut Bilişim",
+            "C) İlişkisel Veritabanı",
+            "D) FTP",
+            "E) DNS"
+          ],
+          "correct_answer": "A",
+          "explanation": "Blokzincir (Blockchain), dağıtık defter teknolojisidir."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "Siber-fiziksel sistemler, nesnelerin interneti ve akıllı fabrikalar vizyonunu içeren sanayi devrimi aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Endüstri 1.0",
+            "B) Endüstri 2.0",
+            "C) Endüstri 3.0",
+            "D) Endüstri 4.0",
+            "E) Endüstri 5.0"
+          ],
+          "correct_answer": "D",
+          "explanation": "Endüstri 4.0, akıllı fabrikalar ve siber-fiziksel sistemlerin entegrasyonunu ifade eder."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 2",
+      "filename": "Final_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) İlk mekanik hesap makinesi olan Pascaline'i geliştiren Fransız matematikçi kimdir?",
+          "options": [
+            "A) Gottfried Leibniz",
+            "B) Blaise Pascal",
+            "C) Charles Babbage",
+            "D) René Descartes",
+            "E) Joseph Marie Jacquard"
+          ],
+          "correct_answer": "B",
+          "explanation": "Blaise Pascal 1642'de Pascaline'i geliştirmiştir."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) Aşağıdaki bellek türlerinden hangisi elektrik kesildiğinde üzerindeki veriyi koruyan kalıcı bir bellektir?",
+          "options": [
+            "A) SRAM",
+            "B) DRAM",
+            "C) ROM",
+            "D) Yazmaç (Register)",
+            "E) L1 Önbellek"
+          ],
+          "correct_answer": "C",
+          "explanation": "ROM (Read Only Memory) kalıcı (non-volatile) bir bellektir."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Linux işletim sisteminin kurucusu kimdir?",
+          "options": [
+            "A) Steve Wozniak",
+            "B) Bill Gates",
+            "C) Linus Torvalds",
+            "D) Ken Thompson",
+            "E) Richard Stallman"
+          ],
+          "correct_answer": "C",
+          "explanation": "Linux çekirdeğini 1991'de Linus Torvalds yazmıştır."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) Bir kurumda müşterilerle olan satış, pazarlama ve teknik destek süreçlerini takip etmek için kullanılan yazılımlara ne ad verilir?",
+          "options": [
+            "A) CRM (Müşteri İlişkileri Yönetimi)",
+            "B) ERP",
+            "C) CAD",
+            "D) DBMS",
+            "E) SCADA"
+          ],
+          "correct_answer": "A",
+          "explanation": "CRM (Customer Relationship Management), müşteri odaklı iş süreçlerini yöneten yazılımdır."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "İnternetin omurgasını oluşturan ve paketlerin hedefe güvenilir şekilde iletilmesini sağlayan protokol takımı hangisidir?",
+          "options": [
+            "A) HTTP",
+            "B) FTP",
+            "C) TCP/IP",
+            "D) SMTP",
+            "E) POP3"
+          ],
+          "correct_answer": "C",
+          "explanation": "TCP/IP internetin ana protokol kümesidir."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "Makinelerin verileri anlayabildiği, yapay zeka destekli ve anlamsal ilişkilerin kurulduğu web nesli hangisidir?",
+          "options": [
+            "A) Web 1.0",
+            "B) Web 2.0",
+            "C) Web 3.0 (Semantik Web)",
+            "D) Web 1.5",
+            "E) Statik Web"
+          ],
+          "correct_answer": "C",
+          "explanation": "Web 3.0, Semantik (anlamsal) web ve yapay zeka odaklıdır."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "1 milisaniyenin altında gecikme süresi ve gigabit seviyesinde veri transfer hızı sunan en güncel hücresel teknoloji hangisidir?",
+          "options": [
+            "A) 2G",
+            "B) 3G",
+            "C) 4G",
+            "D) 5G",
+            "E) GPRS"
+          ],
+          "correct_answer": "D",
+          "explanation": "5G ultra düşük gecikme ve devasa hız sunar."
+        },
+        {
+          "id": 8,
+          "unit": 5,
+          "question": "Bir firmanın kendi bünyesinde fiziksel sunucu barındırmayıp Amazon AWS veya Google Cloud'dan sanal sunucu ve depolama alanı kiralaması hangi bulut modelidir?",
+          "options": [
+            "A) SaaS",
+            "B) PaaS",
+            "C) IaaS (Altyapı Hizmeti)",
+            "D) DaaS",
+            "E) CaaS"
+          ],
+          "correct_answer": "C",
+          "explanation": "Donanım, sunucu ve ağ altyapısının kiralanması IaaS (Infrastructure as a Service) olarak adlandırılır."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "Tüm bilgisayarların merkezi bir cihaza (Switch veya Hub) bağlandığı ve günümüzde en yaygın kullanılan yerel ağ topolojisi hangisidir?",
+          "options": [
+            "A) Yol (Bus) Topolojisi",
+            "B) Halka (Ring) Topolojisi",
+            "C) Yıldız (Star) Topolojisi",
+            "D) Örgü (Mesh) Topolojisi",
+            "E) Karmaşık Topoloji"
+          ],
+          "correct_answer": "C",
+          "explanation": "Yıldız topolojisi (Star), kablo kopmalarının tüm ağı çökertmemesi ve yönetim kolaylığı nedeniyle en yaygın topolojidir."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Ağ bağdaştırıcı kartına (Ethernet kartı) fabrikada donanımsal olarak atanan 48 bitlik fiziksel adrese ne ad verilir?",
+          "options": [
+            "A) IP Adresi",
+            "B) Port Numarası",
+            "C) MAC Adresi",
+            "D) URL Adresi",
+            "E) DNS Adresi"
+          ],
+          "correct_answer": "C",
+          "explanation": "Fiziksel donanım adresi MAC (Media Access Control) adresidir."
+        },
+        {
+          "id": 11,
+          "unit": 6,
+          "question": "Bir banka gibi görünerek sahte web sitesi veya e-posta aracılığıyla kullanıcıların şifrelerini çalmayı amaçlayan siber saldırı türü nedir?",
+          "options": [
+            "A) DDoS",
+            "B) Oltalama (Phishing)",
+            "C) SQL Injection",
+            "D) Man in the Middle",
+            "E) Brute Force"
+          ],
+          "correct_answer": "B",
+          "explanation": "Sahte yemlerle kimlik avı yapılmasına Phishing (Oltalama) denir."
+        },
+        {
+          "id": 12,
+          "unit": 6,
+          "question": "Bir web sunucusuna binlerce sahte istek göndererek sunucunun kilitlenmesini ve gerçek kullanıcılara hizmet verememesini sağlayan saldırı türü hangisidir?",
+          "options": [
+            "A) DoS / DDoS (Hizmet Engelleme)",
+            "B) Truva Atı",
+            "C) Solucan",
+            "D) Ransomware",
+            "E) Casus Yazılım"
+          ],
+          "correct_answer": "A",
+          "explanation": "DDoS (Distributed Denial of Service), dağıtık hizmet engelleme saldırısıdır."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "Akış şemalarında (Flowchart) kullanıcıdan veri girişi veya ekrana veri çıkışı işlemlerini temsil eden sembol hangisidir?",
+          "options": [
+            "A) Dikdörtgen",
+            "B) Paralelkenar",
+            "C) Oval",
+            "D) Daire",
+            "E) Baklava"
+          ],
+          "correct_answer": "B",
+          "explanation": "Girdi ve çıktı işlemleri Paralelkenar sembolü ile ifade edilir."
+        },
+        {
+          "id": 14,
+          "unit": 7,
+          "question": "Aşağıdaki programlama dillerinden hangisi insan diline en yakın, donanımdan bağımsız 'Yüksek Düzeyli' dillere örnektir?",
+          "options": [
+            "A) Makine Dili (0-1)",
+            "B) Assembly Dili",
+            "C) Python",
+            "D) Mikroişlemci Kodu",
+            "E) BIOS Kodu"
+          ],
+          "correct_answer": "C",
+          "explanation": "Python yüksek düzeyli bir dildir; öğrenilmesi ve okunması insan konuşma diline çok yakındır."
+        },
+        {
+          "id": 15,
+          "unit": 7,
+          "question": "Nesne Yönelimli Programlamada (OOP) bir sınıfın özelliklerini ve metotlarını başka bir sınıfın miras almasına ne ad verilir?",
+          "options": [
+            "A) Kapsülleme (Encapsulation)",
+            "B) Kalıtım (Inheritance)",
+            "C) Çok Biçimlilik (Polymorphism)",
+            "D) Soyutlama (Abstraction)",
+            "E) Derleme"
+          ],
+          "correct_answer": "B",
+          "explanation": "Bir üst sınıftan özelliklerin alt sınıfa aktarılmasına Kalıtım (Inheritance) denir."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "1950 yılında bir makinenin insan gibi düşünüp düşünemediğini anlamak için geliştirilen ünlü test aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Turing Testi",
+            "B) Voight-Kampff Testi",
+            "C) Babbage Deneyi",
+            "D) Moore Kriteri",
+            "E) Von Neumann Testi"
+          ],
+          "correct_answer": "A",
+          "explanation": "Alan Turing tarafından önerilen makine zekası testi Turing Testi'dir."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Makine öğrenmesinde etiketsiz veriler arasındaki benzerlikleri bularak kendi kendine gruplama yapılması hangi öğrenme türüdür?",
+          "options": [
+            "A) Denetimli Öğrenme (Supervised)",
+            "B) Denetimsiz Öğrenme (Unsupervised)",
+            "C) Pekiştirmeli Öğrenme (Reinforcement)",
+            "D) Kural Tabanlı Öğrenme",
+            "E) Manuel Öğrenme"
+          ],
+          "correct_answer": "B",
+          "explanation": "Etiketsiz verilerden örüntü çıkarma ve kümeleme Denetimsiz Öğrenme'dir."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Gerçek dünya görüntüsünün üzerine bilgisayar tarafından üretilen dijital verilerin bindirilmesi teknolojisine ne ad verilir?",
+          "options": [
+            "A) Sanal Gerçeklik (VR)",
+            "B) Artırılmış Gerçeklik (AR)",
+            "C) Kuantum Bilişim",
+            "D) Telekonferans",
+            "E) Hologram"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fiziksel dünyaya sanal öğeler ekleme teknolojisi Artırılmış Gerçekliktir (Augmented Reality - AR)."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Bitcoin ve kripto paraların arkasındaki dağıtık defter teknolojisi hangisidir?",
+          "options": [
+            "A) Blokzincir (Blockchain)",
+            "B) Yapay Sinir Ağı",
+            "C) Büyük Veri",
+            "D) Bulut Bilişim",
+            "E) Sanallaştırma"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kripto varlıkların temel altyapısı Blokzincir (Blockchain) teknolojisidir."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "Nesnelerin İnterneti (IoT) kavramını 1999 yılında ilk kez kullanan kişi kimdir?",
+          "options": [
+            "A) Kevin Ashton",
+            "B) Tim Berners-Lee",
+            "C) Elon Musk",
+            "D) Steve Jobs",
+            "E) Vint Cerf"
+          ],
+          "correct_answer": "A",
+          "explanation": "IoT kavramını 1999'da RFID teknolojisi sunumunda ilk kullanan kişi Kevin Ashton'dır."
+        }
+      ]
+    }
+  ]
+}

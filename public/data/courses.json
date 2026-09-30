@@ -1,0 +1,57 @@
+[
+  {
+    "id": "bilisim_teknolojileri",
+    "name": "BİLİŞİM TEKNOLOJİLERİ",
+    "code": "YBS101U",
+    "icon": "fa-laptop-code",
+    "color": "#38bdf8",
+    "file": "bilisim_teknolojileri.json",
+    "unit_count": 8,
+    "question_count": 80,
+    "flashcard_count": 30
+  },
+  {
+    "id": "genel_muhasebe",
+    "name": "GENEL MUHASEBE",
+    "code": "MUH101U",
+    "icon": "fa-calculator",
+    "color": "#10b981",
+    "file": "genel_muhasebe.json",
+    "unit_count": 8,
+    "question_count": 80,
+    "flashcard_count": 30
+  },
+  {
+    "id": "matematik_1",
+    "name": "MATEMATİK I",
+    "code": "MAT105U",
+    "icon": "fa-square-root-variable",
+    "color": "#f59e0b",
+    "file": "matematik_1.json",
+    "unit_count": 8,
+    "question_count": 80,
+    "flashcard_count": 30
+  },
+  {
+    "id": "iktisada_giris",
+    "name": "İKTİSADA GİRİŞ",
+    "code": "İKT101U",
+    "icon": "fa-chart-line",
+    "color": "#8b5cf6",
+    "file": "iktisada_giris.json",
+    "unit_count": 8,
+    "question_count": 80,
+    "flashcard_count": 30
+  },
+  {
+    "id": "isletme_ilkeleri",
+    "name": "İŞLETME İLKELERİ",
+    "code": "İŞL101U",
+    "icon": "fa-briefcase",
+    "color": "#ec4899",
+    "file": "isletme_ilkeleri.json",
+    "unit_count": 8,
+    "question_count": 80,
+    "flashcard_count": 30
+  }
+]

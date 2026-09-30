@@ -1,0 +1,1691 @@
+{
+  "course_name": "İKTİSADA GİRİŞ",
+  "course_code": "İKT101U",
+  "faculty": "İşletme / İktisat Fakültesi - Yönetim Bilişim Sistemleri (YBS)",
+  "term": "1. Sınıf Güz Dönemi",
+  "description": "Mikroekonomi ve makroekonomiye giriş, tüketici teorisi, arz ve talep esneklikleri, üretim ve maliyetler, piyasa yapıları, GSYH, enflasyon, işsizlik, basit Keynesyen model, para-banka ve AD-AS analizi.",
+  "units": [
+    {
+      "unit_number": 1,
+      "title": "Temel Kavramlar ve Tüketici Davranışı",
+      "is_vize": true,
+      "key_topics": [
+        "Kıtlık ve Fırsat Maliyeti",
+        "Üretim İmkânları Eğrisi (PPF)",
+        "Pozitif ve Normatif İktisat",
+        "Fayda Teorisi (TU ve MU)",
+        "Farksızlık Eğrileri ve Bütçe Doğrusu"
+      ],
+      "hap_bilgiler": [
+        "İktisadın Tanımı ve Temel Sorun: İnsanların sınırsız ihtiyaçları karşısında kıt kaynakların en etkin biçimde tahsis edilmesini inceleyen sosyal bilimdir. Temel sorun 'KITLIK'tır.",
+        "Fırsat Maliyeti (Alternatif Maliyet): Bir kararı uygularken vazgeçilen en iyi ikinci alternatifin değeridir.",
+        "İktisadın 3 Temel Sorusu: 1. Ne üretilecek? 2. Nasıl üretilecek? 3. Kimin için üretilecek?",
+        "Üretim İmkânları Eğrisi (PPF): Mevcut teknoloji ve kaynaklarla üretilebilecek maksimum mal bileşimlerini gösterir. Artan fırsat maliyeti sebebiyle orijine göre İÇBÜKEYDİR. Eğri üzerindeki noktalar etkin, içindeki noktalar eksik istihdam/etkinsiz, dışındaki noktalar ise mevcut kaynaklarla ulaşılamaz.",
+        "Pozitif İktisat ('Ne?', 'Nasıl?'): Değer yargısı içermeyen, objektif ve test edilebilir durumları inceler (Örn: 'KDV artarsa fiyatlar yükselir').",
+        "Normatif İktisat ('Ne olmalı?'): Kişisel değer yargıları ve ahlaki öneriler içerir (Örn: 'Devlet asgari ücreti 40.000 TL yapmalıdır').",
+        "Toplam Fayda (TU) ve Marjinal Fayda (MU): Tüketim arttıkça ek birimden elde edilen fayda azalır (Azalan Marjinal Fayda Yasası / 1. Gossen Yasası). Toplam Fayda (TU) MAKSİMUM olduğunda Marjinal Fayda (MU) SIFIRDIR (MU = 0).",
+        "Tüketici Dengesi (Eşmarjinal İlkesi / 2. Gossen Yasası): Harcanan son liranın marjinal faydaları eşitlendiğinde sağlanır: MUx / Px = MUy / Py.",
+        "Farksızlık (Kayıtsızlık) Eğrileri: Tüketiciye eşit tatmin düzeyi sağlayan sepetlerin geometrik yeridir. Özellikleri: Negatif eğimlidir, birbirlerini asla kesmezler, orijinden uzaklaştıkça daha yüksek fayda sağlarlar, azalan marjinal ikame oranı nedeniyle orijine göre DIŞBÜKEYDİRLER. Eğimi Marjinal İkame Oranıdır: MRS = MUx / MUy.",
+        "Bütçe Doğrusu ve Denge: Gelir I = Px * X + Py * Y. Bütçe doğrusunun eğimi -Px / Py'dir. Tüketici dengesi bütçe doğrusunun farksızlık eğrisine TEĞET olduğu noktada gerçekleşir (MRS = Px / Py)."
+      ]
+    },
+    {
+      "unit_number": 2,
+      "title": "Arz, Talep ve Esneklik",
+      "is_vize": true,
+      "key_topics": [
+        "Talep Kanunu ve Eğrinin Kayması",
+        "Arz Kanunu",
+        "Piyasa Dengesi",
+        "Taban ve Tavan Fiyat",
+        "Talebin Fiyat, Gelir ve Çapraz Esneklikleri"
+      ],
+      "hap_bilgiler": [
+        "Talep Kanunu: Ceteris paribus (diğer koşullar sabitken), bir malın fiyatı arttıkça talep edilen miktar azalır (ters yönlü ilişki). Talep eğrisi negatif eğimlidir.",
+        "Talep Miktarının Değişmesi vs Talebin Değişmesi (Eğrinin Kayması): Malın kendi fiyatındaki değişim eğri ÜZERİNDE HAREKET yaratır. Gelir, tüketici zevkleri, ikame/tamamlayıcı mal fiyatları ve beklentilerdeki değişim ise talep eğrisini tamamen SAĞA veya SOLA kaydırır.",
+        "Normal Mal (Gelir artınca talep artar), Düşük Mal (Gelir artınca talep azalır). İkame Mal (Birinin fiyatı artınca diğerinin talebi artar: Çay-Kahve), Tamamlayıcı Mal (Birinin fiyatı artınca diğerinin talebi azalır: Otomobil-Benzin).",
+        "Arz Kanunu: Fiyat arttıkça arz edilen miktar artar (doğru yönlü ilişki). Arz eğrisi pozitif eğimlidir.",
+        "Piyasa Fiyat Kontrolleri:",
+        "  - Taban Fiyat: Üreticiyi korumak amacıyla denge fiyatının ÜZERİNDE belirlenen asgari fiyattır (Örn: Asgari ücret, tarımsal destekleme). Piyasada ARZ FAZLASI (Artık) oluşturur.",
+        "  - Tavan Fiyat: Tüketiciyi korumak amacıyla denge fiyatının ALTINDA belirlenen azami fiyattır (Örn: Kira sınırlaması). Piyasada TALEP FAZLASI (Kıtlık) ve karaborsa oluşturur.",
+        "Talebin Fiyat Esnekliği (|ed| = %ΔQ / %ΔP):",
+        "  - |ed| > 1 ise Talep Esnektir: Fiyat indirimi Toplam Hasılatı (TR) artırır.",
+        "  - |ed| < 1 ise Talep İnelastiktir (Katıdır): Fiyat artışı Toplam Hasılatı (TR) artırır (Tuz, ekmek vb.).",
+        "  - |ed| = 1 ise Birim Esnektir: Fiyat değişimi TR'yi değiştirmez.",
+        "  - ed = 0 ise Tam İnelastiktir (Dikey doğru - insülin ilacı).",
+        "  - ed = ∞ ise Tam Esnektir (Yatay doğru).",
+        "Çapraz Fiyat Esnekliği (exy): exy > 0 ise İKAME mallar, exy < 0 ise TAMAMLAYICI mallar, exy = 0 ise BAĞIMSIZ mallardır.",
+        "Gelir Esnekliği (eI): eI > 0 ise NORMAL mal (eI > 1 ise LÜKS mal, 0 < eI < 1 ise ZORUNLU mal); eI < 0 ise DÜŞÜK maldır."
+      ]
+    },
+    {
+      "unit_number": 3,
+      "title": "Üretim, Maliyetler ve Firma Davranışı",
+      "is_vize": true,
+      "key_topics": [
+        "Kısa ve Uzun Dönem",
+        "Azalan Verimler Yasası",
+        "Toplam, Ortalama ve Marjinal Maliyetler",
+        "Ölçek Ekonomileri"
+      ],
+      "hap_bilgiler": [
+        "Dönem Ayrımı: Kısa dönemde en az bir üretim faktörü sabittir (genellikle sermaye K sabittir, emek L değişkendir). Uzun dönemde tüm girdiler değişkendir.",
+        "Ürün Kavramları ve Azalan Verimler Yasası: Sabit girdilere ilave değişken girdi eklendikçe bir noktadan sonra Marjinal Ürün (MP) azalmaya başlar.",
+        "  - Marjinal Ürün MP = 0 olduğunda Toplam Ürün (TP) MAKSİMUMDUR.",
+        "  - Marjinal Ürün Ortalama Ürüne eşit olduğunda (MP = AP), Ortalama Ürün (AP) MAKSİMUMDUR.",
+        "Kısa Dönem Maliyetleri:",
+        "  - Toplam Maliyet: TC = TFC (Sabit Maliyet) + TVC (Değişken Maliyet).",
+        "  - Ortalama Sabit Maliyet: AFC = TFC / Q. Üretim miktarı arttıkça AFC sürekli azalır ve yatay eksene yaklaşır.",
+        "  - Ortalama Toplam Maliyet: ATC = TC / Q = AFC + AVC.",
+        "  - Marjinal Maliyet (MC = ΔTC / ΔQ): Son üretilen birimin maliyetidir.",
+        "ALTIN MALİYET KURALI: Marjinal Maliyet (MC) eğrisi hem AVC hem de ATC eğrilerini en dip (MİNİMUM) noktalarında alttan keser!",
+        "Uzun Dönem Maliyetleri (LRAC):",
+        "  - Ölçeğe Göre Artan Getiri (Pozitif Ölçek Ekonomileri): Üretim ölçeği arttıkça uzun dönem ortalama maliyet (LRAC) düşer.",
+        "  - Ölçeğe Göre Sabit Getiri: LRAC eğrisi yataydır.",
+        "  - Ölçeğe Göre Azalan Getiri (Negatif Ölçek Ekonomileri): Aşırı büyüme ve yönetimsel hantallık nedeniyle LRAC yükselir."
+      ]
+    },
+    {
+      "unit_number": 4,
+      "title": "Piyasalar",
+      "is_vize": true,
+      "key_topics": [
+        "Tam Rekabet Piyasası",
+        "Monopol (Tekel)",
+        "Monopolcü Rekabet",
+        "Oligopol ve Oyun Teorisi"
+      ],
+      "hap_bilgiler": [
+        "Tam Rekabet Piyasasının 4 Koşulu: 1. Atomisite (Çok sayıda alıcı ve satıcı), 2. Homojenlik (Malların birbirinin tıpatıp aynısı olması), 3. Tam Bilgi (Şeffaflık), 4. Piyasaya Giriş-Çıkış Serbestisi.",
+        "Tam Rekabette Firma Davranışı: Firma 'Fiyat Kabullenicidir' (Price Taker). Firmanın karşılaştığı talep eğrisi sonsuz esnektir (yatay doğrudur): P = AR = MR.",
+        "Tam Rekabette Kısa Dönem Kâr Maksimizasyonu: P = MC (veya MR = MC).",
+        "Kapanma Koşulu: Eğer fiyat Ortalama Değişken Maliyetin altına düşerse (P < AVC_min), firma derhal üretimi durdurmalı ve kapanmalıdır! Firmanın kısa dönem arz eğrisi, MC'nin AVC üzerinde kalan parçasıdır.",
+        "Tam Rekabette Uzun Dönem: Serbest giriş ve çıkışlar sonucunda aşırı kâr sıfırlanır, sadece normal kâr elde edilir: P = MR = MC = ATC_min.",
+        "Monopol (Tekel): Tek bir satıcı, ikamesi olmayan mal ve yüksek giriş engelleri. Firma 'Fiyat Belirleyicidir'. MR eğrisi talep eğrisinin altındadır (P > MR). Kâr maksimizasyonu MR = MC koşuluyla sağlanır, fiyat talep eğrisinden okunur. Monopol piyasası toplumda refah kaybına (Ölü Dara Kaybı) yol açar.",
+        "Monopolcü Rekabet: Çok sayıda firma, serbest giriş-çıkış, ancak FARKLILAŞTIRILMIŞ ürünler (marka, reklam, ambalaj). Uzun dönemde aşırı kâr sıfırdır (P = ATC) ancak atıl kapasite oluşur.",
+        "Oligopol: Birbirini etkileyen az sayıda büyük satıcı (karşılıklı bağımlılık). Paul Sweezy'nin 'Dirsekli Talep Modeli' fiyat katılığını açıklar. Oyun Teorisi ve Mahkûmlar İkilemi (Nash Dengesi) bu piyasada incelenir."
+      ]
+    },
+    {
+      "unit_number": 5,
+      "title": "Makroekonominin Kapsamı ve Temel Makroekonomik Değişkenler",
+      "is_vize": false,
+      "key_topics": [
+        "Klasik İktisat vs Keynesyen İktisat",
+        "GSYH ve Ölçüm Yöntemleri",
+        "Nominal ve Reel GSYH",
+        "Enflasyon Türleri",
+        "İşsizlik Türleri"
+      ],
+      "hap_bilgiler": [
+        "Makroekonominin Doğuşu: 1929 Büyük Dünya Buhranı sonrasında John Maynard Keynes'in 1936 tarihli 'İstihdam, Faiz ve Paranın Genel Teorisi' kitabıyla doğmuştur.",
+        "Klasik İktisat (Adam Smith, Say Yasası): 'Her arz kendi talebini yaratır'. Fiyatlar ve ücretler tamamen esnektir, ekonomi kendiliğinden daima tam istihdama gelir, devlet müdahalesine gerek yoktur.",
+        "Keynesyen İktisat: Fiyat ve ücretler aşağı doğru yapışkandır (esnek değildir). Krizin nedeni efektif talep yetersizliğidir; ekonomi eksik istihdamda dengede kalabilir ve devletin harcama yaparak müdahale etmesi şarttır.",
+        "Gayri Safi Yurtiçi Hasıla (GSYH): Bir ülkede belirli bir dönemde üretilen nihai mal ve hizmetlerin piyasa değeridir.",
+        "  - Harcama Yoluyla GSYH: GSYH = C + I + G + (X - M) (Tüketim + Yatırım + Kamu Harcamaları + Net İhracat).",
+        "  - Nominal GSYH: Cari (o yılın) fiyatlarıyla hesaplanan değer.",
+        "  - Reel GSYH: Enflasyon arındırılarak sabit baz yıl fiyatlarıyla hesaplanan değer.",
+        "  - GSYH Deflatörü = (Nominal GSYH / Reel GSYH) * 100.",
+        "İşsizlik Oranı Formülü: İşsizlik Oranı = (İşsiz Sayısı / İşgücü) * 100. (İşgücü = Çalışanlar + İşsizler).",
+        "İşsizlik Türleri:",
+        "  - Friksiyonel (Geçici/Arızi): İş değiştirenlerin veya yeni mezunların iş arama sürecindeki geçici işsizlik.",
+        "  - Yapısal: Teknolojik değişim veya sektör kapanması nedeniyle işgücü niteliği ile talep edilen nitelik arasındaki uyumsuzluk.",
+        "  - Konjonktürel (Dönemsel/Keynesyen): Ekonomik durgunluk ve kriz dönemlerinde toplam talep daralması sonucu ortaya çıkan işsizlik.",
+        "  - Doğal İşsizlik: Friksiyonel İşsizlik + Yapısal İşsizlik (Konjonktürel işsizlik sıfır olduğunda ulaşılan tam istihdam oranı)."
+      ]
+    },
+    {
+      "unit_number": 6,
+      "title": "Millî Gelir Düzeyinin Belirlenmesi",
+      "is_vize": false,
+      "key_topics": [
+        "Basit Keynesyen Model",
+        "Tüketim ve Tasarruf Fonksiyonları",
+        "MPC ve MPS",
+        "Basit Çarpan (Çoğaltan) Mekanizması",
+        "Deflasyonist ve Enflasyonist Açık"
+      ],
+      "hap_bilgiler": [
+        "Basit Dışa Kapalı Devletsiz Keynesyen Model: Toplam Harcama AE = C + I. Denge Şartı: Y = AE.",
+        "Tüketim Fonksiyonu: C = C0 + c * Y. (C0 = Otonom tüketim - gelir sıfırken yapılan harcama, c = MPC).",
+        "Marjinal Tüketim Eğilimi (MPC = ΔC / ΔY): Gelirdeki 1 birimlik artışın ne kadarının tüketime gideceğini gösterir (0 < MPC < 1).",
+        "Marjinal Tasarruf Eğilimi (MPS = ΔS / ΔY): Gelirdeki 1 birimlik artışın ne kadarının tasarruf edileceğini gösterir.",
+        "ALTIN KURAL: MPC + MPS = 1'dir. Dolayısıyla MPS = 1 - MPC.",
+        "Basit Çarpan (Çoğaltan / Multiplier) Formülü: Yatırımlardaki 1 liralık otonom artışın millî geliri katbekat artırmasını ifade eder: k = 1 / (1 - MPC) = 1 / MPS.",
+        "  - Örnek: MPC = 0.80 ise MPS = 0.20 => k = 1 / 0.20 = 5. Yatırımlar 10 milyar artarsa millî gelir 10 * 5 = 50 milyar TL artar.",
+        "Devletin Olduğu Modelde Çarpanlar:",
+        "  - Kamu Harcamaları Çarpanı: kg = 1 / (1 - MPC).",
+        "  - Vergi Çarpanı: kt = -MPC / (1 - MPC).",
+        "  - Denk Bütçe Çarpanı (Haavelmo Teoremi): Kamu harcamaları ve vergiler eşit miktarda artırılırsa çarpan 1'e eşittir (k = 1).",
+        "Açık Türleri:",
+        "  - Deflasyonist Açık (Durgunluk Açığı): Denge gelirinin potansiyel (tam istihdam) gelirinin altında kalması durumudur (İşsizlik vardır).",
+        "  - Enflasyonist Açık: Toplam harcamaların tam istihdam üretim kapasitesini aşması durumudur (Fiyat artışı ve enflasyon yaratır)."
+      ]
+    },
+    {
+      "unit_number": 7,
+      "title": "Para ve Bankacılık",
+      "is_vize": false,
+      "key_topics": [
+        "Paranın Tanımı ve 4 İşlevi",
+        "Para Arzı Tanımları (M1, M2, M3)",
+        "Kaydi Para Yaratma Mekanizması",
+        "Merkez Bankası Para Politikası Araçları",
+        "Likidite Tuzağı"
+      ],
+      "hap_bilgiler": [
+        "Paranın 4 Temel İşlevi: 1. Değişim (Mübadele) Aracı, 2. Hesap Birimi (Değer Ölçüsü), 3. Değer Saklama (Tasarruf) Aracı, 4. Ertelenmiş Ödemeler Aracı.",
+        "Para Arzı Büyüklükleri (Likiditeden Düşüğe Doğru):",
+        "  - M1 (Dar Para Arzı - En Likit): Dolaşımdaki Nakit Para (Kasa + Cüzdan) + Vadesiz Ticari ve Tasarruf Mevduatları.",
+        "  - M2: M1 + Vadeli Mevduatlar.",
+        "  - M3 (Geniş Para Arzı): M2 + Repo + Para Piyasası Fonları + İhraç Edilen Menkul Kıymetler.",
+        "Kaydi (Banka) Para Yaratılması ve Kredi Çarpanı: Ticari bankalar topladıkları mevduatın bir kısmını Merkez Bankası'na zorunlu karşılık (r) olarak yatırır, kalanını kredi vererek kaydi para üretir.",
+        "  - Basit Mevduat/Kredi Çarpanı = 1 / r. (Örn: Zorunlu karşılık oranı r = %10 ise çarpan = 1 / 0.10 = 10'dur. Bankaya yatırılan 1000 TL toplamda 10.000 TL kaydi para yaratır).",
+        "Merkez Bankasının 3 Temel Para Politikası Aracı:",
+        "  1. Açık Piyasa İşlemleri (APİ): Merkez Bankasının tahvil/bono alıp satmasıdır. Piyasaya para sürmek için bono SATIN ALIR (genişletici); piyasadan likidite çekmek için bono SATAR (daraltıcı).",
+        "  2. Reeskont Oranı: Ticari bankaların Merkez Bankasından aldıkları avans ve kredilerin faiz oranıdır.",
+        "  3. Zorunlu Karşılık Oranı (Munzam Karşılık): Bankaların mevduat karşılığı Merkez Bankasında bloke tuttuğu zorunlu paydır.",
+        "Keynesyen Para Talebi Güdüleri: 1. İşlem Güdüsü (Gelirle doğru orantılı), 2. İhtiyat Güdüsü (Gelirle doğru orantılı), 3. Spekülasyon Güdüsü (FAİZ ORANIYLA TERS ORANTILI).",
+        "Likidite Tuzağı: Faiz oranlarının inebileceği en dip seviyeye indiği, para talebinin sonsuz esnek olduğu ve para arzı artırılsa dahi faizlerin daha fazla düşürülemediği durumdur (Para politikası etkisizleşir)."
+      ]
+    },
+    {
+      "unit_number": 8,
+      "title": "Toplam Talep-Toplam Arz Analizi ve Politika Uygulamaları",
+      "is_vize": false,
+      "key_topics": [
+        "Toplam Talep Eğrisi (AD)",
+        "Toplam Arz Eğrisi (SRAS ve LRAS)",
+        "Makroekonomik Şoklar ve Stagflasyon",
+        "Maliye ve Para Politikası Karması"
+      ],
+      "hap_bilgiler": [
+        "Toplam Talep (AD - Aggregate Demand): Ekonomideki tüm sektörlerin belirli bir fiyat düzeyinde talep ettiği nihai mal ve hizmet miktarıdır. AD eğrisi NEGATİF eğimlidir.",
+        "AD Eğrisinin Negatif Eğimli Olmasının 3 Nedeni:",
+        "  1. Servet (Pigou) Etkisi: Fiyatlar düştükçe paranın satın alma gücü artar, tüketim harcamaları artar.",
+        "  2. Faiz Oranı (Keynes) Etkisi: Fiyatlar düştükçe para talebi azalır, faizler düşer, yatırımlar artar.",
+        "  3. Uluslararası Ticaret (Mundell-Fleming) Etkisi: Yerli fiyatlar düşünce mallar ucuzlar, ihracat artar, ithalat azalır (Net ihracat artar).",
+        "Toplam Arz (AS - Aggregate Supply):",
+        "  - Kısa Dönem Toplam Arz (SRAS): Ücret ve hammadde fiyatlarının yapışkanlığı sebebiyle POZİTİF eğimlidir.",
+        "  - Uzun Dönem Toplam Arz (LRAS): Fiyatlar ve ücretler tamamen esnektir. Ekonomi daima Potansiyel (Tam İstihdam) GSYH düzeyindedir; bu yüzden LRAS DİKEY bir doğrudur!",
+        "Stagflasyon: Ekonomide aynı anda DURGUNLUK (İşsizlik artışı) ve YÜKSEK ENFLASYONUN birlikte yaşanmasıdır. Negatif bir arz şoku (Örn: Petrol fiyatlarının aniden sıçraması) SRAS eğrisini SOLA kaydırdığında tetiklenir.",
+        "Politika Uygulamaları:",
+        "  - Genişletici Politikalar (Durgunlukta uygulanır): Kamu harcamalarını artırmak, vergileri düşürmek, para arzını artırmak, faizleri indirmek -> AD eğrisi SAĞA kayar.",
+        "  - Daraltıcı Politikalar (Enflasyonla mücadelede uygulanır): Kamu harcamalarını kısmak, vergileri artırmak, para arzını kısmak, faizleri artırmak -> AD eğrisi SOLA kayar."
+      ]
+    }
+  ],
+  "sinav_tuzaklari": [
+    {
+      "id": 1,
+      "title": "Talep Eğrisi Üzerinde Hareket ile Eğrinin Kayması Ayrımı",
+      "mistake": "Malın kendi fiyatı düştüğünde talep eğrisinin sağa kaydığını söylemek.",
+      "truth": "Malın kendi fiyatındaki değişimler ASLA eğriyi kaydırmaz; yalnızca var olan eğri ÜZERİNDE aşağı veya yukarı HAREKET ettirir (Talep edilen miktarın değişmesidir). Eğriyi tamamen kaydıranlar ise gelir, zevkler veya diğer malların fiyatlarıdır.",
+      "tip": "Kendi fiyatı = Eğri üzerinde hareket; Dış faktörler = Eğrinin tamamen kayması."
+    },
+    {
+      "id": 2,
+      "title": "Taban Fiyat ile Tavan Fiyatın Yeri ve Sonuçları",
+      "mistake": "Tavan fiyatın denge fiyatının üstünde, taban fiyatın altında belirlendiğini sanmak.",
+      "truth": "Taban fiyat denge fiyatının ÜZERİNDE belirlenir (üreticiyi/işçiyi korumak için asgari taban) ve ARZ FAZLASI yaratır. Tavan fiyat ise denge fiyatının ALTINDA belirlenir (tüketiciyi korumak için azami sınır) ve TALEP FAZLASI (Kıtlık) yaratır.",
+      "tip": "Taban = Denge üstü (Fazlalık); Tavan = Denge altı (Kıtlık/Karaborsa)."
+    },
+    {
+      "id": 3,
+      "title": "Pozitif İktisat ile Normatif İktisat Karışıklığı",
+      "mistake": "'Enflasyon %20'ye düşürülmelidir' cümlesini pozitif iktisat sanmak.",
+      "truth": "İçinde 'olmalı', 'yapılmalı', 'uygundur' gibi temenni ve değer yargısı bulunan her ifade NORMATİF İKTİSAT'tır. 'Fiyatlar artarsa talep düşer' gibi nesnel sebep-sonuç ilişkileri ise POZİTİF İKTİSAT'tır.",
+      "tip": "'...malı / ...meli' görürsen hemen Normatif de geç!"
+    },
+    {
+      "id": 4,
+      "title": "Talebin Fiyat Esnekliği ile Toplam Hasılat (TR) İlişkisi",
+      "mistake": "Fiyatı indirilen her ürünün hasılatı artıracağını zannetmek.",
+      "truth": "Fiyat indirimi Toplam Hasılatı (TR) sadece talep ESNEKSE (|ed| > 1) artırır. Eğer talep inelastikse (|ed| < 1, tuz gibi), fiyat indirimi hasılatı DÜŞÜRÜR; aksine fiyat artışı hasılatı artırır.",
+      "tip": "Esnekse (|ed|>1) fiyat indir hasılat coşsun; İnelastikse (|ed|<1) zam yap hasılat artsın."
+    },
+    {
+      "id": 5,
+      "title": "Marjinal Maliyet (MC) ile Ortalama Maliyet (ATC/AVC) Kesişim Noktası",
+      "mistake": "MC eğrisinin ATC'yi maksimum noktasında kestiğini düşünmek.",
+      "truth": "Marjinal Maliyet (MC) eğrisi, hem Ortalama Değişken Maliyet (AVC) hem de Ortalama Toplam Maliyet (ATC) eğrilerini daima en dipteki MİNİMUM noktalarında keser!",
+      "tip": "MC, AVC ve ATC'yi dipten (en düşük noktasından) vurur!"
+    },
+    {
+      "id": 6,
+      "title": "Tam Rekabet ile Monopolde Fiyat ve Marjinal Hasılat (P ve MR)",
+      "mistake": "Her iki piyasada da P = MR olduğunu düşünmek.",
+      "truth": "Tam Rekabette fiyat sabittir ve P = MR'dir. Ancak Monopolde (Tekel) firma fiyat belirleyicidir ve talep eğrisi aşağı eğimlidir; dolayısıyla MONOPOLDE DAİMA FİYAT MARJİNAL HASILATTAN BÜYÜKTÜR (P > MR).",
+      "tip": "Tam Rekabet: P = MR; Monopol: P > MR."
+    },
+    {
+      "id": 7,
+      "title": "MPC ile MPS Toplamı Kuralı",
+      "mistake": "MPC = 0.70 olduğunda çarpanın 1/0.70 olduğunu sanmak.",
+      "truth": "MPC (Tüketim eğilimi) + MPS (Tasarruf eğilimi) = 1'dir. Basit çarpan k = 1 / (1 - MPC) = 1 / MPS'dir. MPC = 0.70 ise MPS = 0.30'dur ve k = 1 / 0.30'dur.",
+      "tip": "Paydada daima MPS (1 - MPC) yer alır!"
+    },
+    {
+      "id": 8,
+      "title": "M1 Para Arzına Vadeli Mevduatların Dahil Edilmesi Yanılgısı",
+      "mistake": "M1'in vadeli mevduatları da kapsadığını düşünmek.",
+      "truth": "M1 dar para arzıdır; sadece en likit olan dolaşımdaki nakit parayı ve VADESİZ mevduatları içerir. VADELİ mevduatlar M2'nin kapsamındadır.",
+      "tip": "Vadesiz = M1; Vadeli eklenirse = M2."
+    },
+    {
+      "id": 9,
+      "title": "Uzun Dönem Toplam Arz Eğrisinin (LRAS) Şekli",
+      "mistake": "LRAS eğrisinin de kısa dönem gibi pozitif eğimli olduğunu düşünmek.",
+      "truth": "Uzun dönemde tüm fiyatlar ve ücretler esnektir, ekonomi tam istihdama ulaşmıştır. Bu yüzden LRAS potansiyel GSYH düzeyinde DİK (DİKEY) BİR DOĞRUDUR.",
+      "tip": "Kısa dönem AS (SRAS) = Yatık pozitif; Uzun dönem AS (LRAS) = Dimdik dikey."
+    },
+    {
+      "id": 10,
+      "title": "Stagflasyonun Sebebi ve Tanımı",
+      "mistake": "Stagflasyonun talep fazlalığından kaynaklandığını sanmak.",
+      "truth": "Stagflasyon yüksek enflasyon ile işsizliğin (durgunluğun) aynı anda yaşanmasıdır ve TALEP DEĞİL, NEGATİF ARZ ŞOKU (maliyet artışı / petrol krizi) sonucu SRAS'ın sola kaymasıyla meydana gelir.",
+      "tip": "Stagflasyon = Durgunluk + Enflasyon; sebebi negatif arz şokudur."
+    }
+  ],
+  "formuller_ve_kavramlar": [
+    {
+      "term": "Tüketici Dengesi Şartı",
+      "description": "MUx / Px = MUy / Py (Harcanan son liranın marjinal faydalarının eşitliği)."
+    },
+    {
+      "term": "Talebin Fiyat Esnekliği Formülü",
+      "description": "ed = (%ΔQ) / (%ΔP) = [(Q2 - Q1) / Q1] / [(P2 - P1) / P1]."
+    },
+    {
+      "term": "Çapraz Fiyat Esnekliği",
+      "description": "exy = (%ΔQx) / (%ΔPy). Pozitif ise ikame, negatif ise tamamlayıcı mal."
+    },
+    {
+      "term": "Talebin Gelir Esnekliği",
+      "description": "eI = (%ΔQ) / (%ΔI). Pozitif ise normal mal, negatif ise düşük mal."
+    },
+    {
+      "term": "Toplam Maliyet Eşitliği",
+      "description": "TC = TFC + TVC ve ATC = AFC + AVC."
+    },
+    {
+      "term": "Marjinal Maliyet (MC)",
+      "description": "MC = ΔTC / ΔQ (Toplam maliyetin üretim miktarına göre türevi)."
+    },
+    {
+      "term": "Harcama Yoluyla GSYH",
+      "description": "GSYH = C + I + G + (X - M) (Tüketim + Yatırım + Kamu + Net İhracat)."
+    },
+    {
+      "term": "GSYH Deflatörü",
+      "description": "Deflatör = (Nominal GSYH / Reel GSYH) * 100."
+    },
+    {
+      "term": "İşsizlik Oranı Formülü",
+      "description": "İşsizlik Oranı = (İşsiz Sayısı / İşgücü) * 100."
+    },
+    {
+      "term": "Doğal İşsizlik Oranı",
+      "description": "Doğal İşsizlik = Friksiyonel İşsizlik + Yapısal İşsizlik."
+    },
+    {
+      "term": "Keynesyen MPC ve MPS Eşitliği",
+      "description": "MPC + MPS = 1. (MPC: Marjinal Tüketim Eğilimi, MPS: Marjinal Tasarruf Eğilimi)."
+    },
+    {
+      "term": "Basit Çarpan (Çoğaltan) Formülü",
+      "description": "k = 1 / (1 - MPC) = 1 / MPS.",
+      "example": "MPC = 0.75 ise k = 1 / (1 - 0.75) = 1 / 0.25 = 4."
+    },
+    {
+      "term": "Vergi Çarpanı Formülü",
+      "description": "kt = -MPC / (1 - MPC).",
+      "example": "MPC = 0.80 ise kt = -0.80 / 0.20 = -4."
+    },
+    {
+      "term": "Denk Bütçe Çarpanı",
+      "description": "Kamu harcamaları ve vergiler eşit miktarda artırıldığında çarpan k = 1'dir."
+    },
+    {
+      "term": "M1 Para Arzı",
+      "description": "M1 = Dolaşımdaki Nakit + Vadesiz Mevduatlar."
+    },
+    {
+      "term": "M2 Para Arzı",
+      "description": "M2 = M1 + Vadeli Mevduatlar."
+    },
+    {
+      "term": "Basit Kredi Çarpanı",
+      "description": "Kredi Çarpanı = 1 / r (r: Zorunlu Karşılık Oranı).",
+      "example": "r = %20 ise çarpan = 1 / 0.20 = 5."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "unit": 1,
+      "question": "Bir kararı alırken vazgeçilen en iyi ikinci alternatifin değerine ne ad verilir?",
+      "answer": "Fırsat Maliyeti (Alternatif Maliyet)."
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "question": "Üretim İmkânları Eğrisi (PPF) artan fırsat maliyeti sebebiyle orijine göre nasıldır?",
+      "answer": "İçbükeydir (Konkav)."
+    },
+    {
+      "id": 3,
+      "unit": 1,
+      "question": "'Hükümet dar gelirli vatandaşlara kira yardımı yapmalıdır' ifadesi hangi iktisat dalına örnektir?",
+      "answer": "Normatif İktisat (Değer yargısı ve temenni içerir)."
+    },
+    {
+      "id": 4,
+      "unit": 1,
+      "question": "Tüketim arttıkça ek birimden elde edilen tatminin azalacağını belirten yasa hangisidir?",
+      "answer": "Azalan Marjinal Fayda Yasası (1. Gossen Yasası)."
+    },
+    {
+      "id": 5,
+      "unit": 1,
+      "question": "Toplam Fayda (TU) maksimum noktaya ulaştığında Marjinal Fayda (MU) kaç olur?",
+      "answer": "Sıfır (MU = 0) olur."
+    },
+    {
+      "id": 6,
+      "unit": 1,
+      "question": "Farksızlık eğrisinin eğimine ne ad verilir?",
+      "answer": "Marjinal İkame Oranı (MRS = MUx / MUy)."
+    },
+    {
+      "id": 7,
+      "unit": 2,
+      "question": "Malın kendi fiyatındaki bir değişiklik talep eğrisini nasıl etkiler?",
+      "answer": "Eğriyi kaydırmaz; eğri üzerinde yukarı veya aşağı harekete yol açar."
+    },
+    {
+      "id": 8,
+      "unit": 2,
+      "question": "Gelir arttığında talebi azalan mallara ne ad verilir?",
+      "answer": "Düşük Mal (Giffen Malı)."
+    },
+    {
+      "id": 9,
+      "unit": 2,
+      "question": "Çay fiyatı arttığında kahveye olan talebin artması iki malın ne tür mal olduğunu gösterir?",
+      "answer": "İkame Mal olduğunu gösterir (Çapraz esneklik pozitiftir)."
+    },
+    {
+      "id": 10,
+      "unit": 2,
+      "question": "Devletin üreticiyi korumak amacıyla denge fiyatının üzerinde belirlediği asgari fiyata ne denir?",
+      "answer": "Taban Fiyat (Asgari fiyat; arz fazlası yaratır)."
+    },
+    {
+      "id": 11,
+      "unit": 2,
+      "question": "Talebin fiyat esnekliği |ed| > 1 olduğunda ürünün fiyatı düşürülürse Toplam Hasılat (TR) nasıl değişir?",
+      "answer": "Toplam Hasılat (TR) artar."
+    },
+    {
+      "id": 12,
+      "unit": 3,
+      "question": "Marjinal Ürün (MP) sıfır olduğunda Toplam Ürün (TP) hangi değere ulaşır?",
+      "answer": "Maksimum (en yüksek) düzeyine ulaşır."
+    },
+    {
+      "id": 13,
+      "unit": 3,
+      "question": "Üretim miktarı arttıkça sürekli azalan ve yatay eksene yaklaşan maliyet eğrisi hangisidir?",
+      "answer": "Ortalama Sabit Maliyet (AFC = TFC / Q)."
+    },
+    {
+      "id": 14,
+      "unit": 3,
+      "question": "Marjinal Maliyet (MC) eğrisi Ortalama Toplam Maliyet (ATC) eğrisini hangi noktasında keser?",
+      "answer": "ATC'nin en dipteki MİNİMUM noktasında alttan keser."
+    },
+    {
+      "id": 15,
+      "unit": 4,
+      "question": "Tam rekabet piyasasında faaliyet gösteren bir firmanın karşılaştığı talep eğrisi nasıldır?",
+      "answer": "Yatay bir doğrudur (Sonsuz esnektir: P = AR = MR)."
+    },
+    {
+      "id": 16,
+      "unit": 4,
+      "question": "Tam rekabet piyasasında firmanın üretimi durdurup piyasadan çekilme (kapanma) şartı nedir?",
+      "answer": "Fiyatın Ortalama Değişken Maliyetin altına düşmesidir (P < AVC_min)."
+    },
+    {
+      "id": 17,
+      "unit": 4,
+      "question": "Monopol piyasasında firmanın belirlediği fiyat ile Marjinal Hasılat arasındaki ilişki nasıldır?",
+      "answer": "Fiyat Marjinal Hasılattan büyüktür (P > MR)."
+    },
+    {
+      "id": 18,
+      "unit": 4,
+      "question": "Oligopol piyasasında fiyat katılığını açıklayan ve Paul Sweezy tarafından geliştirilen model hangisidir?",
+      "answer": "Dirsekli Talep Modeli."
+    },
+    {
+      "id": 19,
+      "unit": 5,
+      "question": "'Her arz kendi talebini yaratır' görüşü kime ve hangi yasaya aittir?",
+      "answer": "Jean-Baptiste Say (Say Yasası / Klasik İktisat)."
+    },
+    {
+      "id": 20,
+      "unit": 5,
+      "question": "Cari fiyatlarla hesaplanan GSYH'ye ne ad verilir?",
+      "answer": "Nominal GSYH."
+    },
+    {
+      "id": 21,
+      "unit": 5,
+      "question": "İş değiştirenlerin veya okuldan yeni mezun olanların iş arama sürecindeki geçici işsizlik türü nedir?",
+      "answer": "Friksiyonel (Arızi/Geçici) İşsizlik."
+    },
+    {
+      "id": 22,
+      "unit": 6,
+      "question": "Marjinal Tüketim Eğilimi (MPC) 0.80 olan bir ekonomide Basit Yatırım Çarpanı kaçtır?",
+      "answer": "5'tir [k = 1 / (1 - 0.80) = 1 / 0.20 = 5]."
+    },
+    {
+      "id": 23,
+      "unit": 6,
+      "question": "Kamu harcamaları ile vergiler aynı miktarda artırıldığında denk bütçe çarpanı kaça eşittir?",
+      "answer": "1'e eşittir (Haavelmo Teoremi)."
+    },
+    {
+      "id": 24,
+      "unit": 6,
+      "question": "Denge millî gelirinin tam istihdam millî gelirinin altında kalması durumunda oluşan açık türü nedir?",
+      "answer": "Deflasyonist Açık (Durgunluk Açığı)."
+    },
+    {
+      "id": 25,
+      "unit": 7,
+      "question": "En likit para arzı büyüklüğü olan M1 neleri kapsar?",
+      "answer": "Dolaşımdaki Nakit Para + Vadesiz Mevduatlar."
+    },
+    {
+      "id": 26,
+      "unit": 7,
+      "question": "Zorunlu karşılık oranı %10 (0.10) olduğunda basit mevduat (kredi) çarpanı kaçtır?",
+      "answer": "10'dur (1 / 0.10 = 10)."
+    },
+    {
+      "id": 27,
+      "unit": 7,
+      "question": "Merkez Bankasının piyasadaki likiditeyi kısmak için tahvil/bono satması hangi para politikası aracıdır?",
+      "answer": "Açık Piyasa İşlemleri (APİ)."
+    },
+    {
+      "id": 28,
+      "unit": 7,
+      "question": "Faiz oranlarının minimuma indiği ve para politikasının faizleri daha fazla düşüremediği kilitlenme durumuna ne ad verilir?",
+      "answer": "Likidite Tuzağı."
+    },
+    {
+      "id": 29,
+      "unit": 8,
+      "question": "Uzun Dönem Toplam Arz Eğrisi (LRAS) neden dikey bir doğrudur?",
+      "answer": "Ekonominin uzun dönemde tam istihdam (potansiyel GSYH) düzeyinde bulunması sebebiyle."
+    },
+    {
+      "id": 30,
+      "unit": 8,
+      "question": "Ekonomide yüksek enflasyon ile işsizlik ve durgunluğun aynı anda yaşanmasına ne ad verilir?",
+      "answer": "Stagflasyon."
+    }
+  ],
+  "exams": [
+    {
+      "title": "Vize Deneme Sınavı 1",
+      "filename": "Vize_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "İktisat biliminin ortaya çıkışına neden olan temel sorun aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Nüfus artışı",
+            "B) Kıtlık",
+            "C) Enflasyon",
+            "D) Para basımı",
+            "E) İhracat fazlası"
+          ],
+          "correct_answer": "B",
+          "explanation": "İktisadın varlık sebebi sınırsız insan ihtiyaçları karşısında kaynakların KIT olmasıdır."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Bir öğrencinin sinemaya gitmek yerine ders çalışmayı tercih etmesi durumunda vazgeçtiği sinema keyfi iktisadi olarak ne ile açıklanır?",
+          "options": [
+            "A) Marjinal fayda",
+            "B) Fırsat maliyeti (Alternatif maliyet)",
+            "C) Batık maliyet",
+            "D) Muhasebe maliyeti",
+            "E) Normatif maliyet"
+          ],
+          "correct_answer": "B",
+          "explanation": "Bir tercihi yaparken vazgeçilen en iyi ikinci alternatif Fırsat Maliyetidir."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "Artan fırsat maliyeti varsayımı altında Üretim İmkânları Eğrisi'nin (PPF) şekli nasıldır?",
+          "options": [
+            "A) Doğrusal bir çizgidir",
+            "B) Orijine göre içbükeydir",
+            "C) Orijine göre dışbükeydir",
+            "D) U şeklinde bir eğridir",
+            "E) Yatay bir doğrudur"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fırsat maliyeti arttığı için PPF eğrisi orijine göre içbükeydir (konkavdır)."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "Toplam Fayda (TU) eğrisinin maksimum noktaya ulaştığı tüketim miktarında Marjinal Fayda (MU) kaç birimdir?",
+          "options": [
+            "A) 1",
+            "B) 100",
+            "C) Sıfır (0)",
+            "D) Negatif",
+            "E) Sonsuz"
+          ],
+          "correct_answer": "C",
+          "explanation": "TU maksimum olduğunda marjinal fayda sıfırdır (MU = 0)."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Tüketiciye aynı tatmin düzeyini sağlayan farklı mal bileşimlerinin geometrik yerine ne ad verilir?",
+          "options": [
+            "A) Bütçe doğrusu",
+            "B) Farksızlık (Kayıtsızlık) eğrisi",
+            "C) Eşürün eğrisi",
+            "D) Arz eğrisi",
+            "E) Anlaşma eğrisi"
+          ],
+          "correct_answer": "B",
+          "explanation": "Aynı toplam faydayı veren sepetleri farksızlık (kayıtsızlık) eğrileri gösterir."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "Bir malın kendi fiyatındaki bir artış aşağıdaki etkilerden hangisine yol açar?",
+          "options": [
+            "A) Talep eğrisini tamamen sağa kaydırır.",
+            "B) Talep eğrisini tamamen sola kaydırır.",
+            "C) Talep eğrisi üzerinde yukarıya doğru harekete yol açar.",
+            "D) Talebin gelir esnekliğini artırır.",
+            "E) Arz eğrisini sola kaydırır."
+          ],
+          "correct_answer": "C",
+          "explanation": "Malın kendi fiyatındaki değişim eğriyi kaydırmaz; eğri üzerinde hareket ettirir."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Tüketicinin geliri arttığında talebi azalan mallar iktisatta nasıl adlandırılır?",
+          "options": [
+            "A) Normal mal",
+            "B) Lüks mal",
+            "C) Düşük mal",
+            "D) İkame mal",
+            "E) Tamamlayıcı mal"
+          ],
+          "correct_answer": "C",
+          "explanation": "Gelir artışına karşın talebi düşen mallara Düşük Mal denir."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Talebin fiyat esnekliği |ed| = 0 olan (tam inelastik) bir malın talep eğrisinin grafiği nasıldır?",
+          "options": [
+            "A) Yatay bir doğrudur",
+            "B) Dikey bir doğrudur",
+            "C) Pozitif eğimli bir doğrudur",
+            "D) Hiperboldür",
+            "E) U şeklindedir"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fiyat ne kadar değişirse değişsin miktar hiç değişmiyorsa talep eğrisi dikey bir doğrudur (|ed| = 0)."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Talebin fiyat esnekliği mutlak değerce 1'den büyük (|ed| > 1) olan esnek bir malda satıcılar fiyatı düşürürse Toplam Hasılat (TR) nasıl değişir?",
+          "options": [
+            "A) Azalır",
+            "B) Değişmez",
+            "C) Artar",
+            "D) Sıfırlanır",
+            "E) Önce artar sonra azalır"
+          ],
+          "correct_answer": "C",
+          "explanation": "Talep esnekse fiyattaki düşüş yüzdesinden daha fazla miktar artışı olur ve toplam hasılat artar."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "Devletin tarım üreticilerini korumak amacıyla piyasa denge fiyatının üzerinde belirlediği asgari fiyata ne denir ve piyasada ne yaratır?",
+          "options": [
+            "A) Tavan fiyat - Kıtlık yaratır",
+            "B) Taban fiyat - Arz fazlası (Artık) yaratır",
+            "C) Denge fiyatı - İstikrar yaratır",
+            "D) Tavan fiyat - Karaborsa yaratır",
+            "E) Müdahalesiz fiyat - İthalat yaratır"
+          ],
+          "correct_answer": "B",
+          "explanation": "Üreticiyi korumak için denge üstünde Taban Fiyat uygulanır ve bu durum arz fazlası doğurur."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "Kısa dönem üretim sürecinde değişken girdi miktarı artırıldıkça Marjinal Ürünün (MP) bir noktadan sonra azalmaya başlamasını ifade eden yasa nedir?",
+          "options": [
+            "A) Azalan Verimler Yasası",
+            "B) Talep Yasası",
+            "C) Gossen Yasası",
+            "D) Say Yasası",
+            "E) Pareto Yasası"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kısa dönemde değişken girdinin veriminin düşmesi Azalan Verimler Yasasıdır."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Marjinal Ürün (MP) eğrisi Ortalama Ürün (AP) eğrisini hangi noktasında keser?",
+          "options": [
+            "A) AP'nin minimum olduğu noktada",
+            "B) AP'nin maksimum olduğu noktada",
+            "C) AP'nin sıfır olduğu noktada",
+            "D) TP'nin sıfır olduğu noktada",
+            "E) Kesişmezler"
+          ],
+          "correct_answer": "B",
+          "explanation": "MP = AP olduğunda Ortalama Ürün (AP) maksimum düzeyindedir."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "Üretim miktarı sıfır olduğunda dahi katlanılmak zorunda olunan maliyet türü aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Toplam Değişken Maliyet (TVC)",
+            "B) Toplam Sabit Maliyet (TFC)",
+            "C) Marjinal Maliyet (MC)",
+            "D) Ortalama Değişken Maliyet (AVC)",
+            "E) Batık Olmayan Maliyet"
+          ],
+          "correct_answer": "B",
+          "explanation": "Üretim olmasa bile kira, sigorta gibi Toplam Sabit Maliyetler (TFC) ödenmek zorundadır."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "Marjinal Maliyet (MC) eğrisi Ortalama Toplam Maliyet (ATC) eğrisini hangi noktasında keser?",
+          "options": [
+            "A) ATC'nin maksimum olduğu noktada",
+            "B) ATC'nin minimum olduğu noktada",
+            "C) ATC'nin ekseni kestiği noktada",
+            "D) TFC'ye eşit olduğu noktada",
+            "E) Asla kesmez"
+          ],
+          "correct_answer": "B",
+          "explanation": "MC eğrisi, ATC ve AVC eğrilerini minimum noktalarından alttan keser."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "Uzun dönemde firmanın üretim ölçeğini büyütmesiyle birlikte birim ürün maliyetinin (LRAC) düşmesine ne ad verilir?",
+          "options": [
+            "A) Ölçeğe göre artan getiri (Ölçek ekonomileri)",
+            "B) Ölçeğe göre azalan getiri",
+            "C) Azalan verimler",
+            "D) Sabit getiri",
+            "E) Değişken maliyet avantajı"
+          ],
+          "correct_answer": "A",
+          "explanation": "LRAC'ın üretim arttıkça düşmesi pozitif ölçek ekonomilerini (ölçeğe göre artan getiri) gösterir."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "Tam rekabet piyasasında faaliyet gösteren bir firmanın ürününü sattığı fiyat (P), Marjinal Hasılatına (MR) ve Ortalama Hasılatına (AR) nasıl bağlanır?",
+          "options": [
+            "A) P > AR > MR",
+            "B) P = AR = MR",
+            "C) P < MR = AR",
+            "D) MR > P > AR",
+            "E) P ile MR arasında ilişki yoktur"
+          ],
+          "correct_answer": "B",
+          "explanation": "Tam rekabette firma fiyat kabullenicidir ve P = AR = MR geçerlidir."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "Tam rekabet piyasasında kısa dönemde firmanın kapanma koşulu aşağıdakilerden hangisidir?",
+          "options": [
+            "A) P > ATC",
+            "B) P < AVC_min",
+            "C) P = MC",
+            "D) TR > TC",
+            "E) MR = MC"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fiyat ortalama değişken maliyeti dahi karşılayamıyorsa (P < AVC_min), firma derhal kapanmalıdır."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Tek bir satıcının bulunduğu, yakın ikamesi olmayan bir malın üretildiği ve piyasaya giriş engellerinin çok yüksek olduğu piyasa türü hangisidir?",
+          "options": [
+            "A) Tam Rekabet",
+            "B) Monopolcü Rekabet",
+            "C) Oligopol",
+            "D) Monopol (Tekel)",
+            "E) Düopol"
+          ],
+          "correct_answer": "D",
+          "explanation": "Tek satıcılı piyasa Monopoldür."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Monopolcü bir firmanın kârını maksimize eden çıktı düzeyinde fiyat (P) ile Marjinal Maliyet (MC) arasındaki ilişki nasıldır?",
+          "options": [
+            "A) P = MC",
+            "B) P > MC",
+            "C) P < MC",
+            "D) P = 0",
+            "E) MC = 0"
+          ],
+          "correct_answer": "B",
+          "explanation": "Monopolde kâr maksimizasyonu MR = MC'de sağlanır; ancak P > MR olduğu için P > MC olur."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "Az sayıda büyük firmanın birbirlerinin kararlarını yakından takip ettiği ve karşılıklı bağımlılığın yüksek olduğu piyasa türü nedir?",
+          "options": [
+            "A) Tam Rekabet",
+            "B) Monopol",
+            "C) Oligopol",
+            "D) Monopson",
+            "E) Mükemmel Piyasa"
+          ],
+          "correct_answer": "C",
+          "explanation": "Az sayıda firmanın hakim olduğu karşılıklı bağımlı piyasa Oligopoldür."
+        }
+      ]
+    },
+    {
+      "title": "Vize Deneme Sınavı 2",
+      "filename": "Vize_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "Aşağıdaki ifadelerden hangisi 'Pozitif İktisat'a bir örnektir?",
+          "options": [
+            "A) Hükümet asgari ücreti enflasyonun üzerinde artırmalıdır.",
+            "B) Dar gelirlilerden vergi alınmamalıdır.",
+            "C) Bir malın fiyatı arttığında talep edilen miktarı azalır.",
+            "D) Emeklilere daha yüksek ikramiye ödenmesi gerekir.",
+            "E) Sağlık hizmetleri tamamen ücretsiz olmalıdır."
+          ],
+          "correct_answer": "C",
+          "explanation": "Pozitif iktisat objektif neden-sonuç ilişkilerini belirtir (C şıkkı)."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Tüketicinin harcadığı son liranın marjinal faydalarının tüm mallar için eşitlendiğinde dengenin sağlandığını belirten yasa hangisidir?",
+          "options": [
+            "A) 1. Gossen Yasası",
+            "B) 2. Gossen Yasası (Eşmarjinal İlkesi)",
+            "C) Say Yasası",
+            "D) Engel Yasası",
+            "E) King Yasası"
+          ],
+          "correct_answer": "B",
+          "explanation": "MUx/Px = MUy/Py eşitliği 2. Gossen Yasası (Eşmarjinal İlkesi) olarak adlandırılır."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "Farksızlık eğrilerinin birbirini kesmemesi ve negatif eğimli olması hangi aksiyomun sonucudur?",
+          "options": [
+            "A) Doyumsuzluk ve geçişlilik aksiyomları",
+            "B) Sayılamazlık",
+            "C) Kıtlık ilkesi",
+            "D) Fırsat maliyeti",
+            "E) Dışsallık"
+          ],
+          "correct_answer": "A",
+          "explanation": "Tüketici tercihlerinin tutarlılığı (geçişlilik) ve daha çoğun daha aza tercih edilmesi (doyumsuzluk) farksızlık eğrilerinin kesişmesini engeller."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "Geliri I = 600 TL olan bir tüketicinin X malı fiyatı Px = 20 TL ve Y malı fiyatı Py = 30 TL ise bütçe doğrusunun eğimi kaçtır?",
+          "options": [
+            "A) -2/3",
+            "B) -3/2",
+            "C) -20",
+            "D) -30",
+            "E) -1"
+          ],
+          "correct_answer": "A",
+          "explanation": "Bütçe doğrusunun eğimi = -Px / Py = -20 / 30 = -2/3."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Üretim İmkânları Eğrisi'nin (PPF) dışındaki bir nokta neyi ifade eder?",
+          "options": [
+            "A) Eksik istihdamı",
+            "B) Kaynakların israf edildiğini",
+            "C) Mevcut kaynak ve teknolojiyle ulaşılamaz üretim düzeyini",
+            "D) Tam istihdam dengesini",
+            "E) Sıfır maliyeti"
+          ],
+          "correct_answer": "C",
+          "explanation": "PPF'nin dışındaki noktalar mevcut kaynaklarla ulaşılamaz; ancak ekonomik büyüme ile ulaşılabilir."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "İki mal arasındaki çapraz fiyat esnekliği pozitif (exy > 0) çıkmışsa bu mallar ne tür mallardır?",
+          "options": [
+            "A) Tamamlayıcı mallar",
+            "B) İkame mallar",
+            "C) Düşük mallar",
+            "D) Giffen malları",
+            "E) Bağımsız mallar"
+          ],
+          "correct_answer": "B",
+          "explanation": "Birinin fiyatı arttığında diğerinin talebi artıyorsa çapraz esneklik pozitiftir ve mallar İKAME mallardır (Örn: Çay ve Kahve)."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Bir malın gelir esnekliği eI = 1.8 olarak hesaplanmıştır. Bu mal ne tür bir maldır?",
+          "options": [
+            "A) Düşük mal",
+            "B) Zorunlu mal",
+            "C) Lüks normal mal",
+            "D) İkame mal",
+            "E) Tamamlayıcı mal"
+          ],
+          "correct_answer": "C",
+          "explanation": "Gelir esnekliği 1'den büyük (eI > 1) olan mallar Lüks Mallardır."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Devletin kira artışlarını sınırlandırmak amacıyla piyasa denge kirasının altında bir üst sınır belirlemesi hangi fiyat politikasıdır?",
+          "options": [
+            "A) Taban fiyat",
+            "B) Tavan fiyat",
+            "C) Garanti fiyat",
+            "D) Prim sistemi",
+            "E) Destekleme fiyatı"
+          ],
+          "correct_answer": "B",
+          "explanation": "Denge fiyatının altında belirlenen azami fiyat Tavan Fiyattır; kıtlık ve karaborsaya yol açabilir."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Bir malın fiyatı 10 TL iken talep miktarı 100 birimdir. Fiyat 12 TL'ye çıktığında talep miktarı 80 birime düşmüştür. Bu aralıkta talebin fiyat esnekliği kaçtır?",
+          "options": [
+            "A) -0.5",
+            "B) -1.0",
+            "C) -1.5",
+            "D) -2.0",
+            "E) -0.8"
+          ],
+          "correct_answer": "B",
+          "explanation": "%ΔQ = (80 - 100) / 100 = -%20. %ΔP = (12 - 10) / 10 = +%20. ed = -20 / 20 = -1.0 (Birim esnek)."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi arz eğrisini tamamen sağa kaydıran faktörlerden biridir?",
+          "options": [
+            "A) Girdi (hammadde) maliyetlerinin artması",
+            "B) Üretim teknolojisindeki verimlilik artışı",
+            "C) Üreticilere yeni vergiler konması",
+            "D) Malın kendi satış fiyatının düşmesi",
+            "E) Üretici sayısının azalması"
+          ],
+          "correct_answer": "B",
+          "explanation": "Teknolojik gelişme maliyetleri düşürür ve arz eğrisini sağa kaydırır."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "Bir firmanın üretim miktarı Q = 10 birim iken Toplam Sabit Maliyeti (TFC) 500 TL ise Ortalama Sabit Maliyeti (AFC) kaç TL'dir?",
+          "options": [
+            "A) 50 TL",
+            "B) 500 TL",
+            "C) 5.000 TL",
+            "D) 10 TL",
+            "E) 25 TL"
+          ],
+          "correct_answer": "A",
+          "explanation": "AFC = TFC / Q = 500 / 10 = 50 TL."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Bir firmanın toplam maliyet fonksiyonu TC = 100 + 5Q + 2Q^2 olduğuna göre Marjinal Maliyet (MC) fonksiyonu nedir?",
+          "options": [
+            "A) 5 + 4Q",
+            "B) 100 + 4Q",
+            "C) 5 + 2Q",
+            "D) 4Q",
+            "E) 100 / Q + 5"
+          ],
+          "correct_answer": "A",
+          "explanation": "MC = d(TC)/dQ = 5 + 4Q."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "Ortalama Değişken Maliyet (AVC) ile Ortalama Toplam Maliyet (ATC) arasındaki fark aşağıdakilerden hangisine eşittir?",
+          "options": [
+            "A) Marjinal Maliyete (MC)",
+            "B) Ortalama Sabit Maliyete (AFC)",
+            "C) Toplam Maliyete (TC)",
+            "D) Kâra",
+            "E) Sıfıra"
+          ],
+          "correct_answer": "B",
+          "explanation": "ATC = AFC + AVC olduğuna göre ATC - AVC = AFC'dir."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "Uzun dönemde tüm girdiler %50 artırıldığında toplam üretim %30 artıyorsa ölçeğe göre getiri nasıldır?",
+          "options": [
+            "A) Ölçeğe göre artan getiri",
+            "B) Ölçeğe göre azalan getiri",
+            "C) Ölçeğe göre sabit getiri",
+            "D) Sonsuz getiri",
+            "E) Sıfır getiri"
+          ],
+          "correct_answer": "B",
+          "explanation": "Üretimdeki artış oranı (%30) girdilerdeki artış oranından (%50) küçükse 'Ölçeğe Göre Azalan Getiri' vardır."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "Aşağıdaki maliyet eğrilerinden hangisi U şeklinde DEĞİLDİR; aksine üretim arttıkça sürekli aşağı doğru iner?",
+          "options": [
+            "A) Ortalama Sabit Maliyet (AFC)",
+            "B) Ortalama Değişken Maliyet (AVC)",
+            "C) Ortalama Toplam Maliyet (ATC)",
+            "D) Marjinal Maliyet (MC)",
+            "E) Kısa Dönem Toplam Maliyet (TC)"
+          ],
+          "correct_answer": "A",
+          "explanation": "AFC = TFC / Q olduğundan ve sabit pay sürekli artan Q'ya bölündüğünden AFC sürekli azalır."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "Tam rekabet piyasasında uzun dönemde firmaların sadece 'Normal Kâr' elde etmesinin temel sebebi nedir?",
+          "options": [
+            "A) Piyasaya giriş ve çıkışların tamamen serbest olması",
+            "B) Devletin tavan fiyat uygulaması",
+            "C) Talebin inelastik olması",
+            "D) Reklam harcamalarının yüksekliği",
+            "E) Malların heterojen olması"
+          ],
+          "correct_answer": "A",
+          "explanation": "Serbest giriş-çıkış sayesinde aşırı kâr gören yeni firmalar piyasaya girer, arz artar, fiyat düşer ve aşırı kâr sıfırlanır."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "Monopolcü firmanın tüketici fazlasının tamamını elinden alarak her tüketiciye ödemeye razı olduğu en yüksek fiyattan satış yapmasına ne ad verilir?",
+          "options": [
+            "A) 1. Derece Fiyat Farklılaştırması (Tam Farklılaştırma)",
+            "B) 2. Derece Fiyat Farklılaştırması (Miktar İndirimi)",
+            "C) 3. Derece Fiyat Farklılaştırması (Pazar Bölümlendirme)",
+            "D) Yıkıcı Fiyatlama",
+            "E) Taban Fiyatlama"
+          ],
+          "correct_answer": "A",
+          "explanation": "Tüketici rantının tamamını üretici kârına dönüştüren uygulama 1. Derece Fiyat Farklılaştırmasıdır."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Monopolcü rekabet piyasasını tam rekabet piyasasından ayıran en temel fark nedir?",
+          "options": [
+            "A) Çok sayıda firmanın olması",
+            "B) Piyasaya girişin serbest olması",
+            "C) Ürünlerin farklılaştırılmış (markalı/ambalajlı) olması",
+            "D) Fiyatın sıfır olması",
+            "E) Giriş engellerinin olması"
+          ],
+          "correct_answer": "C",
+          "explanation": "Monopolcü rekabette ürünler homojen değil, marka ve kaliteyle farklılaştırılmıştır."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Oligopol piyasasında firmaların açıkça anlaşarak fiyatı ve üretim miktarını belirlemek üzere kurdukları tekel benzeri örgüte ne ad verilir?",
+          "options": [
+            "A) Kartel",
+            "B) Holding",
+            "C) Kooperatif",
+            "D) Tröst",
+            "E) Konsorsiyum"
+          ],
+          "correct_answer": "A",
+          "explanation": "OPEC gibi oligopolcülerin gizli veya açık birlik kurmasına Kartel denir."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "Monopolün varlığı nedeniyle ortaya çıkan ve ne üreticinin ne de tüketicinin alabildiği net toplumsal refah kaybına ne ad verilir?",
+          "options": [
+            "A) Sosyal maliyet",
+            "B) Ölü dara kaybı (Harberger üçgeni)",
+            "C) Enflasyonist açık",
+            "D) Batık maliyet",
+            "E) Negatif dışsallık"
+          ],
+          "correct_answer": "B",
+          "explanation": "Monopolün eksik üretim ve yüksek fiyat politikası sonucu toplumda yarattığı kayba Ölü Dara Kaybı (Deadweight Loss) denir."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 1",
+      "filename": "Final_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) Tüketicinin sınırlı bütçesiyle satın alabileceği mal bileşimlerini gösteren doğruya ne ad verilir?",
+          "options": [
+            "A) Farksızlık eğrisi",
+            "B) Bütçe doğrusu",
+            "C) Talep eğrisi",
+            "D) Eşürün eğrisi",
+            "E) Phillips eğrisi"
+          ],
+          "correct_answer": "B",
+          "explanation": "Tüketicinin gelir sınırını gösteren doğru Bütçe Doğrusudur."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) İki mal arasındaki çapraz talep esnekliği negatif (exy < 0) ise bu iki mal ne tür mallardır?",
+          "options": [
+            "A) İkame mallar",
+            "B) Tamamlayıcı mallar",
+            "C) Bağımsız mallar",
+            "D) Lüks mallar",
+            "E) Düşük mallar"
+          ],
+          "correct_answer": "B",
+          "explanation": "Çapraz esneklik negatif ise mallar Tamamlayıcıdır (Örn: Otomobil ve Benzin)."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Marjinal Maliyet (MC) eğrisi Ortalama Değişken Maliyet (AVC) eğrisini hangi noktasında keser?",
+          "options": [
+            "A) AVC'nin minimum noktasında",
+            "B) AVC'nin maksimum noktasında",
+            "C) Sıfır noktasında",
+            "D) TFC ile kesiştiği yerde",
+            "E) Kesmez"
+          ],
+          "correct_answer": "A",
+          "explanation": "MC eğrisi AVC'yi minimum noktasında alttan keser."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) Tam rekabet piyasasında firmanın kısa dönem kâr maksimizasyonu koşulu nedir?",
+          "options": [
+            "A) P = MC",
+            "B) P > ATC",
+            "C) MR > MC",
+            "D) TR = TC",
+            "E) P = AFC"
+          ],
+          "correct_answer": "A",
+          "explanation": "Tam rekabette P = MR = MC geçerlidir."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "1936 yılında 'İstihdam, Faiz ve Paranın Genel Teorisi' kitabını yazarak modern makroekonominin kurucusu kabul edilen iktisatçı kimdir?",
+          "options": [
+            "A) Adam Smith",
+            "B) David Ricardo",
+            "C) John Maynard Keynes",
+            "D) Milton Friedman",
+            "E) Joseph Schumpeter"
+          ],
+          "correct_answer": "C",
+          "explanation": "Modern makroekonominin kurucusu John Maynard Keynes'tir."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "Bir ekonomide harcamalar yöntemiyle Gayri Safi Yurtiçi Hasıla (GSYH) hesaplanırken aşağıdakilerden hangisi formüle dahil EDİLMEZ?",
+          "options": [
+            "A) Tüketim Harcamaları (C)",
+            "B) Yatırım Harcamaları (I)",
+            "C) Kamu Harcamaları (G)",
+            "D) Net İhracat (X - M)",
+            "E) İkinci el otomobil satış bedelleri"
+          ],
+          "correct_answer": "E",
+          "explanation": "GSYH yalnızca o yıl üretilen nihai mal ve hizmetleri kapsar; ikinci el satışlar cari dönem üretimi olmadığından dahil edilmez."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "Nominal GSYH 1.200 milyar TL ve Reel GSYH 1.000 milyar TL olduğuna göre GSYH Deflatörü kaçtır?",
+          "options": [
+            "A) 83.3",
+            "B) 100",
+            "C) 120",
+            "D) 200",
+            "E) 12"
+          ],
+          "correct_answer": "C",
+          "explanation": "Deflatör = (Nominal / Reel) * 100 = (1200 / 1000) * 100 = 120."
+        },
+        {
+          "id": 8,
+          "unit": 5,
+          "question": "Ekonomik kriz ve durgunluk dönemlerinde toplam talep yetersizliği sebebiyle ortaya çıkan işsizlik türü hangisidir?",
+          "options": [
+            "A) Friksiyonel işsizlik",
+            "B) Yapısal işsizlik",
+            "C) Konjonktürel (Dönemsel/Keynesyen) işsizlik",
+            "D) Mevsimsel işsizlik",
+            "E) Gizli işsizlik"
+          ],
+          "correct_answer": "C",
+          "explanation": "Ekonomik daralmadan kaynaklanan işsizlik Konjonktürel (Dönemsel) işsizliktir."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "Marjinal Tüketim Eğilimi MPC = 0.75 olan bir ekonomide Basit Yatırım Çarpanı (k) kaçtır?",
+          "options": [
+            "A) 2",
+            "B) 3",
+            "C) 4",
+            "D) 5",
+            "E) 0.25"
+          ],
+          "correct_answer": "C",
+          "explanation": "k = 1 / (1 - MPC) = 1 / (1 - 0.75) = 1 / 0.25 = 4."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Marjinal Tüketim Eğilimi (MPC) ile Marjinal Tasarruf Eğilimi (MPS) arasındaki matematiksel ilişki nedir?",
+          "options": [
+            "A) MPC * MPS = 1",
+            "B) MPC + MPS = 1",
+            "C) MPC - MPS = 0",
+            "D) MPC / MPS = 1",
+            "E) MPC + MPS = 0"
+          ],
+          "correct_answer": "B",
+          "explanation": "Gelir ya tüketilir ya tasarruf edilir: MPC + MPS = 1."
+        },
+        {
+          "id": 11,
+          "unit": 6,
+          "question": "Kamu harcamaları 20 milyar TL artırılırken aynı anda vergiler de 20 milyar TL artırılırsa, Denk Bütçe Çarpanına göre millî gelir nasıl değişir?",
+          "options": [
+            "A) Değişmez",
+            "B) 20 milyar TL artar",
+            "C) 20 milyar TL azalır",
+            "D) 40 milyar TL artar",
+            "E) 80 milyar TL artar"
+          ],
+          "correct_answer": "B",
+          "explanation": "Denk bütçe çarpanı k = 1'dir. Dolayısıyla harcama ve vergi 20 milyar artırılırsa millî gelir de tam 20 milyar TL artar."
+        },
+        {
+          "id": 12,
+          "unit": 6,
+          "question": "Ekonomide toplam harcamaların tam istihdam üretim kapasitesini aşması sonucu fiyatların yükselmesine neden olan durum nedir?",
+          "options": [
+            "A) Deflasyonist Açık",
+            "B) Enflasyonist Açık",
+            "C) Likidite Tuzağı",
+            "D) Bütçe Açığı",
+            "E) Cari Açık"
+          ],
+          "correct_answer": "B",
+          "explanation": "Harcamaların tam istihdam kapasitesini aşması Enflasyonist Açıktır."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "Dolaşımdaki nakit para ile bankalardaki vadesiz mevduatların toplamından oluşan en likit para arzı tanımı hangisidir?",
+          "options": [
+            "A) M1",
+            "B) M2",
+            "C) M3",
+            "D) M0",
+            "E) Emisyon"
+          ],
+          "correct_answer": "A",
+          "explanation": "M1 = Dolaşımdaki Nakit + Vadesiz Mevduatlar."
+        },
+        {
+          "id": 14,
+          "unit": 7,
+          "question": "Zorunlu karşılık oranı r = %20 (0.20) olan bir bankacılık sisteminde basit kredi (mevduat) çarpanı kaçtır?",
+          "options": [
+            "A) 2",
+            "B) 4",
+            "C) 5",
+            "D) 10",
+            "E) 20"
+          ],
+          "correct_answer": "C",
+          "explanation": "Çarpan = 1 / r = 1 / 0.20 = 5."
+        },
+        {
+          "id": 15,
+          "unit": 7,
+          "question": "Merkez Bankasının piyasadaki para arzını artırmak (genişletici para politikası uygulamak) için açık piyasada ne yapması gerekir?",
+          "options": [
+            "A) Hazine bonosu ve tahvil satın almalıdır.",
+            "B) Hazine bonosu ve tahvil satmalıdır.",
+            "C) Zorunlu karşılık oranlarını artırmalıdır.",
+            "D) Reeskont faiz oranını yükseltmelidir.",
+            "E) Vergi oranlarını artırmalıdır."
+          ],
+          "correct_answer": "A",
+          "explanation": "Bono satın aldığında piyasaya nakit para girer ve para arzı genişler."
+        },
+        {
+          "id": 16,
+          "unit": 7,
+          "question": "Keynes'e göre faiz oranları ile para talebinin spekülasyon güdüsü arasındaki ilişki nasıldır?",
+          "options": [
+            "A) Doğru yönlüdür (faiz artarsa spekülasyon para talebi artar)",
+            "B) Ters yönlüdür (faiz artarsa spekülasyon para talebi azalır)",
+            "C) Bağımsızdır",
+            "D) Sıfırdır",
+            "E) Önce artar sonra azalır"
+          ],
+          "correct_answer": "B",
+          "explanation": "Faizler yükseldiğinde parayı nakitte tutmanın fırsat maliyeti artar ve spekülatif para talebi düşer (ters yönlü ilişki)."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Toplam Talep (AD) eğrisinin negatif eğimli olmasını açıklayan 'Faiz Oranı Etkisi' iktisat literatüründe kimin adıyla anılır?",
+          "options": [
+            "A) Pigou Etkisi",
+            "B) Keynes Etkisi",
+            "C) Mundell-Fleming Etkisi",
+            "D) Fisher Etkisi",
+            "E) Laffer Etkisi"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fiyatlar düşünce faizlerin düşmesi ve yatırımların artması Keynes Etkisidir (Servet etkisi Pigou, dış ticaret ise Mundell-Fleming'dir)."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Uzun Dönem Toplam Arz Eğrisi (LRAS) neden potansiyel GSYH düzeyinde dikey bir doğrudur?",
+          "options": [
+            "A) Fiyat ve ücretlerin uzun dönemde tamamen esnek olması nedeniyle",
+            "B) Teknolojinin değişmemesi nedeniyle",
+            "C) Faizlerin sıfır olması nedeniyle",
+            "D) Devletin fiyatları belirlemesi nedeniyle",
+            "E) İhracatın sıfır olması nedeniyle"
+          ],
+          "correct_answer": "A",
+          "explanation": "Uzun dönemde fiyat ve ücretler tam esnektir, ekonomi kapasite (tam istihdam) sınırındadır."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Ekonomide yüksek enflasyon ile işsizlik ve ekonomik durgunluğun bir arada yaşanmasına ne ad verilir?",
+          "options": [
+            "A) Deflasyon",
+            "B) Devalüasyon",
+            "C) Stagflasyon",
+            "D) Resesyon",
+            "E) Hiperenflasyon"
+          ],
+          "correct_answer": "C",
+          "explanation": "Durgunluk (stagnation) ve enflasyonun (inflation) birleşimi Stagflasyondur."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "Ekonomik durgunluk (resesyon) döneminde hükümetin uygulayacağı genişletici maliye politikası aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Kamu harcamalarını artırmak ve vergileri azaltmak",
+            "B) Kamu harcamalarını kısmak ve vergileri artırmak",
+            "C) Faiz oranlarını yükseltmek",
+            "D) Para arzını kısmak",
+            "E) İthalatı yasaklamak"
+          ],
+          "correct_answer": "A",
+          "explanation": "Genişletici maliye politikası kamu harcamalarını (G) artırmak ve vergileri (T) düşürmektir."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 2",
+      "filename": "Final_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) Marjinal Fayda (MU) sıfır olduğunda Toplam Fayda (TU) nasıldır?",
+          "options": [
+            "A) Sıfırdır",
+            "B) Minimumdur",
+            "C) Maksimumdur",
+            "D) Azalandır",
+            "E) Tanımsızdır"
+          ],
+          "correct_answer": "C",
+          "explanation": "MU = 0 iken TU tepe noktasındadır (Maksimumdur)."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) Fiyatı %10 artan bir malın talep edilen miktarı %20 azalıyorsa bu malın talebin fiyat esnekliği (|ed|) kaçtır?",
+          "options": [
+            "A) 0.5",
+            "B) 1.0",
+            "C) 2.0",
+            "D) 3.0",
+            "E) 0.2"
+          ],
+          "correct_answer": "C",
+          "explanation": "|ed| = %20 / %10 = 2.0."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Bir firmanın Toplam Maliyeti TC = 300 + 40Q olduğuna göre Sabit Maliyeti (TFC) kaç TL'dir?",
+          "options": [
+            "A) 40 TL",
+            "B) 300 TL",
+            "C) 340 TL",
+            "D) 0 TL",
+            "E) 120 TL"
+          ],
+          "correct_answer": "B",
+          "explanation": "Q'ya bağlı olmayan sabit terim TFC = 300 TL'dir."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) Tekelci bir firmanın kârını maksimize eden temel kural hangisidir?",
+          "options": [
+            "A) MR = MC",
+            "B) P = ATC",
+            "C) TR = TC",
+            "D) MR = 0",
+            "E) MC = 0"
+          ],
+          "correct_answer": "A",
+          "explanation": "Tüm firmalar için kâr maksimizasyonu MR = MC koşulunda gerçekleşir."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "Friksiyonel işsizlik ile yapısal işsizliğin toplamına ne ad verilir?",
+          "options": [
+            "A) Döngüsel işsizlik",
+            "B) Doğal işsizlik oranı",
+            "C) Mevsimsel işsizlik",
+            "D) Gizli işsizlik",
+            "E) Efektif işsizlik"
+          ],
+          "correct_answer": "B",
+          "explanation": "Doğal İşsizlik = Friksiyonel + Yapısal işsizliktir."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "Enflasyonun arındırıldığı ve sabit baz yıl fiyatlarıyla hesaplanan GSYH büyüklüğüne ne ad verilir?",
+          "options": [
+            "A) Nominal GSYH",
+            "B) Reel GSYH",
+            "C) Potansiyel GSYH",
+            "D) Net Yurtiçi Hasıla",
+            "E) Kişi Başına Gelir"
+          ],
+          "correct_answer": "B",
+          "explanation": "Enflasyondan arındırılmış reel çıktıyı Reel GSYH gösterir."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "İşgücüne dahil olan 30 milyon kişinin bulunduğu bir ülkede 3 milyon işsiz varsa işsizlik oranı yüzde kaçtır?",
+          "options": [
+            "A) %5",
+            "B) %10",
+            "C) %15",
+            "D) %20",
+            "E) %3"
+          ],
+          "correct_answer": "B",
+          "explanation": "İşsizlik Oranı = (3 / 30) * 100 = %10."
+        },
+        {
+          "id": 8,
+          "unit": 6,
+          "question": "Bir ekonomide Marjinal Tüketim Eğilimi MPC = 0.80 olduğuna göre Marjinal Tasarruf Eğilimi (MPS) kaçtır?",
+          "options": [
+            "A) 0.20",
+            "B) 0.50",
+            "C) 0.80",
+            "D) 1.20",
+            "E) 0.10"
+          ],
+          "correct_answer": "A",
+          "explanation": "MPC + MPS = 1 => MPS = 1 - 0.80 = 0.20."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "Marjinal Tüketim Eğilimi MPC = 0.60 ise Kamu Harcamaları Çarpanı kaçtır?",
+          "options": [
+            "A) 1.5",
+            "B) 2.0",
+            "C) 2.5",
+            "D) 4.0",
+            "E) 5.0"
+          ],
+          "correct_answer": "C",
+          "explanation": "kg = 1 / (1 - 0.60) = 1 / 0.40 = 2.5."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Gelir düzeyi sıfır iken yapılan zorunlu tüketime ne ad verilir?",
+          "options": [
+            "A) Uyarılmış tüketim",
+            "B) Otonom tüketim (C0)",
+            "C) Marjinal tüketim",
+            "D) Negatif tasarruf",
+            "E) Lüks tüketim"
+          ],
+          "correct_answer": "B",
+          "explanation": "Gelirden bağımsız yapılan asgari tüketime Otonom Tüketim denir."
+        },
+        {
+          "id": 11,
+          "unit": 7,
+          "question": "M1 para arzına bankalardaki vadeli mevduatların eklenmesiyle elde edilen para arzı büyüklüğü hangisidir?",
+          "options": [
+            "A) M0",
+            "B) M2",
+            "C) M3",
+            "D) M4",
+            "E) Rezerv para"
+          ],
+          "correct_answer": "B",
+          "explanation": "M2 = M1 + Vadeli Mevduatlar."
+        },
+        {
+          "id": 12,
+          "unit": 7,
+          "question": "Ticari bankaların topladıkları mevduatların belirli bir yüzdesini Merkez Bankası bünyesinde tutmak zorunda oldukları orana ne denir?",
+          "options": [
+            "A) Reeskont oranı",
+            "B) Zorunlu Karşılık Oranı (Munzam Karşılık)",
+            "C) Faiz koridoru",
+            "D) Politika faizi",
+            "E) Tasarruf oranı"
+          ],
+          "correct_answer": "B",
+          "explanation": "Bankaların Merkez Bankasında tuttuğu zorunlu oran Zorunlu Karşılık Oranıdır."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "Merkez Bankasının ticari bankalara reeskont kredisi verirken uyguladığı faiz oranına ne ad verilir?",
+          "options": [
+            "A) Reeskont Faiz Oranı",
+            "B) Gecelik faiz",
+            "C) Libor faizi",
+            "D) Bono faizi",
+            "E) Enflasyon oranı"
+          ],
+          "correct_answer": "A",
+          "explanation": "Merkez Bankasının senet kırdırma faizi Reeskont Oranıdır."
+        },
+        {
+          "id": 14,
+          "unit": 7,
+          "question": "Paranın mal ve hizmet alım-satımında takası ortadan kaldırarak kullanılması paranın hangi temel işlevidir?",
+          "options": [
+            "A) Değişim (Mübadele) aracı olma",
+            "B) Değer saklama aracı olma",
+            "C) Hesap birimi olma",
+            "D) Değer standardı olma",
+            "E) Yatırım aracı olma"
+          ],
+          "correct_answer": "A",
+          "explanation": "Alışverişte aracılık etmesi Değişim (Mübadele) aracı olma işlevidir."
+        },
+        {
+          "id": 15,
+          "unit": 8,
+          "question": "Fiyatlar genel düzeyinin düşmesi sonucunda yerli malların yabancı mallara göre ucuzlaması ve net ihracatın artması sebebiyle AD eğrisinin negatif eğimli olmasını açıklayan etki nedir?",
+          "options": [
+            "A) Pigou Etkisi (Servet Etkisi)",
+            "B) Keynes Etkisi (Faiz Etkisi)",
+            "C) Mundell-Fleming Etkisi (Uluslararası Ticaret Etkisi)",
+            "D) Gelir Etkisi",
+            "E) İkame Etkisi"
+          ],
+          "correct_answer": "C",
+          "explanation": "Net ihracat kanalı Mundell-Fleming (Uluslararası Ticaret) etkisidir."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "Kısa Dönem Toplam Arz (SRAS) eğrisini SOLA kaydırarak stagflasyona yol açan faktör hangisidir?",
+          "options": [
+            "A) Petrol ve enerji fiyatlarında ani ve büyük bir artış (Maliyet şoku)",
+            "B) Teknolojik ilerleme",
+            "C) Ücretlerin düşmesi",
+            "D) Para arzının artması",
+            "E) Kamu harcamalarının artması"
+          ],
+          "correct_answer": "A",
+          "explanation": "Negatif arz şokları (enerji fiyatlarının sıçraması) SRAS'ı sola kaydırır ve stagflasyona yol açar."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Enflasyonist baskıların yaşandığı bir ekonomide Merkez Bankasının uygulayacağı daraltıcı para politikası adımı hangisidir?",
+          "options": [
+            "A) Politika faizini artırmak ve açık piyasada bono satmak",
+            "B) Faizleri indirmek",
+            "C) Piyasadan bono satın almak",
+            "D) Zorunlu karşılıkları düşürmek",
+            "E) Para basmak"
+          ],
+          "correct_answer": "A",
+          "explanation": "Daraltıcı para politikası faizleri yükseltmek ve bono satarak likidite çekmektir."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Klasik iktisatçılara göre toplam arz eğrisi nasıldır?",
+          "options": [
+            "A) Yataydır",
+            "B) Daima tam istihdam düzeyinde dikeydir",
+            "C) Pozitif eğimlidir",
+            "D) Negatif eğimlidir",
+            "E) U şeklindedir"
+          ],
+          "correct_answer": "B",
+          "explanation": "Klasiklere göre ekonomi kendiliğinden tam istihdama gelir ve arz eğrisi dikeydir."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Hükümetin vergi oranlarını artırması ve kamu yatırımlarını kısması hangi politika türüdür?",
+          "options": [
+            "A) Genişletici Maliye Politikası",
+            "B) Daraltıcı Maliye Politikası",
+            "C) Genişletici Para Politikası",
+            "D) Daraltıcı Para Politikası",
+            "E) Gelirler Politikası"
+          ],
+          "correct_answer": "B",
+          "explanation": "Harcamaları kısıp vergileri artırmak Daraltıcı Maliye Politikasıdır."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "Bir ülkede potansiyel GSYH düzeyinin üzerinde üretim yapıldığında ortaya çıkan açık türü nedir?",
+          "options": [
+            "A) Enflasyonist Açık",
+            "B) Deflasyonist Açık",
+            "C) Bütçe Açığı",
+            "D) Cari Açık",
+            "E) Tasarruf Açığı"
+          ],
+          "correct_answer": "A",
+          "explanation": "Fiili üretimin potansiyeli aşması Enflasyonist Açık oluşturur."
+        }
+      ]
+    }
+  ]
+}

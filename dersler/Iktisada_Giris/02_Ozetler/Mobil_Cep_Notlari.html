@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İKTİSADA GİRİŞ - AÖF Mobil Cep Notları</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 70px; }
+        header { background: linear-gradient(135deg, #1e1b4b, #0f172a); padding: 20px 16px; border-bottom: 1px solid var(--card-border); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); }
+        .badge { background: #4338ca; color: #e0e7ff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 9999px; text-transform: uppercase; }
+        h1 { font-size: 20px; font-weight: 800; margin-top: 6px; color: #fff; }
+        .search-box { margin-top: 12px; width: 100%; }
+        .search-input { width: 100%; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--card-border); background: #1e293b; color: #fff; font-size: 14px; outline: none; }
+        .search-input:focus { border-color: var(--primary); }
+        .tabs { display: flex; overflow-x: auto; background: #1e293b; padding: 6px 12px; gap: 8px; border-bottom: 1px solid var(--card-border); }
+        .tab-btn { background: transparent; border: none; color: var(--text-muted); padding: 8px 14px; font-size: 13px; font-weight: 600; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+        .tab-btn.active { background: var(--primary); color: #0f172a; font-weight: 700; }
+        .container { padding: 16px; max-width: 800px; margin: 0 auto; }
+        .section-pane { display: none; }
+        .section-pane.active { display: block; }
+        .unit-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        .unit-title { font-size: 16px; font-weight: 700; color: var(--primary); display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px; }
+        .bullet-item { margin-bottom: 8px; font-size: 13.5px; display: flex; align-items: flex-start; gap: 8px; }
+        .bullet-dot { color: var(--accent); font-size: 16px; line-height: 1; }
+        .trap-card { background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+        .trap-header { color: #f87171; font-weight: 700; font-size: 14px; margin-bottom: 6px; }
+        .trap-mistake { color: #fca5a5; font-size: 13px; margin-bottom: 4px; }
+        .trap-truth { color: #86efac; font-size: 13px; font-weight: 600; }
+        .dict-item { background: var(--card-bg); border-left: 3px solid var(--primary); padding: 10px 14px; margin-bottom: 10px; border-radius: 0 8px 8px 0; }
+        .dict-term { font-weight: 700; color: #fff; font-size: 14px; }
+        .dict-desc { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+        footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #0f172a; border-top: 1px solid var(--card-border); padding: 10px; text-align: center; font-size: 11px; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">İKT101U - AÖF YBS 1. SINIF</span>
+        <h1>İKTİSADA GİRİŞ</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" class="search-input" placeholder="🔍 Konu, kavram veya tuzak ara..." oninput="handleSearch()">
+        </div>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('vize')">📘 Vize (1-4)</button>
+        <button class="tab-btn" onclick="switchTab('final')">📗 Final (5-8)</button>
+        <button class="tab-btn" onclick="switchTab('tuzaklar')">⚠️ Sınav Tuzakları</button>
+        <button class="tab-btn" onclick="switchTab('sozluk')">📚 Sözlük & Formül</button>
+    </div>
+
+    <div class="container">
+        <!-- Vize Tab -->
+        <div id="vizePane" class="section-pane active">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 1: Temel Kavramlar ve Tüketici Davranışı</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İktisadın Tanımı ve Temel Sorun: İnsanların sınırsız ihtiyaçları karşısında kıt kaynakların en etkin biçimde tahsis edilmesini inceleyen sosyal bilimdir. Temel sorun 'KITLIK'tır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Fırsat Maliyeti (Alternatif Maliyet): Bir kararı uygularken vazgeçilen en iyi ikinci alternatifin değeridir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İktisadın 3 Temel Sorusu: 1. Ne üretilecek? 2. Nasıl üretilecek? 3. Kimin için üretilecek?</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Üretim İmkânları Eğrisi (PPF): Mevcut teknoloji ve kaynaklarla üretilebilecek maksimum mal bileşimlerini gösterir. Artan fırsat maliyeti sebebiyle orijine göre İÇBÜKEYDİR. Eğri üzerindeki noktalar etkin, içindeki noktalar eksik istihdam/etkinsiz, dışındaki noktalar ise mevcut kaynaklarla ulaşılamaz.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Pozitif İktisat ('Ne?', 'Nasıl?'): Değer yargısı içermeyen, objektif ve test edilebilir durumları inceler (Örn: 'KDV artarsa fiyatlar yükselir').</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Normatif İktisat ('Ne olmalı?'): Kişisel değer yargıları ve ahlaki öneriler içerir (Örn: 'Devlet asgari ücreti 40.000 TL yapmalıdır').</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Toplam Fayda (TU) ve Marjinal Fayda (MU): Tüketim arttıkça ek birimden elde edilen fayda azalır (Azalan Marjinal Fayda Yasası / 1. Gossen Yasası). Toplam Fayda (TU) MAKSİMUM olduğunda Marjinal Fayda (MU) SIFIRDIR (MU = 0).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tüketici Dengesi (Eşmarjinal İlkesi / 2. Gossen Yasası): Harcanan son liranın marjinal faydaları eşitlendiğinde sağlanır: MUx / Px = MUy / Py.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Farksızlık (Kayıtsızlık) Eğrileri: Tüketiciye eşit tatmin düzeyi sağlayan sepetlerin geometrik yeridir. Özellikleri: Negatif eğimlidir, birbirlerini asla kesmezler, orijinden uzaklaştıkça daha yüksek fayda sağlarlar, azalan marjinal ikame oranı nedeniyle orijine göre DIŞBÜKEYDİRLER. Eğimi Marjinal İkame Oranıdır: MRS = MUx / MUy.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Bütçe Doğrusu ve Denge: Gelir I = Px * X + Py * Y. Bütçe doğrusunun eğimi -Px / Py'dir. Tüketici dengesi bütçe doğrusunun farksızlık eğrisine TEĞET olduğu noktada gerçekleşir (MRS = Px / Py).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 2: Arz, Talep ve Esneklik</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Talep Kanunu: Ceteris paribus (diğer koşullar sabitken), bir malın fiyatı arttıkça talep edilen miktar azalır (ters yönlü ilişki). Talep eğrisi negatif eğimlidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Talep Miktarının Değişmesi vs Talebin Değişmesi (Eğrinin Kayması): Malın kendi fiyatındaki değişim eğri ÜZERİNDE HAREKET yaratır. Gelir, tüketici zevkleri, ikame/tamamlayıcı mal fiyatları ve beklentilerdeki değişim ise talep eğrisini tamamen SAĞA veya SOLA kaydırır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Normal Mal (Gelir artınca talep artar), Düşük Mal (Gelir artınca talep azalır). İkame Mal (Birinin fiyatı artınca diğerinin talebi artar: Çay-Kahve), Tamamlayıcı Mal (Birinin fiyatı artınca diğerinin talebi azalır: Otomobil-Benzin).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Arz Kanunu: Fiyat arttıkça arz edilen miktar artar (doğru yönlü ilişki). Arz eğrisi pozitif eğimlidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Piyasa Fiyat Kontrolleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Taban Fiyat: Üreticiyi korumak amacıyla denge fiyatının ÜZERİNDE belirlenen asgari fiyattır (Örn: Asgari ücret, tarımsal destekleme). Piyasada ARZ FAZLASI (Artık) oluşturur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Tavan Fiyat: Tüketiciyi korumak amacıyla denge fiyatının ALTINDA belirlenen azami fiyattır (Örn: Kira sınırlaması). Piyasada TALEP FAZLASI (Kıtlık) ve karaborsa oluşturur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Talebin Fiyat Esnekliği (|ed| = %ΔQ / %ΔP):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - |ed| > 1 ise Talep Esnektir: Fiyat indirimi Toplam Hasılatı (TR) artırır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - |ed| < 1 ise Talep İnelastiktir (Katıdır): Fiyat artışı Toplam Hasılatı (TR) artırır (Tuz, ekmek vb.).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - |ed| = 1 ise Birim Esnektir: Fiyat değişimi TR'yi değiştirmez.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - ed = 0 ise Tam İnelastiktir (Dikey doğru - insülin ilacı).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - ed = ∞ ise Tam Esnektir (Yatay doğru).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Çapraz Fiyat Esnekliği (exy): exy > 0 ise İKAME mallar, exy < 0 ise TAMAMLAYICI mallar, exy = 0 ise BAĞIMSIZ mallardır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Gelir Esnekliği (eI): eI > 0 ise NORMAL mal (eI > 1 ise LÜKS mal, 0 < eI < 1 ise ZORUNLU mal); eI < 0 ise DÜŞÜK maldır.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 3: Üretim, Maliyetler ve Firma Davranışı</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Dönem Ayrımı: Kısa dönemde en az bir üretim faktörü sabittir (genellikle sermaye K sabittir, emek L değişkendir). Uzun dönemde tüm girdiler değişkendir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Ürün Kavramları ve Azalan Verimler Yasası: Sabit girdilere ilave değişken girdi eklendikçe bir noktadan sonra Marjinal Ürün (MP) azalmaya başlar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Marjinal Ürün MP = 0 olduğunda Toplam Ürün (TP) MAKSİMUMDUR.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Marjinal Ürün Ortalama Ürüne eşit olduğunda (MP = AP), Ortalama Ürün (AP) MAKSİMUMDUR.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kısa Dönem Maliyetleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Toplam Maliyet: TC = TFC (Sabit Maliyet) + TVC (Değişken Maliyet).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ortalama Sabit Maliyet: AFC = TFC / Q. Üretim miktarı arttıkça AFC sürekli azalır ve yatay eksene yaklaşır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ortalama Toplam Maliyet: ATC = TC / Q = AFC + AVC.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Marjinal Maliyet (MC = ΔTC / ΔQ): Son üretilen birimin maliyetidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>ALTIN MALİYET KURALI: Marjinal Maliyet (MC) eğrisi hem AVC hem de ATC eğrilerini en dip (MİNİMUM) noktalarında alttan keser!</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Uzun Dönem Maliyetleri (LRAC):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ölçeğe Göre Artan Getiri (Pozitif Ölçek Ekonomileri): Üretim ölçeği arttıkça uzun dönem ortalama maliyet (LRAC) düşer.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ölçeğe Göre Sabit Getiri: LRAC eğrisi yataydır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Ölçeğe Göre Azalan Getiri (Negatif Ölçek Ekonomileri): Aşırı büyüme ve yönetimsel hantallık nedeniyle LRAC yükselir.</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 4: Piyasalar</span>
+                    <span class="badge" style="background:#0284c7;">Vize</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tam Rekabet Piyasasının 4 Koşulu: 1. Atomisite (Çok sayıda alıcı ve satıcı), 2. Homojenlik (Malların birbirinin tıpatıp aynısı olması), 3. Tam Bilgi (Şeffaflık), 4. Piyasaya Giriş-Çıkış Serbestisi.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tam Rekabette Firma Davranışı: Firma 'Fiyat Kabullenicidir' (Price Taker). Firmanın karşılaştığı talep eğrisi sonsuz esnektir (yatay doğrudur): P = AR = MR.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tam Rekabette Kısa Dönem Kâr Maksimizasyonu: P = MC (veya MR = MC).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kapanma Koşulu: Eğer fiyat Ortalama Değişken Maliyetin altına düşerse (P < AVC_min), firma derhal üretimi durdurmalı ve kapanmalıdır! Firmanın kısa dönem arz eğrisi, MC'nin AVC üzerinde kalan parçasıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tam Rekabette Uzun Dönem: Serbest giriş ve çıkışlar sonucunda aşırı kâr sıfırlanır, sadece normal kâr elde edilir: P = MR = MC = ATC_min.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Monopol (Tekel): Tek bir satıcı, ikamesi olmayan mal ve yüksek giriş engelleri. Firma 'Fiyat Belirleyicidir'. MR eğrisi talep eğrisinin altındadır (P > MR). Kâr maksimizasyonu MR = MC koşuluyla sağlanır, fiyat talep eğrisinden okunur. Monopol piyasası toplumda refah kaybına (Ölü Dara Kaybı) yol açar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Monopolcü Rekabet: Çok sayıda firma, serbest giriş-çıkış, ancak FARKLILAŞTIRILMIŞ ürünler (marka, reklam, ambalaj). Uzun dönemde aşırı kâr sıfırdır (P = ATC) ancak atıl kapasite oluşur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Oligopol: Birbirini etkileyen az sayıda büyük satıcı (karşılıklı bağımlılık). Paul Sweezy'nin 'Dirsekli Talep Modeli' fiyat katılığını açıklar. Oyun Teorisi ve Mahkûmlar İkilemi (Nash Dengesi) bu piyasada incelenir.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Tab -->
+        <div id="finalPane" class="section-pane">
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 5: Makroekonominin Kapsamı ve Temel Makroekonomik Değişkenler</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Makroekonominin Doğuşu: 1929 Büyük Dünya Buhranı sonrasında John Maynard Keynes'in 1936 tarihli 'İstihdam, Faiz ve Paranın Genel Teorisi' kitabıyla doğmuştur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Klasik İktisat (Adam Smith, Say Yasası): 'Her arz kendi talebini yaratır'. Fiyatlar ve ücretler tamamen esnektir, ekonomi kendiliğinden daima tam istihdama gelir, devlet müdahalesine gerek yoktur.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Keynesyen İktisat: Fiyat ve ücretler aşağı doğru yapışkandır (esnek değildir). Krizin nedeni efektif talep yetersizliğidir; ekonomi eksik istihdamda dengede kalabilir ve devletin harcama yaparak müdahale etmesi şarttır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Gayri Safi Yurtiçi Hasıla (GSYH): Bir ülkede belirli bir dönemde üretilen nihai mal ve hizmetlerin piyasa değeridir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Harcama Yoluyla GSYH: GSYH = C + I + G + (X - M) (Tüketim + Yatırım + Kamu Harcamaları + Net İhracat).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Nominal GSYH: Cari (o yılın) fiyatlarıyla hesaplanan değer.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Reel GSYH: Enflasyon arındırılarak sabit baz yıl fiyatlarıyla hesaplanan değer.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - GSYH Deflatörü = (Nominal GSYH / Reel GSYH) * 100.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşsizlik Oranı Formülü: İşsizlik Oranı = (İşsiz Sayısı / İşgücü) * 100. (İşgücü = Çalışanlar + İşsizler).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>İşsizlik Türleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Friksiyonel (Geçici/Arızi): İş değiştirenlerin veya yeni mezunların iş arama sürecindeki geçici işsizlik.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Yapısal: Teknolojik değişim veya sektör kapanması nedeniyle işgücü niteliği ile talep edilen nitelik arasındaki uyumsuzluk.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Konjonktürel (Dönemsel/Keynesyen): Ekonomik durgunluk ve kriz dönemlerinde toplam talep daralması sonucu ortaya çıkan işsizlik.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Doğal İşsizlik: Friksiyonel İşsizlik + Yapısal İşsizlik (Konjonktürel işsizlik sıfır olduğunda ulaşılan tam istihdam oranı).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 6: Millî Gelir Düzeyinin Belirlenmesi</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Basit Dışa Kapalı Devletsiz Keynesyen Model: Toplam Harcama AE = C + I. Denge Şartı: Y = AE.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Tüketim Fonksiyonu: C = C0 + c * Y. (C0 = Otonom tüketim - gelir sıfırken yapılan harcama, c = MPC).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Marjinal Tüketim Eğilimi (MPC = ΔC / ΔY): Gelirdeki 1 birimlik artışın ne kadarının tüketime gideceğini gösterir (0 < MPC < 1).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Marjinal Tasarruf Eğilimi (MPS = ΔS / ΔY): Gelirdeki 1 birimlik artışın ne kadarının tasarruf edileceğini gösterir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>ALTIN KURAL: MPC + MPS = 1'dir. Dolayısıyla MPS = 1 - MPC.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Basit Çarpan (Çoğaltan / Multiplier) Formülü: Yatırımlardaki 1 liralık otonom artışın millî geliri katbekat artırmasını ifade eder: k = 1 / (1 - MPC) = 1 / MPS.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Örnek: MPC = 0.80 ise MPS = 0.20 => k = 1 / 0.20 = 5. Yatırımlar 10 milyar artarsa millî gelir 10 * 5 = 50 milyar TL artar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Devletin Olduğu Modelde Çarpanlar:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Kamu Harcamaları Çarpanı: kg = 1 / (1 - MPC).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Vergi Çarpanı: kt = -MPC / (1 - MPC).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Denk Bütçe Çarpanı (Haavelmo Teoremi): Kamu harcamaları ve vergiler eşit miktarda artırılırsa çarpan 1'e eşittir (k = 1).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Açık Türleri:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Deflasyonist Açık (Durgunluk Açığı): Denge gelirinin potansiyel (tam istihdam) gelirinin altında kalması durumudur (İşsizlik vardır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Enflasyonist Açık: Toplam harcamaların tam istihdam üretim kapasitesini aşması durumudur (Fiyat artışı ve enflasyon yaratır).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 7: Para ve Bankacılık</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Paranın 4 Temel İşlevi: 1. Değişim (Mübadele) Aracı, 2. Hesap Birimi (Değer Ölçüsü), 3. Değer Saklama (Tasarruf) Aracı, 4. Ertelenmiş Ödemeler Aracı.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Para Arzı Büyüklükleri (Likiditeden Düşüğe Doğru):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - M1 (Dar Para Arzı - En Likit): Dolaşımdaki Nakit Para (Kasa + Cüzdan) + Vadesiz Ticari ve Tasarruf Mevduatları.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - M2: M1 + Vadeli Mevduatlar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - M3 (Geniş Para Arzı): M2 + Repo + Para Piyasası Fonları + İhraç Edilen Menkul Kıymetler.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Kaydi (Banka) Para Yaratılması ve Kredi Çarpanı: Ticari bankalar topladıkları mevduatın bir kısmını Merkez Bankası'na zorunlu karşılık (r) olarak yatırır, kalanını kredi vererek kaydi para üretir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Basit Mevduat/Kredi Çarpanı = 1 / r. (Örn: Zorunlu karşılık oranı r = %10 ise çarpan = 1 / 0.10 = 10'dur. Bankaya yatırılan 1000 TL toplamda 10.000 TL kaydi para yaratır).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Merkez Bankasının 3 Temel Para Politikası Aracı:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Açık Piyasa İşlemleri (APİ): Merkez Bankasının tahvil/bono alıp satmasıdır. Piyasaya para sürmek için bono SATIN ALIR (genişletici); piyasadan likidite çekmek için bono SATAR (daraltıcı).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Reeskont Oranı: Ticari bankaların Merkez Bankasından aldıkları avans ve kredilerin faiz oranıdır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Zorunlu Karşılık Oranı (Munzam Karşılık): Bankaların mevduat karşılığı Merkez Bankasında bloke tuttuğu zorunlu paydır.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Keynesyen Para Talebi Güdüleri: 1. İşlem Güdüsü (Gelirle doğru orantılı), 2. İhtiyat Güdüsü (Gelirle doğru orantılı), 3. Spekülasyon Güdüsü (FAİZ ORANIYLA TERS ORANTILI).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Likidite Tuzağı: Faiz oranlarının inebileceği en dip seviyeye indiği, para talebinin sonsuz esnek olduğu ve para arzı artırılsa dahi faizlerin daha fazla düşürülemediği durumdur (Para politikası etkisizleşir).</span>
+                </div>
+            </div>
+
+            <div class="unit-card searchable-card">
+                <div class="unit-title">
+                    <span>Ünite 8: Toplam Talep-Toplam Arz Analizi ve Politika Uygulamaları</span>
+                    <span class="badge" style="background:#059669;">Final</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Toplam Talep (AD - Aggregate Demand): Ekonomideki tüm sektörlerin belirli bir fiyat düzeyinde talep ettiği nihai mal ve hizmet miktarıdır. AD eğrisi NEGATİF eğimlidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>AD Eğrisinin Negatif Eğimli Olmasının 3 Nedeni:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  1. Servet (Pigou) Etkisi: Fiyatlar düştükçe paranın satın alma gücü artar, tüketim harcamaları artar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  2. Faiz Oranı (Keynes) Etkisi: Fiyatlar düştükçe para talebi azalır, faizler düşer, yatırımlar artar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  3. Uluslararası Ticaret (Mundell-Fleming) Etkisi: Yerli fiyatlar düşünce mallar ucuzlar, ihracat artar, ithalat azalır (Net ihracat artar).</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Toplam Arz (AS - Aggregate Supply):</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Kısa Dönem Toplam Arz (SRAS): Ücret ve hammadde fiyatlarının yapışkanlığı sebebiyle POZİTİF eğimlidir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Uzun Dönem Toplam Arz (LRAS): Fiyatlar ve ücretler tamamen esnektir. Ekonomi daima Potansiyel (Tam İstihdam) GSYH düzeyindedir; bu yüzden LRAS DİKEY bir doğrudur!</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Stagflasyon: Ekonomide aynı anda DURGUNLUK (İşsizlik artışı) ve YÜKSEK ENFLASYONUN birlikte yaşanmasıdır. Negatif bir arz şoku (Örn: Petrol fiyatlarının aniden sıçraması) SRAS eğrisini SOLA kaydırdığında tetiklenir.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>Politika Uygulamaları:</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Genişletici Politikalar (Durgunlukta uygulanır): Kamu harcamalarını artırmak, vergileri düşürmek, para arzını artırmak, faizleri indirmek -> AD eğrisi SAĞA kayar.</span>
+                </div>
+
+                <div class="bullet-item">
+                    <span class="bullet-dot">⚡</span>
+                    <span>  - Daraltıcı Politikalar (Enflasyonla mücadelede uygulanır): Kamu harcamalarını kısmak, vergileri artırmak, para arzını kısmak, faizleri artırmak -> AD eğrisi SOLA kayar.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuzaklar Tab -->
+        <div id="tuzaklarPane" class="section-pane">
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #1: Talep Eğrisi Üzerinde Hareket ile Eğrinin Kayması Ayrımı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Malın kendi fiyatı düştüğünde talep eğrisinin sağa kaydığını söylemek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Malın kendi fiyatındaki değişimler ASLA eğriyi kaydırmaz; yalnızca var olan eğri ÜZERİNDE aşağı veya yukarı HAREKET ettirir (Talep edilen miktarın değişmesidir). Eğriyi tamamen kaydıranlar ise gelir, zevkler veya diğer malların fiyatlarıdır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #2: Taban Fiyat ile Tavan Fiyatın Yeri ve Sonuçları</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Tavan fiyatın denge fiyatının üstünde, taban fiyatın altında belirlendiğini sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Taban fiyat denge fiyatının ÜZERİNDE belirlenir (üreticiyi/işçiyi korumak için asgari taban) ve ARZ FAZLASI yaratır. Tavan fiyat ise denge fiyatının ALTINDA belirlenir (tüketiciyi korumak için azami sınır) ve TALEP FAZLASI (Kıtlık) yaratır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #3: Pozitif İktisat ile Normatif İktisat Karışıklığı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> 'Enflasyon %20'ye düşürülmelidir' cümlesini pozitif iktisat sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> İçinde 'olmalı', 'yapılmalı', 'uygundur' gibi temenni ve değer yargısı bulunan her ifade NORMATİF İKTİSAT'tır. 'Fiyatlar artarsa talep düşer' gibi nesnel sebep-sonuç ilişkileri ise POZİTİF İKTİSAT'tır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #4: Talebin Fiyat Esnekliği ile Toplam Hasılat (TR) İlişkisi</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Fiyatı indirilen her ürünün hasılatı artıracağını zannetmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Fiyat indirimi Toplam Hasılatı (TR) sadece talep ESNEKSE (|ed| > 1) artırır. Eğer talep inelastikse (|ed| < 1, tuz gibi), fiyat indirimi hasılatı DÜŞÜRÜR; aksine fiyat artışı hasılatı artırır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #5: Marjinal Maliyet (MC) ile Ortalama Maliyet (ATC/AVC) Kesişim Noktası</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> MC eğrisinin ATC'yi maksimum noktasında kestiğini düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Marjinal Maliyet (MC) eğrisi, hem Ortalama Değişken Maliyet (AVC) hem de Ortalama Toplam Maliyet (ATC) eğrilerini daima en dipteki MİNİMUM noktalarında keser!</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #6: Tam Rekabet ile Monopolde Fiyat ve Marjinal Hasılat (P ve MR)</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Her iki piyasada da P = MR olduğunu düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Tam Rekabette fiyat sabittir ve P = MR'dir. Ancak Monopolde (Tekel) firma fiyat belirleyicidir ve talep eğrisi aşağı eğimlidir; dolayısıyla MONOPOLDE DAİMA FİYAT MARJİNAL HASILATTAN BÜYÜKTÜR (P > MR).</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #7: MPC ile MPS Toplamı Kuralı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> MPC = 0.70 olduğunda çarpanın 1/0.70 olduğunu sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> MPC (Tüketim eğilimi) + MPS (Tasarruf eğilimi) = 1'dir. Basit çarpan k = 1 / (1 - MPC) = 1 / MPS'dir. MPC = 0.70 ise MPS = 0.30'dur ve k = 1 / 0.30'dur.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #8: M1 Para Arzına Vadeli Mevduatların Dahil Edilmesi Yanılgısı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> M1'in vadeli mevduatları da kapsadığını düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> M1 dar para arzıdır; sadece en likit olan dolaşımdaki nakit parayı ve VADESİZ mevduatları içerir. VADELİ mevduatlar M2'nin kapsamındadır.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #9: Uzun Dönem Toplam Arz Eğrisinin (LRAS) Şekli</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> LRAS eğrisinin de kısa dönem gibi pozitif eğimli olduğunu düşünmek.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Uzun dönemde tüm fiyatlar ve ücretler esnektir, ekonomi tam istihdama ulaşmıştır. Bu yüzden LRAS potansiyel GSYH düzeyinde DİK (DİKEY) BİR DOĞRUDUR.</div>
+            </div>
+
+            <div class="trap-card searchable-card">
+                <div class="trap-header">⚠️ TUZAK #10: Stagflasyonun Sebebi ve Tanımı</div>
+                <div class="trap-mistake">❌ <b>Öğrenci Yanılgısı:</b> Stagflasyonun talep fazlalığından kaynaklandığını sanmak.</div>
+                <div class="trap-truth">✅ <b>Sınav Gerçeği & Doğru Mantık:</b> Stagflasyon yüksek enflasyon ile işsizliğin (durgunluğun) aynı anda yaşanmasıdır ve TALEP DEĞİL, NEGATİF ARZ ŞOKU (maliyet artışı / petrol krizi) sonucu SRAS'ın sola kaymasıyla meydana gelir.</div>
+            </div>
+        </div>
+
+        <!-- Sozluk Tab -->
+        <div id="sozlukPane" class="section-pane">
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Tüketici Dengesi Şartı</div>
+                <div class="dict-desc">MUx / Px = MUy / Py (Harcanan son liranın marjinal faydalarının eşitliği).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Talebin Fiyat Esnekliği Formülü</div>
+                <div class="dict-desc">ed = (%ΔQ) / (%ΔP) = [(Q2 - Q1) / Q1] / [(P2 - P1) / P1].</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Çapraz Fiyat Esnekliği</div>
+                <div class="dict-desc">exy = (%ΔQx) / (%ΔPy). Pozitif ise ikame, negatif ise tamamlayıcı mal.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Talebin Gelir Esnekliği</div>
+                <div class="dict-desc">eI = (%ΔQ) / (%ΔI). Pozitif ise normal mal, negatif ise düşük mal.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Toplam Maliyet Eşitliği</div>
+                <div class="dict-desc">TC = TFC + TVC ve ATC = AFC + AVC.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Marjinal Maliyet (MC)</div>
+                <div class="dict-desc">MC = ΔTC / ΔQ (Toplam maliyetin üretim miktarına göre türevi).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Harcama Yoluyla GSYH</div>
+                <div class="dict-desc">GSYH = C + I + G + (X - M) (Tüketim + Yatırım + Kamu + Net İhracat).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">GSYH Deflatörü</div>
+                <div class="dict-desc">Deflatör = (Nominal GSYH / Reel GSYH) * 100.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">İşsizlik Oranı Formülü</div>
+                <div class="dict-desc">İşsizlik Oranı = (İşsiz Sayısı / İşgücü) * 100.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Doğal İşsizlik Oranı</div>
+                <div class="dict-desc">Doğal İşsizlik = Friksiyonel İşsizlik + Yapısal İşsizlik.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Keynesyen MPC ve MPS Eşitliği</div>
+                <div class="dict-desc">MPC + MPS = 1. (MPC: Marjinal Tüketim Eğilimi, MPS: Marjinal Tasarruf Eğilimi).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Basit Çarpan (Çoğaltan) Formülü</div>
+                <div class="dict-desc">k = 1 / (1 - MPC) = 1 / MPS.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Vergi Çarpanı Formülü</div>
+                <div class="dict-desc">kt = -MPC / (1 - MPC).</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Denk Bütçe Çarpanı</div>
+                <div class="dict-desc">Kamu harcamaları ve vergiler eşit miktarda artırıldığında çarpan k = 1'dir.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">M1 Para Arzı</div>
+                <div class="dict-desc">M1 = Dolaşımdaki Nakit + Vadesiz Mevduatlar.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">M2 Para Arzı</div>
+                <div class="dict-desc">M2 = M1 + Vadeli Mevduatlar.</div>
+            </div>
+
+            <div class="dict-item searchable-card">
+                <div class="dict-term">Basit Kredi Çarpanı</div>
+                <div class="dict-desc">Kredi Çarpanı = 1 / r (r: Zorunlu Karşılık Oranı).</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        🎓 AÖF YBS 1. Sınıf Başarı Ekosistemi • İnternetsiz Doğrudan Çalışır
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
+            
+            if (tabId === 'vize') {
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+                document.getElementById('vizePane').classList.add('active');
+            } else if (tabId === 'final') {
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+                document.getElementById('finalPane').classList.add('active');
+            } else if (tabId === 'tuzaklar') {
+                document.querySelectorAll('.tab-btn')[2].classList.add('active');
+                document.getElementById('tuzaklarPane').classList.add('active');
+            } else if (tabId === 'sozluk') {
+                document.querySelectorAll('.tab-btn')[3].classList.add('active');
+                document.getElementById('sozlukPane').classList.add('active');
+            }
+        }
+
+        function handleSearch() {
+            const q = document.getElementById('searchInput').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.searchable-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (q === '' || text.includes(q)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1684 @@
+{
+  "course_name": "GENEL MUHASEBE",
+  "course_code": "MUH101U",
+  "faculty": "İşletme / İktisat Fakültesi - Yönetim Bilişim Sistemleri (YBS)",
+  "term": "1. Sınıf Güz Dönemi",
+  "description": "Temel muhasebe kavramları, bilanço eşitliği, hesap işleyiş kuralları, dönen ve duran varlıklar, yabancı kaynaklar, öz kaynaklar, gelir tablosu hesapları ve dönem sonu envanter işlemleri.",
+  "units": [
+    {
+      "unit_number": 1,
+      "title": "Muhasebeye Giriş",
+      "is_vize": true,
+      "key_topics": [
+        "Muhasebenin Tanımı ve İşlevleri",
+        "Temel Muhasebe Eşitliği",
+        "Finansal Tablolar (Bilanço ve Gelir Tablosu)",
+        "Temel Muhasebe Kavramları"
+      ],
+      "hap_bilgiler": [
+        "Muhasebenin 4 Temel İşlevi: 1. Kaydetme (Yevmiye Defteri - ilk ve temel işlev), 2. Sınıflandırma (Büyük Defter / Defter-i Kebir), 3. Özetleme (Mizanlar, Bilanço, Gelir Tablosu), 4. Analiz ve Yorumlama (Rasyolar ve karar vericilere raporlama).",
+        "Temel Muhasebe (Bilanço) Eşitliği: Varlıklar (Aktif) = Kaynaklar (Pasif). Detaylı: Varlıklar = Yabancı Kaynaklar (Borçlar) + Öz Kaynaklar (Sermaye).",
+        "Bilanço: Bir işletmenin belirli bir tarihteki (anlık fotoğraf) varlıklarını ve bu varlıkların sağlandığı kaynakları gösteren temel mali tablodur. Sol taraf AKTİF (Dönen ve Duran Varlıklar), sağ taraf PASİF (Kısa Vadeli Yabancı Kaynaklar, Uzun Vadeli Yabancı Kaynaklar, Öz Kaynaklar).",
+        "Gelir Tablosu: Bir işletmenin belirli bir dönemde elde ettiği tüm gelirler ile katlandığı tüm giderleri ve bunların sonucunda oluşan Dönem Net Kârı veya Zararını gösteren dinamik tablodur (Gelirler - Giderler = Kâr veya Zarar).",
+        "12 Temel Muhasebe Kavramı:",
+        "  - Sosyal Sorumluluk: Muhasebenin belli kişi veya grupların değil, tüm toplumun çıkarlarını gözeterek dürüst ve tarafsız yürütülmesidir (En üst kavramdır).",
+        "  - Kişilik Kavramı: İşletmenin, sahiplerinden ve ortaklarından ayrı bağımsız bir hukuki ve iktisadi kişiliğe sahip olmasıdır.",
+        "  - İşletmenin Sürekliliği: İşletmenin faaliyetlerinin herhangi bir zaman sınırına bağlı olmaksızın sonsuza kadar süreceği varsayımıdır (Maliyet esası bu kavrama dayanır).",
+        "  - Dönemsellik Kavramı: İşletmenin sınırsız ömrünün belirli dönemlere (genellikle 1 takvim yılı) bölünmesi, her dönemin gelir ve giderinin o döneme ait olmasıdır (Amortisman, reeskont ve tahakkuk kayıtları bu kavrama dayanır).",
+        "  - Parayla Ölçülme: Muhasebe işlemlerinin ortak bir ulusal para birimiyle kaydedilmesidir.",
+        "  - Maliyet Esası: Para mevcudu ve alacaklar hariç, edinilen varlıkların maliyet bedeliyle defterlere kaydedilmesidir.",
+        "  - Tarafsızlık ve Belgelendirme: Kayıtların objektif belgelere (fatura, makbuz, çek) dayandırılması zorunluluğudur.",
+        "  - Tutarlılık: Muhasebe politikalarının ve değerleme yöntemlerinin dönemden döneme değiştirilmeden uygulanmasıdır (Karşılaştırılabilirliği sağlar).",
+        "  - Tam Açıklama: Mali tabloların karar vericilerin anlayabileceği açıklık ve detayda hazırlanmasıdır.",
+        "  - İhtiyatlılık: Olası riskler, zararlar ve giderler için karşılık ayrılması, ancak gerçekleşmemiş kârların kaydedilmemesidir.",
+        "  - Önemlilik: Bir hesap veya tutarın karar vericilerin kararlarını etkileyecek ağırlıkta olması durumunda mutlaka ayrı gösterilmesidir.",
+        "  - Özün Önceliği: İşlemlerin biçimsel hukuki yapısından ziyade iktisadi ve mali özünün esas alınmasıdır (Örn: Çeklerin vadeli düzenlenmesi durumunda senet gibi değerlenmesi)."
+      ]
+    },
+    {
+      "unit_number": 2,
+      "title": "Bilgi İşleme ve Muhasebe Süreci",
+      "is_vize": true,
+      "key_topics": [
+        "Hesap Kavramı ve İşleyiş Kuralları",
+        "Muhasebe Fişleri",
+        "Yasal Defterler",
+        "Mizanlar",
+        "Muhasebe Döngüsü"
+      ],
+      "hap_bilgiler": [
+        "Hesap İşleyiş Kuralları (ALTIN KURAL):",
+        "  - Aktif Karakterli Hesaplar (Varlıklar ve Giderler): İlk kayıt ve artışlar BORCA yazılır. Azalışlar ALACAĞA yazılır. Borç kalanı verir veya kalan vermez (sıfır olur). Kesinlikle alacak kalanı veremez!",
+        "  - Pasif Karakterli Hesaplar (Kaynaklar ve Gelirler): İlk kayıt ve artışlar ALACAĞA yazılır. Azalışlar BORCA yazılır. Alacak kalanı verir veya sıfır olur. Kesinlikle borç kalanı veremez!",
+        "  - Düzenleyici Hesaplar: Yanında eksi (-) olan hesaplardır. Aktifi Düzenleyici hesaplar bilançonun aktifinde yer alır ancak pasif karakterlidir (artış alacağa). Pasifi Düzenleyici hesaplar pasifte yer alır ancak aktif karakterlidir (artış borca).",
+        "Muhasebe Fişleri: 1. Kasa Tahsil Fişi (Kasaya nakit girişi olduğunda), 2. Kasa Tediye Fişi (Kasadan nakit çıkışı olduğunda), 3. Mahsup Fişi (İçinde kesinlikle kasa hesabı geçmeyen, nakit hareketsiz işlemler için düzenlenir).",
+        "Yasal Defterler: Yevmiye Defteri (İşlemlerin tarih sırasına göre madde madde kaydedildiği günlük defter), Defter-i Kebir (Büyük Defter - yevmiyedeki kayıtların hesaplar bazında sınıflandırıldığı defter), Envanter Defteri (Dönem başı ve dönem sonu sayım sonuçlarının yazıldığı defter).",
+        "Mizan Çeşitleri: 1. Aylık Mizan (Her ay sonunda yevmiye ile büyük defter uyumunu kontrol eder), 2. Genel Geçici Mizan (Aralık ayı sonunda, dönem sonu envanter işlemlerine başlamadan önce çıkarılır), 3. Kesin Mizan (Dönem sonu envanter ve düzeltme kayıtları tamamlandıktan sonra, bilançodan hemen önce çıkarılan nihai kontrol cetvelidir).",
+        "Muhasebe Süreci Sıralaması: Açılış Bilançosu -> Açılış Yevmiye Kaydı -> Dönem İçi İşlemler -> Aylık Mizanlar -> Genel Geçici Mizan -> Envanter İşlemleri (Sayım, değerleme, amortisman) -> Kesin Mizan -> Finansal Tablolar (Bilanço & Gelir Tablosu) -> Kapanış Kayıtları."
+      ]
+    },
+    {
+      "unit_number": 3,
+      "title": "Dönen Varlıklar",
+      "is_vize": true,
+      "key_topics": [
+        "10 Hazır Değerler",
+        "11 Menkul Kıymetler",
+        "12 Ticari Alacaklar",
+        "15 Stoklar ve Stok Değerleme",
+        "19 KDV Hesapları"
+      ],
+      "hap_bilgiler": [
+        "Dönen Varlıklar (1 Grubu): Bir yıl veya normal faaliyet dönemi içinde paraya çevrilmesi veya tüketilmesi öngörülen varlıklardır.",
+        "10 Hazır Değerler:",
+        "  - 100 Kasa: Kasa mevcudu fiili sayımdan çok çıkarsa '397 Sayım ve Tesellüm Fazlaları' alacaklandırılır; eksik çıkarsa '197 Sayım ve Tesellüm Noksanları' borçlandırılır.",
+        "  - 101 Alınan Çekler: Müşteriden alınan çekler portföyde iken bu hesapta izlenir.",
+        "  - 102 Bankalar: Vadeli veya vadesiz banka mevduatları.",
+        "  - 103 Verilen Çekler ve Ödeme Emirleri (-): İşletmenin üçüncü kişilere keşide ettiği çeklerdir. Aktifte yer almasına rağmen pasif karakterli (düzenleyici) bir hesaptır! Verildiğinde ALACAKLANDIRILIR.",
+        "12 Ticari Alacaklar:",
+        "  - 120 Alıcılar: Veresiye (açık hesap) mal veya hizmet satışından doğan senetsiz alacaklar. Mal satıldığında 120 BORÇLU, 600 Yurtiçi Satışlar ALACAKLI kaydedilir.",
+        "  - 121 Alacak Senetleri: Müşteriden alınan bonolar ve poliçeler.",
+        "  - 122 Alacak Senetleri Reeskontu (-): Senetli alacakların dönem sonundaki peşin değerine indirgenmesi (aktifi düzenleyici).",
+        "  - 128 Şüpheli Ticari Alacaklar ve 129 Şüpheli Ticari Alacaklar Karşılığı (-): Vadesinde ödenmeyen ve yasal takibe intikal eden alacaklar.",
+        "15 Stoklar:",
+        "  - 153 Ticari Mallar: Üzerinde hiçbir değişiklik yapılmadan satılmak üzere alınan mallardır.",
+        "  - Sürekli Envanter Yöntemi: Her satış anında satış kaydının hemen altına maliyet kaydı yapılır: 621 Satılan Ticari Mallar Maliyeti BORÇLU, 153 Ticari Mallar ALACAKLI.",
+        "  - Aralıklı Envanter Yöntemi: Satış anında maliyet kaydı yapılmaz. Dönem sonunda fiili sayım yapılır ve formülle hesaplanır: STMM = Dönem Başı Mal Mevcudu + Dönem İçi Net Alışlar - Dönem Sonu Mal Mevcudu.",
+        "  - Stok Değerleme Yöntemleri: FIFO (İlk Giren İlk Çıkar - enflasyonist ortamda dönem sonu stokları yüksek, STMM düşük, kâr yüksek çıkar), Ağırlıklı Ortalama Maliyet.",
+        "KDV Hesapları:",
+        "  - 191 İndirilecek KDV: Mal ve hizmet satın alırken ödenen KDV (Aktif hesap, Borçlu çalışır).",
+        "  - 391 Hesaplanan KDV: Mal ve hizmet satarken müşteriden tahsil edilen KDV (Pasif hesap, Alacaklı çalışır).",
+        "  - Ay Sonu KDV Mahsubu: 391 > 191 ise aradaki fark '360 Ödenecek Vergi ve Fonlar' hesabına alacak yazılır. 191 > 391 ise fark '190 Devreden KDV' hesabına borç yazılır."
+      ]
+    },
+    {
+      "unit_number": 4,
+      "title": "Duran Varlıklar",
+      "is_vize": true,
+      "key_topics": [
+        "25 Maddi Duran Varlıklar",
+        "Amortisman Hesaplama Yöntemleri",
+        "Kıst Amortisman Kuralı",
+        "26 Maddi Olmayan Duran Varlıklar"
+      ],
+      "hap_bilgiler": [
+        "Duran Varlıklar (2 Grubu): Bir yıldan daha uzun süre işletme faaliyetlerinde kullanılmak üzere edinilen varlıklardır.",
+        "25 Maddi Duran Varlıklar: 250 Arazi ve Arsalar, 251 Yeraltı ve Yerüstü Düzenleri, 252 Binalar, 253 Tesis Makine ve Cihazlar, 254 Taşıtlar, 255 Demirbaşlar, 257 Birikmiş Amortismanlar (-).",
+        "KRİTİK KURAL: 250 Arazi ve Arsalar hesabına aşınma veya yıpranma payı olmadığı için KESİNLİKLE AMORTİSMAN AYRILMAZ!",
+        "Amortisman Yöntemleri:",
+        "  1. Normal (Eşit Paylı) Amortisman: Her yıl eşit tutarda amortisman ayrılır.",
+        "     Amortisman Oranı = 1 / Faydalı Ömür (n). Yıllık Tutar = Maliyet Bedeli * Amortisman Oranı.",
+        "     Örnek: 100.000 TL demirbaş, ömrü 5 yıl -> Oran = 1/5 = %20 -> Yıllık amortisman = 20.000 TL.",
+        "  2. Azalan Bakiyeler (Hızlandırılmış) Amortisman Yöntemi:",
+        "     Oran = Normal Amortisman Oranı * 2 (Ancak oran hiçbir şekilde %50'yi geçemez!).",
+        "     Amortisman tutarı her yıl Duran Varlığın Net Defter Değerinden (Maliyet Bedeli - Birikmiş Amortisman) hesaplanır.",
+        "     Son yıl kalan net defter değerinin tamamı amortisman olarak ayrılır ve sıfırlanır.",
+        "  3. Kıst Amortisman Kuralı: Vergi Usul Kanunu'na göre YALNIZCA işletmelerde kullanılan BİNEK OTOMOBİLLER için uygulanır. Alındığı aydan itibaren yıl sonuna kadar kalan ay sayısı kadar ayrılır. İlk yıl ayrılmayan eksik kısım son yıla ilave edilir.",
+        "Amortisman Kaydı: 770 Genel Yönetim Giderleri BORÇLU, 257 Birikmiş Amortismanlar ALACAKLI.",
+        "26 Maddi Olmayan Duran Varlıklar: Fiziksel varlığı olmayan haklar ve imtiyazlardır (260 Haklar - patent, telif, lisans; 261 Şerefiye - işletme devralırken ödenen hava parası; 268 Birikmiş Amortismanlar [-])."
+      ]
+    },
+    {
+      "unit_number": 5,
+      "title": "Yabancı Kaynaklar",
+      "is_vize": false,
+      "key_topics": [
+        "3 Kısa Vadeli Yabancı Kaynaklar",
+        "4 Uzun Vadeli Yabancı Kaynaklar",
+        "Ticari Borçlar ve Senetler",
+        "Gelecek Aylara Ait Gelirler"
+      ],
+      "hap_bilgiler": [
+        "Yabancı Kaynaklar: İşletmenin üçüncü kişilere (bankalar, satıcılar, devlet vb.) olan borçlarıdır.",
+        "Kısa Vadeli Yabancı Kaynaklar (3 Grubu): Vadesi 1 yıla kadar olan borçlar.",
+        "Uzun Vadeli Yabancı Kaynaklar (4 Grubu): Vadesi 1 yıldan uzun olan borçlar. Vadesi 1 yılın altına inen uzun vadeli borçlar dönem sonunda 3 grubundaki ilgili hesaplara aktarılır (Örn: 400 Banka Kredileri -> 303 Uzun Vadeli Kredilerin Anapara Taksitleri ve Faizleri).",
+        "32 Ticari Borçlar:",
+        "  - 320 Satıcılar: Veresiye (açık hesap) mal ve hizmet alımından doğan senetsiz borçlar. Mal alındığında 153 Ticari Mallar ve 191 İndirilecek KDV BORÇLU, 320 Satıcılar ALACAKLI olur.",
+        "  - 321 Borç Senetleri: Mal alımı veya borç karşılığı işletmenin keşide ettiği ya da ciroladığı bonolar.",
+        "  - 322 Borç Senetleri Reeskontu (-): Pasifte yer almasına karşın AKTİF karakterli düzenleyici hesaptır! Dönem sonunda borç senetlerinin peşin değerine indirilmesini sağlar.",
+        "380 Gelecek Aylara Ait Gelirler: Peşin tahsil edilen ancak gelecek aylara ait olan gelirlerdir (Örn: 1 yıllık kira gelirinin peşin tahsil edilmesi). Dönemsellik ilkesi gereği peşin alınan tutar hemen gelir yazılmaz, pasifte 380 hesabında bekletilir ve ilgili ay geldikçe 649/600 hesaplarına aktarılır."
+      ]
+    },
+    {
+      "unit_number": 6,
+      "title": "Öz Kaynaklar",
+      "is_vize": false,
+      "key_topics": [
+        "50 Ödenmiş Sermaye",
+        "52 Sermaye Yedekleri",
+        "54 Kâr Yedekleri",
+        "Geçmiş Yıllar Kâr/Zararları",
+        "Dönem Net Kâr/Zararı"
+      ],
+      "hap_bilgiler": [
+        "Öz Kaynaklar (5 Grubu): İşletme sahip veya ortaklarının işletme varlıkları üzerindeki net hak sahipliğidir (Öz Kaynaklar = Varlıklar - Yabancı Kaynaklar).",
+        "50 Ödenmiş Sermaye:",
+        "  - 500 Sermaye: Şirket ana sözleşmesinde taahhüt edilen nominal sermayedir (Pasif hesap, alacak kalanı verir).",
+        "  - 501 Ödenmemiş Sermaye (-): Ortakların taahhüt edip henüz işletmeye ödemedikleri sermaye payıdır. Pasifte yer almasına rağmen AKTİF karakterli düzenleyici hesaptır (borç tarafına kayıt yapılır, bilançoda indirim kalemi olarak eksi gösterilir).",
+        "52 Sermaye Yedekleri: 520 Hisse Senedi İhraç Primleri (Emisyon Primi - hisse senetlerinin nominal değerinin üzerinde bir bedelle satılmasından doğan farktır).",
+        "54 Kâr Yedekleri:",
+        "  - 540 Yasal Yedekler: Türk Ticaret Kanunu (TTK) hükümlerine göre safi kârın %5'i oranında zorunlu olarak ayrılan yedek akçelerdir.",
+        "  - 541 Statü Yedekleri: Şirket ana sözleşmesi gereğince ayrılan yedekler.",
+        "  - 542 Olağanüstü Yedekler: Genel Kurul kararıyla serbestçe ayrılan yedekler.",
+        "570 Geçmiş Yıllar Kârları (Kâr birikimi) ve 580 Geçmiş Yıllar Zararları (-) (Zarar birikimi).",
+        "590 Dönem Net Kârı ve 591 Dönem Net Zararı (-): Faaliyet dönemi sonucunda oluşan nihai net sonuçtur."
+      ]
+    },
+    {
+      "unit_number": 7,
+      "title": "Gelirler ve Giderler",
+      "is_vize": false,
+      "key_topics": [
+        "6 Grubu Gelir Tablosu Hesapları",
+        "Brüt Satış Kârı ve Faaliyet Kârı Formülleri",
+        "7/A Seçeneği Maliyet Hesapları",
+        "Yansıtma Hesapları"
+      ],
+      "hap_bilgiler": [
+        "Gelir Tablosu Temel Matematiksel Yapısı (Kademe Kademe Kâr Hesaplama):",
+        "  1. Net Satışlar = 60 Brüt Satışlar (600 Yurtiçi Satışlar) - 61 Satış İndirimleri (610 Satıştan İadeler, 611 Satış İskontoları).",
+        "  2. Brüt Satış Kârı (Zararı) = Net Satışlar - 62 Satışların Maliyeti (621 STMM).",
+        "  3. Faaliyet Kârı (Zararı) = Brüt Satış Kârı - 63 Faaliyet Giderleri (631 Pazarlama Satış Dağıtım Giderleri + 632 Genel Yönetim Giderleri).",
+        "  4. Olağan Kâr (Zarar) = Faaliyet Kârı + Diğer Faaliyetlerden Olağan Gelirler (Faiz 642, Kambiyo Kârı 646) - Diğer Faaliyetlerden Olağan Giderler (Kambiyo Zararı 656) - Finansman Giderleri (660).",
+        "  5. Dönem Net Kârı (Zararı) = Dönem Kârı - Dönem Kârı Vergi ve Yasal Yükümlülük Karşılıkları (691).",
+        "Maliyet Hesapları (7/A Seçeneği):",
+        "  - 710 Direkt İlk Madde ve Malzeme, 720 Direkt İşçilik, 730 Genel Üretim, 760 Pazarlama Satış Dağıtım, 770 Genel Yönetim Giderleri, 780 Finansman Giderleri.",
+        "  - Giderler fiilen ortaya çıktığında ilgili 7'li hesaba BORÇ yazılır.",
+        "  - Dönem sonunda bu giderler Yansıtma Hesapları (771, 761, 781 vb.) aracılığıyla Gelir Tablosundaki 632, 631, 660 hesaplarına devredilerek kapatılır."
+      ]
+    },
+    {
+      "unit_number": 8,
+      "title": "Dönem Sonu İşlemleri",
+      "is_vize": false,
+      "key_topics": [
+        "Muhasebe Dışı ve Muhasebe İçi Envanter",
+        "Reeskont Kayıtları",
+        "Amortisman ve Karşılıklar",
+        "Gelir ve Giderlerin 690 Hesaba Devri",
+        "Kapanış Kaydı"
+      ],
+      "hap_bilgiler": [
+        "Envanter Türleri: Muhasebe Dışı Envanter (Fiziki sayım, ölçüm, tartım yaparak fiili durumun tespit edilmesi) ve Muhasebe İçi Envanter (Tespit edilen fiili durum ile defter kayıtları arasındaki farkların düzeltilmesi, amortisman, reeskont, karşılık ve kapanış kayıtları).",
+        "Reeskont İşlemleri (Senede bağlı alacak ve borçların bilançoda peşin değerine indirgenmesi):",
+        "  - Alacak Senetleri Reeskontu: 657 Reeskont Faiz Giderleri BORÇLU / 122 Alacak Senetleri Reeskontu ALACAKLI.",
+        "  - Borç Senetleri Reeskontu: 322 Borç Senetleri Reeskontu BORÇLU / 647 Reeskont Faiz Gelirleri ALACAKLI.",
+        "Gelir ve Gider Hesaplarının Kapatılması:",
+        "  - Bütün Gelir Hesapları (Alacak kalanı veren 600, 642 vb.) BORÇLANDIRILARAK,",
+        "  - Bütün Gider Hesapları (Borç kalanı veren 621, 631, 632, 656 vb.) ALACAKLANDIRILARAK,",
+        "  - '690 Dönem Kârı veya Zararı' hesabına devredilir ve 6'lı hesapların tamamı sıfırlanır.",
+        "690 Hesabın Kalanı: Alacak kalanı verirse KÂR (690 Borç / 692 Dönem Net Kârı Alacak); Borç kalanı verirse ZARAR (692 Dönem Net Zararı Borç / 690 Alacak) oluşur.",
+        "Kapanış Yevmiye Kaydı (Dönemin en son kaydı):",
+        "  - Borç kalanı veren Aktif hesaplar ALACAKLANDIRILIR.",
+        "  - Alacak kalanı veren Pasif hesaplar BORÇLANDIRILIR.",
+        "  - Böylece bilançonun tüm hesapları sıfırlanarak defterler kapatılır."
+      ]
+    }
+  ],
+  "sinav_tuzaklari": [
+    {
+      "id": 1,
+      "title": "103 Verilen Çekler ve Ödeme Emirleri Hesabının Karakteri",
+      "mistake": "103 hesabının aktifte yer aldığı için normal bir aktif hesap gibi borç kalanı vereceğini düşünmek.",
+      "truth": "103 Verilen Çekler hesabı AKTİFİ DÜZENLEYİCİ PASİF KARAKTERLİ bir hesaptır. Çek keşide edildiğinde ALACAKLANDIRILIR, bankadan ödendiğinde BORÇLANDIRILIR. Asla borç kalanı vermez!",
+      "tip": "Kodun yanında (-) işareti varsa ters çalışır: Aktifteyse pasif, pasifteyse aktif gibi düşün."
+    },
+    {
+      "id": 2,
+      "title": "250 Arazi ve Arsalar Hesabına Amortisman Ayrılması Yanılgısı",
+      "mistake": "Soru metninde 'işletmenin sahip olduğu arsaya %20 amortisman ayrılmıştır' dendiğinde hesaplama yapmaya çalışmak.",
+      "truth": "Arazi ve arsalar (250) tükenebilir veya yıpranabilir bir nitelikte olmadığından amortismana tabi DEĞİLDİR! Bu hesap için amortisman tutarı daima 0 (sıfır) TL'dir.",
+      "tip": "Arsa ve Araziye amortisman ayrılmaz; sınavda görürsen tuzaktır!"
+    },
+    {
+      "id": 3,
+      "title": "Kıst Amortisman Kapsamı Tuzağı",
+      "mistake": "Kıst amortismanın tüm makineler veya binalar için de uygulanabileceğini sanmak.",
+      "truth": "Türk vergi mevzuatında kıst amortisman YALNIZCA işletmelerde kullanılan BİNEK OTOMOBİLLER için zorunludur. Kamyon, otobüs, bina veya makineler için yılın hangi ayında alınırsa alınsın tam yıllık amortisman ayrılır.",
+      "tip": "Kıst Amortisman = Yalnızca Binek Otomobil."
+    },
+    {
+      "id": 4,
+      "title": "Azalan Bakiyeler Yönteminde Matrah Hesabı",
+      "mistake": "Her yıl ilk maliyet bedeli üzerinden amortisman hesaplamak.",
+      "truth": "Azalan bakiyelerde amortisman tutarı maliyetten değil, NET DEFTER DEĞERİNDEN (Maliyet Bedeli - Birikmiş Amortisman) hesaplanır. Ayrıca normal oranın 2 katı alınır (azami %50).",
+      "tip": "Azalan bakiyede her yıl birikmiş amortismanı düşmeyi unutma!"
+    },
+    {
+      "id": 5,
+      "title": "120 Alıcılar ile 320 Satıcılar Hesaplarının Karıştırılması",
+      "mistake": "Veresiye mal alışında 120, satışında 320 hesabını kullanmak.",
+      "truth": "İşletme mal sattığında müşteriye karşı alacak doğar -> 120 ALICILAR BORÇLU. İşletme veresiye mal aldığında toptancıya borç doğar -> 320 SATICILAR ALACAKLI.",
+      "tip": "Satıcıya borçlanırsın (320 Pasif/Alacak); Alıcıdan tahsil edersin (120 Aktif/Borç)."
+    },
+    {
+      "id": 6,
+      "title": "Mizan Tablosunun Mali Tablo Sayılması",
+      "mistake": "Mizanın bilanço veya gelir tablosu gibi bir finansal tablo olduğunu düşünmek.",
+      "truth": "Mizan bir mali tablo DEĞİLDİR! Mizan, yevmiye defterinden büyük deftere yapılan kayıtların matematiksel eşitliğini kontrol etmeye yarayan bir ara kontrol cetvelidir.",
+      "tip": "Temel mali tablolar sadece Bilanço ve Gelir Tablosudur."
+    },
+    {
+      "id": 7,
+      "title": "380 Gelecek Aylara Ait Gelirler Hesabının Niteliği",
+      "mistake": "Adında 'Gelir' kelimesi geçtiği için gelir tablosu hesabı sanmak.",
+      "truth": "380 bir GELİR hesabı değil, bir PASİF (Kısa Vadeli Yabancı Kaynak) bilançosu hesabıdır. Peşin tahsil edilen kiranın henüz hak edilmemiş borcunu gösterir.",
+      "tip": "3 ile başlıyorsa yabancı kaynak (borçtur), 6 ile başlıyorsa gelirdir."
+    },
+    {
+      "id": 8,
+      "title": "KDV Mahsubunda Ödenecek KDV ile Devreden KDV Karışıklığı",
+      "mistake": "191 büyük olduğunda vergi dairesine vergi ödeneceğini sanmak.",
+      "truth": "391 Hesaplanan KDV (müşteriden tahsil ettiğin) > 191 İndirilecek KDV (ödediğin) ise devlete vergi borcu doğar -> 360 Ödenecek Vergi. Tam tersi 191 > 391 ise devletten alacaklı olursun ve sonraki aya devreder -> 190 Devreden KDV.",
+      "tip": "391 büyükse ÖDE (360); 191 büyükse DEVRET (190)."
+    },
+    {
+      "id": 9,
+      "title": "Gelir ve Gider Hesaplarının Kapatılma Şekli",
+      "mistake": "Gelir hesaplarını alacaklandırarak, gider hesaplarını borçlandırarak kapattığını düşünmek.",
+      "truth": "Gelir hesapları normalde alacak kalanı verir; kapatmak için BORÇLANDIRILIR. Gider hesapları borç kalanı verir; kapatmak için ALACAKLANDIRILIR. Karşı hesap daima '690 Dönem Kârı veya Zararı'dır.",
+      "tip": "Kapatmak = Hesabın tersine kayıt yapıp sıfırlamaktır!"
+    },
+    {
+      "id": 10,
+      "title": "501 Ödenmemiş Sermaye Hesabının Bilançodaki Yeri",
+      "mistake": "Ödenmemiş sermayeyi bir alacak kalemi sanıp Dönen Varlıklara yazmak.",
+      "truth": "501 Ödenmemiş Sermaye, bilançonun PASİFİNDE, ÖZ KAYNAKLAR grubunda yer alır; ancak düzenleyici bir hesap olduğu için sermayeden düşülerek (-) eksi olarak gösterilir.",
+      "tip": "501 pasifte ama parantez içinde eksi (-) olarak oturur."
+    }
+  ],
+  "formuller_ve_kavramlar": [
+    {
+      "term": "Bilanço Eşitliği",
+      "description": "Varlıklar (Aktif) = Yabancı Kaynaklar (Kısa + Uzun Vadeli Borçlar) + Öz Kaynaklar.",
+      "example": "Varlıklar 500.000 TL, Borçlar 200.000 TL ise Öz Kaynaklar = 300.000 TL'dir."
+    },
+    {
+      "term": "Net Satışlar Formülü",
+      "description": "Net Satışlar = Brüt Satışlar (600 Yurtiçi Satışlar) - Satış İndirimleri (610 Satıştan İadeler + 611 Satış İskontoları)."
+    },
+    {
+      "term": "Brüt Satış Kârı (Zararı)",
+      "description": "Brüt Satış Kârı = Net Satışlar - Satılan Ticari Mallar Maliyeti (621 STMM)."
+    },
+    {
+      "term": "Faaliyet Kârı (Zararı)",
+      "description": "Faaliyet Kârı = Brüt Satış Kârı - (760 Pazarlama Giderleri + 770 Genel Yönetim Giderleri)."
+    },
+    {
+      "term": "STMM Formülü (Aralıklı Envanter)",
+      "description": "STMM = Dönem Başı Emtia Mevcudu + Dönem İçi Net Alışlar - Dönem Sonu Emtia Mevcudu.",
+      "example": "Dönem başı mal: 50.000 TL, Alışlar: 150.000 TL, Dönem sonu sayım: 40.000 TL -> STMM = 50.000 + 150.000 - 40.000 = 160.000 TL."
+    },
+    {
+      "term": "Normal Amortisman Formülü",
+      "description": "Yıllık Amortisman = Maliyet Bedeli / Faydalı Ömür = Maliyet Bedeli * (1 / n).",
+      "example": "80.000 TL demirbaş, ömür 4 yıl -> Yıllık amortisman = 80.000 * %25 = 20.000 TL."
+    },
+    {
+      "term": "Azalan Bakiyeler Amortismanı",
+      "description": "Amortisman Oranı = Normal Oran * 2 (Maksimum %50). Yıllık Amortisman = (Maliyet - Birikmiş Amortisman) * Oran.",
+      "example": "100.000 TL makine, ömür 5 yıl -> Oran = (1/5)*2 = %40. 1. Yıl: 40.000 TL. 2. Yıl matrahı: 60.000 TL -> 24.000 TL amortisman."
+    },
+    {
+      "term": "Kıst Amortisman (Binek Oto)",
+      "description": "İlk Yıl Amortismanı = (Yıllık Amortisman Tutarı / 12) * Kalan Ay Sayısı. Ayrılmayan kısım son yıla eklenir."
+    },
+    {
+      "term": "Alacak Senetleri Reeskontu",
+      "description": "Senetli alacakların dönem sonu itibarıyla peşin değerine indirgenmesi işlemidir. 657 Reeskont Faiz Giderleri Borç / 122 Alacak Senetleri Reeskontu Alacak kaydedilir."
+    },
+    {
+      "term": "Borç Senetleri Reeskontu",
+      "description": "Senetli borçların bilanço tarihindeki peşin değerine indirgenmesidir. 322 Borç Senetleri Reeskontu Borç / 647 Reeskont Faiz Gelirleri Alacak kaydedilir."
+    },
+    {
+      "term": "Kasa Sayım Fazlası",
+      "description": "Fiili sayım mevcudu > Defter mevcudu ise aradaki fark 397 Sayım ve Tesellüm Fazlaları hesabına alacak yazılır."
+    },
+    {
+      "term": "Kasa Sayım Noksanı",
+      "description": "Fiili sayım mevcudu < Defter mevcudu ise aradaki fark 197 Sayım ve Tesellüm Noksanları hesabına borç yazılır."
+    },
+    {
+      "term": "Yasal Yedekler (I. Tertip)",
+      "description": "Türk Ticaret Kanunu uyarınca her yıl safi kârın %5'i, ödenmiş sermayenin %20'sine ulaşıncaya kadar yasal yedek olarak ayrılır."
+    },
+    {
+      "term": "Emisyon Primi (Hisse İhraç Primi)",
+      "description": "Hisse senetlerinin nominal bedelinden daha yüksek fiyatla ihraç edilmesi halinde aradaki pozitif fark (520 hesabı)."
+    },
+    {
+      "term": "690 Dönem Kârı veya Zararı",
+      "description": "Dönem sonunda tüm gelir ve gider hesaplarının devredildiği, kâr veya zararın net olarak toplandığı sonuç hesabıdır."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": 1,
+      "unit": 1,
+      "question": "Muhasebenin ilk ve temel işlevi nedir?",
+      "answer": "Kaydetme işlevidir (Yevmiye defterine tarih sırasıyla kaydetme)."
+    },
+    {
+      "id": 2,
+      "unit": 1,
+      "question": "Temel muhasebe (bilanço) eşitliği nasıldır?",
+      "answer": "Varlıklar = Yabancı Kaynaklar (Borçlar) + Öz Kaynaklar (Sermaye)."
+    },
+    {
+      "id": 3,
+      "unit": 1,
+      "question": "İşletmenin sahiplerinden bağımsız bir varlığa sahip olduğunu belirten muhasebe kavramı nedir?",
+      "answer": "Kişilik Kavramı."
+    },
+    {
+      "id": 4,
+      "unit": 1,
+      "question": "İşletmenin sınırsız ömrünün belirli takvim yıllarına bölünmesini öngören muhasebe ilkesi nedir?",
+      "answer": "Dönemsellik Kavramı."
+    },
+    {
+      "id": 5,
+      "unit": 1,
+      "question": "Olası risk ve zararlar için karşılık ayrılmasını gerektiren temel muhasebe kavramı hangisidir?",
+      "answer": "İhtiyatlılık Kavramı."
+    },
+    {
+      "id": 6,
+      "unit": 2,
+      "question": "Aktif karakterli bir hesapta artış meydana geldiğinde hesabın hangi tarafına kayıt yapılır?",
+      "answer": "Borç (sol) tarafına kayıt yapılır."
+    },
+    {
+      "id": 7,
+      "unit": 2,
+      "question": "Pasif karakterli hesaplar kural olarak hangi kalanı verir?",
+      "answer": "Alacak kalanı verir veya sıfır olur (Asla borç kalanı veremez)."
+    },
+    {
+      "id": 8,
+      "unit": 2,
+      "question": "İçinde kesinlikle kasa hesabı geçmeyen, nakitsiz işlemler için düzenlenen muhasebe fişi hangisidir?",
+      "answer": "Mahsup Fişi."
+    },
+    {
+      "id": 9,
+      "unit": 2,
+      "question": "İşlemlerin hesaplar bazında sınıflandırılarak gösterildiği yasal defter hangisidir?",
+      "answer": "Büyük Defter (Defter-i Kebir)."
+    },
+    {
+      "id": 10,
+      "unit": 2,
+      "question": "Dönem sonu envanter ve düzeltme kayıtları yapıldıktan sonra çıkarılan nihai kontrol cetveli nedir?",
+      "answer": "Kesin Mizan."
+    },
+    {
+      "id": 11,
+      "unit": 3,
+      "question": "103 Verilen Çekler ve Ödeme Emirleri hesabının bilançodaki niteliği nedir?",
+      "answer": "Aktifi Düzenleyici Pasif Karakterli hesaptır (Verildiğinde Alacaklandırılır)."
+    },
+    {
+      "id": 12,
+      "unit": 3,
+      "question": "Veresiye (açık hesap) mal satışından doğan senetsiz alacaklar hangi hesapta izlenir?",
+      "answer": "120 Alıcılar hesabında izlenir."
+    },
+    {
+      "id": 13,
+      "unit": 3,
+      "question": "Kasa fiili sayımında defterdekinden daha fazla nakit çıkarsa hangi hesap alacaklandırılır?",
+      "answer": "397 Sayım ve Tesellüm Fazlaları hesabı."
+    },
+    {
+      "id": 14,
+      "unit": 3,
+      "question": "Sürekli envanter yönteminde mal satıldığı anda yapılan maliyet kaydı nasıldır?",
+      "answer": "621 Satılan Ticari Mallar Maliyeti BORÇLU, 153 Ticari Mallar ALACAKLI."
+    },
+    {
+      "id": 15,
+      "unit": 3,
+      "question": "Ay sonunda 391 Hesaplanan KDV > 191 İndirilecek KDV ise aradaki fark hangi hesaba kaydedilir?",
+      "answer": "360 Ödenecek Vergi ve Fonlar hesabına (Alacak)."
+    },
+    {
+      "id": 16,
+      "unit": 4,
+      "question": "Maddi duran varlıklar arasında yer almasına rağmen KESİNLİKLE amortisman ayrılmayan hesap hangisidir?",
+      "answer": "250 Arazi ve Arsalar hesabı."
+    },
+    {
+      "id": 17,
+      "unit": 4,
+      "question": "Azalan bakiyeler yönteminde uygulanabilecek azami (en yüksek) amortisman oranı yüzde kaçtır?",
+      "answer": "Yüzde 50 (%50)."
+    },
+    {
+      "id": 18,
+      "unit": 4,
+      "question": "Kıst amortisman uygulaması mevzuat gereği yalnızca hangi duran varlık için zorunludur?",
+      "answer": "Binek Otomobiller için."
+    },
+    {
+      "id": 19,
+      "unit": 4,
+      "question": "İşletmenin bir başka işletmeyi devralırken net varlık değerinden fazla ödediği tutar (hava parası) hangi hesapta izlenir?",
+      "answer": "261 Şerefiye hesabında."
+    },
+    {
+      "id": 20,
+      "unit": 5,
+      "question": "Veresiye mal alımı dolayısıyla satıcılara olan senetsiz ticari borçlar hangi hesapta izlenir?",
+      "answer": "320 Satıcılar hesabında."
+    },
+    {
+      "id": 21,
+      "unit": 5,
+      "question": "Peşin tahsil edilen gelecek dönemlere ait kira gelirleri dönemsellik ilkesi gereği hangi hesapta bekletilir?",
+      "answer": "380 Gelecek Aylara Ait Gelirler hesabında."
+    },
+    {
+      "id": 22,
+      "unit": 5,
+      "question": "322 Borç Senetleri Reeskontu hesabının bilançodaki niteliği nedir?",
+      "answer": "Pasifi Düzenleyici Aktif Karakterli hesaptır."
+    },
+    {
+      "id": 23,
+      "unit": 6,
+      "question": "Ortakların taahhüt edip henüz ödemedikleri sermaye payı hangi düzenleyici hesapta takip edilir?",
+      "answer": "501 Ödenmemiş Sermaye (-) hesabında."
+    },
+    {
+      "id": 24,
+      "unit": 6,
+      "question": "Türk Ticaret Kanunu'na göre safi kârdan zorunlu olarak ayrılan yedek akçe türü nedir?",
+      "answer": "540 Yasal Yedekler."
+    },
+    {
+      "id": 25,
+      "unit": 7,
+      "question": "Brüt Satış Kârı (Zararı) nasıl hesaplanır?",
+      "answer": "Net Satışlar - Satılan Ticari Mallar Maliyeti (STMM)."
+    },
+    {
+      "id": 26,
+      "unit": 7,
+      "question": "Faaliyet Kârı nasıl bulunur?",
+      "answer": "Brüt Satış Kârı - Faaliyet Giderleri (Pazarlama + Genel Yönetim Giderleri)."
+    },
+    {
+      "id": 27,
+      "unit": 8,
+      "question": "İşletmenin fiili sayım, tartım ve ölçüm yaparak mevcutları belirlemesine ne envanter denir?",
+      "answer": "Muhasebe Dışı Envanter."
+    },
+    {
+      "id": 28,
+      "unit": 8,
+      "question": "Dönem sonunda tüm gelir hesapları nereye devredilerek kapatılır?",
+      "answer": "Gelir hesapları borçlandırılarak '690 Dönem Kârı veya Zararı' hesabına devredilir."
+    },
+    {
+      "id": 29,
+      "unit": 8,
+      "question": "690 Dönem Kârı veya Zararı hesabı alacak kalanı verirse bu neyi ifade eder?",
+      "answer": "Dönemin kârla (Dönem Net Kârı) sonuçlandığını ifade eder."
+    },
+    {
+      "id": 30,
+      "unit": 8,
+      "question": "Dönem sonu kapanış yevmiye kaydında aktif hesaplar nasıl kapatılır?",
+      "answer": "Aktif hesaplar ALACAKLANDIRILARAK kapatılır."
+    }
+  ],
+  "exams": [
+    {
+      "title": "Vize Deneme Sınavı 1",
+      "filename": "Vize_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "Mali nitelikteki işlemlerin yevmiye defterine tarih sırasıyla kaydedilmesi muhasebenin hangi temel işlevine aittir?",
+          "options": [
+            "A) Sınıflandırma",
+            "B) Kaydetme",
+            "C) Özetleme",
+            "D) Analiz",
+            "E) Yorumlama"
+          ],
+          "correct_answer": "B",
+          "explanation": "Mali işlemlerin tarih sırasıyla yevmiye defterine geçirilmesi muhasebenin 'Kaydetme' işlevidir."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Bir işletmenin toplam varlıkları 650.000 TL ve yabancı kaynakları (borçları) 280.000 TL olduğuna göre, temel muhasebe eşitliğine göre Öz Kaynakları kaç TL'dir?",
+          "options": [
+            "A) 930.000 TL",
+            "B) 650.000 TL",
+            "C) 370.000 TL",
+            "D) 280.000 TL",
+            "E) 190.000 TL"
+          ],
+          "correct_answer": "C",
+          "explanation": "Varlıklar = Yabancı Kaynaklar + Öz Kaynaklar. 650.000 = 280.000 + Öz Kaynaklar -> Öz Kaynaklar = 650.000 - 280.000 = 370.000 TL."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "İşletme sahibi Bay A'nın kendi evinin kişisel elektrik faturasını işletmenin kasasından ödeyip gider yazması, aşağıdaki muhasebe temel kavramlarından hangisine aykırıdır?",
+          "options": [
+            "A) Dönemsellik",
+            "B) Sosyal Sorumluluk",
+            "C) Kişilik",
+            "D) Tutarlılık",
+            "E) İhtiyatlılık"
+          ],
+          "correct_answer": "C",
+          "explanation": "Kişilik kavramı, işletmenin sahip ve ortaklarından bağımsız ayrı bir kişiliğe sahip olduğunu belirtir. Kişisel harcamalar işletmeye gider yazılamaz."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "İşletmenin ömrünün sınırsız kabul edilmesi varsayımı aşağıdaki kavramlardan hangisidir?",
+          "options": [
+            "A) İşletmenin Sürekliliği",
+            "B) Parayla Ölçülme",
+            "C) Dönemsellik",
+            "D) Maliyet Esası",
+            "E) Önemlilik"
+          ],
+          "correct_answer": "A",
+          "explanation": "İşletmenin Sürekliliği kavramı, işletmenin ömrünün sonsuz olduğunu ve faaliyetlerinin herhangi bir sona bağlı olmadığını kabul eder."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Gelecekte doğabilecek olası risk ve zararlar için karşılık ayrılmasını öngören muhasebe kavramı aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Tam Açıklama",
+            "B) İhtiyatlılık",
+            "C) Özün Önceliği",
+            "D) Tarafsızlık",
+            "E) Tutarlılık"
+          ],
+          "correct_answer": "B",
+          "explanation": "İhtiyatlılık kavramı gereği, olası risk ve zararlar için karşılık ayrılır, ancak gerçekleşmemiş kârlar kaydedilmez."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "Aktif karakterli bir hesap için aşağıdakilerden hangisi kesinlikle yanlıştır?",
+          "options": [
+            "A) İlk kayıt borç tarafına yapılır.",
+            "B) Artışlar borç tarafına yazılır.",
+            "C) Azalışlar alacak tarafına yazılır.",
+            "D) Dönem sonunda alacak kalanı verir.",
+            "E) Borç kalanı verir veya sıfır olur."
+          ],
+          "correct_answer": "D",
+          "explanation": "Aktif karakterli hesaplar borç kalanı verir veya kalan vermez (sıfır). KESİNLİKLE alacak kalanı veremezler!"
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Kasa hesabını kesinlikle içermeyen, tamamen hesaben ve nakitsiz gerçekleşen işlemler için hangi muhasebe fişi düzenlenir?",
+          "options": [
+            "A) Kasa Tahsil Fişi",
+            "B) Kasa Tediye Fişi",
+            "C) Mahsup Fişi",
+            "D) Açılış Fişi",
+            "E) Gider Makbuzu"
+          ],
+          "correct_answer": "C",
+          "explanation": "Nakit tahsilat veya tediye içermeyen tüm yevmiye kayıtları için Mahsup Fişi düzenlenir."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "İşlemlerin tarih sırasına göre madde madde kaydedildiği yasal defter hangisidir?",
+          "options": [
+            "A) Yevmiye Defteri (Günlük Defter)",
+            "B) Defter-i Kebir (Büyük Defter)",
+            "C) Envanter Defteri",
+            "D) Karar Defteri",
+            "E) Pay Defteri"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kronolojik (tarih) sırayla yevmiye maddeleri halinde tutulan defter Yevmiye Defteridir."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Aralık ayı sonunda, dönem sonu envanter ve düzeltme işlemlerine başlamadan hemen önce çıkarılan kontrol mizanı hangisidir?",
+          "options": [
+            "A) Aylık Mizan",
+            "B) Genel Geçici Mizan",
+            "C) Kesin Mizan",
+            "D) Açılış Mizanı",
+            "E) Tasfiye Mizanı"
+          ],
+          "correct_answer": "B",
+          "explanation": "Envanter işlemlerinden hemen önce çıkarılan mizan Genel Geçici Mizandır."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi bir 'Mali Tablo' değildir?",
+          "options": [
+            "A) Bilanço",
+            "B) Gelir Tablosu",
+            "C) Nakit Akım Tablosu",
+            "D) Mizan",
+            "E) Satışların Maliyeti Tablosu"
+          ],
+          "correct_answer": "D",
+          "explanation": "Mizan bir mali tablo değil; kayıtların matematiksel tutarlılığını kontrol eden bir ara cetveldir."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "İşletmenin keşide ettiği çeklerin izlendiği ve aktifte yer almasına karşın pasif karakterli çalışan düzenleyici hesap hangisidir?",
+          "options": [
+            "A) 100 Kasa",
+            "B) 101 Alınan Çekler",
+            "C) 102 Bankalar",
+            "D) 103 Verilen Çekler ve Ödeme Emirleri (-)",
+            "E) 108 Diğer Hazır Değerler"
+          ],
+          "correct_answer": "D",
+          "explanation": "103 Verilen Çekler ve Ödeme Emirleri (-), aktifi düzenleyen pasif karakterli bir hesaptır."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "İşletme 50.000 TL + %20 KDV tutarındaki ticari malı veresiye (açık hesap) satmıştır. Bu işlemde aşağıdaki hesaplardan hangisi BORÇLU çalışır?",
+          "options": [
+            "A) 600 Yurtiçi Satışlar (50.000 TL)",
+            "B) 391 Hesaplanan KDV (10.000 TL)",
+            "C) 120 Alıcılar (60.000 TL)",
+            "D) 320 Satıcılar (60.000 TL)",
+            "E) 100 Kasa (60.000 TL)"
+          ],
+          "correct_answer": "C",
+          "explanation": "Veresiye mal satışında senetsiz müşteri alacağı doğar: 120 Alıcılar 60.000 TL BORÇLU; 600 Yurtiçi Satışlar 50.000 TL ALACAKLI ve 391 Hesaplanan KDV 10.000 TL ALACAKLI kaydedilir."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "Aralıklı envanter yönteminde; Dönem Başı Mal Mevcudu 60.000 TL, Dönem İçi Net Alışlar 140.000 TL ve Dönem Sonu Mal Mevcudu 50.000 TL ise Satılan Ticari Mallar Maliyeti (STMM) kaç TL'dir?",
+          "options": [
+            "A) 250.000 TL",
+            "B) 150.000 TL",
+            "C) 130.000 TL",
+            "D) 190.000 TL",
+            "E) 200.000 TL"
+          ],
+          "correct_answer": "B",
+          "explanation": "STMM = Dönem Başı + Dönem İçi Alışlar - Dönem Sonu = 60.000 + 140.000 - 50.000 = 150.000 TL."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "Kasada yapılan fiziki sayımda 18.000 TL nakit tespit edilmiş, ancak 100 Kasa hesabının büyük defter borç kalanı 17.500 TL olarak görülmüştür. Bu durumda alacaklandırılacak hesap hangisidir?",
+          "options": [
+            "A) 197 Sayım ve Tesellüm Noksanları (500 TL)",
+            "B) 397 Sayım ve Tesellüm Fazlaları (500 TL)",
+            "C) 679 Diğer Olağandışı Gelirler (500 TL)",
+            "D) 100 Kasa (500 TL)",
+            "E) 600 Yurtiçi Satışlar (500 TL)"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fiili mevcudun (18.000) defter mevcudundan (17.500) 500 TL fazla çıkması durumunda 100 Kasa BORÇLU (500 TL), 397 Sayım ve Tesellüm Fazlaları ALACAKLI (500 TL) kaydedilir."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "Ay sonunda yapılan KDV mahsubunda; 391 Hesaplanan KDV 45.000 TL, 191 İndirilecek KDV 35.000 TL olarak belirlenmiştir. Aradaki 10.000 TL fark hangi hesaba kaydedilir?",
+          "options": [
+            "A) 190 Devreden KDV (Borçlu)",
+            "B) 360 Ödenecek Vergi ve Fonlar (Alacaklı)",
+            "C) 600 Yurtiçi Satışlar (Alacaklı)",
+            "D) 100 Kasa (Alacaklı)",
+            "E) 689 Diğer Olağandışı Giderler (Borçlu)"
+          ],
+          "correct_answer": "B",
+          "explanation": "391 (45.000) > 191 (35.000) olduğunda işletmenin devlete vergi borcu doğar ve 360 Ödenecek Vergi ve Fonlar hesabına 10.000 TL ALACAK yazılır."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "Aşağıdaki maddi duran varlık hesaplarından hangisine aşınma ve yıpranma payı olmadığı için KESİNLİKLE amortisman ayrılmaz?",
+          "options": [
+            "A) 252 Binalar",
+            "B) 254 Taşıtlar",
+            "C) 250 Arazi ve Arsalar",
+            "D) 255 Demirbaşlar",
+            "E) 253 Tesis Makine ve Cihazlar"
+          ],
+          "correct_answer": "C",
+          "explanation": "250 Arazi ve Arsalar hesabına kural olarak asla amortisman ayrılmaz."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "İşletme 120.000 TL maliyet bedelli bir demirbaşı satın almıştır. Demirbaşın faydalı ömrü 5 yıl olduğuna göre, Normal (Eşit Paylı) Amortisman yöntemine göre 1. yıl ayrılacak amortisman payı kaç TL'dir?",
+          "options": [
+            "A) 12.000 TL",
+            "B) 24.000 TL",
+            "C) 48.000 TL",
+            "D) 30.000 TL",
+            "E) 60.000 TL"
+          ],
+          "correct_answer": "B",
+          "explanation": "Normal amortisman oranı = 1 / 5 = %20. Yıllık amortisman = 120.000 * %20 = 24.000 TL."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Azalan bakiyeler (hızlandırılmış) amortisman yönteminde uygulanacak amortisman oranı normal amortisman oranının kaç katıdır ve azami sınırı yüzde kaçtır?",
+          "options": [
+            "A) 3 katı, azami %60",
+            "B) 2 katı, azami %50",
+            "C) 2 katı, azami %40",
+            "D) 1.5 katı, azami %50",
+            "E) 2 katı, sınır yoktur"
+          ],
+          "correct_answer": "B",
+          "explanation": "Azalan bakiyeler yönteminde oran normal oranın 2 katıdır ve yasal olarak en fazla %50 olabilir."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Duran varlıklar için ayrılan amortisman tutarlarının kaydedildiği yevmiye maddesinde ALACAKLANDIRILAN hesap hangisidir?",
+          "options": [
+            "A) 770 Genel Yönetim Giderleri",
+            "B) 257 Birikmiş Amortismanlar (-)",
+            "C) 255 Demirbaşlar",
+            "D) 100 Kasa",
+            "E) 621 STMM"
+          ],
+          "correct_answer": "B",
+          "explanation": "Amortisman kaydı: 770 Genel Yönetim Giderleri BORÇLU, 257 Birikmiş Amortismanlar (-) ALACAKLI olarak yapılır."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "Kıst amortisman uygulaması aşağıdaki duran varlık türlerinden hangisi için geçerlidir?",
+          "options": [
+            "A) Binalar",
+            "B) Yük taşıma kamyonları",
+            "C) Binek otomobiller",
+            "D) Fabrika makineleri",
+            "E) Patent ve haklar"
+          ],
+          "correct_answer": "C",
+          "explanation": "Kıst amortisman Türk Vergi Mevzuatında sadece binek otomobiller için uygulanır."
+        }
+      ]
+    },
+    {
+      "title": "Vize Deneme Sınavı 2",
+      "filename": "Vize_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "Çok sayıdaki mali verinin benzer işlem gruplarına göre düzenlenmesi ve büyük deftere aktarılması muhasebenin hangi işlevidir?",
+          "options": [
+            "A) Kaydetme",
+            "B) Sınıflandırma",
+            "C) Özetleme",
+            "D) Analiz",
+            "E) Denetim"
+          ],
+          "correct_answer": "B",
+          "explanation": "Verilerin benzer hesap başlıkları altında büyük deftere toplanması 'Sınıflandırma' işlevidir."
+        },
+        {
+          "id": 2,
+          "unit": 1,
+          "question": "Bir işletmenin belirli bir andaki finansal durumunu (varlıklarını ve borçlarını) gösteren tablo hangisidir?",
+          "options": [
+            "A) Gelir Tablosu",
+            "B) Bilanço",
+            "C) Mizan",
+            "D) Satışların Maliyeti Tablosu",
+            "E) Fon Akım Tablosu"
+          ],
+          "correct_answer": "B",
+          "explanation": "Belirli bir tarihteki varlık ve kaynak dengesini gösteren statik tablo Bilançodur."
+        },
+        {
+          "id": 3,
+          "unit": 1,
+          "question": "Uygulanan muhasebe politika ve yöntemlerinin yıldan yıla keyfi olarak değiştirilmemesini, finansal tabloların karşılaştırılabilir olmasını zorunlu kılan kavram hangisidir?",
+          "options": [
+            "A) Tutarlılık",
+            "B) İhtiyatlılık",
+            "C) Önemlilik",
+            "D) Dönemsellik",
+            "E) Kişilik"
+          ],
+          "correct_answer": "A",
+          "explanation": "Yöntemlerin ve politikaların dönemler arası benzer uygulanması Tutarlılık kavramının gereğidir."
+        },
+        {
+          "id": 4,
+          "unit": 1,
+          "question": "Muhasebede tüm kayıtların objektif ve yasal belgelere (fatura, dekont, makbuz vb.) dayandırılmasını gerektiren ilke nedir?",
+          "options": [
+            "A) Maliyet Esası",
+            "B) Tarafsızlık ve Belgelendirme",
+            "C) Sosyal Sorumluluk",
+            "D) Tam Açıklama",
+            "E) Özün Önceliği"
+          ],
+          "correct_answer": "B",
+          "explanation": "Tarafsızlık ve Belgelendirme ilkesi tüm muhasebe kayıtlarının geçerli belgelere dayanmasını şart koşar."
+        },
+        {
+          "id": 5,
+          "unit": 1,
+          "question": "Vadeli çeklerin özü itibarıyla bir senet niteliği taşıması sebebiyle dönem sonunda reeskonta tabi tutulması aşağıdaki kavramlardan hangisinin gereğidir?",
+          "options": [
+            "A) Özün Önceliği",
+            "B) Parayla Ölçülme",
+            "C) Süreklilik",
+            "D) İhtiyatlılık",
+            "E) Maliyet Esası"
+          ],
+          "correct_answer": "A",
+          "explanation": "İşlemlerin hukuki biçiminden ziyade iktisadi özünün esas alınması 'Özün Önceliği' kavramıdır."
+        },
+        {
+          "id": 6,
+          "unit": 2,
+          "question": "Pasif karakterli bir hesapta azalış meydana geldiğinde hesabın hangi tarafına kayıt yapılır?",
+          "options": [
+            "A) Borç tarafına",
+            "B) Alacak tarafına",
+            "C) Hem borç hem alacak",
+            "D) Nazım hesaplara",
+            "E) Kayıt yapılmaz"
+          ],
+          "correct_answer": "A",
+          "explanation": "Pasif hesaplar alacak taraflı çalışır; bu hesaplardaki azalışlar BORÇ tarafına yazılır."
+        },
+        {
+          "id": 7,
+          "unit": 2,
+          "question": "Kasaya nakit para girişi gerçekleştiğinde düzenlenen muhasebe fişi hangisidir?",
+          "options": [
+            "A) Kasa Tediye Fişi",
+            "B) Mahsup Fişi",
+            "C) Kasa Tahsil Fişi",
+            "D) Açılış Fişi",
+            "E) Dekont"
+          ],
+          "correct_answer": "C",
+          "explanation": "Kasaya nakit girdiğinde Kasa Tahsil Fişi düzenlenir."
+        },
+        {
+          "id": 8,
+          "unit": 2,
+          "question": "Yevmiye defterine kaydedilen işlemlerin hesaplar bazında topluca görülebilmesi için aktarıldığı defter hangisidir?",
+          "options": [
+            "A) Defter-i Kebir (Büyük Defter)",
+            "B) Envanter Defteri",
+            "C) Günlük Kasa Defteri",
+            "D) Çek Defteri",
+            "E) Stok Defteri"
+          ],
+          "correct_answer": "A",
+          "explanation": "Büyük Defter (Defter-i Kebir), işlemlerin 'T' cetvelleri şeklinde hesap bazında izlendiği yasal defterdir."
+        },
+        {
+          "id": 9,
+          "unit": 2,
+          "question": "Aşağıdakilerden hangisi pasifi düzenleyen aktif karakterli bir hesaptır?",
+          "options": [
+            "A) 103 Verilen Çekler ve Ödeme Emirleri (-)",
+            "B) 257 Birikmiş Amortismanlar (-)",
+            "C) 322 Borç Senetleri Reeskontu (-)",
+            "D) 122 Alacak Senetleri Reeskontu (-)",
+            "E) 129 Şüpheli Ticari Alacaklar Karşılığı (-)"
+          ],
+          "correct_answer": "C",
+          "explanation": "322 Borç Senetleri Reeskontu (-), pasifte yer almasına karşın borç taraflı çalışan aktif karakterli düzenleyici hesaptır."
+        },
+        {
+          "id": 10,
+          "unit": 2,
+          "question": "Dönem başı açılış bilançosundan sonra yapılan ilk yevmiye kaydına ne ad verilir?",
+          "options": [
+            "A) Kapanış Kaydı",
+            "B) Düzeltme Kaydı",
+            "C) Açılış Yevmiye Kaydı",
+            "D) Tasfiye Kaydı",
+            "E) Maliyet Kaydı"
+          ],
+          "correct_answer": "C",
+          "explanation": "Yeni faaliyet dönemine başlarken bilançodaki değerlerin defterlere geçirilmesi Açılış Kaydıdır."
+        },
+        {
+          "id": 11,
+          "unit": 3,
+          "question": "İşletme toptancıdan 80.000 TL + %20 KDV tutarında ticari malı veresiye (satıcıya borçlanarak) almıştır. Yapılacak yevmiye kaydında ALACAKLI hesap hangisidir?",
+          "options": [
+            "A) 153 Ticari Mallar (80.000 TL)",
+            "B) 191 İndirilecek KDV (16.000 TL)",
+            "C) 320 Satıcılar (96.000 TL)",
+            "D) 120 Alıcılar (96.000 TL)",
+            "E) 100 Kasa (96.000 TL)"
+          ],
+          "correct_answer": "C",
+          "explanation": "Veresiye mal alımında 320 Satıcılar 96.000 TL ALACAKLI, 153 Ticari Mallar 80.000 TL BORÇLU ve 191 İndirilecek KDV 16.000 TL BORÇLU kaydedilir."
+        },
+        {
+          "id": 12,
+          "unit": 3,
+          "question": "Kredi kartı sliplerinin bankadan tahsil edilinceye kadar izlendiği hazır değer hesabı hangisidir?",
+          "options": [
+            "A) 100 Kasa",
+            "B) 102 Bankalar",
+            "C) 108 Diğer Hazır Değerler",
+            "D) 101 Alınan Çekler",
+            "E) 110 Hisse Senetleri"
+          ],
+          "correct_answer": "C",
+          "explanation": "Kredi kartı slipleri, vadesi gelmiş kuponlar ve pullar 108 Diğer Hazır Değerler hesabında izlenir."
+        },
+        {
+          "id": 13,
+          "unit": 3,
+          "question": "Kasada yapılan sayımda 24.000 TL nakit bulunmuş, fakat 100 Kasa hesabının büyük defter borç bakiyesi 25.000 TL olarak görülmüştür. Bu durumda BORÇLANDIRILACAK hesap hangisidir?",
+          "options": [
+            "A) 397 Sayım ve Tesellüm Fazlaları (1.000 TL)",
+            "B) 197 Sayım ve Tesellüm Noksanları (1.000 TL)",
+            "C) 100 Kasa (1.000 TL)",
+            "D) 659 Diğer Olağan Giderler (1.000 TL)",
+            "E) 689 Diğer Olağandışı Giderler (1.000 TL)"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kasa noksanı durumunda: 197 Sayım ve Tesellüm Noksanları BORÇLU (1.000 TL), 100 Kasa ALACAKLI (1.000 TL) kaydedilir."
+        },
+        {
+          "id": 14,
+          "unit": 3,
+          "question": "Enflasyonist (fiyatların sürekli arttığı) bir ortamda FIFO (İlk Giren İlk Çıkar) yöntemi uygulandığında, dönem sonu stoklar ve satılan malın maliyeti (STMM) nasıl etkilenir?",
+          "options": [
+            "A) Stoklar düşük, STMM yüksek çıkar.",
+            "B) Stoklar yüksek, STMM düşük çıkar.",
+            "C) Hem stoklar hem STMM düşük çıkar.",
+            "D) Kâr minimum çıkar.",
+            "E) Hiçbir etkisi olmaz."
+          ],
+          "correct_answer": "B",
+          "explanation": "FIFO yönteminde ilk alınan ucuz mallar önce çıkacağından STMM düşük çıkar, depoda son alınan pahalı mallar kalacağı için dönem sonu stoklar yüksek çıkar."
+        },
+        {
+          "id": 15,
+          "unit": 3,
+          "question": "Ay sonunda 191 İndirilecek KDV hesabı 60.000 TL, 391 Hesaplanan KDV hesabı 40.000 TL bakiye vermiştir. Yapılacak mahsup kaydında BORÇLANDIRILACAK hesap hangisidir?",
+          "options": [
+            "A) 360 Ödenecek Vergi ve Fonlar (20.000 TL)",
+            "B) 190 Devreden KDV (20.000 TL)",
+            "C) 100 Kasa (20.000 TL)",
+            "D) 600 Yurtiçi Satışlar (20.000 TL)",
+            "E) 391 Hesaplanan KDV (40.000 TL)"
+          ],
+          "correct_answer": "B",
+          "explanation": "İndirilecek KDV (60.000) > Hesaplanan KDV (40.000) olduğunda, aradaki 20.000 TL gelecek aya devreder ve 190 Devreden KDV BORÇLU kaydedilir."
+        },
+        {
+          "id": 16,
+          "unit": 4,
+          "question": "İşletme 200.000 TL değerinde ve 4 yıl ömürlü bir üretim makinesi için Azalan Bakiyeler yöntemine göre amortisman ayıracaktır. 1. yıl ayrılacak amortisman kaç TL'dir?",
+          "options": [
+            "A) 50.000 TL",
+            "B) 80.000 TL",
+            "C) 100.000 TL",
+            "D) 40.000 TL",
+            "E) 60.000 TL"
+          ],
+          "correct_answer": "C",
+          "explanation": "Normal oran = 1/4 = %25. Azalan bakiyeler oranı = %25 * 2 = %50 (yasal tavan). 1. Yıl Amortismanı = 200.000 * %50 = 100.000 TL."
+        },
+        {
+          "id": 17,
+          "unit": 4,
+          "question": "İşletme 1 Ekim tarihinde 240.000 TL bedelle bir binek otomobil satın almıştır. Ömrü 5 yıl olduğuna göre, Kıst Amortisman kuralı gereğince ilk yıl ayrılacak amortisman payı kaç TL'dir?",
+          "options": [
+            "A) 48.000 TL",
+            "B) 24.000 TL",
+            "C) 12.000 TL",
+            "D) 8.000 TL",
+            "E) 4.000 TL"
+          ],
+          "correct_answer": "C",
+          "explanation": "Yıllık tam amortisman = 240.000 / 5 = 48.000 TL. Aylık amortisman = 48.000 / 12 = 4.000 TL. Ekim, Kasım, Aralık = 3 ay. İlk yıl tutarı = 3 * 4.000 = 12.000 TL."
+        },
+        {
+          "id": 18,
+          "unit": 4,
+          "question": "Bir işletmenin ticari itibarını, müşteri çevresini veya pazar payını devralırken net aktif değerinin üzerinde ödediği hava parası hangi hesapta aktifleştirilir?",
+          "options": [
+            "A) 260 Haklar",
+            "B) 261 Şerefiye",
+            "C) 262 Kuruluş ve Örgütlenme Giderleri",
+            "D) 255 Demirbaşlar",
+            "E) 770 Genel Yönetim Giderleri"
+          ],
+          "correct_answer": "B",
+          "explanation": "Ödenen hava parası 261 Şerefiye hesabında maddi olmayan duran varlık olarak muhasebeleştirilir."
+        },
+        {
+          "id": 19,
+          "unit": 4,
+          "question": "Bir duran varlığın maliyet bedelinden, bugüne kadar ayrılmış olan birikmiş amortismanların düşülmesiyle bulunan tutara ne ad verilir?",
+          "options": [
+            "A) Nominal Değer",
+            "B) Tasfiye Değeri",
+            "C) Net Defter Değeri",
+            "D) Hurda Değeri",
+            "E) Emsal Bedel"
+          ],
+          "correct_answer": "C",
+          "explanation": "Net Defter Değeri = Maliyet Bedeli - Birikmiş Amortismanlar."
+        },
+        {
+          "id": 20,
+          "unit": 4,
+          "question": "Patent, lisans, telif hakkı ve marka gibi yasal imtiyazlar Tekdüzen Hesap Planında hangi hesapta izlenir?",
+          "options": [
+            "A) 260 Haklar",
+            "B) 261 Şerefiye",
+            "C) 250 Arazi ve Arsalar",
+            "D) 110 Hisse Senetleri",
+            "E) 255 Demirbaşlar"
+          ],
+          "correct_answer": "A",
+          "explanation": "Patent, telif, marka ve imtiyaz hakları 260 Haklar hesabında takip edilir."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 1",
+      "filename": "Final_Deneme_1.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) Muhasebe kayıtlarının kişisel yargılara değil, objektif fatura ve makbuzlara dayanmasını zorunlu kılan temel ilke hangisidir?",
+          "options": [
+            "A) Tutarlılık",
+            "B) Tarafsızlık ve Belgelendirme",
+            "C) Dönemsellik",
+            "D) Maliyet Esası",
+            "E) Önemlilik"
+          ],
+          "correct_answer": "B",
+          "explanation": "Belgelendirme ilkesi gereği her kayıt yasal evrakla kanıtlanmalıdır."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) Yevmiye defterine yapılan kayıtların büyük deftere doğru aktarılıp aktarılmadığını matematiksel olarak denetleyen cetvel hangisidir?",
+          "options": [
+            "A) Bilanço",
+            "B) Mizan",
+            "C) Gelir Tablosu",
+            "D) Gelir Fişi",
+            "E) Envanter Listesi"
+          ],
+          "correct_answer": "B",
+          "explanation": "Mizan, yevmiye ve büyük defter tutarlarının eşitliğini kontrol eden cetveldir."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Sürekli envanter yönteminde ticari mal satıldığında, satış hasılatı kaydının yanı sıra yapılan maliyet kaydında hangi hesap BORÇLANDIRILIR?",
+          "options": [
+            "A) 153 Ticari Mallar",
+            "B) 600 Yurtiçi Satışlar",
+            "C) 621 Satılan Ticari Mallar Maliyeti",
+            "D) 100 Kasa",
+            "E) 391 Hesaplanan KDV"
+          ],
+          "correct_answer": "C",
+          "explanation": "Maliyet kaydında 621 STMM BORÇLU, 153 Ticari Mallar ALACAKLI yazılır."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) 100.000 TL maliyetli bir tesis makinesine 5 yıl ömür üzerinden Normal Amortisman ayrılacaktır. Yıllık amortisman tutarı kaç TL'dir?",
+          "options": [
+            "A) 10.000 TL",
+            "B) 20.000 TL",
+            "C) 25.000 TL",
+            "D) 40.000 TL",
+            "E) 50.000 TL"
+          ],
+          "correct_answer": "B",
+          "explanation": "100.000 / 5 = 20.000 TL."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "İşletmenin 1 Ekim tarihinde kiraladığı gayrimenkul için 1 yıllık kira bedeli olan 120.000 TL'yi peşin tahsil etmesi durumunda, dönemsellik ilkesi gereğince gelecek yıla sarkan 9 aylık kısım (90.000 TL) hangi hesapta bekletilir?",
+          "options": [
+            "A) 600 Yurtiçi Satışlar",
+            "B) 649 Diğer Olağan Gelirler",
+            "C) 380 Gelecek Aylara Ait Gelirler",
+            "D) 480 Gelecek Yıllara Ait Gelirler",
+            "E) 180 Gelecek Aylara Ait Giderler"
+          ],
+          "correct_answer": "D",
+          "explanation": "Gelecek takvim yılına sarkan peşin gelirler 480 Gelecek Yıllara Ait Gelirler hesabında pasifte izlenir. Cari yılın gelecek aylarına ait olanlar ise 380 hesabında tutulur."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "İşletmenin satıcılara olan senetsiz veresiye ticari borçları hangi hesapta izlenir?",
+          "options": [
+            "A) 120 Alıcılar",
+            "B) 320 Satıcılar",
+            "C) 321 Borç Senetleri",
+            "D) 300 Banka Kredileri",
+            "E) 331 Ortaklara Borçlar"
+          ],
+          "correct_answer": "B",
+          "explanation": "Senetsiz ticari borçlar 320 Satıcılar hesabında takip edilir."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "Dönem sonunda borç senetlerinin bilançoda peşin değeriyle gösterilmesi için yapılan reeskont kaydında ALACAKLANDIRILAN hesap hangisidir?",
+          "options": [
+            "A) 657 Reeskont Faiz Giderleri",
+            "B) 647 Reeskont Faiz Gelirleri",
+            "C) 322 Borç Senetleri Reeskontu",
+            "D) 321 Borç Senetleri",
+            "E) 122 Alacak Senetleri Reeskontu"
+          ],
+          "correct_answer": "B",
+          "explanation": "Borç senetleri reeskont kaydı: 322 Borç Senetleri Reeskontu BORÇLU / 647 Reeskont Faiz Gelirleri ALACAKLI."
+        },
+        {
+          "id": 8,
+          "unit": 6,
+          "question": "Şirket ortaklarının taahhüt ettikleri sermaye borcunu henüz ödemediklerini gösteren ve pasifte eksi (-) karakterli çalışan hesap hangisidir?",
+          "options": [
+            "A) 500 Sermaye",
+            "B) 501 Ödenmemiş Sermaye (-)",
+            "C) 520 Hisse Senedi İhraç Primleri",
+            "D) 540 Yasal Yedekler",
+            "E) 580 Geçmiş Yıllar Zararları"
+          ],
+          "correct_answer": "B",
+          "explanation": "501 Ödenmemiş Sermaye (-) pasifte yer almasına karşın taahhüdün ödenmeyen kısmını gösteren borç karakterli düzenleyici hesaptır."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "Türk Ticaret Kanunu (TTK) hükümlerine göre şirketlerin safi kârları üzerinden ayırmak zorunda oldukları yedek akçe türü nedir?",
+          "options": [
+            "A) Statü Yedekleri",
+            "B) Olağanüstü Yedekler",
+            "C) Yasal Yedekler",
+            "D) Özel Fonlar",
+            "E) Sermaye Yedekleri"
+          ],
+          "correct_answer": "C",
+          "explanation": "TTK gereğince ayrılması zorunlu olan yedekler 540 Yasal Yedekler hesabında toplanır."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Yeni çıkarılan hisse senetlerinin üzerinde yazılı nominal değerinden daha yüksek bir fiyatla satılması durumunda oluşan kâr payı hangi hesapta izlenir?",
+          "options": [
+            "A) 600 Yurtiçi Satışlar",
+            "B) 520 Hisse Senedi İhraç Primleri (Emisyon Primi)",
+            "C) 540 Yasal Yedekler",
+            "D) 645 Menkul Kıymet Satış Kârları",
+            "E) 500 Sermaye"
+          ],
+          "correct_answer": "B",
+          "explanation": "Hisse senetlerinin nominal değerinin üzerinde ihraç edilmesinden doğan primler 520 Hisse Senedi İhraç Primleri hesabına alınır."
+        },
+        {
+          "id": 11,
+          "unit": 7,
+          "question": "Brüt Satışları 500.000 TL, Satış İndirimleri 40.000 TL ve Satılan Ticari Mallar Maliyeti (STMM) 310.000 TL olan bir işletmenin Brüt Satış Kârı kaç TL'dir?",
+          "options": [
+            "A) 190.000 TL",
+            "B) 150.000 TL",
+            "C) 160.000 TL",
+            "D) 230.000 TL",
+            "E) 120.000 TL"
+          ],
+          "correct_answer": "B",
+          "explanation": "Net Satışlar = 500.000 - 40.000 = 460.000 TL. Brüt Satış Kârı = Net Satışlar - STMM = 460.000 - 310.000 = 150.000 TL."
+        },
+        {
+          "id": 12,
+          "unit": 7,
+          "question": "Bir işletmenin Brüt Satış Kârı 200.000 TL, Pazarlama Satış Dağıtım Giderleri 40.000 TL ve Genel Yönetim Giderleri 60.000 TL ise Faaliyet Kârı kaç TL olur?",
+          "options": [
+            "A) 100.000 TL",
+            "B) 140.000 TL",
+            "C) 160.000 TL",
+            "D) 300.000 TL",
+            "E) 80.000 TL"
+          ],
+          "correct_answer": "A",
+          "explanation": "Faaliyet Kârı = Brüt Satış Kârı - Faaliyet Giderleri = 200.000 - (40.000 + 60.000) = 100.000 TL."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "Dönem içinde 7/A seçeneğine göre 770 Genel Yönetim Giderleri hesabına kaydedilen tutarlar dönem sonunda hangi yansıtma hesabı aracılığıyla gelir tablosuna devredilir?",
+          "options": [
+            "A) 771 Genel Yönetim Giderleri Yansıtma Hesabı",
+            "B) 761 Pazarlama Giderleri Yansıtma",
+            "C) 632 Genel Yönetim Giderleri",
+            "D) 690 Dönem Kârı veya Zararı",
+            "E) 153 Ticari Mallar"
+          ],
+          "correct_answer": "A",
+          "explanation": "770 hesabındaki giderler 771 yansıtma hesabı alacaklandırılarak 632 Genel Yönetim Giderleri hesabına devredilir."
+        },
+        {
+          "id": 14,
+          "unit": 8,
+          "question": "İşletmenin varlık ve borçlarının fiilen sayılıp ölçülerek gerçek durumun belirlenmesine ne ad verilir?",
+          "options": [
+            "A) Muhasebe İçi Envanter",
+            "B) Muhasebe Dışı Envanter",
+            "C) Kesin Mizan",
+            "D) Kapanış Kaydı",
+            "E) Reeskont"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fiziki sayım ve tespit işlemleri Muhasebe Dışı Envanterdir."
+        },
+        {
+          "id": 15,
+          "unit": 8,
+          "question": "Dönem sonunda tüm gelir hesapları (600, 642 vb.) kapatılırken hangi hesaba devredilir?",
+          "options": [
+            "A) 500 Sermaye",
+            "B) 690 Dönem Kârı veya Zararı",
+            "C) 590 Dönem Net Kârı",
+            "D) 100 Kasa",
+            "E) 770 Genel Yönetim"
+          ],
+          "correct_answer": "B",
+          "explanation": "Gelir ve gider hesapları 690 Dönem Kârı veya Zararı hesabına devredilerek kapatılır."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "Dönem sonu kapanış kayıtları sırasında borç kalanı veren aktif hesaplar nasıl kapatılır?",
+          "options": [
+            "A) Borçlandırılarak",
+            "B) Alacaklandırılarak",
+            "C) Nazım hesaplara yazılarak",
+            "D) 690 hesaba borç yazılarak",
+            "E) Silinerek"
+          ],
+          "correct_answer": "B",
+          "explanation": "Borç kalanı veren aktif hesaplar ALACAKLANDIRILARAK sıfırlanır ve kapatılır."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "690 Dönem Kârı veya Zararı hesabının alacak toplamı 600.000 TL, borç toplamı 450.000 TL ise işletmenin dönem sonucu nedir?",
+          "options": [
+            "A) 150.000 TL Dönem Kârı",
+            "B) 150.000 TL Dönem Zararı",
+            "C) 1.050.000 TL Toplam Varlık",
+            "D) Sıfır sonuç",
+            "E) 450.000 TL Vergi"
+          ],
+          "correct_answer": "A",
+          "explanation": "Alacak tarafı gelirleri, borç tarafı giderleri gösterir. Gelirler (600.000) > Giderler (450.000) olduğunda 150.000 TL KÂR oluşur."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Alacak senetlerinin dönem sonunda peşin değerine indirgenmesi için yapılan reeskont kaydında BORÇLANDIRILAN hesap hangisidir?",
+          "options": [
+            "A) 122 Alacak Senetleri Reeskontu",
+            "B) 657 Reeskont Faiz Giderleri",
+            "C) 647 Reeskont Faiz Gelirleri",
+            "D) 121 Alacak Senetleri",
+            "E) 322 Borç Senetleri Reeskontu"
+          ],
+          "correct_answer": "B",
+          "explanation": "Alacak senedi reeskont kaydı: 657 Reeskont Faiz Giderleri BORÇLU / 122 Alacak Senetleri Reeskontu ALACAKLI."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Aşağıdakilerden hangisi bir 'Muhasebe İçi Envanter' işlemidir?",
+          "options": [
+            "A) Kasadaki paraların tek tek sayılması",
+            "B) Depodaki ticari malların sayılıp listelenmesi",
+            "C) Amortisman paylarının hesaplanıp yevmiyeye kaydedilmesi",
+            "D) Müşterilere teyit mektubu (mutabakat) gönderilmesi",
+            "E) Banka cüzdanının bankadan istenmesi"
+          ],
+          "correct_answer": "C",
+          "explanation": "Amortisman ayırma, reeskont hesaplama ve gelir-gider devir kayıtları muhasebe içi envanter işlemleridir."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "Dönemin en son kaydı olan bilanço hesaplarının kapatılması işleminde ALACAKLANDIRILAN hesaplar hangileridir?",
+          "options": [
+            "A) Aktif hesaplar",
+            "B) Pasif hesaplar",
+            "C) Gelir hesapları",
+            "D) Gider hesapları",
+            "E) Öz kaynak hesapları"
+          ],
+          "correct_answer": "A",
+          "explanation": "Kapanış kaydında borç kalanı veren Aktif hesaplar alacaklandırılır, alacak kalanı veren Pasif hesaplar borçlandırılır."
+        }
+      ]
+    },
+    {
+      "title": "Final Deneme Sınavı 2",
+      "filename": "Final_Deneme_2.md",
+      "questions": [
+        {
+          "id": 1,
+          "unit": 1,
+          "question": "(Vize Tekrarı) Bir işletmenin varlıklarının toplamı 900.000 TL, öz kaynakları 400.000 TL ise yabancı kaynakları (borçları) kaç TL'dir?",
+          "options": [
+            "A) 1.300.000 TL",
+            "B) 500.000 TL",
+            "C) 400.000 TL",
+            "D) 900.000 TL",
+            "E) 200.000 TL"
+          ],
+          "correct_answer": "B",
+          "explanation": "Varlıklar = Borçlar + Özkaynaklar. 900.000 = Borçlar + 400.000 -> Borçlar = 500.000 TL."
+        },
+        {
+          "id": 2,
+          "unit": 2,
+          "question": "(Vize Tekrarı) Kasadan nakit para çıkışı olduğunda düzenlenen belge hangisidir?",
+          "options": [
+            "A) Kasa Tahsil Fişi",
+            "B) Kasa Tediye Fişi",
+            "C) Mahsup Fişi",
+            "D) Dekont",
+            "E) Fatura"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kasadan ödeme/çıkış yapıldığında Kasa Tediye Fişi kesilir."
+        },
+        {
+          "id": 3,
+          "unit": 3,
+          "question": "(Vize Tekrarı) Müşterilerden vadeli olarak alınan bonolar ve poliçeler hangi hesapta izlenir?",
+          "options": [
+            "A) 120 Alıcılar",
+            "B) 121 Alacak Senetleri",
+            "C) 101 Alınan Çekler",
+            "D) 321 Borç Senetleri",
+            "E) 110 Hisse Senetleri"
+          ],
+          "correct_answer": "B",
+          "explanation": "Senetli alacaklar 121 Alacak Senetleri hesabında izlenir."
+        },
+        {
+          "id": 4,
+          "unit": 4,
+          "question": "(Vize Tekrarı) 60.000 TL maliyetli bir demirbaş için 5 yıl ömür üzerinden Normal Amortisman yöntemi uygulandığında yıllık amortisman oranı yüzde kaçtır?",
+          "options": [
+            "A) %10",
+            "B) %20",
+            "C) %25",
+            "D) %40",
+            "E) %50"
+          ],
+          "correct_answer": "B",
+          "explanation": "Oran = 1 / 5 = %20."
+        },
+        {
+          "id": 5,
+          "unit": 5,
+          "question": "İşletmenin bankalardan sağladığı 1 yıldan kısa vadeli nakit krediler hangi hesapta izlenir?",
+          "options": [
+            "A) 102 Bankalar",
+            "B) 300 Banka Kredileri",
+            "C) 400 Banka Kredileri",
+            "D) 320 Satıcılar",
+            "E) 303 Uzun Vadeli Krediler"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kısa vadeli banka kredileri 300 Banka Kredileri hesabında izlenir."
+        },
+        {
+          "id": 6,
+          "unit": 5,
+          "question": "Vadesi bir yılın altına inen uzun vadeli banka kredilerinin anapara ve faiz taksitleri dönem sonunda hangi hesaba aktarılır?",
+          "options": [
+            "A) 300 Banka Kredileri",
+            "B) 303 Uzun Vadeli Kredilerin Anapara Taksitleri ve Faizleri",
+            "C) 400 Banka Kredileri",
+            "D) 320 Satıcılar",
+            "E) 102 Bankalar"
+          ],
+          "correct_answer": "B",
+          "explanation": "Uzun vadeli kredilerin vadesi 1 yılın altına inen kısımları 303 no'lu hesaba virmanlanır."
+        },
+        {
+          "id": 7,
+          "unit": 5,
+          "question": "Veresiye mal alımından doğan borçlar için düzenlenen bono veya poliçeler hangi hesapta izlenir?",
+          "options": [
+            "A) 320 Satıcılar",
+            "B) 321 Borç Senetleri",
+            "C) 121 Alacak Senetleri",
+            "D) 103 Verilen Çekler",
+            "E) 300 Banka Kredileri"
+          ],
+          "correct_answer": "B",
+          "explanation": "Senetli ticari borçlar 321 Borç Senetleri hesabında izlenir."
+        },
+        {
+          "id": 8,
+          "unit": 6,
+          "question": "Şirketin ana sözleşmesinde belirlenen ve ortakların taahhüt ettiği sermaye tutarı hangi hesapta izlenir?",
+          "options": [
+            "A) 500 Sermaye",
+            "B) 501 Ödenmemiş Sermaye",
+            "C) 540 Yasal Yedekler",
+            "D) 520 Hisse Senedi Primleri",
+            "E) 590 Dönem Kârı"
+          ],
+          "correct_answer": "A",
+          "explanation": "Nominal taahhüt edilen sermaye 500 Sermaye hesabında alacaklı takip edilir."
+        },
+        {
+          "id": 9,
+          "unit": 6,
+          "question": "Şirket genel kurulunun kararıyla serbestçe ayrılmasına karar verilen yedek akçeler hangisidir?",
+          "options": [
+            "A) Yasal Yedekler",
+            "B) Statü Yedekleri",
+            "C) Olağanüstü Yedekler",
+            "D) Emisyon Primi",
+            "E) Karşılıklar"
+          ],
+          "correct_answer": "C",
+          "explanation": "Genel kurul kararıyla ayrılan ihtiyari yedekler 542 Olağanüstü Yedeklerdir."
+        },
+        {
+          "id": 10,
+          "unit": 6,
+          "question": "Geçmiş faaliyet dönemlerinden devreden kâr birikimleri bilançoda hangi hesapta yer alır?",
+          "options": [
+            "A) 590 Dönem Net Kârı",
+            "B) 570 Geçmiş Yıllar Kârları",
+            "C) 580 Geçmiş Yıllar Zararları",
+            "D) 540 Yasal Yedekler",
+            "E) 600 Yurtiçi Satışlar"
+          ],
+          "correct_answer": "B",
+          "explanation": "Geçmiş yıllardan devreden kârlar 570 Geçmiş Yıllar Kârları hesabında gösterilir."
+        },
+        {
+          "id": 11,
+          "unit": 7,
+          "question": "Satılan malların müşteriler tarafından geri iade edilmesi durumunda aşağıdaki hesaplardan hangisi BORÇLU çalışır?",
+          "options": [
+            "A) 600 Yurtiçi Satışlar",
+            "B) 610 Satıştan İadeler (-)",
+            "C) 611 Satış İskontoları",
+            "D) 391 Hesaplanan KDV",
+            "E) 621 STMM"
+          ],
+          "correct_answer": "B",
+          "explanation": "Satıştan iadeler 610 Satıştan İadeler (-) hesabının borcuna kaydedilir."
+        },
+        {
+          "id": 12,
+          "unit": 7,
+          "question": "İşletmenin bankadaki mevduat hesabına tahakkuk eden faiz geliri hangi hesaba ALACAK kaydedilir?",
+          "options": [
+            "A) 102 Bankalar",
+            "B) 642 Faiz Gelirleri",
+            "C) 780 Finansman Giderleri",
+            "D) 600 Yurtiçi Satışlar",
+            "E) 657 Reeskont Giderleri"
+          ],
+          "correct_answer": "B",
+          "explanation": "Mevduat faiz gelirleri 642 Faiz Gelirleri hesabına alacak yazılır (102 Bankalar borçlu)."
+        },
+        {
+          "id": 13,
+          "unit": 7,
+          "question": "İşletmenin kullandığı banka kredisi nedeniyle ödediği faiz ve komisyon giderleri hangi hesapta izlenir?",
+          "options": [
+            "A) 642 Faiz Gelirleri",
+            "B) 660 Kısa Vadeli Borçlanma Giderleri (veya 780 Finansman Giderleri)",
+            "C) 770 Genel Yönetim Giderleri",
+            "D) 656 Kambiyo Zararları",
+            "E) 300 Banka Kredileri"
+          ],
+          "correct_answer": "B",
+          "explanation": "Borçlanma faizleri 780 Finansman Giderleri veya gelir tablosunda 660 Finansman Giderlerinde izlenir."
+        },
+        {
+          "id": 14,
+          "unit": 8,
+          "question": "Dönem sonunda 690 Dönem Kârı veya Zararı hesabının borç kalanı vermesi durumunda bu tutar hangi hesaba aktarılır?",
+          "options": [
+            "A) 590 Dönem Net Kârı",
+            "B) 692 Dönem Net Kârı veya Zararı (Zarar olarak)",
+            "C) 500 Sermaye",
+            "D) 100 Kasa",
+            "E) 540 Yasal Yedekler"
+          ],
+          "correct_answer": "B",
+          "explanation": "690 borç kalanı verirse dönem zararla sonuçlanmıştır ve 692 hesabına devredilir."
+        },
+        {
+          "id": 15,
+          "unit": 8,
+          "question": "Dönem sonunda gider hesapları (621, 631, 632 vb.) kapatılırken hangi işlem yapılır?",
+          "options": [
+            "A) Gider hesapları borçlandırılır.",
+            "B) Gider hesapları alacaklandırılır ve 690 hesap borçlandırılır.",
+            "C) 500 Sermaye hesabı borçlandırılır.",
+            "D) Gider hesapları silinir.",
+            "E) Kasa hesabı alacaklandırılır."
+          ],
+          "correct_answer": "B",
+          "explanation": "Gider hesapları alacaklandırılarak kapatılır ve toplam tutar 690 hesabın borcuna yazılır."
+        },
+        {
+          "id": 16,
+          "unit": 8,
+          "question": "Aşağıdakilerden hangisi bir 'Muhasebe Dışı Envanter' işlemidir?",
+          "options": [
+            "A) Kasa sayım farkı kaydı yapılması",
+            "B) Depodaki malların fiziki olarak sayılıp tartılması",
+            "C) Şüpheli alacak karşılığı ayrılması",
+            "D) Amortisman kaydı yapılması",
+            "E) Kapanış kaydı yapılması"
+          ],
+          "correct_answer": "B",
+          "explanation": "Fiziki tartım ve sayım muhasebe dışı envanterdir."
+        },
+        {
+          "id": 17,
+          "unit": 8,
+          "question": "Dönem sonu kesin mizanı hangi aşamada düzenlenir?",
+          "options": [
+            "A) Dönem başında",
+            "B) Envanter işlemlerine başlamadan önce",
+            "C) Envanter ve düzeltme kayıtları tamamlandıktan sonra, bilançodan hemen önce",
+            "D) Kapanış kaydından sonra",
+            "E) Her ay başında"
+          ],
+          "correct_answer": "C",
+          "explanation": "Kesin mizan, tüm envanter düzeltmeleri yapıldıktan sonra bilançonun hazırlanmasından hemen önce çıkarılır."
+        },
+        {
+          "id": 18,
+          "unit": 8,
+          "question": "Dönem sonunda alacak senetlerine reeskont ayrıldığında kullanılan 122 Alacak Senetleri Reeskontu (-) hesabı bilançoda nerede yer alır?",
+          "options": [
+            "A) Aktifte, Ticari Alacaklar grubunda indirim kalemi olarak",
+            "B) Pasifte, Kısa Vadeli Yabancı Kaynaklarda",
+            "C) Gelir Tablosunda",
+            "D) Öz Kaynaklarda",
+            "E) Nazım Hesaplarda"
+          ],
+          "correct_answer": "A",
+          "explanation": "122 hesabı aktifte Ticari Alacaklar içinde alacak senetlerinin altında eksi (-) olarak yer alır."
+        },
+        {
+          "id": 19,
+          "unit": 8,
+          "question": "Kapanış yevmiye kaydında borçlandırılan hesap grubu aşağıdakilerden hangisidir?",
+          "options": [
+            "A) Aktif karakterli hesaplar",
+            "B) Pasif karakterli hesaplar (Kaynaklar)",
+            "C) Gelir hesapları",
+            "D) Gider hesapları",
+            "E) Maliyet hesapları"
+          ],
+          "correct_answer": "B",
+          "explanation": "Kapanış kaydında alacak kalanı veren Pasif hesaplar BORÇLANDIRILARAK sıfırlanır."
+        },
+        {
+          "id": 20,
+          "unit": 8,
+          "question": "Faaliyet dönemi sonunda net kâr elde edilmesi durumunda bu tutar bilançonun hangi grubunda öz kaynakları artırıcı bir unsur olarak yer alır?",
+          "options": [
+            "A) 1 Dönen Varlıklar",
+            "B) 3 Kısa Vadeli Yabancı Kaynaklar",
+            "C) 5 Öz Kaynaklar (590 Dönem Net Kârı)",
+            "D) 2 Duran Varlıklar",
+            "E) 4 Uzun Vadeli Yabancı Kaynaklar"
+          ],
+          "correct_answer": "C",
+          "explanation": "Dönem net kârı bilançoda 5 Öz Kaynaklar grubunda 590 Dönem Net Kârı hesabında pozitif olarak yer alır."
+        }
+      ]
+    }
+  ]
+}
