@@ -1940,15 +1940,29 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Service Worker Registration for PWA Offline Functionality
+        // Service Worker Registration for PWA Offline Functionality & Auto-Update
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js').then(reg => {
+                navigator.serviceWorker.register('./sw.js?v=2').then(reg => {
                     console.log('SW registered with scope:', reg.scope);
+                    reg.update();
+                    reg.addEventListener('updatefound', () => {
+                        const newWorker = reg.installing;
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                console.log('New SW installed, reloading for instant update...');
+                                window.location.reload();
+                            }
+                        });
+                    });
                 }).catch(err => {
                     console.log('SW registration error:', err);
                 });
             });
+        }
+        // Immediately delete legacy v1 cache if existing
+        if ('caches' in window) {
+            caches.delete('aof-ybs-cache-v1');
         }
     </script>
 </body>
