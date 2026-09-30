@@ -1157,6 +1157,7 @@
         }
 
         // GLOBAL APP STATE
+        let currentCourseId = 'bilisim_teknolojileri';
         let coursesList = [];
         let currentCourse = null;
         let currentExam = null;
@@ -1180,7 +1181,9 @@
         });
 
         async function loadCoursesData() {
-            if (window.COURSES_LIST) {
+            if (window.BUNDLED_COURSES && window.BUNDLED_COURSES.length > 0) {
+                coursesList = window.BUNDLED_COURSES;
+            } else if (window.COURSES_LIST && window.COURSES_LIST.length > 0) {
                 coursesList = window.COURSES_LIST;
             } else {
                 try {
@@ -1212,7 +1215,7 @@
             list.innerHTML = '';
 
             coursesList.forEach(c => {
-                const isSelected = currentCourse && (currentCourse.course_code === c.code || currentCourse.id === c.id);
+                const isSelected = currentCourse && (currentCourse.course_code === c.code || currentCourse.id === c.id || currentCourseId === c.id);
                 const card = document.createElement('button');
                 card.className = `w-full text-left p-3.5 rounded-2xl border transition flex items-center justify-between gap-3 ${
                     isSelected 
@@ -1241,6 +1244,7 @@
         }
 
         async function selectCourse(courseId) {
+            currentCourseId = courseId;
             if (window.BUNDLED_DATA && window.BUNDLED_DATA[courseId]) {
                 currentCourse = window.BUNDLED_DATA[courseId];
             } else {
@@ -1452,6 +1456,7 @@
         }
 
         function getActiveCourseKey() {
+            if (currentCourseId) return currentCourseId;
             if (!currentCourse) return 'bilisim_teknolojileri';
             const code = (currentCourse.course_code || '').toUpperCase();
             if (code.includes('MUH')) return 'genel_muhasebe';
@@ -1568,36 +1573,64 @@ Bu seviyenin kilidini açmak için Seviye ${unitNum - 1}'i tamamlayın veya 'Kil
                 `;
             }
 
-            // STEP 2: SINAV TUZAĞI
+            // STEP 2: SINAV TUZAĞI (AÖF TUZAKLARI VE ÇELDİRİCİLERİ)
             else if (unitModalStep === 2) {
                 const traps = currentCourse.sinav_tuzaklari || [];
-                const trap = traps[(uNum - 1) % traps.length] || traps[0] || {
-                    tuzak_baslik: "Kavram Karışıklığı Tuzağı",
-                    aciklama: "AÖF komisyonu benzer terimler arasında zıt anlam çeldiricisi koyar.",
-                    dogru_mantik: "Soru kökündeki 'değildir' ve 'en kapsamlı' ifadelerine dikkat edin."
+                const trap = traps[(uNum - 1) % (traps.length || 1)] || traps[0] || {
+                    title: "Kavram Karışıklığı Tuzağı",
+                    mistake: "Benzer iki kavramı birbiri yerine kullanarak şıkları karıştırmak.",
+                    truth: "Soru kökündeki anahtar kelimelere ve zıt anlamlı çeldiricilere dikkat edin.",
+                    tip: "Soru kökünü ve 'değildir' ifadelerini iki kez okuyun."
                 };
 
+                const trapTitle = trap.title || trap.tuzak_baslik || 'Kritik Sınav Çeldiricisi';
+                const trapMistake = trap.mistake || trap.aciklama || 'Sınavda sıkça düşülen kavram yanılgısı.';
+                const trapTruth = trap.truth || trap.dogru_mantik || 'Sorunun doğru cevabına giden temel kural.';
+                const trapTip = trap.tip || 'Soru kökündeki anahtar kelimeleri yakala!';
+
                 body.innerHTML = `
-                    <div class="p-4 rounded-2xl bg-gradient-to-br from-rose-950/30 to-slate-900 border border-rose-500/40 space-y-3">
+                    <div class="p-4 rounded-2xl bg-gradient-to-br from-rose-950/40 via-slate-900 to-slate-900 border border-rose-500/40 space-y-3 shadow-lg shadow-rose-950/20 anim-unlock">
                         <div class="flex items-center gap-2 text-rose-400 font-extrabold text-xs sm:text-sm">
-                            <i class="fa-solid fa-triangle-exclamation text-base"></i>
-                            <span>AÖF Tuzağı: ${trap.tuzak_baslik || 'Kritik Çeldirici'}</span>
+                            <i class="fa-solid fa-triangle-exclamation text-base animate-pulse"></i>
+                            <span>⚠️ AÖF Tuzağı: ${trapTitle}</span>
                         </div>
-                        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">${trap.aciklama}</p>
+
+                        <!-- Sık Yapılan Yanılgı (Kırmızı Kutu) -->
+                        <div class="p-3 rounded-xl bg-rose-950/50 border border-rose-500/30 text-xs sm:text-sm text-rose-200/90 leading-relaxed">
+                            <div class="font-extrabold text-rose-400 mb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-circle-xmark text-xs"></i>
+                                <span>Sınavda Düşülen Yanılgı (Tuzak):</span>
+                            </div>
+                            <p>${trapMistake}</p>
+                        </div>
                         
-                        <div class="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">
-                            <b>💡 Doğru Mantık:</b> ${trap.dogru_mantik}
+                        <!-- Doğru Mantık (Yeşil Kutu) -->
+                        <div class="p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-xs sm:text-sm text-emerald-200 leading-relaxed">
+                            <div class="font-extrabold text-emerald-400 mb-1 flex items-center gap-1.5">
+                                <i class="fa-solid fa-circle-check text-xs"></i>
+                                <span>💡 Sözelci Dostu Doğru Mantık:</span>
+                            </div>
+                            <p>${trapTruth}</p>
+                        </div>
+
+                        <!-- Altın Taktik (Sarı Kutu) -->
+                        <div class="p-2.5 rounded-xl bg-amber-500/15 border border-amber-500/30 text-xs text-amber-300 leading-relaxed flex items-start gap-2">
+                            <i class="fa-solid fa-key text-amber-400 mt-0.5 shrink-0"></i>
+                            <div><b>Altın Taktik:</b> ${trapTip}</div>
                         </div>
                     </div>
 
-                    <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 flex items-center gap-2">
-                        <i class="fa-solid fa-lightbulb text-amber-400 text-sm"></i>
-                        <span>Şimdi bu tuzağı aşmak için 3 soruluk mini testi çöz!</span>
+                    <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 flex items-center gap-2.5 shadow-sm">
+                        <i class="fa-solid fa-bullseye text-amber-400 text-sm shrink-0"></i>
+                        <span>Şimdi bu bilgiyi pekiştirmek için 3 soruluk mini testi çöz!</span>
                     </div>
                 `;
 
                 footer.innerHTML = `
-                    <button onclick="goToUnitStep(1)" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs transition">Geri</button>
+                    <button onclick="goToUnitStep(1)" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs transition flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                        <span>Geri</span>
+                    </button>
                     <button onclick="goToUnitStep(3)" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-md shadow-amber-500/20 transition flex items-center gap-1.5">
                         <span>Mini Teste Başla</span>
                         <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -1874,8 +1907,8 @@ Bu seviyenin kilidini açmak için Seviye ${unitNum - 1}'i tamamlayın veya 'Kil
         function displayFlashcard() {
             if (flashcardsData.length === 0) return;
             const fc = flashcardsData[currentFlashcardIdx];
-            document.getElementById('flashcardQuestion').textContent = fc.q;
-            document.getElementById('flashcardAnswer').textContent = fc.a;
+            document.getElementById('flashcardQuestion').textContent = fc.question || fc.q || '';
+            document.getElementById('flashcardAnswer').textContent = fc.answer || fc.a || '';
             document.getElementById('flashcardCounter').textContent = `Kart ${currentFlashcardIdx + 1} / ${flashcardsData.length}`;
             document.getElementById('flashcardBox').classList.remove('rotate-y-180');
         }
@@ -2133,7 +2166,7 @@ Bu seviyenin kilidini açmak için Seviye ${unitNum - 1}'i tamamlayın veya 'Kil
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 window.scrollTo(0, 0);
-                navigator.serviceWorker.register('./sw.js?v=4').then(reg => {
+                navigator.serviceWorker.register('./sw.js?v=5').then(reg => {
                     reg.update();
                     reg.addEventListener('updatefound', () => {
                         const newWorker = reg.installing;
@@ -2147,7 +2180,7 @@ Bu seviyenin kilidini açmak için Seviye ${unitNum - 1}'i tamamlayın veya 'Kil
             });
         }
         if ('caches' in window) {
-            ['aof-ybs-cache-v1', 'aof-ybs-cache-v2', 'aof-ybs-cache-v3'].forEach(k => caches.delete(k));
+            ['aof-ybs-cache-v1', 'aof-ybs-cache-v2', 'aof-ybs-cache-v3', 'aof-ybs-cache-v4'].forEach(k => caches.delete(k));
         }
     </script>
 </body>

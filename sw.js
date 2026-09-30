@@ -1,5 +1,5 @@
-// AÖF YBS Çalışma Platformu Service Worker v4 (Network-First for HTML/Data)
-const CACHE_NAME = 'aof-ybs-cache-v4';
+// AÖF YBS Çalışma Platformu Service Worker v5 (Network-First for HTML/Data)
+const CACHE_NAME = 'aof-ybs-cache-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
