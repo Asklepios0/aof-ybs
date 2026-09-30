@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>AÖF YBS Çalışma Platformu | Akıllı Eğitim Koçu & Seviyeli Öğrenme</title>
+    <title>AÖF YBS Çalışma Platformu | Sözelci Dostu Akıllı Eğitim Koçu</title>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#090d16">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="Anadolu Üniversitesi AÖF Yönetim Bilişim Sistemleri (YBS) 1. Sınıf Master Çalışma Platformu ve Akıllı Eğitim Koçu">
+    <meta name="description" content="Anadolu Üniversitesi AÖF Yönetim Bilişim Sistemleri (YBS) 1. Sınıf Sözelci Dostu İnteraktif Çalışma Platformu">
     
     <!-- Google Fonts & Tailwind & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,10 +42,6 @@
                             900: '#0c4a6e',
                             950: '#082f49',
                         }
-                    },
-                    padding: {
-                        'safe-bottom': 'max(1rem, env(safe-area-inset-bottom))',
-                        'safe-top': 'max(0.75rem, env(safe-area-inset-top))',
                     }
                 }
             }
@@ -72,34 +68,33 @@
         ::-webkit-scrollbar-thumb:hover { background: rgba(100, 116, 139, 0.9); }
         
         .glass-panel {
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .glass-card {
-            background: rgba(30, 41, 59, 0.6);
+            background: rgba(30, 41, 59, 0.65);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 15px rgba(56, 189, 248, 0.3); }
-            50% { box-shadow: 0 0 28px rgba(56, 189, 248, 0.7); }
+            0%, 100% { box-shadow: 0 0 15px rgba(56, 189, 248, 0.25); }
+            50% { box-shadow: 0 0 26px rgba(56, 189, 248, 0.65); }
         }
         .pulse-active {
             animation: pulseGlow 2s infinite;
         }
 
         @keyframes unlockAnim {
-            0% { transform: scale(0.85); opacity: 0.5; }
-            50% { transform: scale(1.08); }
+            0% { transform: scale(0.92); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
         .anim-unlock {
-            animation: unlockAnim 0.5s ease-out forwards;
+            animation: unlockAnim 0.35s ease-out forwards;
         }
 
         /* Safe padding for iOS notches and bottom dock */
@@ -111,46 +106,43 @@
 <body class="bg-[#090d16] text-slate-100 min-h-screen flex flex-col font-sans antialiased selection:bg-sky-500 selection:text-white">
 
     <!-- ================= TOP APP HEADER ================= -->
-    <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80 px-3 sm:px-6 pt-[env(safe-area-inset-top,0px)]">
-        <div class="max-w-6xl mx-auto h-16 flex items-center justify-between gap-2 sm:gap-4">
+    <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/90 px-3 sm:px-6 pt-[env(safe-area-inset-top,0px)]">
+        <div class="max-w-6xl mx-auto h-16 flex items-center justify-between gap-2">
             
             <!-- Logo & Brand -->
-            <div class="flex items-center gap-2.5">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-amber-400 flex items-center justify-center text-white shadow-lg shadow-sky-500/25">
-                    <i class="fa-solid fa-graduation-cap text-base sm:text-lg"></i>
+            <div class="flex items-center gap-2 shrink-0">
+                <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-sky-500 via-indigo-500 to-amber-400 flex items-center justify-center text-white shadow-lg shadow-sky-500/25">
+                    <i class="fa-solid fa-graduation-cap text-base"></i>
                 </div>
                 <div>
-                    <div class="flex items-center gap-1.5">
-                        <span class="font-extrabold text-base sm:text-lg tracking-tight bg-gradient-to-r from-sky-400 via-indigo-300 to-amber-300 bg-clip-text text-transparent">AÖF YBS</span>
-                        <span class="text-[9px] uppercase font-extrabold px-1.5 py-0.5 rounded-full bg-sky-500/15 text-sky-400 border border-sky-500/30">1. Sınıf</span>
-                    </div>
-                    <p class="text-[10px] text-slate-400 hidden sm:block leading-none mt-0.5">Akıllı Eğitim Koçu & Seviyeli Öğrenme</p>
+                    <span class="font-extrabold text-sm sm:text-base tracking-tight bg-gradient-to-r from-sky-400 via-indigo-300 to-amber-300 bg-clip-text text-transparent">AÖF YBS</span>
+                    <span class="text-[9px] uppercase font-extrabold px-1.5 py-0.2 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 hidden xs:inline ml-1">Sözelci Dostu</span>
                 </div>
             </div>
 
-            <!-- Course Selector -->
-            <div class="flex-1 max-w-xs sm:max-w-sm mx-1 sm:mx-2">
-                <div class="relative">
-                    <select id="courseSelect" onchange="onCourseChange(this.value)" class="w-full bg-slate-900/90 text-sky-300 font-bold text-xs sm:text-sm rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 border border-slate-700/80 focus:outline-none focus:border-sky-400 cursor-pointer shadow-inner pr-7 truncate">
-                        <!-- Populated by JS -->
-                    </select>
-                    <i class="fa-solid fa-chevron-down absolute right-2.5 top-3 text-[10px] text-slate-400 pointer-events-none"></i>
-                </div>
+            <!-- Sleek Mobile & Desktop Course Switcher Button (NO MORE BROKEN SELECT) -->
+            <div class="flex-1 max-w-[210px] sm:max-w-xs mx-1">
+                <button onclick="openCourseModal()" class="w-full bg-slate-900/90 hover:bg-slate-850 text-left px-3 py-2 rounded-2xl border border-sky-500/30 shadow-inner flex items-center justify-between gap-1.5 transition group">
+                    <div class="flex items-center gap-2 truncate">
+                        <i id="headerCourseIcon" class="fa-solid fa-laptop-code text-sky-400 text-xs shrink-0"></i>
+                        <span id="headerCourseName" class="font-extrabold text-xs sm:text-sm text-sky-300 truncate">Bilişim Tek.</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-sky-300 transition shrink-0"></i>
+                </button>
             </div>
 
             <!-- Gamification Pill Indicators (Streak & XP) -->
-            <div class="flex items-center gap-1.5 sm:gap-2">
+            <div class="flex items-center gap-1.5 shrink-0">
                 <!-- Streak -->
                 <div class="flex items-center gap-1 px-2 py-1 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-400 font-bold text-xs" title="Günlük Çalışma Serisi">
-                    <i class="fa-solid fa-fire text-amber-500 animate-pulse"></i>
+                    <i class="fa-solid fa-fire text-amber-500 animate-pulse text-[11px]"></i>
                     <span id="streakCount">1</span>
                 </div>
 
                 <!-- XP -->
-                <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-sky-500/10 border border-sky-500/25 text-sky-400 font-bold text-xs" title="Toplam Deneyim Puanı">
-                    <i class="fa-solid fa-star text-sky-400"></i>
+                <div class="flex items-center gap-1 px-2 py-1 rounded-xl bg-sky-500/10 border border-sky-500/25 text-sky-400 font-bold text-xs" title="Toplam Deneyim Puanı">
+                    <i class="fa-solid fa-star text-sky-400 text-[11px]"></i>
                     <span id="xpCount">0</span>
-                    <span class="text-[10px] opacity-75">XP</span>
                 </div>
 
                 <!-- Sound Mute Toggle -->
@@ -163,44 +155,40 @@
     </header>
 
     <!-- ================= MAIN CONTAINER ================= -->
-    <main class="flex-1 max-w-5xl w-full mx-auto px-3 sm:px-6 py-4 safe-bottom-pad">
+    <main class="flex-1 max-w-5xl w-full mx-auto px-3 sm:px-6 py-3 safe-bottom-pad">
 
-        <!-- ================= TOP COACH BANNER (HER ZAMAN GÖRÜNÜR) ================= -->
-        <div id="coachBanner" class="glass-panel rounded-2xl p-3.5 sm:p-4 border border-sky-500/20 mb-5 relative overflow-hidden shadow-xl shadow-sky-950/30">
-            <div class="absolute -right-10 -bottom-10 w-36 h-36 bg-sky-500/10 rounded-full blur-2xl pointer-events-none"></div>
-            
-            <div class="flex items-center gap-3 sm:gap-4 relative z-10">
+        <!-- ================= TOP COACH BANNER ================= -->
+        <div id="coachBanner" class="glass-panel rounded-2xl p-3 sm:p-4 border border-sky-500/25 mb-4 relative overflow-hidden shadow-lg shadow-sky-950/20">
+            <div class="flex items-center gap-3 relative z-10">
                 <!-- Coach Avatar -->
                 <div class="relative shrink-0">
-                    <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white text-xl sm:text-2xl shadow-lg shadow-sky-500/30">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-sky-600 via-indigo-600 to-amber-500 flex items-center justify-center text-white text-lg sm:text-xl shadow-md shadow-sky-500/30">
                         <i class="fa-solid fa-user-graduate"></i>
                     </div>
-                    <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-slate-900 flex items-center justify-center">
-                        <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
-                    </span>
+                    <span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-slate-900"></span>
                 </div>
 
                 <!-- Speech Bubble -->
                 <div class="flex-1 min-w-0">
-                    <div class="flex items-center justify-between gap-2 mb-0.5">
-                        <span class="text-[11px] font-extrabold text-sky-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <div class="flex items-center justify-between gap-1 mb-0.5">
+                        <span class="text-[10px] sm:text-[11px] font-extrabold text-sky-400 uppercase tracking-wider flex items-center gap-1">
                             <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
-                            <span>Koç Demir • AÖF Rehberin</span>
+                            <span>Koç Demir • Sözelci Rehberin</span>
                         </span>
-                        <button onclick="openCoachModal()" class="text-[11px] font-bold text-amber-400 hover:text-amber-300 transition flex items-center gap-1">
-                            <span>Soru Sor</span>
+                        <button onclick="openCoachModal()" class="text-[11px] font-extrabold text-amber-400 hover:text-amber-300 transition flex items-center gap-1">
+                            <span>Koça Sor</span>
                             <i class="fa-solid fa-circle-question text-[10px]"></i>
                         </button>
                     </div>
                     <p id="coachQuoteText" class="text-xs sm:text-sm text-slate-200 leading-snug line-clamp-2">
-                        "Hoş geldin! AÖF sınavlarında 4 yanlış 1 doğruyu götürür. İki şık arasında kalmadıysan sallama!"
+                        "Hoş geldin! 'Ben sözelciyim bu terimler ne' diyorsan doğru yerdesin. Her şeyi günlük hayat analojisiyle 30 saniyede çözeceğiz!"
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- ================= DESKTOP NAV TABS (MD ÜSTÜ İÇİN) ================= -->
-        <nav class="hidden md:flex items-center gap-1.5 p-1.5 glass-panel rounded-2xl border border-slate-800 mb-6">
+        <!-- ================= DESKTOP NAV TABS ================= -->
+        <nav class="hidden md:flex items-center gap-1.5 p-1.5 glass-panel rounded-2xl border border-slate-800 mb-5">
             <button onclick="switchTab('roadmap')" data-tab="roadmap" class="tab-btn flex-1 py-2 px-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition">
                 <i class="fa-solid fa-map-location-dot"></i>
                 <span>Yolculuk (Seviyeler)</span>
@@ -226,42 +214,39 @@
         <!-- ============================================================== -->
         <!-- TAB 1: 🗺️ YOLCULUK (ROADMAP / SEVİYELER) - VARSAYILAN EKRAN      -->
         <!-- ============================================================== -->
-        <section id="tab-roadmap" class="tab-content space-y-6">
+        <section id="tab-roadmap" class="tab-content space-y-4">
             
             <!-- Progress Summary Card -->
-            <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="glass-card rounded-2xl p-4 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
                     <div class="flex items-center gap-2">
                         <h2 id="roadmapCourseTitle" class="text-base sm:text-lg font-extrabold text-white">BİLİŞİM TEKNOLOJİLERİ</h2>
-                        <span id="roadmapCourseCode" class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-sky-500/20 text-sky-300">YBS101U</span>
+                        <span id="roadmapCourseCode" class="text-[10px] font-extrabold px-2 py-0.5 rounded-md bg-sky-500/20 text-sky-300">YBS101U</span>
                     </div>
-                    <p class="text-xs text-slate-400 mt-0.5">8 Seviyeli Adım Adım Öğrenme Patikası • Tamamla, Kilidi Aç, Şampiyon Ol!</p>
+                    <p class="text-xs text-slate-400 mt-0.5">8 Seviyeli Sözelci Dostu Öğrenme Patikası • Mala Anlatır Gibi Özeti Oku, Kilidi Aç!</p>
                 </div>
 
                 <!-- Progress Bar & Teacher Mode Toggle -->
-                <div class="flex items-center gap-4 sm:gap-6">
-                    <div class="text-right">
-                        <div class="text-xs font-bold text-slate-300">İlerleme: <span id="roadmapPercentText" class="text-sky-400">0%</span></div>
-                        <div class="w-32 sm:w-40 h-2.5 bg-slate-800 rounded-full overflow-hidden mt-1 border border-slate-700">
+                <div class="flex items-center gap-3 sm:gap-6 justify-between sm:justify-end">
+                    <div class="text-left sm:text-right">
+                        <div class="text-xs font-bold text-slate-300">İlerleme: <span id="roadmapPercentText" class="text-sky-400 font-extrabold">0%</span></div>
+                        <div class="w-32 sm:w-36 h-2 bg-slate-800 rounded-full overflow-hidden mt-1 border border-slate-700">
                             <div id="roadmapProgressBar" class="h-full bg-gradient-to-r from-sky-500 to-emerald-400 rounded-full transition-all duration-500" style="width: 0%"></div>
                         </div>
                     </div>
 
                     <!-- Teacher Mode (Unlock All) Button -->
-                    <button onclick="toggleUnlockAll()" id="unlockAllBtn" class="shrink-0 text-[11px] font-bold px-2.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900/80 hover:bg-slate-800 text-slate-300 transition flex items-center gap-1.5" title="Tüm kilitleri açarak serbest çalışma modu">
-                        <i class="fa-solid fa-lock-open text-amber-400"></i>
-                        <span class="hidden sm:inline">Kilitleri Aç</span>
+                    <button onclick="toggleUnlockAll()" id="unlockAllBtn" class="shrink-0 text-[11px] font-bold px-2.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900/80 hover:bg-slate-800 text-slate-300 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-lock text-slate-400"></i>
+                        <span>Kilitleri Aç</span>
                     </button>
                 </div>
             </div>
 
             <!-- ROADMAP VERTICAL PATH CONTAINER -->
-            <div class="relative py-2">
-                <!-- Vertical Line in Background -->
+            <div class="relative py-1">
                 <div class="absolute left-6 sm:left-8 top-6 bottom-6 w-1 bg-gradient-to-b from-sky-500 via-indigo-500 to-emerald-500 rounded-full opacity-30"></div>
-
-                <!-- Dynamic Levels List -->
-                <div id="roadmapLevelsContainer" class="space-y-4 relative z-10">
+                <div id="roadmapLevelsContainer" class="space-y-3.5 relative z-10">
                     <!-- Populated by JS -->
                 </div>
             </div>
@@ -271,11 +256,11 @@
         <!-- ============================================================== -->
         <!-- TAB 2: 📝 AÖF DENEMELERİ (20 SORU - 30 DAKİKA)                 -->
         <!-- ============================================================== -->
-        <section id="tab-exams" class="tab-content hidden space-y-5">
+        <section id="tab-exams" class="tab-content hidden space-y-4">
             
             <!-- Exam Mode Selector & Rules Banner -->
-            <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+            <div class="glass-card rounded-2xl p-4 border border-slate-800">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
                     <div>
                         <h3 class="text-base font-extrabold text-white flex items-center gap-2">
                             <i class="fa-solid fa-file-signature text-amber-400"></i>
@@ -284,9 +269,8 @@
                         <p class="text-xs text-slate-400">20 Soru • 30 Dakika • 4 Yanlış 1 Doğruyu Götürür (Net = D - Y/4)</p>
                     </div>
 
-                    <!-- Exam Select Dropdown -->
                     <div class="flex items-center gap-2">
-                        <select id="examSelector" onchange="loadExam(this.value)" class="bg-slate-900 border border-slate-700 text-amber-300 font-bold text-xs sm:text-sm rounded-xl px-3 py-2 cursor-pointer focus:outline-none focus:border-amber-400">
+                        <select id="examSelector" onchange="loadExam(this.value)" class="w-full sm:w-auto bg-slate-900 border border-slate-700 text-amber-300 font-bold text-xs sm:text-sm rounded-xl px-3 py-2 cursor-pointer focus:outline-none focus:border-amber-400">
                             <option value="0">Ara Sınav (Vize) Deneme 1 (1-4. Üniteler)</option>
                             <option value="1">Ara Sınav (Vize) Deneme 2 (1-4. Üniteler)</option>
                             <option value="2">Dönem Sonu (Final) Deneme 1 (Tüm Kitap)</option>
@@ -295,11 +279,11 @@
                     </div>
                 </div>
 
-                <!-- Timer & Score Header -->
-                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+                <!-- Timer & Controls -->
+                <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800">
                     <div class="flex items-center gap-2 text-xs font-bold text-slate-300">
                         <i class="fa-regular fa-clock text-amber-400 text-sm"></i>
-                        <span>Kalan Süre:</span>
+                        <span>Süre:</span>
                         <span id="examTimer" class="font-mono text-sm text-amber-400 font-extrabold">30:00</span>
                     </div>
 
@@ -308,36 +292,32 @@
                             <i class="fa-solid fa-play mr-1 text-emerald-400"></i>Başlat
                         </button>
                         <button onclick="finishExam()" class="text-[11px] font-bold px-3 py-1 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-md shadow-amber-500/20 transition">
-                            Sınavı Bitir
+                            Bitir
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Exam Scorecard Box (Hidden by default, shown upon finish) -->
-            <div id="examResultCard" class="hidden glass-panel rounded-2xl p-5 border border-emerald-500/30 bg-emerald-950/20 anim-unlock">
-                <!-- Populated by JS -->
-            </div>
+            <!-- Exam Scorecard -->
+            <div id="examResultCard" class="hidden glass-panel rounded-2xl p-4 border border-emerald-500/30 bg-emerald-950/20 anim-unlock"></div>
 
-            <!-- 20 Question Paper Container -->
-            <div id="examQuestionsContainer" class="space-y-4">
-                <!-- Populated by JS -->
-            </div>
+            <!-- 20 Question Paper -->
+            <div id="examQuestionsContainer" class="space-y-3.5"></div>
 
         </section>
 
         <!-- ============================================================== -->
         <!-- TAB 3: 🃏 KAVRAM KARTLARI (3D FLASHCARDS)                      -->
         <!-- ============================================================== -->
-        <section id="tab-flashcards" class="tab-content hidden space-y-5">
-            <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800 text-center">
+        <section id="tab-flashcards" class="tab-content hidden space-y-4">
+            <div class="glass-card rounded-2xl p-4 border border-slate-800 text-center">
                 <h3 class="text-base font-extrabold text-white flex items-center justify-center gap-2">
                     <i class="fa-solid fa-layer-group text-sky-400"></i>
                     <span>3D İnteraktif Hafıza Kartları</span>
                 </h3>
-                <p class="text-xs text-slate-400 mt-1">Karta dokunarak arkasını çevirin. Hafızanızı tazeleyin!</p>
+                <p class="text-xs text-slate-400 mt-0.5">Karta dokunarak arkasını çevirin. 2 günde unutmayı engelleyin!</p>
                 
-                <div class="flex items-center justify-center gap-2 mt-3">
+                <div class="flex items-center justify-center gap-2 mt-2.5">
                     <span id="flashcardCounter" class="text-xs font-bold text-sky-400 bg-sky-500/10 px-3 py-1 rounded-full border border-sky-500/20">Kart 1 / 30</span>
                     <button onclick="shuffleFlashcards()" class="text-xs font-bold text-slate-300 bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-full border border-slate-700 transition">
                         <i class="fa-solid fa-shuffle mr-1"></i>Karıştır
@@ -346,16 +326,16 @@
             </div>
 
             <!-- 3D Card Stage -->
-            <div class="max-w-md mx-auto perspective-1000 my-4">
-                <div id="flashcardBox" onclick="flipFlashcard()" class="w-full min-h-[260px] sm:min-h-[290px] relative transform-style-3d transition-transform duration-500 cursor-pointer shadow-2xl rounded-2xl">
+            <div class="max-w-md mx-auto perspective-1000 my-2">
+                <div id="flashcardBox" onclick="flipFlashcard()" class="w-full min-h-[250px] sm:min-h-[280px] relative transform-style-3d transition-transform duration-500 cursor-pointer shadow-2xl rounded-2xl">
                     
                     <!-- Front Side (Soru) -->
-                    <div class="absolute inset-0 backface-hidden glass-panel rounded-2xl p-6 flex flex-col justify-between border border-sky-500/30 bg-gradient-to-br from-slate-900/90 to-slate-950">
+                    <div class="absolute inset-0 backface-hidden glass-panel rounded-2xl p-5 sm:p-6 flex flex-col justify-between border border-sky-500/30 bg-gradient-to-br from-slate-900/90 to-slate-950">
                         <div class="flex items-center justify-between text-xs text-sky-400 font-extrabold">
                             <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-question"></i> Sınav Sorusu</span>
                             <span class="text-[10px] text-slate-500">Çevirmek için dokun</span>
                         </div>
-                        <div id="flashcardQuestion" class="my-auto text-base sm:text-lg font-bold text-white text-center leading-relaxed">
+                        <div id="flashcardQuestion" class="my-auto text-sm sm:text-base font-bold text-white text-center leading-relaxed">
                             Yükleniyor...
                         </div>
                         <div class="text-center text-[11px] text-slate-400 font-medium">
@@ -364,12 +344,12 @@
                     </div>
 
                     <!-- Back Side (Cevap) -->
-                    <div class="absolute inset-0 backface-hidden rotate-y-180 glass-panel rounded-2xl p-6 flex flex-col justify-between border border-emerald-500/40 bg-gradient-to-br from-slate-900/95 via-emerald-950/20 to-slate-950">
+                    <div class="absolute inset-0 backface-hidden rotate-y-180 glass-panel rounded-2xl p-5 sm:p-6 flex flex-col justify-between border border-emerald-500/40 bg-gradient-to-br from-slate-900/95 via-emerald-950/20 to-slate-950">
                         <div class="flex items-center justify-between text-xs text-emerald-400 font-extrabold">
-                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Doğru Cevap & Açıklama</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Sözelci Mantığıyla Cevap</span>
                             <span class="text-[10px] text-slate-500">Geri çevir</span>
                         </div>
-                        <div id="flashcardAnswer" class="my-auto text-sm sm:text-base text-emerald-200 text-center leading-relaxed font-semibold">
+                        <div id="flashcardAnswer" class="my-auto text-xs sm:text-sm text-emerald-200 text-center leading-relaxed font-semibold">
                             Yükleniyor...
                         </div>
                         <div class="text-center text-[11px] text-slate-400 font-medium">
@@ -380,17 +360,17 @@
                 </div>
             </div>
 
-            <!-- Flashcard Navigation Controls -->
-            <div class="flex items-center justify-center gap-3 max-w-md mx-auto">
-                <button onclick="prevFlashcard()" class="flex-1 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition flex items-center justify-center gap-2">
+            <!-- Flashcard Controls -->
+            <div class="flex items-center justify-center gap-2.5 max-w-md mx-auto">
+                <button onclick="prevFlashcard()" class="flex-1 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition flex items-center justify-center gap-1.5">
                     <i class="fa-solid fa-arrow-left"></i>
                     <span>Önceki</span>
                 </button>
-                <button onclick="markFlashcardLearned()" class="py-2.5 px-4 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 font-bold text-xs transition flex items-center gap-1.5">
+                <button onclick="markFlashcardLearned()" class="py-2.5 px-3.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 text-emerald-300 font-bold text-xs transition flex items-center gap-1">
                     <i class="fa-solid fa-check"></i>
                     <span>Öğrendim</span>
                 </button>
-                <button onclick="nextFlashcard()" class="flex-1 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md shadow-sky-500/20 transition flex items-center justify-center gap-2">
+                <button onclick="nextFlashcard()" class="flex-1 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md shadow-sky-500/20 transition flex items-center justify-center gap-1.5">
                     <span>Sonraki</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
@@ -400,127 +380,124 @@
         <!-- ============================================================== -->
         <!-- TAB 4: 🧮 HESAPLAYICILAR & A-Z SÖZLÜK                           -->
         <!-- ============================================================== -->
-        <section id="tab-tools" class="tab-content hidden space-y-6">
+        <section id="tab-tools" class="tab-content hidden space-y-4">
             
-            <!-- 4 Interactive Financial & Math Calculators -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                 
                 <!-- 1. AÖF Harf Notu & Baraj Hesaplayıcı -->
-                <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                    <div class="flex items-center gap-2 mb-2">
-                        <div class="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-percent"></i></div>
-                        <h4 class="font-bold text-white text-sm">AÖF Başarı Notu & 35 Barajı</h4>
+                <div class="glass-card rounded-2xl p-4 border border-slate-800">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <div class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-percent"></i></div>
+                        <h4 class="font-bold text-white text-xs sm:text-sm">AÖF Başarı Notu & 35 Barajı</h4>
                     </div>
-                    <p class="text-xs text-slate-400 mb-3">%30 Vize + %70 Final ağırlığıyla başarı notunuzu ve baraj durumunuzu hesaplar.</p>
+                    <p class="text-[11px] text-slate-400 mb-2.5">%30 Vize + %70 Final ağırlığıyla baraj durumunu anında gör.</p>
                     
-                    <div class="grid grid-cols-2 gap-2 mb-3">
+                    <div class="grid grid-cols-2 gap-2 mb-2.5">
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold uppercase">Vize Notu (0-100)</label>
-                            <input type="number" id="calcVizeInput" min="0" max="100" value="60" oninput="calcAofGrade()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="calcVizeInput" min="0" max="100" value="60" oninput="calcAofGrade()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
                         </div>
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold uppercase">Final Notu (0-100)</label>
-                            <input type="number" id="calcFinalInput" min="0" max="100" value="70" oninput="calcAofGrade()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="calcFinalInput" min="0" max="100" value="70" oninput="calcAofGrade()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
                         </div>
                     </div>
-                    <div id="aofGradeResult" class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-xs space-y-1"></div>
+                    <div id="aofGradeResult" class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800 text-xs space-y-1"></div>
                 </div>
 
                 <!-- 2. Genel Muhasebe: Amortisman Hesaplayıcı -->
-                <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                    <div class="flex items-center gap-2 mb-2">
-                        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-coins"></i></div>
-                        <h4 class="font-bold text-white text-sm">Muhasebe: Amortisman Hesaplayıcı</h4>
+                <div class="glass-card rounded-2xl p-4 border border-slate-800">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-coins"></i></div>
+                        <h4 class="font-bold text-white text-xs sm:text-sm">Muhasebe: Amortisman (Eskime Payı)</h4>
                     </div>
-                    <p class="text-xs text-slate-400 mb-3">Normal (Eşit Paylı) ve Azalan Bakiyeler usulü yıllık amortisman tutarları.</p>
+                    <p class="text-[11px] text-slate-400 mb-2.5">Mala anlatır gibi: Sıfır aldığın arabanın her yıl düşen değeri.</p>
                     
-                    <div class="grid grid-cols-3 gap-2 mb-3">
+                    <div class="grid grid-cols-3 gap-2 mb-2.5">
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold uppercase">Maliyet (TL)</label>
-                            <input type="number" id="amortMaliyet" value="100000" oninput="calcAmortisman()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="amortMaliyet" value="100000" oninput="calcAmortisman()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2 py-1.5 text-xs text-white mt-1">
                         </div>
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold uppercase">Ömür (Yıl)</label>
-                            <input type="number" id="amortOmur" value="5" min="1" max="50" oninput="calcAmortisman()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="amortOmur" value="5" min="1" max="50" oninput="calcAmortisman()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2 py-1.5 text-xs text-white mt-1">
                         </div>
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold uppercase">Yöntem</label>
-                            <select id="amortYontem" onchange="calcAmortisman()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2 py-1.5 text-xs text-white mt-1">
-                                <option value="normal">Normal (Eşit)</option>
-                                <option value="azalan">Azalan Bakiye</option>
+                            <select id="amortYontem" onchange="calcAmortisman()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-1.5 py-1.5 text-xs text-white mt-1">
+                                <option value="normal">Normal</option>
+                                <option value="azalan">Azalan</option>
                             </select>
                         </div>
                     </div>
-                    <div id="amortResultBox" class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-xs space-y-1"></div>
+                    <div id="amortResultBox" class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800 text-xs space-y-1"></div>
                 </div>
 
                 <!-- 3. İktisat: Keynesyen Çarpan Hesaplayıcı -->
-                <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                    <div class="flex items-center gap-2 mb-2">
-                        <div class="w-8 h-8 rounded-lg bg-violet-500/20 text-violet-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-chart-pie"></i></div>
-                        <h4 class="font-bold text-white text-sm">İktisat: Keynesyen Çarpan (k)</h4>
+                <div class="glass-card rounded-2xl p-4 border border-slate-800">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <div class="w-7 h-7 rounded-lg bg-violet-500/20 text-violet-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h4 class="font-bold text-white text-xs sm:text-sm">İktisat: Keynesyen Çoğaltan (k)</h4>
                     </div>
-                    <p class="text-xs text-slate-400 mb-3">Marjinal Tüketim Eğilimi (MPC) ile Çoğaltan ve Millî Gelir artışı.</p>
+                    <p class="text-[11px] text-slate-400 mb-2.5">Mala anlatır gibi: 10 liralık yatırımın ekonomide 50 lira yaratması.</p>
                     
-                    <div class="grid grid-cols-2 gap-2 mb-3">
+                    <div class="grid grid-cols-2 gap-2 mb-2.5">
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold uppercase">MPC (0.1 - 0.95)</label>
-                            <input type="number" id="calcMpcInput" step="0.05" min="0.1" max="0.95" value="0.80" oninput="calcKeynesMultiplier()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="calcMpcInput" step="0.05" min="0.1" max="0.95" value="0.80" oninput="calcKeynesMultiplier()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
                         </div>
                         <div>
-                            <label class="text-[10px] text-slate-400 font-bold uppercase">Yatırım Artışı (Milyar TL)</label>
-                            <input type="number" id="calcYatirimArtisi" value="10" oninput="calcKeynesMultiplier()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 text-xs text-white mt-1">
+                            <label class="text-[10px] text-slate-400 font-bold uppercase">Yatırım Artışı</label>
+                            <input type="number" id="calcYatirimArtisi" value="10" oninput="calcKeynesMultiplier()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
                         </div>
                     </div>
-                    <div id="keynesResultBox" class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-xs space-y-1"></div>
+                    <div id="keynesResultBox" class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800 text-xs space-y-1"></div>
                 </div>
 
                 <!-- 4. Matematik: Parabol Tepe Noktası -->
-                <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                    <div class="flex items-center gap-2 mb-2">
-                        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-square-root-variable"></i></div>
-                        <h4 class="font-bold text-white text-sm">Matematik: Parabol Tepe Noktası T(r, k)</h4>
+                <div class="glass-card rounded-2xl p-4 border border-slate-800">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <div class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-square-root-variable"></i></div>
+                        <h4 class="font-bold text-white text-xs sm:text-sm">Matematik: Parabol Zirve Noktası</h4>
                     </div>
-                    <p class="text-xs text-slate-400 mb-3">f(x) = ax² + bx + c fonksiyonunda tepe noktası ve delta analizi.</p>
+                    <p class="text-[11px] text-slate-400 mb-2.5">Mala anlatır gibi: Havaya atılan taşın ulaştığı en yüksek zirve.</p>
                     
-                    <div class="grid grid-cols-3 gap-2 mb-3">
+                    <div class="grid grid-cols-3 gap-2 mb-2.5">
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold">a Katsayısı</label>
-                            <input type="number" id="parabolA" value="1" oninput="calcParabol()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="parabolA" value="1" oninput="calcParabol()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2 py-1.5 text-xs text-white mt-1">
                         </div>
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold">b Katsayısı</label>
-                            <input type="number" id="parabolB" value="-4" oninput="calcParabol()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="parabolB" value="-4" oninput="calcParabol()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2 py-1.5 text-xs text-white mt-1">
                         </div>
                         <div>
                             <label class="text-[10px] text-slate-400 font-bold">c Katsayısı</label>
-                            <input type="number" id="parabolC" value="3" oninput="calcParabol()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-white mt-1">
+                            <input type="number" id="parabolC" value="3" oninput="calcParabol()" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-2 py-1.5 text-xs text-white mt-1">
                         </div>
                     </div>
-                    <div id="parabolResultBox" class="bg-slate-900/90 p-3 rounded-xl border border-slate-800 text-xs space-y-1"></div>
+                    <div id="parabolResultBox" class="bg-slate-900/90 p-2.5 rounded-xl border border-slate-800 text-xs space-y-1"></div>
                 </div>
 
             </div>
 
             <!-- A-Z KAVRAMLAR VE FORMÜLLER SÖZLÜĞÜ -->
-            <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+            <div class="glass-card rounded-2xl p-4 border border-slate-800">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
                     <div>
-                        <h3 class="text-base font-extrabold text-white flex items-center gap-2">
+                        <h3 class="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
                             <i class="fa-solid fa-spell-check text-sky-400"></i>
                             <span>A-Z Kavramlar ve Formüller Sözlüğü</span>
                         </h3>
-                        <p class="text-xs text-slate-400">Dersin sınavda sorulan tüm kritik terimleri ve tanımları.</p>
+                        <p class="text-xs text-slate-400">Dersin sınavda sorulan tüm kritik terimleri ve sade tanımları.</p>
                     </div>
-                    <div class="relative w-full sm:w-64">
-                        <input type="text" id="dictSearchInput" oninput="filterDict(this.value)" placeholder="Terim veya formül ara..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 pl-9 text-xs text-white focus:outline-none focus:border-sky-400">
-                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+                    <div class="relative w-full sm:w-60">
+                        <input type="text" id="dictSearchInput" oninput="filterDict(this.value)" placeholder="Terim veya formül ara..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-1.5 pl-8 text-xs text-white focus:outline-none focus:border-sky-400">
+                        <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-slate-500 text-xs"></i>
                     </div>
                 </div>
 
-                <div id="dictListContainer" class="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[500px] overflow-y-auto pr-1">
-                    <!-- Populated by JS -->
-                </div>
+                <div id="dictListContainer" class="grid grid-cols-1 md:grid-cols-2 gap-2.5 max-h-[450px] overflow-y-auto pr-1"></div>
             </div>
 
         </section>
@@ -528,47 +505,43 @@
         <!-- ============================================================== -->
         <!-- TAB 5: 🏆 BAŞARILAR, PROFİL & ARKADAŞLARLA PAYLAŞ               -->
         <!-- ============================================================== -->
-        <section id="tab-profile" class="tab-content hidden space-y-5">
+        <section id="tab-profile" class="tab-content hidden space-y-4">
             
             <!-- Student Level & XP Card -->
-            <div class="glass-panel rounded-2xl p-5 border border-sky-500/20 bg-gradient-to-br from-slate-900/90 via-sky-950/20 to-slate-900">
-                <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-400 via-sky-500 to-indigo-600 flex items-center justify-center text-white text-3xl shadow-xl shadow-amber-500/20">
+            <div class="glass-panel rounded-2xl p-4 sm:p-5 border border-sky-500/20 bg-gradient-to-br from-slate-900/90 via-sky-950/20 to-slate-900">
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 via-sky-500 to-indigo-600 flex items-center justify-center text-white text-2xl shadow-xl shadow-amber-500/20 shrink-0">
                         <i class="fa-solid fa-crown"></i>
                     </div>
                     <div>
                         <div class="flex items-center gap-2">
-                            <h3 id="profileLevelName" class="text-lg font-extrabold text-white">Çırak Öğrenci</h3>
+                            <h3 id="profileLevelName" class="text-base sm:text-lg font-extrabold text-white">Çırak Öğrenci</h3>
                             <span id="profileLevelBadge" class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30">Seviye 1</span>
                         </div>
                         <p class="text-xs text-slate-300 mt-0.5">Toplam Deneyim: <b id="profileXpText" class="text-sky-400">0 XP</b> • Seri: <b id="profileStreakText" class="text-amber-400">1 Gün 🔥</b></p>
-                        <p class="text-[11px] text-slate-400 mt-1">Her ünite bitirildiğinde +100 XP, her deneme sınavında +50 XP kazanırsınız.</p>
+                        <p class="text-[11px] text-slate-400 mt-0.5">Her ünite bitirildiğinde +100 XP, her deneme sınavında +50 XP kazanırsınız.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Badges Gallery -->
-            <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                <h4 class="font-extrabold text-white text-sm mb-3 flex items-center gap-2">
+            <div class="glass-card rounded-2xl p-4 border border-slate-800">
+                <h4 class="font-extrabold text-white text-xs sm:text-sm mb-3 flex items-center gap-2">
                     <i class="fa-solid fa-medal text-amber-400"></i>
                     <span>Kazanılan Başarı Rozetleri</span>
                 </h4>
-                <div id="badgesContainer" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    <!-- Populated by JS -->
-                </div>
+                <div id="badgesContainer" class="grid grid-cols-2 sm:grid-cols-4 gap-2.5"></div>
             </div>
 
             <!-- Share with Friends / WhatsApp / QR -->
-            <div class="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800">
-                <div class="text-center mb-4">
-                    <h4 class="font-extrabold text-white text-base">Arkadaşlarınla Birlikte Çalış! 🚀</h4>
-                    <p class="text-xs text-slate-400 max-w-md mx-auto mt-1">Sınıf grubundaki arkadaşlarınla bu interaktif platformu paylaş, vize ve finallere beraber hazırlanın.</p>
-                </div>
+            <div class="glass-card rounded-2xl p-4 border border-slate-800 text-center">
+                <h4 class="font-extrabold text-white text-sm sm:text-base">Arkadaşlarınla Birlikte Çalış! 🚀</h4>
+                <p class="text-xs text-slate-400 max-w-md mx-auto mt-1 mb-3">Sınıf grubundaki arkadaşlarınla bu sözelci dostu platformu paylaş, vize ve finallere beraber hazırlanın.</p>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-md mx-auto">
                     <button onclick="shareWhatsApp()" class="py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-sm"></i>
-                        <span>WhatsApp'ta Paylaş</span>
+                        <span>WhatsApp'ta Gruba Gönder</span>
                     </button>
                     <button onclick="copyShareLink()" class="py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition flex items-center justify-center gap-2">
                         <i class="fa-solid fa-link text-xs text-sky-400"></i>
@@ -576,16 +549,15 @@
                     </button>
                 </div>
 
-                <!-- QR Box -->
-                <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-col items-center">
-                    <p class="text-xs text-slate-400 mb-2 font-medium">Telefonda Açmak İçin QR Kodu Okutun:</p>
+                <div class="mt-4 pt-3 border-t border-slate-800/80 flex flex-col items-center">
+                    <p class="text-[11px] text-slate-400 mb-1.5 font-medium">Telefonda Açmak İçin QR Kodu Okutun:</p>
                     <div id="qrcodeCanvas" class="p-2 bg-white rounded-xl shadow-lg inline-block"></div>
                 </div>
             </div>
 
             <!-- Reset Progress Button -->
-            <div class="text-center pt-2">
-                <button onclick="resetProgress()" class="text-xs text-slate-500 hover:text-rose-400 transition underline">
+            <div class="text-center pt-1">
+                <button onclick="resetProgress()" class="text-[11px] text-slate-500 hover:text-rose-400 transition underline">
                     Tüm İlerlememi ve Puanlarımı Sıfırla
                 </button>
             </div>
@@ -595,52 +567,80 @@
     </main>
 
     <!-- ============================================================== -->
-    <!-- INTERACTIVE UNIT LEARNING MODAL (BOTTOM-SHEET / FULL MODAL)    -->
+    <!-- MOBILE DERS SEÇİM MODALI (BOTTOM SHEET / MODAL)                 -->
     <!-- ============================================================== -->
-    <div id="unitModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4">
-        <div class="glass-panel w-full max-w-xl max-h-[90vh] rounded-3xl border border-sky-500/30 flex flex-col shadow-2xl overflow-hidden bg-slate-900/95 anim-unlock">
+    <div id="courseModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+        <div class="glass-panel w-full max-w-md rounded-t-3xl sm:rounded-3xl border border-sky-500/30 flex flex-col shadow-2xl overflow-hidden bg-slate-900/98 anim-unlock max-h-[85vh]">
             
-            <!-- Modal Header -->
-            <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
-                <div class="flex items-center gap-2.5">
-                    <div id="modalUnitIconBox" class="w-9 h-9 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-extrabold text-sm">
-                        1
+            <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-sm font-bold">
+                        <i class="fa-solid fa-book-open"></i>
                     </div>
                     <div>
-                        <span id="modalUnitBadge" class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-300">ÜNİTE 1</span>
-                        <h3 id="modalUnitTitle" class="text-sm sm:text-base font-extrabold text-white leading-tight mt-0.5">Bilişim Teknolojileri</h3>
+                        <h3 class="text-sm font-extrabold text-white">Çalışmak İstediğin Dersi Seç</h3>
+                        <p class="text-[10px] text-slate-400">1. Sınıf Güz Dönemi 5 Temel Ders</p>
                     </div>
                 </div>
-                <button onclick="closeUnitModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-xs transition">
+                <button onclick="closeCourseModal()" class="w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-xs transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="courseModalList" class="p-3 sm:p-4 space-y-2.5 overflow-y-auto">
+                <!-- Dynamically populated with beautiful course cards -->
+            </div>
+
+            <div class="p-3 border-t border-slate-800 bg-slate-950/60 text-center">
+                <p class="text-[11px] text-slate-400 font-medium">💡 İstediğin derse dokunup anında geçiş yapabilirsin.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- INTERACTIVE UNIT LEARNING MODAL (WIZARD & SÖZELCİ REHBERİ)     -->
+    <!-- ============================================================== -->
+    <div id="unitModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4">
+        <div class="glass-panel w-full max-w-xl max-h-[92vh] rounded-3xl border border-sky-500/30 flex flex-col shadow-2xl overflow-hidden bg-slate-900/95 anim-unlock">
+            
+            <!-- Modal Header -->
+            <div class="p-3.5 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
+                <div class="flex items-center gap-2">
+                    <div id="modalUnitIconBox" class="w-8 h-8 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-extrabold text-sm shrink-0">
+                        1
+                    </div>
+                    <div class="min-w-0">
+                        <span id="modalUnitBadge" class="text-[9px] font-extrabold px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-300">SEVİYE 1</span>
+                        <h3 id="modalUnitTitle" class="text-xs sm:text-sm font-extrabold text-white leading-tight truncate">Bilişim Teknolojileri</h3>
+                    </div>
+                </div>
+                <button onclick="closeUnitModal()" class="w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-xs transition shrink-0">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
             <!-- Step Wizard Indicators -->
-            <div class="grid grid-cols-3 border-b border-slate-800 text-center text-[11px] font-bold bg-slate-950/30">
-                <div id="wizardStepBtn1" class="py-2.5 border-b-2 border-sky-400 text-sky-400 flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-lightbulb"></i>
-                    <span>1. Hap Bilgi</span>
+            <div class="grid grid-cols-3 border-b border-slate-800 text-center text-[10px] sm:text-[11px] font-bold bg-slate-950/40">
+                <div id="wizardStepBtn1" class="py-2 border-b-2 border-amber-400 text-amber-400 flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-brain text-xs"></i>
+                    <span>1. Sözelci Özeti</span>
                 </div>
-                <div id="wizardStepBtn2" class="py-2.5 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
+                <div id="wizardStepBtn2" class="py-2 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-triangle-exclamation text-xs"></i>
                     <span>2. Sınav Tuzağı</span>
                 </div>
-                <div id="wizardStepBtn3" class="py-2.5 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-bullseye"></i>
-                    <span>3. Mini Quiz</span>
+                <div id="wizardStepBtn3" class="py-2 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-bullseye text-xs"></i>
+                    <span>3. Mini Test</span>
                 </div>
             </div>
 
-            <!-- Modal Body (Scrollable) -->
-            <div id="unitModalBody" class="p-4 sm:p-5 overflow-y-auto flex-1 space-y-4">
-                <!-- Dynamically populated step content -->
-            </div>
+            <!-- Modal Body -->
+            <div id="unitModalBody" class="p-3.5 sm:p-5 overflow-y-auto flex-1 space-y-3.5"></div>
 
-            <!-- Modal Footer Buttons -->
-            <div id="unitModalFooter" class="p-3.5 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between">
-                <!-- Populated dynamically -->
-            </div>
+            <!-- Modal Footer -->
+            <div id="unitModalFooter" class="p-3 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between"></div>
 
         </div>
     </div>
@@ -649,51 +649,49 @@
     <!-- COACH ADVICE MODAL (KOÇA DANIŞ)                                 -->
     <!-- ============================================================== -->
     <div id="coachModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4">
-        <div class="glass-panel w-full max-w-lg max-h-[85vh] rounded-3xl border border-amber-500/30 flex flex-col shadow-2xl overflow-hidden bg-slate-900/95 anim-unlock">
+        <div class="glass-panel w-full max-w-lg max-h-[85vh] rounded-3xl border border-amber-500/30 flex flex-col shadow-2xl overflow-hidden bg-slate-900/98 anim-unlock">
             
-            <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-base">
+            <div class="p-3.5 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm">
                         <i class="fa-solid fa-user-graduate"></i>
                     </div>
                     <div>
-                        <h3 class="text-sm font-extrabold text-white">Koç Demir'e Danış</h3>
-                        <p class="text-[11px] text-slate-400">AÖF Sınav Stratejileri & Taktik Rehberi</p>
+                        <h3 class="text-xs sm:text-sm font-extrabold text-white">Koç Demir'e Danış</h3>
+                        <p class="text-[10px] text-slate-400">Sözelcilere Özel AÖF Taktik Rehberi</p>
                     </div>
                 </div>
-                <button onclick="closeCoachModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-xs transition">
+                <button onclick="closeCoachModal()" class="w-7 h-7 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-xs transition">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
-            <div class="p-4 sm:p-5 overflow-y-auto flex-1 space-y-3">
-                <p class="text-xs text-slate-300 font-semibold mb-2">Hangi konuda stratejiye ihtiyacın var?</p>
+            <div class="p-4 overflow-y-auto flex-1 space-y-2.5">
+                <p class="text-xs text-slate-300 font-semibold mb-1">Koçuna ne sormak istersin?</p>
                 
-                <div class="space-y-2">
-                    <button onclick="showCoachAnswer(1)" class="w-full text-left p-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
-                        <span>🎯 AÖF 4 yanlış 1 doğru kuralından nasıl korunurum?</span>
+                <div class="space-y-1.5">
+                    <button onclick="showCoachAnswer(1)" class="w-full text-left p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
+                        <span>🎯 4 yanlış 1 doğru kuralında ne zaman sallamalıyım?</span>
                         <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
                     </button>
-                    <button onclick="showCoachAnswer(2)" class="w-full text-left p-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
-                        <span>📊 Vize (%30) ve Final (%70) puanlama dengesi nedir?</span>
+                    <button onclick="showCoachAnswer(2)" class="w-full text-left p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
+                        <span>📊 Vize 100 gelse bile Finalden kalır mıyım (35 Barajı)?</span>
                         <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
                     </button>
-                    <button onclick="showCoachAnswer(3)" class="w-full text-left p-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
-                        <span>⏱️ Sınavda 30 dakikayı nasıl yönetmeliyim?</span>
+                    <button onclick="showCoachAnswer(3)" class="w-full text-left p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
+                        <span>🧠 Ben sözelciyim bu formülleri 2 güne unutuyorum ne yapayım?</span>
                         <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
                     </button>
-                    <button onclick="showCoachAnswer(4)" class="w-full text-left p-3 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
-                        <span>🔥 Motivasyonum düştü, bana bir taktik ver!</span>
+                    <button onclick="showCoachAnswer(4)" class="w-full text-left p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 text-xs text-slate-200 font-semibold transition flex items-center justify-between">
+                        <span>🔥 Sınav haftası günde kaç dakika çalışsam yeter?</span>
                         <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
                     </button>
                 </div>
 
-                <div id="coachAnswerBox" class="hidden mt-4 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/25 text-xs text-amber-200 leading-relaxed space-y-2 anim-unlock">
-                    <!-- Populated by JS -->
-                </div>
+                <div id="coachAnswerBox" class="hidden mt-3 p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/25 text-xs text-amber-200 leading-relaxed space-y-1.5 anim-unlock"></div>
             </div>
 
-            <div class="p-3 border-t border-slate-800 bg-slate-950/60 text-center">
+            <div class="p-2.5 border-t border-slate-800 bg-slate-950/60 text-center">
                 <button onclick="closeCoachModal()" class="text-xs font-bold text-slate-400 hover:text-white">Kapat</button>
             </div>
 
@@ -701,42 +699,256 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- MOBILE FIXED BOTTOM NAVIGATION DOCK (MD ALTINDA GÖRÜNÜR)       -->
+    <!-- MOBILE FIXED BOTTOM NAVIGATION DOCK                             -->
     <!-- ============================================================== -->
-    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 glass-panel border-t border-slate-800/90 pb-[env(safe-area-inset-bottom,10px)] bg-slate-950/90 backdrop-blur-xl">
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 glass-panel border-t border-slate-800/90 pb-[env(safe-area-inset-bottom,10px)] bg-slate-950/95 backdrop-blur-xl">
         <div class="grid grid-cols-5 h-16 items-center px-1">
             
             <button onclick="switchTab('roadmap')" data-tab="roadmap" class="mobile-tab-btn flex flex-col items-center justify-center gap-1 text-sky-400 font-bold">
-                <i class="fa-solid fa-map-location-dot text-lg"></i>
+                <i class="fa-solid fa-map-location-dot text-base"></i>
                 <span class="text-[10px]">Yolculuk</span>
             </button>
 
             <button onclick="switchTab('exams')" data-tab="exams" class="mobile-tab-btn flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200">
-                <i class="fa-solid fa-file-pen text-lg"></i>
+                <i class="fa-solid fa-file-pen text-base"></i>
                 <span class="text-[10px]">Deneme</span>
             </button>
 
             <button onclick="switchTab('flashcards')" data-tab="flashcards" class="mobile-tab-btn flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200">
-                <i class="fa-solid fa-layer-group text-lg"></i>
+                <i class="fa-solid fa-layer-group text-base"></i>
                 <span class="text-[10px]">Kartlar</span>
             </button>
 
             <button onclick="switchTab('tools')" data-tab="tools" class="mobile-tab-btn flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200">
-                <i class="fa-solid fa-calculator text-lg"></i>
+                <i class="fa-solid fa-calculator text-base"></i>
                 <span class="text-[10px]">Araçlar</span>
             </button>
 
             <button onclick="switchTab('profile')" data-tab="profile" class="mobile-tab-btn flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200">
-                <i class="fa-solid fa-trophy text-lg"></i>
+                <i class="fa-solid fa-trophy text-base"></i>
                 <span class="text-[10px]">Başarı</span>
             </button>
 
         </div>
     </nav>
 
-    <!-- ================= JAVASCRIPT ENGINE ================= -->
+    <!-- ================= SÖZELCİ DOSTU REHBER VERİTABANI & JAVASCRIPT ================= -->
     <script>
-        // ================= SOUND SYNTHESIZER (Web Audio API) =================
+        // SÖZELCİYE ÖZEL: MALA ANLATIR GİBİ GÜNLÜK HAYAT KODLAMALARI (5 DERS X 8 ÜNİTE)
+        const SOZELCI_REHBER = {
+            'genel_muhasebe': {
+                1: {
+                    baslik: "Muhasebe Şirketin Casusudur!",
+                    mala_anlatim: "Muhasebeyi uzay bilimi sanma. Bakkal amcanın veresiye defterinin biraz daha kravatlı halidir. Şirkete giren her kuruşun ve çıkan her faturanın kaydını tutar, patrona 'batıyor muyuz çıkıyor muyuz' onu söyler.",
+                    sifre: "DÖNEMSELLİK = Her yılın hesabı o yıla kalır, geçen senenin faturası bu seneyi bağlamaz! İHTİYATLILIK = Kötümsersin, zararı hemen yaz, kârı cebine koymadan sevinme!"
+                },
+                2: {
+                    baslik: "Bilanço Fotoğraftır, Gelir Tablosu Film!",
+                    mala_anlatim: "Bilanço 31 Aralık gecesi şirketin dondurulmuş anlık fotoğrafıdır. Cebinde ne var (Varlık), kime borcun var (Pasif) onu gösterir. Gelir tablosu ise 1 yıllık sinema filmidir; ne kazandın ne harcadın hikayesini anlatır.",
+                    sifre: "VARLIKLAR (Cebimdekiler) = BORÇLAR (Bakkala olanlar) + ÖZKAYNAK (Anamın ak sütü gibi kendi param)!"
+                },
+                3: {
+                    baslik: "Giren Çıkan Kuralı: Borç vs Alacak",
+                    mala_anlatim: "T cetvelinde sol tarafa 'Borç', sağ tarafa 'Alacak' denir. Kafanı hiç karıştırma: Masana para veya mal GİRDİYSE sola (Borç) yazılır! Masandan para veya mal ÇIKTIYSA sağa (Alacak) yazılır!",
+                    sifre: "KASAYA PARA GİRDİ = 100 Kasa BORÇLU! KASADAN PARA ÇIKTI = 100 Kasa ALACAKLI!"
+                },
+                4: {
+                    baslik: "Apartman Numarası Gibi Hesap Planı",
+                    mala_anlatim: "Hesap kodlarının ilk rakamına bak gerisini salla: 1 = Dönen Varlık (1 yılda paraya çevrilir: Nakit, Banka). 2 = Duran Varlık (Bina, araba). 3 = Kısa vadeli borç. 4 = Uzun vadeli borç. 5 = Kendi sermayem. 6 = Gelir/Gider.",
+                    sifre: "1 ve 2 ile başlayanlar VARLIK, 3-4-5 ile başlayanlar KAYNAK/BORÇTUR!"
+                },
+                5: {
+                    baslik: "KDV Senin Paran Değildir, Emanettir!",
+                    mala_anlatim: "Mal alırken devlete peşin ödediğin KDV = 191 İndirilecek KDV (Devletten alacağın). Müşteriye mal satarken müşteriden tahsil ettiğin KDV = 391 Hesaplanan KDV (Devlete emanet borcun).",
+                    sifre: "391 > 191 ise devlete vergi ÖDERSİN (360). 191 > 391 ise devlet sana borçlu kalır (190 Devreden KDV)!"
+                },
+                6: {
+                    baslik: "Kasada Para Eksik Çıkarsa",
+                    mala_anlatim: "Akşam kasayı saydın; defterde 1000 TL yazıyor ama kasada 900 TL var. 100 TL buhar oldu! Muhasebeci hemen '197 Sayım Noksanı' yazar. Fazla çıkarsa '397 Sayım Fazlası' yazar.",
+                    sifre: "Eksik = 197 (Geçici hırsız arama hesabı), Fazla = 397!"
+                },
+                7: {
+                    baslik: "Araba Eskir Ama Arsa Eskimez!",
+                    mala_anlatim: "Sıfır aldığın araba her yıl değer kaybeder, işte buna Amortisman (Eskime Payı) denir. Bu eskimeyi gider yazıp vergiden düşersin. Ama dikkat: Toprak çürümez, arsa değer kaybetmez!",
+                    sifre: "ARSA VE ARAZİLERE ASLA AMORTİSMAN AYRILMAZ! Sınavda garanti 1 soru!"
+                },
+                8: {
+                    baslik: "Yıl Sonu Kepenk İndirip Sayım Yapmak",
+                    mala_anlatim: "Yılın son günü dükkanı kapatıp raflardaki malları tek tek saymaya 'Fiili Envanter' denir. Defterdeki rakamla raftaki kutu sayısını eşitleyip yılı kapatırsın.",
+                    sifre: "Envanter = Saymak, ölçmek, tartmak ve değerini biçmektir!"
+                }
+            },
+            'iktisada_giris': {
+                1: {
+                    baslik: "Fırsat Maliyeti: Vazgeçtiğin Sevgili!",
+                    mala_anlatim: "Paran kısıtlı. Hem lahmacun yiyip hem sinemaya gidemiyorsun. Lahmacunu seçtiğin an kaçırdığın o güzelim sinema filmi senin FIRSAT MALİYETİN olur. Hayatta her seçiş bir vazgeçiştir!",
+                    sifre: "Fırsat Maliyeti = Vazgeçtiğin en iyi 2. alternatif!"
+                },
+                2: {
+                    baslik: "Pazarlık Mantığı: Arz ve Talep",
+                    mala_anlatim: "Fiyat artarsa sen kaçarsın, daha az alırsın (Talep düşer). Ama dükkan sahibi bayram eder, daha çok satmak ister (Arz artar). İkinizin el sıkıştığı orta noktaya 'Piyasa Dengesi' denir.",
+                    sifre: "Talep eğrisi aşağı (negatif), Arz eğrisi yukarı (pozitif) eğimlidir!"
+                },
+                3: {
+                    baslik: "Tuz vs Çilekli Pasta (Esneklik)",
+                    mala_anlatim: "Tuzun fiyatı 10 katına çıksa da mecbursun alacaksın (Esneklik < 1, Katı). Ama çilekli pastanın fiyatı 2 katına çıkarsa 'yemem canım lokma yerim' dersin (Esneklik > 1, Aşırı esnek).",
+                    sifre: "Zorunlu ihtiyaçlar = İnelastik (Katı). Lüks keyif maddeleri = Aşırı Esnek!"
+                },
+                4: {
+                    baslik: "Çöldeki İlk Bardak Su (Azalan Fayda)",
+                    mala_anlatim: "Çölde susuz kaldın. 1. bardak su hayatını kurtarır (100 puan). 2. bardak iyi gelir (50 puan). 5. bardakta miden bulanır (0 puan). İşte içtikçe aldığın zevkin düşmesine 'Azalan Marjinal Fayda' denir.",
+                    sifre: "Tüketim arttıkça Marjinal Fayda (Son birimin zevki) DAİMA AZALIR!"
+                },
+                5: {
+                    baslik: "Dükkan Kirası vs Ekmek Unu",
+                    mala_anlatim: "Bakkalın aylık dükkan kirası sabittir; hiç müşteri gelmese de o kira tıkır tıkır ödenir (Sabit Maliyet). Ama fırında ekmek bastıkça kullanılan un parası artar (Değişken Maliyet).",
+                    sifre: "Toplam Maliyet = Sabit Maliyet + Değişken Maliyet!"
+                },
+                6: {
+                    baslik: "Eminönü Balık-Ekmekçileri",
+                    mala_anlatim: "Herkes aynı balığı satıyor, binlerce müşteri var. Kimse kafasına göre 'ben balığı 500 liraya satıyorum' diyemez, piyasa ne derse onu kabullenir (Fiyat Kabullenici). İşte bu Tam Rekabettir.",
+                    sifre: "Tam Rekabette Firma Fiyatı Belirleyemez, Piyasa Fiyatını Kabullenir!"
+                },
+                7: {
+                    baslik: "Kral Tekel vs 3 Dev Şirket",
+                    mala_anlatim: "Monopol (Tekel) = Şehrin tek su şebekesi veya TCDD. Rakibi yok, kral o! Oligopol = Türkiye'deki GSM operatörleri (Turkcell, Vodafone, Telekom). 3 tane dev var, birbirlerine bakıp fiyat ayarlarlar.",
+                    sifre: "1 Satıcı = Monopol, Birkaç Büyük Satıcı = Oligopol!"
+                },
+                8: {
+                    baslik: "Ülkenin Yıllık Cirosu (GSYH)",
+                    mala_anlatim: "Türkiye sınırları içinde 1 yılda üretilen tüm domatesin, otomobilin, berber tıraşının piyasa değerini topla = GSYH (Gayri Safi Yurtiçi Hasıla). Ülkenin 1 yıllık toplam karnesidir.",
+                    sifre: "GSYH = Ülke sınırları içinde üretilen nihai mal ve hizmetlerin toplamı!"
+                }
+            },
+            'matematik_1': {
+                1: {
+                    baslik: "Kümeler WhatsApp Gruplarıdır!",
+                    mala_anlatim: "Kesişim (∩) = İkinizin de ortak bulunduğu WhatsApp grupları veya ortak takip ettiğiniz ünlüler. Birleşim (∪) = İkinizin takip ettiği herkesin toplamı.",
+                    sifre: "Kesişim = Ortaklar, Birleşim = Hepsi!"
+                },
+                2: {
+                    baslik: "Terazi Dengesi (Denklemler)",
+                    mala_anlatim: "Eşitliğin soluna ne yaparsan sağına da aynısını yapacaksın. Karşıya geçirirken işaret ters döner (+ ise - olur). Eşitsizliği eksiyle çarparsan büyüktür küçüktür olur!",
+                    sifre: "Eksi (-) ile çarpınca eşitsizlik ters döner!"
+                },
+                3: {
+                    baslik: "Kıyma Makinesi (Fonksiyon)",
+                    mala_anlatim: "Fonksiyon mutfaktaki kıyma makinesidir. İçine eti atarsın (x), makine onu çeker (fonksiyon kuralı f), dışarı kıyma çıkar (y = f(x)). Aynı eti atıp iki farklı sonuç alamazsın!",
+                    sifre: "Her x girdisinin yalnızca TEK BİR y çıktısı olabilir!"
+                },
+                4: {
+                    baslik: "Taş Fırlatma Kavisi (Parabol)",
+                    mala_anlatim: "Taşı havaya fırlattın; yukarı çıkar, bir an havada asılı kalır (Zirve yapar = Tepe Noktası), sonra yere düşer. Taşın çizdiği kavis paraboldür. Zirve noktası formülü r = -b/(2a).",
+                    sifre: "Kollar aşağıysa tepe zirvedir (Maksimum kâr). r = -b/(2a) garanti soru!"
+                },
+                5: {
+                    baslik: "Virüs Yayılması vs Dedektif (Logaritma)",
+                    mala_anlatim: "Üstel fonksiyon = Virüsün yayılması (2, 4, 8, 16...). Logaritma ise dedektiftir; 'Virüs 64'e ulaştıysa kaç defa ikiye katlandı?' sorusuna cevap verir: log₂(64) = 6.",
+                    sifre: "Logaritma = Üs bulma dedektifidir!"
+                },
+                6: {
+                    baslik: "Flört Aşaması (Limit)",
+                    mala_anlatim: "Birine çok yaklaşıyorsun, burnunun ucuna kadar geliyorsun ama tam değmiyorsun. Sağdan da baksan soldan da baksan aynı kişiye yaklaşıyorsan Limit vardır!",
+                    sifre: "Sağ limit = Sol limit ise Limit Vardır!"
+                },
+                7: {
+                    baslik: "Hız Göstergesi (Türev)",
+                    mala_anlatim: "Araba sürerken o anki hız göstergen ne yazıyorsa anlık türevin odur. Türev = Değişim hızıdır, grafiğin teğetinin eğimidir.",
+                    sifre: "Türev = Anlık Değişim Hızı ve Eğim!"
+                },
+                8: {
+                    baslik: "Dağın Zirvesinde Zemin Dümdüzdür!",
+                    mala_anlatim: "Dağın en tepesine (maksimum noktaya) çıktığında zemin dümdüzleşir, eğim SIFIR olur. İşte bu yüzden maksimum kârı veya minimum maliyeti bulmak için türev alıp SIFIRA eşitlersin!",
+                    sifre: "Maksimum/Minimum için: Türevi Al ve Sıfıra Eşitle (f'(x) = 0)!"
+                }
+            },
+            'bilisim_teknolojileri': {
+                1: {
+                    baslik: "39 Derece Ateş (Veri vs Bilgelik)",
+                    mala_anlatim: "Veri = '39' (Kuru sayı, anlamsız). Enformasyon = 'Hastanın ateşi 39 derece' (Anlam kazandı). Bilgi = '39 derece ateş havaleye yol açabilir' (Teşhis). Bilgelik = 'Hemen soğuk kompres yap' (Eylem).",
+                    sifre: "Veri (Ham) ➔ Enformasyon (İşlenmiş) ➔ Bilgi ➔ Bilgelik!"
+                },
+                2: {
+                    baslik: "Aşçı, Kesme Tahtası ve Buzdolabı",
+                    mala_anlatim: "İşlemci (CPU) = Aşçıdır. RAM = Aşçının kesme tahtasıdır (Hızlıdır ama mutfaktan çıkınca silinir, uçar!). Hard Disk / SSD = Buzdolabıdır (Elektrik gitse de yemekler bozulmaz, saklanır).",
+                    sifre: "RAM = Geçici hafıza (Uçar!). SSD/Hard Disk = Kalıcı depo!"
+                },
+                3: {
+                    baslik: "Evin Temeli vs İçindeki Koltuk",
+                    mala_anlatim: "Sistem Yazılımı (Windows, Android, iOS) = Evin temeli ve elektrik tesisatıdır, o olmazsa ev olmaz. Uygulama Yazılımı (Instagram, Excel, WhatsApp) = Evin içindeki televizyondur.",
+                    sifre: "İşletim Sistemi = Temel Sistem, Excel/Instagram = Uygulama!"
+                },
+                4: {
+                    baslik: "Bilgisayarın Trafik Polisi",
+                    mala_anlatim: "İşletim sistemi klavyeden bastığın tuşu ekrana iletir, belleği programlar arasında paylaştırır. Linux açık kaynaktır (isteyen tarifini değiştirir), Windows kapalı kutudur.",
+                    sifre: "Linux = Ücretsiz & Açık Kaynak, Windows = Lisanslı & Kapalı!"
+                },
+                5: {
+                    baslik: "Ev Wi-Fi'ı vs Tüm Dünya (Ağlar)",
+                    mala_anlatim: "LAN = Evindeki veya kafedeki yerel Wi-Fi ağı (küçük alan). WAN = Bütün dünyayı birbirine bağlayan devasa internet okyanusu.",
+                    sifre: "LAN = Yerel (Oda/Bina), WAN = Geniş (Dünya çapında)!"
+                },
+                6: {
+                    baslik: "Telefon Rehberi (DNS ve IP)",
+                    mala_anlatim: "IP = Evinin posta adresi (142.250.180...). DNS = Telefon rehberidir. Sen rehberden 'Google' seçersin, DNS arkadaki o karışık IP numarasını arar.",
+                    sifre: "DNS = İsmi IP adresine çeviren telefon rehberidir!"
+                },
+                7: {
+                    baslik: "Bedava Peynir Sadece Kapanında Olur!",
+                    mala_anlatim: "Phishing (Oltalama) = '10.000 TL kazandınız' sahte SMS'leri. Truva Atı = Bedava oyun indirdin sanırsın, arkasından virüs çıkar.",
+                    sifre: "Oltalama (Phishing) = Yem atarak şifre çalma hilesi!"
+                },
+                8: {
+                    baslik: "Fotoğrafları Gökyüzüne Yüklemek (Bulut)",
+                    mala_anlatim: "Bulut Bilişim = Dosyalarını kendi telefonunda değil, uzaktaki devasa sunucularda (Google Drive, iCloud) saklamak. Telefonun kırılsa da fotoğrafların kaybolmaz.",
+                    sifre: "Bulut = İnternet üzerinden erişilen kiralık sunucu havuzudur!"
+                }
+            },
+            'isletme_ilkeleri': {
+                1: {
+                    baslik: "Dükkanın 1 Numaralı Amacı",
+                    mala_anlatim: "İşletme hayır kurumu değildir, 1 numaralı hedefi kâr etmektir. Ama çalışanına maaş vermezse, doğayı zehirlerse batar. Toplumsal fayda ile kâr el ele gitmelidir.",
+                    sifre: "Temel Amaç = Kâr Etmek ve Varlığını Sürdürmek!"
+                },
+                2: {
+                    baslik: "Evin İçi vs Mahalle (Çevre)",
+                    mala_anlatim: "İç Çevre = Müdürün, çalışanların, sermayen (sen kontrol edebilirsin). Dış Çevre = Enflasyon, döviz kuru, rakipler, savaş (sen kontrol edemezsin, uyum sağlamak zorundasın).",
+                    sifre: "İç Çevre = Kontrol edilebilir, Dış Çevre = Uyum sağlanır!"
+                },
+                3: {
+                    baslik: "Issız Dağ Başına Dönerci Açılmaz!",
+                    mala_anlatim: "Çimento fabrikasını taş ocağının yanına kurarsın (Hammaddeye yakınlık). Ama dönerciyi insanların geçtiği caddeye açarsın (Pazara yakınlık). Yanlış yerde dükkan batar!",
+                    sifre: "Kuruluş yeri seçimi işletmenin ömrünü belirler!"
+                },
+                4: {
+                    baslik: "Bakkal Rıza vs Koç Holding",
+                    mala_anlatim: "Şahıs Şirketi = Bakkal Rıza borca batarsa evini arabasını haciz alıp götürür (Sınırsız Sorumluluk). Anonim Şirket (A.Ş.) = Şirket batsa bile sadece koyduğun hisse yanar, evine haciz gelemez (Sınırlı Sorumluluk).",
+                    sifre: "A.Ş. ve Limited = Sınırlı Sorumlu, Şahıs = Malıyla Mülküyle Sorumlu!"
+                },
+                5: {
+                    baslik: "POLK Formülü (Yönetimin 4 Silahşörü)",
+                    mala_anlatim: "Yönetim 4 adımdır: Planla (Nereye gideceğiz?), Örgütle (Kim ne yapacak?), Liderlik et/Yönelt (Haydi aslanlarım yapabilirsiniz!), Kontrol et (Hedefe vardık mı kontrol et).",
+                    sifre: "P-O-L-K: Planlama, Örgütleme, Liderlik, Kontrol!"
+                },
+                6: {
+                    baslik: "Pazarlamanın 4P'si",
+                    mala_anlatim: "Product (Ürün), Price (Fiyat), Place (Dağıtım/Mekan), Promotion (Tutundurma/Reklam). Bu dördü bir araya gelmeden hiçbir mal satılmaz!",
+                    sifre: "4P: Ürün, Fiyat, Dağıtım, Reklam!"
+                },
+                7: {
+                    baslik: "Doğru İnsanı Doğru Koltuğa Oturtmak",
+                    mala_anlatim: "İnsan Kaynakları = Ağzı laf yapmayanı satışa, sayılardan anlamayanı muhasebeye oturtursan batarsın. İK'nın tek görevi doğru insanı doğru pozisyona koymaktır.",
+                    sifre: "İK = Doğru işe doğru insan!"
+                },
+                8: {
+                    baslik: "Süte Su Katmamak (İş Ahlakı)",
+                    mala_anlatim: "Girişimci fırsatı görüp risk alan cesur kişidir. İş ahlakı ise 'Terazide hile yapma, süte su katma, müşterini aldatma' diyen Ahilik ahlakıdır.",
+                    sifre: "Girişimci = Risk Alan, İş Etiği = Güven ve Dürüstlük!"
+                }
+            }
+        };
+
+        // SOUND SYNTHESIZER (Zero dependencies Web Audio API)
         const SoundFX = {
             ctx: null,
             muted: false,
@@ -835,14 +1047,14 @@
             ProgressManager.save();
         }
 
-        // ================= PROGRESS & GAMIFICATION MANAGER =================
+        // PROGRESS MANAGER
         const ProgressManager = {
-            KEY: 'aof_ybs_gamified_v1',
+            KEY: 'aof_ybs_gamified_v2',
             data: {
                 xp: 0,
                 streak: 1,
                 lastActiveDate: new Date().toISOString().slice(0, 10),
-                completedUnits: {}, // { courseId: [1, 2, ...] }
+                completedUnits: {},
                 badges: [],
                 unlockAll: false,
                 soundMuted: false
@@ -856,10 +1068,6 @@
                 } catch(e) {}
                 this.checkStreak();
                 SoundFX.muted = this.data.soundMuted || false;
-                const btn = document.getElementById('soundBtn');
-                if (btn) {
-                    btn.innerHTML = SoundFX.muted ? '<i class="fa-solid fa-volume-xmark text-rose-400"></i>' : '<i class="fa-solid fa-volume-high text-emerald-400"></i>';
-                }
             },
             save() {
                 try {
@@ -873,11 +1081,8 @@
                     const last = new Date(this.data.lastActiveDate);
                     const now = new Date(today);
                     const diffDays = Math.round((now - last) / (1000 * 60 * 60 * 24));
-                    if (diffDays === 1) {
-                        this.data.streak += 1;
-                    } else if (diffDays > 1) {
-                        this.data.streak = 1;
-                    }
+                    if (diffDays === 1) this.data.streak += 1;
+                    else if (diffDays > 1) this.data.streak = 1;
                     this.data.lastActiveDate = today;
                     this.save();
                 }
@@ -899,9 +1104,7 @@
                 return arr.includes(unitNum - 1);
             },
             completeUnit(courseId, unitNum) {
-                if (!this.data.completedUnits[courseId]) {
-                    this.data.completedUnits[courseId] = [];
-                }
+                if (!this.data.completedUnits[courseId]) this.data.completedUnits[courseId] = [];
                 if (!this.data.completedUnits[courseId].includes(unitNum)) {
                     this.data.completedUnits[courseId].push(unitNum);
                     this.addXP(100);
@@ -911,27 +1114,13 @@
             checkBadges() {
                 const b = this.data.badges;
                 let newBadge = false;
-                if (!b.includes('first_step') && this.data.xp >= 50) {
-                    b.push('first_step'); newBadge = true;
-                }
-                if (!b.includes('unit_master') && Object.values(this.data.completedUnits).some(u => u.length >= 1)) {
-                    b.push('unit_master'); newBadge = true;
-                }
-                if (!b.includes('vize_ready') && Object.values(this.data.completedUnits).some(u => u.includes(4))) {
-                    b.push('vize_ready'); newBadge = true;
-                }
-                if (!b.includes('streak_3') && this.data.streak >= 3) {
-                    b.push('streak_3'); newBadge = true;
-                }
-                if (!b.includes('xp_500') && this.data.xp >= 500) {
-                    b.push('xp_500'); newBadge = true;
-                }
-                if (!b.includes('final_champion') && Object.values(this.data.completedUnits).some(u => u.includes(8))) {
-                    b.push('final_champion'); newBadge = true;
-                }
-                if (newBadge) {
-                    renderBadges();
-                }
+                if (!b.includes('first_step') && this.data.xp >= 50) { b.push('first_step'); newBadge = true; }
+                if (!b.includes('unit_master') && Object.values(this.data.completedUnits).some(u => u.length >= 1)) { b.push('unit_master'); newBadge = true; }
+                if (!b.includes('vize_ready') && Object.values(this.data.completedUnits).some(u => u.includes(4))) { b.push('vize_ready'); newBadge = true; }
+                if (!b.includes('streak_3') && this.data.streak >= 3) { b.push('streak_3'); newBadge = true; }
+                if (!b.includes('xp_500') && this.data.xp >= 500) { b.push('xp_500'); newBadge = true; }
+                if (!b.includes('final_champion') && Object.values(this.data.completedUnits).some(u => u.includes(8))) { b.push('final_champion'); newBadge = true; }
+                if (newBadge) renderBadges();
             }
         };
 
@@ -942,10 +1131,10 @@
             const btn = document.getElementById('unlockAllBtn');
             if (ProgressManager.data.unlockAll) {
                 btn.className = 'shrink-0 text-[11px] font-bold px-2.5 py-1.5 rounded-xl border border-amber-500/50 bg-amber-500/20 text-amber-300 transition flex items-center gap-1.5';
-                btn.innerHTML = '<i class="fa-solid fa-lock-open text-amber-400"></i><span class="hidden sm:inline">Kilitler Açık</span>';
+                btn.innerHTML = '<i class="fa-solid fa-lock-open text-amber-400"></i><span>Kilitler Açık</span>';
             } else {
                 btn.className = 'shrink-0 text-[11px] font-bold px-2.5 py-1.5 rounded-xl border border-slate-700 bg-slate-900/80 hover:bg-slate-800 text-slate-300 transition flex items-center gap-1.5';
-                btn.innerHTML = '<i class="fa-solid fa-lock text-slate-400"></i><span class="hidden sm:inline">Normal Mod</span>';
+                btn.innerHTML = '<i class="fa-solid fa-lock text-slate-400"></i><span>Kilitleri Aç</span>';
             }
             SoundFX.playClick();
         }
@@ -957,7 +1146,7 @@
             }
         }
 
-        // ================= GLOBAL STATE =================
+        // GLOBAL APP STATE
         let coursesList = [];
         let currentCourse = null;
         let currentExam = null;
@@ -970,7 +1159,6 @@
         let unitQuizQuestions = [];
         let unitQuizCurrentIdx = 0;
 
-        // ================= INITIALIZATION =================
         window.addEventListener('DOMContentLoaded', async () => {
             ProgressManager.load();
             await loadCoursesData();
@@ -988,27 +1176,58 @@
                 try {
                     const res = await fetch('public/data/courses.json');
                     coursesList = await res.json();
-                } catch(e) {
-                    console.warn("Using fallback courses");
-                }
+                } catch(e) {}
             }
 
-            const select = document.getElementById('courseSelect');
-            select.innerHTML = '';
-            coursesList.forEach(c => {
-                const opt = document.createElement('option');
-                opt.value = c.id;
-                opt.textContent = `${c.name} (${c.code})`;
-                select.appendChild(opt);
-            });
-
+            renderCourseModalList();
             const initialCourseId = coursesList[0]?.id || 'bilisim_teknolojileri';
             await selectCourse(initialCourseId);
         }
 
-        async function onCourseChange(courseId) {
+        // MOBILE COURSE SWITCHER MODAL
+        function openCourseModal() {
             SoundFX.playClick();
-            await selectCourse(courseId);
+            renderCourseModalList();
+            document.getElementById('courseModal').classList.remove('hidden');
+        }
+
+        function closeCourseModal() {
+            SoundFX.playClick();
+            document.getElementById('courseModal').classList.add('hidden');
+        }
+
+        function renderCourseModalList() {
+            const list = document.getElementById('courseModalList');
+            if (!list) return;
+            list.innerHTML = '';
+
+            coursesList.forEach(c => {
+                const isSelected = currentCourse && (currentCourse.course_code === c.code || currentCourse.id === c.id);
+                const card = document.createElement('button');
+                card.className = `w-full text-left p-3.5 rounded-2xl border transition flex items-center justify-between gap-3 ${
+                    isSelected 
+                        ? 'bg-sky-500/20 border-sky-400 text-white shadow-lg shadow-sky-500/10' 
+                        : 'bg-slate-800/60 hover:bg-slate-800 border-slate-700/80 text-slate-300'
+                }`;
+                card.onclick = () => {
+                    selectCourse(c.id);
+                    closeCourseModal();
+                };
+
+                card.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-lg shrink-0" style="color: ${c.color || '#38bdf8'}">
+                            <i class="fa-solid ${c.icon}"></i>
+                        </div>
+                        <div>
+                            <div class="font-extrabold text-xs sm:text-sm text-white">${c.name}</div>
+                            <div class="text-[10px] text-slate-400 font-bold mt-0.5">${c.code} • 8 Seviyeli Patika</div>
+                        </div>
+                    </div>
+                    ${isSelected ? '<span class="w-6 h-6 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center text-xs font-bold shrink-0"><i class="fa-solid fa-check"></i></span>' : '<i class="fa-solid fa-chevron-right text-slate-600 text-xs"></i>'}
+                `;
+                list.appendChild(card);
+            });
         }
 
         async function selectCourse(courseId) {
@@ -1019,14 +1238,15 @@
                     const cMeta = coursesList.find(c => c.id === courseId);
                     const res = await fetch(`public/data/${cMeta.file}`);
                     currentCourse = await res.json();
-                } catch(e) {
-                    console.error("Course load error", e);
-                }
+                } catch(e) {}
             }
 
             if (!currentCourse) return;
 
-            // Update Header & Roadmap Titles
+            // Update Header display
+            const cMeta = coursesList.find(c => c.id === courseId) || { icon: 'fa-book', name: currentCourse.course_name };
+            document.getElementById('headerCourseIcon').className = `fa-solid ${cMeta.icon} text-sky-400 text-xs shrink-0`;
+            document.getElementById('headerCourseName').textContent = currentCourse.course_name;
             document.getElementById('roadmapCourseTitle').textContent = currentCourse.course_name;
             document.getElementById('roadmapCourseCode').textContent = currentCourse.course_code;
 
@@ -1037,15 +1257,12 @@
             updateCoachQuote();
         }
 
-        // ================= TOP STATS & COACH =================
         function updateTopStatsUI() {
             document.getElementById('streakCount').textContent = ProgressManager.data.streak;
             document.getElementById('xpCount').textContent = ProgressManager.data.xp;
 
-            // Profile Tab
             const xp = ProgressManager.data.xp;
-            let lvl = 1;
-            let lvlName = 'Başlangıç Öğrencisi';
+            let lvl = 1; let lvlName = 'Başlangıç Öğrencisi';
             if (xp >= 100 && xp < 300) { lvl = 2; lvlName = 'Çırak Öğrenci'; }
             else if (xp >= 300 && xp < 600) { lvl = 3; lvlName = 'Kalfa Öğrenci'; }
             else if (xp >= 600 && xp < 1000) { lvl = 4; lvlName = 'Bilge Öğrenci'; }
@@ -1062,13 +1279,11 @@
         }
 
         const COACH_QUOTES = [
-            "AÖF'te 4 yanlış 1 doğruyu götürür. İki şık arasında kalmadıysan asla rastgele sallama!",
-            "Vize sınavı %30, Final %70 etkilidir. Finalde 35 barajını geçmek şarttır.",
-            "Günde sadece 15-20 dakika seviye ilerlemek, sınav öncesi sabahlamaktan kat kat daha verimlidir.",
-            "Önce hap bilgileri oku, ardından sınav tuzağına dikkat et ve 3 soruluk testi çöz!",
-            "Genel Muhasebede Varlıklar = Kaynaklar eşitliği bilançonun değişmez kuralıdır.",
-            "İktisatta talep eğrisi negatif, arz eğrisi pozitif eğimlidir. Denge kesişim noktasıdır.",
-            "Matematikte ikinci dereceden fonksiyonun tepe noktası r = -b/(2a) formülünden çıkar!"
+            "Ben sözelciyim terimleri unuturum diyorsan korkma! Seviyedeki 'Mala Anlatır Gibi' kutusunu oku, sınavda garanti gülümseyeceksin.",
+            "Genel Muhasebede Masana giren para BORÇTUR, masandan çıkan para ALACAKTIR. Bu kadar basit!",
+            "İktisatta susadıkça içtiğin suyun zevki düşer, buna Azalan Marjinal Fayda denir!",
+            "Matematikte tepe noktası havaya attığın taşın zirvesidir. Formülü r = -b/(2a) garanti 1 soru getirir!",
+            "AÖF'te 4 yanlış 1 doğruyu götürür. İki şık arasında kalmadıysan asla rastgele sallama!"
         ];
 
         function updateCoachQuote() {
@@ -1096,34 +1311,30 @@
             
             let text = "";
             if (id === 1) {
-                text = "<b>🎯 4 Yanlış 1 Doğru Kuralı:</b> Her yanlış cevabınız doğru sayınızdan 0.25 net siler. Eğer 5 şıktan 3'ünü eleyip 2 şık arasında kaldıysanız işaretlemek matematiksel olarak mantıklıdır. Ancak hiçbir fikriniz yoksa kesinlikle BOŞ BIRAKIN.";
+                text = "<b>🎯 Ne Zaman Sallamalısın?</b> 5 şıktan 3'ünü kesin elediysen ve geriye 2 şık kaldıysa sallamak matematiksel olarak kârlıdır (+0.50 beklenen değer). Ama 5 şıktan hiçbirini bilmiyorsan ASLA SALLAMA, boş bırak!";
             } else if (id === 2) {
-                text = "<b>📊 Vize & Final Ağırlığı:</b> Başarı Notu = (Vize × 0.30) + (Final × 0.70). Unutmayın: Finalden 35'in altında alırsanız vizeniz 100 bile olsa doğrudan KALIRSINIZ (35 Barajı!).";
+                text = "<b>🚨 35 Barajı Hayatidir!</b> Vizeden 100 bile alsan, Final sınavında 35'in altında (örneğin 34) alırsan sistem seni DOĞRUDAN FF İLE BIRAKIR! Finalde en az 7 net (35 puan) yapmak ölüm kalım meselesidir.";
             } else if (id === 3) {
-                text = "<b>⏱️ Zaman Yönetimi:</b> 20 soruya 30 dakika verilir, yani soru başına 1.5 dakika düşer. Matematik ve muhasebe işlem sorularını ikinci tura bırakın, bilgi sorularını ilk 10 dakikada eritip zaman kazanın.";
+                text = "<b>🧠 Sözelciler Nasıl Unutmaz?</b> Kitaptaki akademik dili ezberleme! Seviyelerdeki 'Sözelci Mantığı' kartını oku. Muhasebeyi bakkal, iktisadı pazar pazarlığı, bilişimi aşçı-kesme tahtası gibi kodla. Günlük hayat hikayesi asla unutulmaz!";
             } else if (id === 4) {
-                text = "<b>🔥 Çalışma Motivasyonu:</b> AÖF YBS bölümü dijital dünyanın en popüler alanlarından biri! Günde sadece 1 seviye bitirerek haftada bir dersi baştan sona fethedebilirsin. Sen bu işi yaparsın!";
+                text = "<b>⏱️ Günde Kaç Dakika?</b> Günde sadece 15-20 dakika 1 seviye bitir. 8 günde koskoca ders biter! Sınav gecesi sabahlayıp beynini yakmaktan 10 kat daha başarılı olursun.";
             }
             box.innerHTML = text;
         }
 
-        // ================= TAB 1: ROADMAP (YOLCULUK ENGINE) =================
+        // ================= TAB 1: ROADMAP ENGINE =================
         function renderRoadmap() {
             if (!currentCourse) return;
 
             const container = document.getElementById('roadmapLevelsContainer');
             container.innerHTML = '';
 
-            const courseId = currentCourse.course_code ? currentCourse.course_code.toLowerCase().replace(/[^a-z0-9]/g, '_') : 'course';
-            const realCourseId = document.getElementById('courseSelect').value;
+            const realCourseId = getActiveCourseKey();
             const units = currentCourse.units || [];
 
-            // Calculate progress %
             let completedCount = 0;
             units.forEach(u => {
-                if (ProgressManager.isUnitCompleted(realCourseId, u.unit_number)) {
-                    completedCount++;
-                }
+                if (ProgressManager.isUnitCompleted(realCourseId, u.unit_number)) completedCount++;
             });
             const percent = units.length > 0 ? Math.round((completedCount / units.length) * 100) : 0;
             document.getElementById('roadmapPercentText').textContent = `${percent}%`;
@@ -1135,9 +1346,8 @@
                 const isUnlocked = ProgressManager.isUnitUnlocked(realCourseId, uNum);
                 const isCurrent = isUnlocked && !isCompleted;
 
-                // Level Card Node
                 const node = document.createElement('div');
-                node.className = `glass-card rounded-2xl p-4 sm:p-5 border transition-all duration-300 relative flex items-center justify-between gap-3 ${
+                node.className = `glass-card rounded-2xl p-3.5 sm:p-4 border transition-all duration-300 relative flex items-center justify-between gap-3 ${
                     isCompleted 
                         ? 'border-emerald-500/40 bg-emerald-950/15' 
                         : isCurrent 
@@ -1145,109 +1355,102 @@
                             : 'border-slate-800/80 opacity-60 bg-slate-900/40'
                 }`;
 
-                // Status Icon & Styles
                 let iconHtml = '';
                 if (isCompleted) {
-                    iconHtml = `<div class="w-12 h-12 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center font-extrabold text-lg shadow-md shadow-emerald-500/30 shrink-0"><i class="fa-solid fa-check"></i></div>`;
+                    iconHtml = `<div class="w-11 h-11 rounded-2xl bg-emerald-500 text-slate-950 flex items-center justify-center font-extrabold text-base shadow-md shadow-emerald-500/30 shrink-0"><i class="fa-solid fa-check"></i></div>`;
                 } else if (isCurrent) {
-                    iconHtml = `<div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-sky-500/40 shrink-0 animate-bounce">${uNum}</div>`;
+                    iconHtml = `<div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 text-white flex items-center justify-center font-extrabold text-base shadow-md shadow-sky-500/40 shrink-0 animate-bounce">${uNum}</div>`;
                 } else {
-                    iconHtml = `<div class="w-12 h-12 rounded-2xl bg-slate-800 text-slate-500 flex items-center justify-center font-bold text-lg shrink-0"><i class="fa-solid fa-lock"></i></div>`;
+                    iconHtml = `<div class="w-11 h-11 rounded-2xl bg-slate-800 text-slate-500 flex items-center justify-center font-bold text-base shrink-0"><i class="fa-solid fa-lock"></i></div>`;
                 }
 
-                // Node Content
+                // Sözelci hook preview
+                const sozelciHook = (SOZELCI_REHBER[realCourseId] && SOZELCI_REHBER[realCourseId][uNum]) ? SOZELCI_REHBER[realCourseId][uNum].baslik : 'Sözelciye Özel Mala Anlatım';
+
                 const contentHtml = `
                     <div class="flex-1 min-w-0">
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full ${u.is_vize ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30' : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/30'}">
-                                ${u.is_vize ? 'VİZE KONUSU' : 'FİNAL KONUSU'}
+                        <div class="flex items-center gap-1.5 mb-0.5">
+                            <span class="text-[9px] font-extrabold px-1.5 py-0.2 rounded-full ${u.is_vize ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30' : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/30'}">
+                                ${u.is_vize ? 'VİZE' : 'FİNAL'}
                             </span>
-                            <span class="text-[11px] font-bold text-slate-400">Seviye ${uNum}</span>
+                            <span class="text-[10px] font-bold text-slate-400">Seviye ${uNum}</span>
                         </div>
-                        <h4 class="font-extrabold text-sm sm:text-base text-white truncate leading-tight">${u.title}</h4>
-                        <p class="text-xs text-slate-400 mt-1 line-clamp-1">${(u.key_topics || []).slice(0, 3).join(' • ') || '3 dk okuma + Sınav tuzağı + 3 Test Sorusu'}</p>
+                        <h4 class="font-extrabold text-xs sm:text-sm text-white truncate leading-tight">${u.title}</h4>
+                        <p class="text-[11px] text-amber-300/80 mt-0.5 font-medium truncate"><i class="fa-solid fa-brain mr-1 text-[10px] text-amber-400"></i>${sozelciHook}</p>
                     </div>
                 `;
 
-                // Action Button
                 let actionBtnHtml = '';
                 if (isCompleted) {
-                    actionBtnHtml = `<button onclick="openUnitModal(${uNum})" class="px-3.5 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-emerald-400 font-bold text-xs border border-emerald-500/30 transition shrink-0 flex items-center gap-1.5"><i class="fa-solid fa-rotate-left"></i><span class="hidden sm:inline">Tekrar Et</span></button>`;
+                    actionBtnHtml = `<button onclick="openUnitModal(${uNum})" class="px-3 py-1.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-emerald-400 font-bold text-xs border border-emerald-500/30 transition shrink-0 flex items-center gap-1"><i class="fa-solid fa-rotate-left text-[10px]"></i><span class="hidden xs:inline">Tekrar</span></button>`;
                 } else if (isCurrent) {
-                    actionBtnHtml = `<button onclick="openUnitModal(${uNum})" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs shadow-md shadow-sky-500/30 transition shrink-0 flex items-center gap-1.5"><span>BAŞLA</span><i class="fa-solid fa-play text-[10px]"></i></button>`;
+                    actionBtnHtml = `<button onclick="openUnitModal(${uNum})" class="px-3.5 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs shadow-md shadow-sky-500/30 transition shrink-0 flex items-center gap-1"><span>BAŞLA</span><i class="fa-solid fa-play text-[9px]"></i></button>`;
                 } else {
-                    actionBtnHtml = `<button onclick="showLockedAlert(${uNum})" class="px-3 py-2 rounded-xl bg-slate-800/50 text-slate-500 font-bold text-xs cursor-not-allowed shrink-0 flex items-center gap-1"><i class="fa-solid fa-lock text-[10px]"></i><span class="hidden sm:inline">Kilitli</span></button>`;
+                    actionBtnHtml = `<button onclick="showLockedAlert(${uNum})" class="px-2.5 py-1.5 rounded-xl bg-slate-800/50 text-slate-500 font-bold text-xs cursor-not-allowed shrink-0 flex items-center gap-1"><i class="fa-solid fa-lock text-[9px]"></i><span class="hidden xs:inline">Kilitli</span></button>`;
                 }
 
                 node.innerHTML = iconHtml + contentHtml + actionBtnHtml;
                 container.appendChild(node);
 
-                // Insert VIZE CHECKPOINT GATE between Unit 4 and 5
+                // VIZE GATE (After Unit 4)
                 if (uNum === 4) {
                     const isVizeReady = ProgressManager.isUnitCompleted(realCourseId, 4);
                     const vizeGate = document.createElement('div');
-                    vizeGate.className = `p-4 sm:p-5 rounded-2xl border flex items-center justify-between gap-3 ${
-                        isVizeReady 
-                            ? 'bg-gradient-to-r from-amber-500/20 via-sky-500/20 to-slate-900 border-amber-500/40 shadow-lg shadow-amber-500/10' 
-                            : 'bg-slate-950/40 border-slate-800/80 opacity-60'
+                    vizeGate.className = `p-3.5 rounded-2xl border flex items-center justify-between gap-2.5 ${
+                        isVizeReady ? 'bg-gradient-to-r from-amber-500/20 via-sky-500/20 to-slate-900 border-amber-500/40 shadow-lg shadow-amber-500/10' : 'bg-slate-950/40 border-slate-800/80 opacity-60'
                     }`;
                     vizeGate.innerHTML = `
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">ARA SINAV KAPISI</span>
-                                <h4 class="font-extrabold text-sm sm:text-base text-white">Vize Denemesi (1-4. Üniteler)</h4>
-                                <p class="text-xs text-slate-400">1-4. üniteleri bitirdin! Şimdi 20 soruluk vize denemesinde kendini test et.</p>
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <div class="w-10 h-10 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="truncate">
+                                <span class="text-[9px] font-extrabold px-1.5 py-0.2 rounded-full bg-amber-500/20 text-amber-300">ARA SINAV KAPISI</span>
+                                <h4 class="font-extrabold text-xs sm:text-sm text-white truncate">Vize Denemesi (1-4. Üniteler)</h4>
                             </div>
                         </div>
-                        <button onclick="switchTab('exams'); loadExam(0);" class="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-md shadow-amber-500/20 transition shrink-0 flex items-center gap-1.5">
-                            <i class="fa-solid fa-play text-[10px]"></i>
-                            <span>Denemeyi Çöz</span>
-                        </button>
+                        <button onclick="switchTab('exams'); loadExam(0);" class="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition shrink-0">Denemeyi Çöz</button>
                     `;
                     container.appendChild(vizeGate);
                 }
 
-                // Insert FINAL CHAMPION GATE after Unit 8
+                // FINAL GATE (After Unit 8)
                 if (uNum === 8) {
                     const isFinalReady = ProgressManager.isUnitCompleted(realCourseId, 8);
                     const finalGate = document.createElement('div');
-                    finalGate.className = `p-4 sm:p-5 rounded-2xl border flex items-center justify-between gap-3 ${
-                        isFinalReady 
-                            ? 'bg-gradient-to-r from-emerald-500/20 via-sky-500/20 to-slate-900 border-emerald-500/40 shadow-lg shadow-emerald-500/10' 
-                            : 'bg-slate-950/40 border-slate-800/80 opacity-60'
+                    finalGate.className = `p-3.5 rounded-2xl border flex items-center justify-between gap-2.5 ${
+                        isFinalReady ? 'bg-gradient-to-r from-emerald-500/20 via-sky-500/20 to-slate-900 border-emerald-500/40 shadow-lg shadow-emerald-500/10' : 'bg-slate-950/40 border-slate-800/80 opacity-60'
                     }`;
                     finalGate.innerHTML = `
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl shrink-0">
-                                <i class="fa-solid fa-trophy"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">BÜYÜK FİNAL KAPISI</span>
-                                <h4 class="font-extrabold text-sm sm:text-base text-white">Dönem Sonu Şampiyonluk Sınavı</h4>
-                                <p class="text-xs text-slate-400">Tüm 8 üniteyi tamamladın! 20 soruluk final denemesini çözerek AÖF Master Rozetini kazan.</p>
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <div class="w-10 h-10 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-trophy"></i></div>
+                            <div class="truncate">
+                                <span class="text-[9px] font-extrabold px-1.5 py-0.2 rounded-full bg-emerald-500/20 text-emerald-300">BÜYÜK FİNAL KAPISI</span>
+                                <h4 class="font-extrabold text-xs sm:text-sm text-white truncate">Dönem Sonu Şampiyonluk Sınavı</h4>
                             </div>
                         </div>
-                        <button onclick="switchTab('exams'); loadExam(2);" class="px-3.5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs shadow-md shadow-emerald-500/20 transition shrink-0 flex items-center gap-1.5">
-                            <i class="fa-solid fa-play text-[10px]"></i>
-                            <span>Finali Çöz</span>
-                        </button>
+                        <button onclick="switchTab('exams'); loadExam(2);" class="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs transition shrink-0">Finali Çöz</button>
                     `;
                     container.appendChild(finalGate);
                 }
-
             });
+        }
+
+        function getActiveCourseKey() {
+            if (!currentCourse) return 'bilisim_teknolojileri';
+            const code = (currentCourse.course_code || '').toUpperCase();
+            if (code.includes('MUH')) return 'genel_muhasebe';
+            if (code.includes('MAT')) return 'matematik_1';
+            if (code.includes('İKT') || code.includes('IKT')) return 'iktisada_giris';
+            if (code.includes('İŞL') || code.includes('ISL')) return 'isletme_ilkeleri';
+            return 'bilisim_teknolojileri';
         }
 
         function showLockedAlert(unitNum) {
             SoundFX.playError();
             alert(`🔒 Seviye ${unitNum} Kilitli!
-Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamamlayın veya üstteki 'Kilitleri Aç' modunu kullanın.`);
+Bu seviyenin kilidini açmak için Seviye ${unitNum - 1}'i tamamlayın veya 'Kilitleri Aç' düğmesini kullanın.`);
         }
 
-        // ================= INTERACTIVE UNIT MODAL (WIZARD ENGINE) =================
+        // ================= INTERACTIVE UNIT MODAL =================
         function openUnitModal(unitNum) {
             SoundFX.playClick();
             if (!currentCourse) return;
@@ -1258,21 +1461,16 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             currentActiveUnit = unit;
             unitModalStep = 1;
 
-            // Gather quiz questions for this unit
             const allQuestions = [];
             (currentCourse.exams || []).forEach(ex => {
                 (ex.questions || []).forEach(q => {
-                    if (q.unit === unitNum) {
-                        allQuestions.push(q);
-                    }
+                    if (q.unit === unitNum) allQuestions.push(q);
                 });
             });
 
-            // Pick 3 questions (or all if fewer)
             unitQuizQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 3);
             unitQuizCurrentIdx = 0;
 
-            // Modal Header setup
             document.getElementById('modalUnitIconBox').textContent = unitNum;
             document.getElementById('modalUnitBadge').textContent = `SEVİYE ${unitNum} • ${unit.is_vize ? 'VİZE' : 'FİNAL'}`;
             document.getElementById('modalUnitTitle').textContent = unit.title;
@@ -1292,40 +1490,62 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             body.innerHTML = '';
             footer.innerHTML = '';
 
-            // Update Wizard Tab Headers
-            document.getElementById('wizardStepBtn1').className = unitModalStep === 1 ? 'py-2.5 border-b-2 border-sky-400 text-sky-400 flex items-center justify-center gap-1.5' : 'py-2.5 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1.5';
-            document.getElementById('wizardStepBtn2').className = unitModalStep === 2 ? 'py-2.5 border-b-2 border-amber-400 text-amber-400 flex items-center justify-center gap-1.5' : 'py-2.5 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1.5';
-            document.getElementById('wizardStepBtn3').className = unitModalStep === 3 ? 'py-2.5 border-b-2 border-emerald-400 text-emerald-400 flex items-center justify-center gap-1.5' : 'py-2.5 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1.5';
+            document.getElementById('wizardStepBtn1').className = unitModalStep === 1 ? 'py-2 border-b-2 border-amber-400 text-amber-400 flex items-center justify-center gap-1 font-bold' : 'py-2 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1 font-bold';
+            document.getElementById('wizardStepBtn2').className = unitModalStep === 2 ? 'py-2 border-b-2 border-sky-400 text-sky-400 flex items-center justify-center gap-1 font-bold' : 'py-2 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1 font-bold';
+            document.getElementById('wizardStepBtn3').className = unitModalStep === 3 ? 'py-2 border-b-2 border-emerald-400 text-emerald-400 flex items-center justify-center gap-1 font-bold' : 'py-2 border-b-2 border-transparent text-slate-500 flex items-center justify-center gap-1 font-bold';
 
-            // STEP 1: HAP BİLGİLER
+            const realCourseId = getActiveCourseKey();
+            const uNum = currentActiveUnit.unit_number;
+            const sozelciData = (SOZELCI_REHBER[realCourseId] && SOZELCI_REHBER[realCourseId][uNum]) || {
+                baslik: "Sözelci Mantığı",
+                mala_anlatim: "Bu konuyu gündelik hayat mantığıyla düşünün; teorik ezber yapmayın.",
+                sifre: "Soru kökündeki anahtar kelimeyi yakalayın!"
+            };
+
+            // STEP 1: SÖZELCİ REHBERİ & HAP BİLGİLER
             if (unitModalStep === 1) {
                 const hapList = currentActiveUnit.hap_bilgiler || [];
-                const topHap = hapList.slice(0, 4);
+                const topHap = hapList.slice(0, 3);
 
-                let cardsHtml = '';
+                let hapCardsHtml = '';
                 topHap.forEach((hb, i) => {
-                    cardsHtml += `
-                        <div class="p-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs sm:text-sm text-slate-200 flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">${i+1}</div>
+                    hapCardsHtml += `
+                        <div class="p-2.5 rounded-xl bg-slate-900/70 border border-slate-800 text-xs text-slate-300 flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-md bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">${i+1}</span>
                             <div class="leading-relaxed">${hb}</div>
                         </div>
                     `;
                 });
 
                 body.innerHTML = `
-                    <div class="flex items-center justify-between text-xs text-sky-400 font-extrabold mb-1">
-                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt"></i> 3 Dakikalık Hap Bilgiler</span>
-                        <span class="text-slate-400 font-normal">Hızlıca göz gezdir</span>
+                    <!-- MALA ANLATIR GİBİ SÖZELCİ KUTUSU -->
+                    <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-500/15 via-slate-900 to-slate-900 border border-amber-500/40 shadow-lg shadow-amber-500/10 space-y-2.5">
+                        <div class="flex items-center gap-2 text-amber-400 font-extrabold text-xs sm:text-sm">
+                            <i class="fa-solid fa-brain text-base animate-pulse"></i>
+                            <span>🧠 Sözelciye Özel: ${sozelciData.baslik}</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-amber-100/90 leading-relaxed font-medium">
+                            ${sozelciData.mala_anlatim}
+                        </p>
+                        <div class="p-2.5 rounded-xl bg-slate-950/80 border border-amber-500/30 text-xs text-amber-300">
+                            <b>🔑 Sınav Şifresi:</b> ${sozelciData.sifre}
+                        </div>
                     </div>
-                    <div class="space-y-2.5">
-                        ${cardsHtml}
+
+                    <!-- 3 DAKİKALIK HAP BİLGİLER -->
+                    <div class="space-y-2 pt-1">
+                        <div class="text-[11px] font-extrabold text-sky-400 uppercase tracking-wider flex items-center gap-1">
+                            <i class="fa-solid fa-bolt text-xs"></i>
+                            <span>Hızlı Sınav Notları (3 Dk)</span>
+                        </div>
+                        ${hapCardsHtml}
                     </div>
                 `;
 
                 footer.innerHTML = `
                     <span class="text-xs text-slate-500">Adım 1 / 3</span>
                     <button onclick="goToUnitStep(2)" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs shadow-md shadow-sky-500/20 transition flex items-center gap-1.5">
-                        <span>Sınav Tuzağına Geç</span>
+                        <span>Sınav Tuzağına Bak</span>
                         <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </button>
                 `;
@@ -1333,8 +1553,6 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
             // STEP 2: SINAV TUZAĞI
             else if (unitModalStep === 2) {
-                const uNum = currentActiveUnit.unit_number;
-                // Find matching trap or pick by index
                 const traps = currentCourse.sinav_tuzaklari || [];
                 const trap = traps[(uNum - 1) % traps.length] || traps[0] || {
                     tuzak_baslik: "Kavram Karışıklığı Tuzağı",
@@ -1343,28 +1561,26 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
                 };
 
                 body.innerHTML = `
-                    <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-950/30 to-slate-900 border border-amber-500/30 space-y-3">
-                        <div class="flex items-center gap-2 text-amber-400 font-extrabold text-xs sm:text-sm">
+                    <div class="p-4 rounded-2xl bg-gradient-to-br from-rose-950/30 to-slate-900 border border-rose-500/40 space-y-3">
+                        <div class="flex items-center gap-2 text-rose-400 font-extrabold text-xs sm:text-sm">
                             <i class="fa-solid fa-triangle-exclamation text-base"></i>
-                            <span>AÖF Komisyonu Tuzağı: ${trap.tuzak_baslik || 'Kritik Çeldirici'}</span>
+                            <span>AÖF Tuzağı: ${trap.tuzak_baslik || 'Kritik Çeldirici'}</span>
                         </div>
                         <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">${trap.aciklama}</p>
                         
-                        <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-xs text-emerald-200">
-                            <b>💡 Doğru Yaklaşım:</b> ${trap.dogru_mantik}
+                        <div class="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-xs text-emerald-200">
+                            <b>💡 Doğru Mantık:</b> ${trap.dogru_mantik}
                         </div>
                     </div>
 
-                    <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 flex items-center gap-2">
-                        <i class="fa-solid fa-graduation-cap text-sky-400 text-sm"></i>
-                        <span>Şimdi bu tuzağı aşmak için 3 soruluk mini testi çözün!</span>
+                    <div class="p-3 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb text-amber-400 text-sm"></i>
+                        <span>Şimdi bu tuzağı aşmak için 3 soruluk mini testi çöz!</span>
                     </div>
                 `;
 
                 footer.innerHTML = `
-                    <button onclick="goToUnitStep(1)" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs transition">
-                        <i class="fa-solid fa-arrow-left mr-1"></i> Geri
-                    </button>
+                    <button onclick="goToUnitStep(1)" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs transition">Geri</button>
                     <button onclick="goToUnitStep(3)" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs shadow-md shadow-amber-500/20 transition flex items-center gap-1.5">
                         <span>Mini Teste Başla</span>
                         <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -1375,17 +1591,7 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             // STEP 3: MİKRO QUIZ (3 SORU)
             else if (unitModalStep === 3) {
                 if (unitQuizQuestions.length === 0) {
-                    body.innerHTML = `
-                        <div class="text-center py-8 text-slate-400 text-xs">
-                            Bu üniteye ait test soruları başarıyla tamamlandı!
-                        </div>
-                    `;
-                    footer.innerHTML = `
-                        <div></div>
-                        <button onclick="finishUnitModule()" class="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs shadow-lg shadow-emerald-500/30 transition">
-                            Seviyeyi Tamamla ve Kilidi Aç 🔓
-                        </button>
-                    `;
+                    finishUnitModule();
                     return;
                 }
 
@@ -1395,9 +1601,8 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
                 (q.options || []).forEach(opt => {
                     const optKey = opt.trim().charAt(0);
                     optionsHtml += `
-                        <button onclick="checkUnitQuizAnswer(this, '${optKey}', '${q.correct_answer}')" class="unit-quiz-opt w-full text-left p-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-200 transition font-medium flex items-center justify-between">
-                            <span>${opt}</span>
-                            <span class="opt-indicator hidden"></span>
+                        <button onclick="checkUnitQuizAnswer(this, '${optKey}', '${q.correct_answer}')" class="unit-quiz-opt w-full text-left p-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-200 transition font-medium">
+                            ${opt}
                         </button>
                     `;
                 });
@@ -1405,24 +1610,22 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
                 body.innerHTML = `
                     <div class="flex items-center justify-between text-xs text-emerald-400 font-extrabold mb-1">
                         <span>Soru ${unitQuizCurrentIdx + 1} / ${unitQuizQuestions.length}</span>
-                        <span class="text-slate-400 font-normal">Doğru şıkkı seç</span>
+                        <span class="text-slate-400 font-normal">Şıkkı seç</span>
                     </div>
 
                     <div class="p-3.5 rounded-2xl bg-slate-900/90 border border-slate-800 text-xs sm:text-sm font-bold text-white leading-relaxed">
                         ${q.question}
                     </div>
 
-                    <div id="unitQuizOptions" class="space-y-2 mt-3">
+                    <div id="unitQuizOptions" class="space-y-2 mt-2">
                         ${optionsHtml}
                     </div>
 
-                    <div id="unitQuizExplanation" class="hidden p-3.5 rounded-2xl bg-slate-900 border border-slate-700 text-xs text-slate-300 leading-relaxed anim-unlock">
-                        <!-- Populated upon answer -->
-                    </div>
+                    <div id="unitQuizExplanation" class="hidden p-3 rounded-2xl bg-slate-900 border border-slate-700 text-xs text-slate-300 leading-relaxed anim-unlock"></div>
                 `;
 
                 footer.innerHTML = `
-                    <span class="text-xs text-slate-500">Soru ${unitQuizCurrentIdx + 1}/${unitQuizQuestions.length}</span>
+                    <span class="text-xs text-slate-500">${unitQuizCurrentIdx + 1}/${unitQuizQuestions.length}</span>
                     <button id="unitQuizNextBtn" onclick="nextUnitQuizQuestion()" class="hidden px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-xs shadow-md shadow-sky-500/20 transition flex items-center gap-1.5">
                         <span>Sonraki Soru</span>
                         <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -1433,15 +1636,15 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             // STEP 4: SEVİYE ZAFERİ (LEVEL CLEAR)
             else if (unitModalStep === 4) {
                 body.innerHTML = `
-                    <div class="text-center py-6 space-y-4 anim-unlock">
-                        <div class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-emerald-400 via-sky-500 to-indigo-600 mx-auto flex items-center justify-center text-white text-4xl shadow-2xl shadow-emerald-500/30 animate-bounce">
+                    <div class="text-center py-6 space-y-3.5 anim-unlock">
+                        <div class="w-16 h-16 rounded-3xl bg-gradient-to-tr from-emerald-400 via-sky-500 to-indigo-600 mx-auto flex items-center justify-center text-white text-3xl shadow-2xl shadow-emerald-500/30 animate-bounce">
                             <i class="fa-solid fa-trophy"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-extrabold text-white">TEBRİKLER! SEVİYE ${currentActiveUnit.unit_number} TAMAMLANDI!</h3>
-                            <p class="text-xs text-slate-300 mt-1 max-w-sm mx-auto">Harika bir performans gösterdin! Bir sonraki ünitenin kilidi başarıyla açıldı.</p>
+                            <h3 class="text-lg font-extrabold text-white">TEBRİKLER! SEVİYE ${currentActiveUnit.unit_number} TAMAMLANDI!</h3>
+                            <p class="text-xs text-slate-300 mt-1 max-w-sm mx-auto">Harika bir iş çıkardın! Sözelci mantığını kaptın, sonraki seviyenin kilidi açıldı.</p>
                         </div>
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-300 font-extrabold text-sm">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-amber-500/20 border border-amber-500/40 text-amber-300 font-extrabold text-xs">
                             <i class="fa-solid fa-star text-amber-400"></i>
                             <span>+100 XP KAZANDIN!</span>
                         </div>
@@ -1450,7 +1653,7 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
                 footer.innerHTML = `
                     <div></div>
-                    <button onclick="closeUnitModal(); renderRoadmap();" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs shadow-lg shadow-emerald-500/30 transition flex items-center justify-center gap-2">
+                    <button onclick="closeUnitModal(); renderRoadmap();" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs shadow-lg shadow-emerald-500/30 transition flex items-center justify-center gap-2">
                         <span>Haritaya Dön & Devam Et ➔</span>
                     </button>
                 `;
@@ -1465,7 +1668,7 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
         function checkUnitQuizAnswer(btn, chosenKey, correctKey) {
             const allBtns = document.querySelectorAll('.unit-quiz-opt');
-            allBtns.forEach(b => b.onclick = null); // disable clicks
+            allBtns.forEach(b => b.onclick = null);
 
             const q = unitQuizQuestions[unitQuizCurrentIdx];
             const expBox = document.getElementById('unitQuizExplanation');
@@ -1473,24 +1676,19 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
             if (chosenKey === correctKey) {
                 SoundFX.playSuccess();
-                btn.className = 'unit-quiz-opt w-full text-left p-3 rounded-xl bg-emerald-950/60 border border-emerald-500 text-xs text-emerald-200 font-bold transition flex items-center justify-between';
-                if (typeof confetti === 'function') {
-                    confetti({ particleCount: 40, spread: 60, origin: { y: 0.6 } });
-                }
-                expBox.className = 'p-3.5 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 text-xs text-emerald-200 leading-relaxed anim-unlock';
-                expBox.innerHTML = `<b>🎉 Doğru Cevap!</b> ${q.explanation || 'Harika kavradın!'}`;
+                btn.className = 'unit-quiz-opt w-full text-left p-3 rounded-xl bg-emerald-950/70 border border-emerald-500 text-xs text-emerald-200 font-bold transition';
+                if (typeof confetti === 'function') confetti({ particleCount: 35, spread: 50, origin: { y: 0.6 } });
+                expBox.className = 'p-3 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 text-xs text-emerald-200 leading-relaxed anim-unlock';
+                expBox.innerHTML = `<b>🎉 Doğru Cevap!</b> ${q.explanation || 'Harika!'}`;
             } else {
                 SoundFX.playError();
-                btn.className = 'unit-quiz-opt w-full text-left p-3 rounded-xl bg-rose-950/60 border border-rose-500 text-xs text-rose-200 font-bold transition flex items-center justify-between';
-                
-                // Highlight correct button
+                btn.className = 'unit-quiz-opt w-full text-left p-3 rounded-xl bg-rose-950/70 border border-rose-500 text-xs text-rose-200 font-bold transition';
                 allBtns.forEach(b => {
                     if (b.textContent.trim().startsWith(correctKey)) {
-                        b.className = 'unit-quiz-opt w-full text-left p-3 rounded-xl bg-emerald-950/60 border border-emerald-500 text-xs text-emerald-200 font-bold transition flex items-center justify-between';
+                        b.className = 'unit-quiz-opt w-full text-left p-3 rounded-xl bg-emerald-950/70 border border-emerald-500 text-xs text-emerald-200 font-bold transition';
                     }
                 });
-
-                expBox.className = 'p-3.5 rounded-2xl bg-rose-950/30 border border-rose-500/40 text-xs text-slate-300 leading-relaxed anim-unlock';
+                expBox.className = 'p-3 rounded-2xl bg-rose-950/30 border border-rose-500/40 text-xs text-slate-300 leading-relaxed anim-unlock';
                 expBox.innerHTML = `<b class="text-rose-400">⚠️ Doğru Seçenek ${correctKey}:</b> ${q.explanation || ''}`;
             }
 
@@ -1509,17 +1707,15 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
         }
 
         function finishUnitModule() {
-            const realCourseId = document.getElementById('courseSelect').value;
+            const realCourseId = getActiveCourseKey();
             ProgressManager.completeUnit(realCourseId, currentActiveUnit.unit_number);
             SoundFX.playLevelUp();
-            if (typeof confetti === 'function') {
-                confetti({ particleCount: 100, spread: 80, origin: { y: 0.5 } });
-            }
+            if (typeof confetti === 'function') confetti({ particleCount: 80, spread: 70, origin: { y: 0.5 } });
             unitModalStep = 4;
             renderUnitModalStep();
         }
 
-        // ================= TAB 2: AÖF EXAMS ENGINE =================
+        // ================= TAB 2: EXAMS ENGINE =================
         function loadExam(examIdx) {
             if (!currentCourse) return;
             const exams = currentCourse.exams || [];
@@ -1527,7 +1723,7 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             if (!currentExam) return;
 
             clearInterval(examTimerInterval);
-            examTimeLeft = 1800; // 30 minutes
+            examTimeLeft = 1800;
             updateTimerDisplay();
             document.getElementById('examResultCard').classList.add('hidden');
 
@@ -1537,39 +1733,33 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             const questions = currentExam.questions || [];
             questions.forEach((q, idx) => {
                 const card = document.createElement('div');
-                card.className = 'glass-card rounded-2xl p-4 sm:p-5 border border-slate-800/80 question-card';
+                card.className = 'glass-card rounded-2xl p-4 border border-slate-800/80 question-card';
                 card.id = `qcard-${idx}`;
 
                 let optionsHtml = '';
                 (q.options || []).forEach(opt => {
                     const optKey = opt.trim().charAt(0);
                     optionsHtml += `
-                        <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 cursor-pointer transition text-xs sm:text-sm text-slate-200">
-                            <input type="radio" name="q_${idx}" value="${optKey}" onchange="onExamOptionSelect(${idx})" class="w-4 h-4 text-sky-500 focus:ring-0 bg-slate-800 border-slate-700">
+                        <label class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 cursor-pointer transition text-xs sm:text-sm text-slate-200">
+                            <input type="radio" name="q_${idx}" value="${optKey}" onchange="SoundFX.playClick()" class="w-4 h-4 text-sky-500 focus:ring-0 bg-slate-800 border-slate-700">
                             <span>${opt}</span>
                         </label>
                     `;
                 });
 
                 card.innerHTML = `
-                    <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                    <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
                         <span class="font-extrabold text-sky-400">SORU ${idx + 1} / ${questions.length}</span>
                         <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 font-semibold">Ünite ${q.unit}</span>
                     </div>
-                    <p class="font-bold text-white text-xs sm:text-sm leading-relaxed mb-3">${q.question}</p>
-                    <div class="space-y-2">
-                        ${optionsHtml}
-                    </div>
-                    <div id="qexp-${idx}" class="hidden mt-3 p-3 rounded-xl bg-slate-900/90 border border-slate-700 text-xs text-slate-300 leading-relaxed">
+                    <p class="font-bold text-white text-xs sm:text-sm leading-relaxed mb-2.5">${q.question}</p>
+                    <div class="space-y-1.5">${optionsHtml}</div>
+                    <div id="qexp-${idx}" class="hidden mt-2.5 p-2.5 rounded-xl bg-slate-900/90 border border-slate-700 text-xs text-slate-300 leading-relaxed">
                         <b class="text-amber-400">Açıklamalı Çözüm:</b> ${q.explanation}
                     </div>
                 `;
                 container.appendChild(card);
             });
-        }
-
-        function onExamOptionSelect(qIdx) {
-            SoundFX.playClick();
         }
 
         function startExamTimer() {
@@ -1591,7 +1781,7 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
         function pauseExamTimer() {
             SoundFX.playClick();
             clearInterval(examTimerInterval);
-            document.getElementById('examTimerBtn').innerHTML = '<i class="fa-solid fa-play mr-1 text-emerald-400"></i>Devam Et';
+            document.getElementById('examTimerBtn').innerHTML = '<i class="fa-solid fa-play mr-1 text-emerald-400"></i>Devam';
             document.getElementById('examTimerBtn').onclick = startExamTimer;
         }
 
@@ -1607,9 +1797,7 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
             SoundFX.playClick();
             const questions = currentExam.questions || [];
-            let correct = 0;
-            let wrong = 0;
-            let empty = 0;
+            let correct = 0; let wrong = 0; let empty = 0;
 
             questions.forEach((q, idx) => {
                 const checked = document.querySelector(`input[name="q_${idx}"]:checked`);
@@ -1619,44 +1807,37 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
                 if (!checked) {
                     empty++;
-                    card.className = 'glass-card rounded-2xl p-4 sm:p-5 border border-slate-700 bg-slate-900/40 question-card';
+                    card.className = 'glass-card rounded-2xl p-4 border border-slate-700 bg-slate-900/40 question-card';
                 } else if (checked.value === q.correct_answer) {
                     correct++;
-                    card.className = 'glass-card rounded-2xl p-4 sm:p-5 border border-emerald-500/40 bg-emerald-950/20 question-card';
+                    card.className = 'glass-card rounded-2xl p-4 border border-emerald-500/40 bg-emerald-950/20 question-card';
                 } else {
                     wrong++;
-                    card.className = 'glass-card rounded-2xl p-4 sm:p-5 border border-rose-500/40 bg-rose-950/20 question-card';
+                    card.className = 'glass-card rounded-2xl p-4 border border-rose-500/40 bg-rose-950/20 question-card';
                 }
             });
 
-            // AÖF Net Formülü: Net = D - (Y / 4)
             const net = Math.max(0, correct - (wrong / 4));
-            const puan = Math.round(net * 5); // 20 soru x 5 = 100 puan
+            const puan = Math.round(net * 5);
 
-            // Award XP
             ProgressManager.addXP(50);
             if (puan >= 50) SoundFX.playSuccess(); else SoundFX.playError();
             if (puan >= 70 && typeof confetti === 'function') confetti({ particleCount: 70, spread: 60 });
 
-            // Display Scorecard
             const card = document.getElementById('examResultCard');
             card.innerHTML = `
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
-                        <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">AÖF SINAV KARNESİ</span>
-                        <h4 class="text-xl font-extrabold text-white mt-1">Sınav Puanınız: <span class="${puan >= 50 ? 'text-emerald-400' : 'text-rose-400'}">${puan} / 100</span></h4>
+                        <span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300">AÖF SINAV KARNESİ</span>
+                        <h4 class="text-lg font-extrabold text-white mt-1">Sınav Puanınız: <span class="${puan >= 50 ? 'text-emerald-400' : 'text-rose-400'}">${puan} / 100</span></h4>
                         <p class="text-xs text-slate-300 mt-0.5">Net Sayınız: <b>${net.toFixed(2)}</b> • Doğru: <b>${correct}</b> • Yanlış: <b>${wrong}</b> • Boş: <b>${empty}</b></p>
                     </div>
                     <div class="text-right">
                         <span class="text-xs font-bold text-slate-400">Harf Notu Karşılığı:</span>
-                        <div class="text-2xl font-extrabold ${puan >= 70 ? 'text-emerald-400' : puan >= 50 ? 'text-amber-400' : 'text-rose-400'}">
+                        <div class="text-xl font-extrabold ${puan >= 70 ? 'text-emerald-400' : puan >= 50 ? 'text-amber-400' : 'text-rose-400'}">
                             ${puan >= 85 ? 'AA (Mükemmel)' : puan >= 75 ? 'BA (Çok İyi)' : puan >= 65 ? 'BB (İyi)' : puan >= 50 ? 'CC (Geçti)' : puan >= 35 ? 'DD (Koşullu)' : 'FF (Kaldı)'}
                         </div>
                     </div>
-                </div>
-                <div class="mt-3 text-xs text-slate-300 border-t border-slate-800 pt-2 flex items-center justify-between">
-                    <span>💡 Aşağıdaki sorularda çözümlü açıklamaları inceleyebilirsiniz.</span>
-                    <button onclick="window.scrollTo({top: 400, behavior: 'smooth'})" class="text-sky-400 hover:underline">Soruları İncele ↓</button>
                 </div>
             `;
             card.classList.remove('hidden');
@@ -1679,16 +1860,12 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             document.getElementById('flashcardQuestion').textContent = fc.q;
             document.getElementById('flashcardAnswer').textContent = fc.a;
             document.getElementById('flashcardCounter').textContent = `Kart ${currentFlashcardIdx + 1} / ${flashcardsData.length}`;
-
-            // Reset flip
-            const box = document.getElementById('flashcardBox');
-            box.classList.remove('rotate-y-180');
+            document.getElementById('flashcardBox').classList.remove('rotate-y-180');
         }
 
         function flipFlashcard() {
             SoundFX.playClick();
-            const box = document.getElementById('flashcardBox');
-            box.classList.toggle('rotate-y-180');
+            document.getElementById('flashcardBox').classList.toggle('rotate-y-180');
         }
 
         function nextFlashcard() {
@@ -1732,19 +1909,19 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
             let durumHtml = '';
             if (final < 35) {
-                durumHtml = `<span class="text-rose-400 font-extrabold">🚨 Final Notunuz 35 barajının altında kaldığı için doğrudan FF ile kalırsınız!</span>`;
+                durumHtml = `<span class="text-rose-400 font-extrabold">🚨 Final Notu 35 barajının altında! Vizeniz 100 bile olsa FF ile kalırsınız!</span>`;
             } else if (basari >= 50) {
-                durumHtml = `<span class="text-emerald-400 font-extrabold">🎉 Tebrikler! Dersi Başarıyla Geçtiniz (CC veya Üstü).</span>`;
+                durumHtml = `<span class="text-emerald-400 font-extrabold">🎉 Dersi Başarıyla Geçtiniz (CC veya Üstü).</span>`;
             } else if (basari >= 35) {
-                durumHtml = `<span class="text-amber-400 font-extrabold">⚠️ Koşullu Geçer (DD/DC). Dönem Genel Not Ortalamanız (GNO) 2.00 üzerinde olmalıdır.</span>`;
+                durumHtml = `<span class="text-amber-400 font-extrabold">⚠️ Koşullu Geçer (DD/DC). Genel Not Ortalamanız (GNO) 2.00 üzerinde olmalıdır.</span>`;
             } else {
-                durumHtml = `<span class="text-rose-400 font-extrabold">❌ Başarı notunuz 35'in altında (FF ile Kalındı).</span>`;
+                durumHtml = `<span class="text-rose-400 font-extrabold">❌ Başarı notu 35'in altında (FF ile Kalındı).</span>`;
             }
 
             box.innerHTML = `
                 <div class="flex justify-between items-center text-slate-200">
                     <span>Başarı Notu: <b>${basari.toFixed(1)} / 100</b></span>
-                    <span class="text-slate-400 text-[11px]">(%30 Vize + %70 Final)</span>
+                    <span class="text-slate-400 text-[10px]">(%30 Vize + %70 Final)</span>
                 </div>
                 <div>${durumHtml}</div>
             `;
@@ -1760,19 +1937,15 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             if (yontem === 'normal') {
                 const yillik = maliyet / omur;
                 box.innerHTML = `
-                    <div class="text-slate-200">Amortisman Oranı: <b>%${oran.toFixed(1)}</b></div>
-                    <div class="text-emerald-400 font-bold">Yıllık Amortisman: ${yillik.toLocaleString('tr-TR')} TL</div>
-                    <div class="text-[11px] text-slate-400">Yevmiye Kaydı: 770 GENEL YÖNETİM GİD. (Borçlu) / 257 BİRİKMİŞ AMORTİSMAN (Alacaklı)</div>
+                    <div class="text-slate-200">Normal Oran: <b>%${oran.toFixed(1)}</b></div>
+                    <div class="text-emerald-400 font-bold">Yıllık Eskime Payı: ${yillik.toLocaleString('tr-TR')} TL</div>
                 `;
             } else {
                 const azalanOran = Math.min(50, oran * 2);
                 const yil1 = maliyet * (azalanOran / 100);
-                const kalan1 = maliyet - yil1;
-                const yil2 = kalan1 * (azalanOran / 100);
                 box.innerHTML = `
                     <div class="text-slate-200">Azalan Oran: <b>%${azalanOran.toFixed(1)}</b> (Normal oranın 2 katı, maks %50)</div>
-                    <div class="text-emerald-400 font-bold">1. Yıl Payı: ${yil1.toLocaleString('tr-TR')} TL (Kalan: ${kalan1.toLocaleString('tr-TR')} TL)</div>
-                    <div class="text-sky-300 font-semibold">2. Yıl Payı: ${yil2.toLocaleString('tr-TR')} TL</div>
+                    <div class="text-emerald-400 font-bold">1. Yıl Payı: ${yil1.toLocaleString('tr-TR')} TL</div>
                 `;
             }
         }
@@ -1787,9 +1960,8 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             const deltaY = dy * k;
 
             box.innerHTML = `
-                <div class="text-slate-200">MPS (Tasarruf Eğilimi): <b>${mps.toFixed(2)}</b> • Çarpan (k): <b>${k.toFixed(2)}</b></div>
+                <div class="text-slate-200">Çoğaltan (k): <b>${k.toFixed(2)}</b> (Tasarruf: ${mps.toFixed(2)})</div>
                 <div class="text-violet-300 font-bold">Millî Gelir Artışı (ΔY): ${deltaY.toFixed(1)} Milyar TL</div>
-                <div class="text-[11px] text-slate-400">Formül: k = 1 / (1 - MPC) = 1 / MPS • ΔY = k × ΔI</div>
             `;
         }
 
@@ -1801,12 +1973,9 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
             const r = -b / (2 * a);
             const k = (a * r * r) + (b * r) + c;
-            const delta = (b * b) - (4 * a * c);
-
             box.innerHTML = `
-                <div class="text-slate-200">Tepe Noktası T(r, k): <b>T(${r.toFixed(2)}, ${k.toFixed(2)})</b></div>
-                <div class="text-amber-300 font-bold">Diskriminant (Δ): ${delta.toFixed(2)} (${delta > 0 ? 'İki farklı reel kök' : delta === 0 ? 'Çakışık tek kök' : 'Reel kök yok'})</div>
-                <div class="text-[11px] text-slate-400">Kollar: ${a > 0 ? 'Yukarı Doğru (Minimum Tepe)' : 'Aşağı Doğru (Maksimum Tepe)'}</div>
+                <div class="text-slate-200">Zirve Noktası T(r, k): <b>T(${r.toFixed(2)}, ${k.toFixed(2)})</b></div>
+                <div class="text-amber-300 font-bold">${a > 0 ? 'Çukur (Minimum Değer)' : 'Dağ Zirvesi (Maksimum Kâr)'}</div>
             `;
         }
 
@@ -1814,20 +1983,20 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             const container = document.getElementById('dictListContainer');
             container.innerHTML = '';
             if (!terms || terms.length === 0) {
-                container.innerHTML = '<div class="text-xs text-slate-400 p-3">Bu ders için terim bulunamadı.</div>';
+                container.innerHTML = '<div class="text-xs text-slate-400 p-2">Bu ders için terim bulunamadı.</div>';
                 return;
             }
 
             terms.forEach(t => {
                 const card = document.createElement('div');
-                card.className = 'dict-card p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs';
+                card.className = 'dict-card p-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs';
                 card.innerHTML = `
-                    <div class="font-extrabold text-sky-400 flex items-center gap-1.5">
-                        <i class="fa-solid fa-bookmark text-[10px]"></i>
+                    <div class="font-extrabold text-sky-400 flex items-center gap-1">
+                        <i class="fa-solid fa-bookmark text-[9px]"></i>
                         <span>${t.term}</span>
                     </div>
-                    <p class="text-slate-300 mt-1 leading-relaxed">${t.description}</p>
-                    ${t.example ? `<div class="mt-1 text-[11px] text-amber-300/80 bg-slate-950/60 p-1.5 rounded-lg border border-slate-800"><b>Örnek:</b> ${t.example}</div>` : ''}
+                    <p class="text-slate-300 mt-0.5 leading-relaxed">${t.description}</p>
+                    ${t.example ? `<div class="mt-1 text-[10px] text-amber-300/80 bg-slate-950/60 p-1.5 rounded-lg border border-slate-800"><b>Örnek:</b> ${t.example}</div>` : ''}
                 `;
                 container.appendChild(card);
             });
@@ -1860,17 +2029,16 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             BADGE_DEFINITIONS.forEach(b => {
                 const isEarned = unlocked.includes(b.id);
                 const el = document.createElement('div');
-                el.className = `p-3 rounded-2xl border text-center flex flex-col items-center justify-center gap-1.5 transition ${
+                el.className = `p-2.5 rounded-2xl border text-center flex flex-col items-center justify-center gap-1 transition ${
                     isEarned 
                         ? 'bg-amber-500/15 border-amber-500/40 text-amber-300 shadow-md shadow-amber-500/10' 
                         : 'bg-slate-900/40 border-slate-800/80 text-slate-600 opacity-60'
                 }`;
                 el.innerHTML = `
-                    <div class="w-10 h-10 rounded-xl ${isEarned ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-slate-600'} flex items-center justify-center text-lg">
+                    <div class="w-8 h-8 rounded-xl ${isEarned ? 'bg-amber-500 text-slate-950' : 'bg-slate-800 text-slate-600'} flex items-center justify-center text-sm">
                         <i class="fa-solid ${b.icon}"></i>
                     </div>
-                    <span class="font-extrabold text-xs text-white">${b.name}</span>
-                    <span class="text-[10px] text-slate-400 line-clamp-1">${b.desc}</span>
+                    <span class="font-extrabold text-[11px] text-white">${b.name}</span>
                 `;
                 container.appendChild(el);
             });
@@ -1878,13 +2046,13 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
 
         function shareWhatsApp() {
             SoundFX.playClick();
-            const text = encodeURIComponent("Selam! AÖF YBS 1. Sınıf tüm dersler için bu harika interaktif çalışma platformunu kullanıyorum. Seviye ilerlemeli hap notlar, sınav tuzakları ve 20 soruluk denemeler var: https://asklepios0.github.io/aof-ybs/");
+            const text = encodeURIComponent("Kanka AÖF YBS için bu site efsane! Terimleri mala anlatır gibi anlatıyor, seviye seviye açılan kilitli testler var: https://asklepios0.github.io/aof-ybs/");
             window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
         }
 
         function copyShareLink() {
             SoundFX.playClick();
-            const url = window.location.href;
+            const url = 'https://asklepios0.github.io/aof-ybs/';
             navigator.clipboard.writeText(url).then(() => {
                 const btnText = document.getElementById('copyLinkBtnText');
                 btnText.textContent = "Kopyalandı! ✓";
@@ -1896,12 +2064,12 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             const container = document.getElementById('qrcodeCanvas');
             if (!container) return;
             container.innerHTML = '';
-            const currentUrl = window.location.href;
+            const currentUrl = 'https://asklepios0.github.io/aof-ybs/';
             if (typeof QRCode !== 'undefined') {
                 new QRCode(container, {
                     text: currentUrl,
-                    width: 140,
-                    height: 140,
+                    width: 120,
+                    height: 120,
                     colorDark: "#090d16",
                     colorLight: "#ffffff",
                     correctLevel: QRCode.CorrectLevel.M
@@ -1914,7 +2082,6 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
             SoundFX.playClick();
             activeTab = tabId;
 
-            // Desktop Buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 if (btn.dataset.tab === tabId) {
                     btn.className = 'tab-btn flex-1 py-2 px-3 rounded-xl font-extrabold text-xs flex items-center justify-center gap-2 transition bg-sky-500 text-slate-950 shadow-md shadow-sky-500/20';
@@ -1923,7 +2090,6 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
                 }
             });
 
-            // Mobile Buttons
             document.querySelectorAll('.mobile-tab-btn').forEach(btn => {
                 if (btn.dataset.tab === tabId) {
                     btn.className = 'mobile-tab-btn flex flex-col items-center justify-center gap-1 text-sky-400 font-extrabold';
@@ -1932,7 +2098,6 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
                 }
             });
 
-            // Tab Content Visibility
             document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
             const target = document.getElementById(`tab-${tabId}`);
             if (target) target.classList.remove('hidden');
@@ -1943,24 +2108,19 @@ Bu seviyenin kilidini açmak için lütfen önceki Seviye ${unitNum - 1}'i tamam
         // Service Worker Registration for PWA Offline Functionality & Auto-Update
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js?v=2').then(reg => {
-                    console.log('SW registered with scope:', reg.scope);
+                navigator.serviceWorker.register('./sw.js?v=3').then(reg => {
                     reg.update();
                     reg.addEventListener('updatefound', () => {
                         const newWorker = reg.installing;
                         newWorker.addEventListener('statechange', () => {
                             if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                console.log('New SW installed, reloading for instant update...');
                                 window.location.reload();
                             }
                         });
                     });
-                }).catch(err => {
-                    console.log('SW registration error:', err);
-                });
+                }).catch(() => {});
             });
         }
-        // Immediately delete legacy v1 cache if existing
         if ('caches' in window) {
             caches.delete('aof-ybs-cache-v1');
         }
